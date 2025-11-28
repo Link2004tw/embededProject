@@ -26,7 +26,7 @@ rule PDBLINK
 #Build steps
 build E$:\coding\embedded\project\Debug\BrowseInfo\main.xcl : COMPILER_XCL 
   xclcommand = -source_file E$:\coding\embedded\project\main.c -xcl_file E$:\coding\embedded\project\Debug\BrowseInfo\main.xcl -macro_file E$:\coding\embedded\project\Debug\BrowseInfo\main.tmp -icc_path "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\arm\bin\iccarm.exe"
-  flags = E$:\coding\embedded\project\main.c -o E$:\coding\embedded\project\Debug\Obj\ --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa --no_clustering --no_scheduling --debug --endian=little --cpu=Cortex-M3 -e --fpu=None --dlib_config "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\arm\inc\c\DLib_Config_Normal.h" -Ol --predef_macros E$:\coding\embedded\project\Debug\BrowseInfo\main.tmp
+  flags = E$:\coding\embedded\project\main.c -D "ewarm$ PART_TM4C123GH6PM$ TARGET_IS_TM4C123_RB1" -o E$:\coding\embedded\project\Debug\Obj\ --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa --no_clustering --no_scheduling --debug --endian=little --cpu=Cortex-M3 -e --fpu=None --dlib_config "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\arm\inc\c\DLib_Config_Normal.h" -I C$:\ti\TivaWare_C_Series-2.2.0.295\ -Ol --predef_macros E$:\coding\embedded\project\Debug\BrowseInfo\main.tmp
   rspfile_name = E$:\coding\embedded\project\Debug\BrowseInfo\main.xcl.rsp
 
 build E$:\coding\embedded\project\Debug\BrowseInfo\main.pbi : INDEXER E$:\coding\embedded\project\Debug\BrowseInfo\main.xcl |  $
