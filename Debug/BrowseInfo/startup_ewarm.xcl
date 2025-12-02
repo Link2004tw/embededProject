@@ -1,13 +1,13 @@
-"E:\coding\embedded\project\main.c"
+"E:\coding\embedded\project\startup_ewarm.c"
 -std=c11
 -ferror-limit=0
 -fbracket-depth=512
 -funsigned-char
 -MD
 -MF
-E:\coding\embedded\project\Debug\BrowseInfo\main.pbi.dep
+E:\coding\embedded\project\Debug\BrowseInfo\startup_ewarm.pbi.dep
 -o
-E:\coding\embedded\project\Debug\BrowseInfo\main.pbi
+E:\coding\embedded\project\Debug\BrowseInfo\startup_ewarm.pbi
 -I
 E:\coding\embedded\project
 -I

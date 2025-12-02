@@ -2845,6 +2845,18 @@
         <name>$PROJ_DIR$\consts.h</name>
     </file>
     <file>
+        <name>$PROJ_DIR$\eepromDriver.h</name>
+    </file>
+    <file>
+        <name>$PROJ_DIR$\hw_nvic.h</name>
+    </file>
+    <file>
+        <name>$PROJ_DIR$\hw_types.h</name>
+    </file>
+    <file>
         <name>$PROJ_DIR$\main.c</name>
+    </file>
+    <file>
+        <name>$PROJ_DIR$\startup_ewarm.c</name>
     </file>
 </project>

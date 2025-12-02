@@ -1,0 +1,8 @@
+# ninja log v5
+363	1591	7863955906929765	E:/coding/embedded/project/Debug/Obj/startup_ewarm.o	ca16cdc81e575538
+0	217	7863956332546976	E:/coding/embedded/project/Debug/Obj/main.o	436a0d91803b78
+18	152	7863956747108127	E:/coding/embedded/project/Debug/Obj/startup_ewarm.o	ca16cdc81e575538
+1	58	7863957967285179	E:/coding/embedded/project/Debug/Obj/startup_ewarm.o	ca16cdc81e575538
+2	67	7863958248138338	E:/coding/embedded/project/Debug/Obj/startup_ewarm.o	ca16cdc81e575538
+2	104	7863958308944676	E:/coding/embedded/project/Debug/Obj/startup_ewarm.o	ca16cdc81e575538
+115	177	7863958309709593	E:/coding/embedded/project/Debug/Exe/main.out	3fa31d4232a3221d
