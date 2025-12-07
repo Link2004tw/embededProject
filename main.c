@@ -9,6 +9,11 @@
 #include "driverlib/uart.h"
 #include "driverlib/pin_map.h"
 #include "HMI_Comm.h"
+#include "driverlib/gpio.h"
+
+#define RED_LED     GPIO_PIN_1
+#define BLUE_LED    GPIO_PIN_2
+#define GREEN_LED   GPIO_PIN_3
 
 // **********************
 // This function Should be modified to maintain the style we learned using the .h files

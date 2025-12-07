@@ -24,6 +24,11 @@ rule PDBLINK
 
 
 #Build steps
+build E$:\coding\embedded\project\Debug\BrowseInfo\HMI_Comm.xcl : COMPILER_XCL 
+  xclcommand = -source_file E$:\coding\embedded\project\HMI_Comm.c -xcl_file E$:\coding\embedded\project\Debug\BrowseInfo\HMI_Comm.xcl -macro_file E$:\coding\embedded\project\Debug\BrowseInfo\HMI_Comm.tmp -icc_path "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\arm\bin\iccarm.exe"
+  flags = E$:\coding\embedded\project\HMI_Comm.c -D PART_TM4C123GH6PM -o E$:\coding\embedded\project\Debug\Obj\ --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa --no_clustering --no_scheduling --debug --endian=little --cpu=Cortex-M4 -e --fpu=VFPv4_sp --dlib_config "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\arm\inc\c\DLib_Config_Normal.h" -I C$:\ti\TivaWare_C_Series-2.2.0.295\ -I C$:\ti\TivaWare_C_Series-2.2.0.295\inc\ -I C$:\ti\TivaWare_C_Series-2.2.0.295\driverlib\ -Ol --predef_macros E$:\coding\embedded\project\Debug\BrowseInfo\HMI_Comm.tmp
+  rspfile_name = E$:\coding\embedded\project\Debug\BrowseInfo\HMI_Comm.xcl.rsp
+
 build E$:\coding\embedded\project\Debug\BrowseInfo\main.xcl : COMPILER_XCL 
   xclcommand = -source_file E$:\coding\embedded\project\main.c -xcl_file E$:\coding\embedded\project\Debug\BrowseInfo\main.xcl -macro_file E$:\coding\embedded\project\Debug\BrowseInfo\main.tmp -icc_path "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\arm\bin\iccarm.exe"
   flags = E$:\coding\embedded\project\main.c -D PART_TM4C123GH6PM -o E$:\coding\embedded\project\Debug\Obj\ --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa --no_clustering --no_scheduling --debug --endian=little --cpu=Cortex-M4 -e --fpu=VFPv4_sp --dlib_config "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\arm\inc\c\DLib_Config_Normal.h" -I C$:\ti\TivaWare_C_Series-2.2.0.295\ -I C$:\ti\TivaWare_C_Series-2.2.0.295\inc\ -I C$:\ti\TivaWare_C_Series-2.2.0.295\driverlib\ -Ol --predef_macros E$:\coding\embedded\project\Debug\BrowseInfo\main.tmp
@@ -33,6 +38,10 @@ build E$:\coding\embedded\project\Debug\BrowseInfo\startup_ewarm.xcl : COMPILER_
   xclcommand = -source_file E$:\coding\embedded\project\startup_ewarm.c -xcl_file E$:\coding\embedded\project\Debug\BrowseInfo\startup_ewarm.xcl -macro_file E$:\coding\embedded\project\Debug\BrowseInfo\startup_ewarm.tmp -icc_path "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\arm\bin\iccarm.exe"
   flags = E$:\coding\embedded\project\startup_ewarm.c -D PART_TM4C123GH6PM -o E$:\coding\embedded\project\Debug\Obj\ --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa --no_clustering --no_scheduling --debug --endian=little --cpu=Cortex-M4 -e --fpu=VFPv4_sp --dlib_config "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\arm\inc\c\DLib_Config_Normal.h" -I C$:\ti\TivaWare_C_Series-2.2.0.295\ -I C$:\ti\TivaWare_C_Series-2.2.0.295\inc\ -I C$:\ti\TivaWare_C_Series-2.2.0.295\driverlib\ -Ol --predef_macros E$:\coding\embedded\project\Debug\BrowseInfo\startup_ewarm.tmp
   rspfile_name = E$:\coding\embedded\project\Debug\BrowseInfo\startup_ewarm.xcl.rsp
+
+build E$:\coding\embedded\project\Debug\BrowseInfo\HMI_Comm.pbi : INDEXER E$:\coding\embedded\project\Debug\BrowseInfo\HMI_Comm.xcl |  $
+E$:\coding\embedded\project\HMI_Comm.c
+  flags = -out=E$:\coding\embedded\project\Debug\BrowseInfo\HMI_Comm.pbi -f E$:\coding\embedded\project\Debug\BrowseInfo\HMI_Comm.xcl
 
 build E$:\coding\embedded\project\Debug\BrowseInfo\main.pbi : INDEXER E$:\coding\embedded\project\Debug\BrowseInfo\main.xcl |  $
 E$:\coding\embedded\project\main.c
@@ -45,7 +54,8 @@ E$:\coding\embedded\project\startup_ewarm.c
 build E$:\coding\embedded\project\Debug\BrowseInfo\main.pbw : MAKEBROWSE E$:\coding\embedded\project\Debug\BrowseInfo\main.pbd
   flags = E$:\coding\embedded\project\Debug\BrowseInfo\main.pbd -output E$:\coding\embedded\project\Debug\BrowseInfo\main.pbw
 
-build E$:\coding\embedded\project\Debug\BrowseInfo\main.pbd : PDBLINK E$:\coding\embedded\project\Debug\BrowseInfo\main.pbi |  $
+build E$:\coding\embedded\project\Debug\BrowseInfo\main.pbd : PDBLINK E$:\coding\embedded\project\Debug\BrowseInfo\HMI_Comm.pbi |  $
+E$:\coding\embedded\project\Debug\BrowseInfo\main.pbi $
 E$:\coding\embedded\project\Debug\BrowseInfo\startup_ewarm.pbi
-  flags = -M E$:\coding\embedded\project\Debug\BrowseInfo\main.pbd E$:\coding\embedded\project\Debug\BrowseInfo\main.pbi E$:\coding\embedded\project\Debug\BrowseInfo\startup_ewarm.pbi
+  flags = -M E$:\coding\embedded\project\Debug\BrowseInfo\main.pbd E$:\coding\embedded\project\Debug\BrowseInfo\HMI_Comm.pbi E$:\coding\embedded\project\Debug\BrowseInfo\main.pbi E$:\coding\embedded\project\Debug\BrowseInfo\startup_ewarm.pbi
 
