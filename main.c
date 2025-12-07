@@ -51,8 +51,7 @@ int main() {
     // Should be handled so to match the .h file
     GPIOPinWrite(GPIO_PORTF_BASE, RED_LED | BLUE_LED | GREEN_LED, RED_LED);
   }
-
-{ 
+  {
   UART0_Init();
   // LCD_Init();
   // Keypad_Init();
@@ -62,4 +61,5 @@ int main() {
      //GetUserPassword(PasswordBuffer); // keypad module fills the array
      HMI_SendPassword(PasswordBuffer, 5);
    }
+  }
 }
