@@ -19,7 +19,33 @@ void buzzerOFF(){
     GPIO_PORTB_DATA_R |=0;
 
 }
+// this assumes that the interrupt is caused by PF4
+void GPIOF_InterruptInit(void){
+    SYSCTL_RCGCGPIO_R |= (1<<5);      
+    while((SYSCTL_PRGPIO_R & (1<<5)) == 0);
 
+    GPIO_PORTF_LOCK_R = 0x4C4F434B;   
+    GPIO_PORTF_CR_R |= 0x10;         
+
+    GPIO_PORTF_DIR_R &= ~(1<<4);      
+    GPIO_PORTF_DEN_R |= (1<<4);      
+    GPIO_PORTF_PUR_R |= (1<<4);      
+
+    GPIO_PORTF_IS_R &= ~(1<<4);      
+    GPIO_PORTF_IBE_R &= ~(1<<4);     
+    GPIO_PORTF_IEV_R &= ~(1<<4);      
+    GPIO_PORTF_ICR_R |= (1<<4);       
+    GPIO_PORTF_IM_R |= (1<<4);       
+
+    NVIC_EN0_R |= (1<<30);            
+}
+void GPIOF_Handler(void){
+    GPIO_PORTF_ICR_R |= (1<<4);       
+    if (GPIO_PORTB_DATA_R & (1<<2))
+        buzzerOFF();
+    else
+        buzzerON();
+}
 
 int main(void)
 {
