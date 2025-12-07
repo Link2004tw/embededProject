@@ -62,4 +62,17 @@ int main() {
      HMI_SendPassword(PasswordBuffer, 5);
    }
   }
+  
+  
+  
+  char key = KEYPAD_GetMappedKey();
+if(key)
+{
+    // Send key to display module
+    DISPLAY_HandleKey(key);
+
+    // Send key to UART module
+    UART_SendByte(key);
+}
+
 }
