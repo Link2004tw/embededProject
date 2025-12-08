@@ -2855,11 +2855,23 @@
         <file>
             <name>$PROJ_DIR$\APP\input_manager.h</name>
         </file>
+        <file>
+            <name>$PROJ_DIR$\APP\potentiometer_manager.c</name>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\APP\potentiometer_manager.h</name>
+        </file>
     </group>
     <group>
         <name>HAL</name>
         <group>
             <name>Keypad</name>
+            <file>
+                <name>$PROJ_DIR$\HAL\Keypad\dio.c</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\HAL\Keypad\dio.h</name>
+            </file>
             <file>
                 <name>$PROJ_DIR$\HAL\Keypad\keypad.c</name>
             </file>
@@ -2874,6 +2886,15 @@
             </file>
             <file>
                 <name>$PROJ_DIR$\HAL\LCD\lcd.h</name>
+            </file>
+        </group>
+        <group>
+            <name>Potentiometer</name>
+            <file>
+                <name>$PROJ_DIR$\HAL\Potentiometer\potentiometer.c</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\HAL\Potentiometer\potentiometer.h</name>
             </file>
         </group>
     </group>

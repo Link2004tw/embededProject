@@ -12,12 +12,20 @@
  *****************************************************************************/
 
 #include "lcd.h"
-#include "dio.h"
-#include "systick.h"
+#include "../Keypad/dio.h"
+#include "driverlib/sysctl.h"
 
 /******************************************************************************
- *                            Pin Definitions                                  *
+ *                         Delay Function                                      *
  ******************************************************************************/
+/* DelayMs: Delay for specified milliseconds using SysCtlDelay
+ * SysCtlDelay takes 3 clock cycles per count at 16MHz
+ * 1ms = 16,000 cycles, so 1ms = SysCtlDelay(16000/3) = SysCtlDelay(5333)
+ */
+static void DelayMs(uint32_t ms)
+{
+    SysCtlDelay((16000000 / 3 / 1000) * ms);
+}
 
 #define LCD_PORT        PORTB
 #define LCD_RS          PIN0

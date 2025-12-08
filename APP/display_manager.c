@@ -1,3 +1,4 @@
+#include <stdbool.h>
 #include "display_manager.h"
 #include "lcd.h"
 
