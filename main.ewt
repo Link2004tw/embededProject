@@ -2841,6 +2841,42 @@
             </data>
         </settings>
     </configuration>
+    <group>
+        <name>APP</name>
+        <file>
+            <name>$PROJ_DIR$\APP\display_manager.c</name>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\APP\display_manager.h</name>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\APP\input_manager.c</name>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\APP\input_manager.h</name>
+        </file>
+    </group>
+    <group>
+        <name>HAL</name>
+        <group>
+            <name>Keypad</name>
+            <file>
+                <name>$PROJ_DIR$\HAL\Keypad\keypad.c</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\HAL\Keypad\keypad.h</name>
+            </file>
+        </group>
+        <group>
+            <name>LCD</name>
+            <file>
+                <name>$PROJ_DIR$\HAL\LCD\lcd.c</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\HAL\LCD\lcd.h</name>
+            </file>
+        </group>
+    </group>
     <file>
         <name>$PROJ_DIR$\consts.h</name>
     </file>

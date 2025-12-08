@@ -1,9 +1,9 @@
 #include <stdint.h>
 #include "tm4c123gh6pm.h"
 
-#include "keypad.h"              // Frontend 1 (TA driver)
-#include "input_manager.h"       // Your mapped key function
-#include "display_manager.h"     // Frontend 2
+#include "HAL/Keypad/keypad.h"              // Frontend 1 (TA driver)
+#include "APP/input_manager.h"       // Your mapped key function
+#include "APP/display_manager.h"     // Frontend 2
 
 int main(void)
 {
