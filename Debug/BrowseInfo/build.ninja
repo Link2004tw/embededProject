@@ -1,0 +1,41 @@
+##IAR Ninja build file
+
+
+#Rules
+rule COMPILER_XCL
+  command = C$:\Users\Marti\OneDrive$ -$ University$ of$ East$ London\Attachments\common\bin\XclFileGenerator.exe $xclcommand -f "$rspfile_name"
+  description = IAR_NEW_TOOL+++COMPILER_XCL+++$in+++C$:\Users\Marti\OneDrive$ -$ University$ of$ East$ London\Attachments\common\bin\XclFileGenerator.exe $flags
+  rspfile = $rspfile_name
+  rspfile_content = $flags
+
+rule INDEXER
+  command = C$:\Users\Marti\OneDrive$ -$ University$ of$ East$ London\Attachments\common\bin\SourceIndexer.exe $flags
+  depfile = $out.dep
+  description = IAR_NEW_TOOL+++INDEXER+++$out+++C$:\Users\Marti\OneDrive$ -$ University$ of$ East$ London\Attachments\common\bin\SourceIndexer.exe $flags
+
+rule MAKEBROWSE
+  command = C$:\Users\Marti\OneDrive$ -$ University$ of$ East$ London\Attachments\common\bin\makeBrowseData.exe $flags
+  description = IAR_NEW_TOOL+++MAKEBROWSE+++$out+++C$:\Users\Marti\OneDrive$ -$ University$ of$ East$ London\Attachments\common\bin\makeBrowseData.exe $flags
+
+rule PDBLINK
+  command = C$:\Users\Marti\OneDrive$ -$ University$ of$ East$ London\Attachments\common\bin\PbdLink.exe $flags
+  description = IAR_NEW_TOOL+++PDBLINK+++$out+++C$:\Users\Marti\OneDrive$ -$ University$ of$ East$ London\Attachments\common\bin\PbdLink.exe $flags
+
+
+
+#Build steps
+build C$:\Users\Marti\OneDrive$ -$ University$ of$ East$ London\Desktop\Fall$ 2025\Intro$ to$ Embedded\Project\Debug\BrowseInfo\main.xcl : COMPILER_XCL 
+  xclcommand = -source_file "C$:\Users\Marti\OneDrive$ -$ University$ of$ East$ London\Desktop\Fall$ 2025\Intro$ to$ Embedded\Project\main.c" -xcl_file "C$:\Users\Marti\OneDrive$ -$ University$ of$ East$ London\Desktop\Fall$ 2025\Intro$ to$ Embedded\Project\Debug\BrowseInfo\main.xcl" -macro_file "C$:\Users\Marti\OneDrive$ -$ University$ of$ East$ London\Desktop\Fall$ 2025\Intro$ to$ Embedded\Project\Debug\BrowseInfo\main.tmp" -icc_path "C$:\Users\Marti\OneDrive$ -$ University$ of$ East$ London\Attachments\arm\bin\iccarm.exe"
+  flags = "C$:\Users\Marti\OneDrive$ -$ University$ of$ East$ London\Desktop\Fall$ 2025\Intro$ to$ Embedded\Project\main.c" -D PART_TM4C123GH6PM -o "C$:\Users\Marti\OneDrive$ -$ University$ of$ East$ London\Desktop\Fall$ 2025\Intro$ to$ Embedded\Project\Debug\Obj\\" --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa --no_clustering --no_scheduling --debug --endian=little --cpu=Cortex-M4 -e --fpu=VFPv4_sp --dlib_config "C$:\Users\Marti\OneDrive$ -$ University$ of$ East$ London\Attachments\arm\inc\c\DLib_Config_Full.h" -I C$:\ti\TivaWare_C_Series-2.2.0.295\inc\ -I C$:\ti\TivaWare_C_Series-2.2.0.295\driverlib\ -I C$:\ti\TivaWare_C_Series-2.2.0.295\ -Ol --predef_macros "C$:\Users\Marti\OneDrive$ -$ University$ of$ East$ London\Desktop\Fall$ 2025\Intro$ to$ Embedded\Project\Debug\BrowseInfo\main.tmp"
+  rspfile_name = C$:\Users\Marti\OneDrive$ -$ University$ of$ East$ London\Desktop\Fall$ 2025\Intro$ to$ Embedded\Project\Debug\BrowseInfo\main.xcl.rsp
+
+build C$:\Users\Marti\OneDrive$ -$ University$ of$ East$ London\Desktop\Fall$ 2025\Intro$ to$ Embedded\Project\Debug\BrowseInfo\main.pbi : INDEXER C$:\Users\Marti\OneDrive$ -$ University$ of$ East$ London\Desktop\Fall$ 2025\Intro$ to$ Embedded\Project\Debug\BrowseInfo\main.xcl |  $
+C$:\Users\Marti\OneDrive$ -$ University$ of$ East$ London\Desktop\Fall$ 2025\Intro$ to$ Embedded\Project\main.c
+  flags = "-out=C$:\Users\Marti\OneDrive$ -$ University$ of$ East$ London\Desktop\Fall$ 2025\Intro$ to$ Embedded\Project\Debug\BrowseInfo\main.pbi" -f "C$:\Users\Marti\OneDrive$ -$ University$ of$ East$ London\Desktop\Fall$ 2025\Intro$ to$ Embedded\Project\Debug\BrowseInfo\main.xcl"
+
+build C$:\Users\Marti\OneDrive$ -$ University$ of$ East$ London\Desktop\Fall$ 2025\Intro$ to$ Embedded\Project\Debug\BrowseInfo\Embedded_project.pbw : MAKEBROWSE C$:\Users\Marti\OneDrive$ -$ University$ of$ East$ London\Desktop\Fall$ 2025\Intro$ to$ Embedded\Project\Debug\BrowseInfo\Embedded_project.pbd
+  flags = "C$:\Users\Marti\OneDrive$ -$ University$ of$ East$ London\Desktop\Fall$ 2025\Intro$ to$ Embedded\Project\Debug\BrowseInfo\Embedded_project.pbd" -output "C$:\Users\Marti\OneDrive$ -$ University$ of$ East$ London\Desktop\Fall$ 2025\Intro$ to$ Embedded\Project\Debug\BrowseInfo\Embedded_project.pbw"
+
+build C$:\Users\Marti\OneDrive$ -$ University$ of$ East$ London\Desktop\Fall$ 2025\Intro$ to$ Embedded\Project\Debug\BrowseInfo\Embedded_project.pbd : PDBLINK C$:\Users\Marti\OneDrive$ -$ University$ of$ East$ London\Desktop\Fall$ 2025\Intro$ to$ Embedded\Project\Debug\BrowseInfo\main.pbi
+  flags = -M "C$:\Users\Marti\OneDrive$ -$ University$ of$ East$ London\Desktop\Fall$ 2025\Intro$ to$ Embedded\Project\Debug\BrowseInfo\Embedded_project.pbd" "C$:\Users\Marti\OneDrive$ -$ University$ of$ East$ London\Desktop\Fall$ 2025\Intro$ to$ Embedded\Project\Debug\BrowseInfo\main.pbi"
+
