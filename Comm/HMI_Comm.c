@@ -9,7 +9,7 @@
 #include "driverlib/uart.h"
 #include "driverlib/pin_map.h"
 #include "inc/hw_gpio.h"
-#include "UART.h"
+//#include "UART.h"
 
 void UART0_Init(void) { 
   // Enable UART0 and Port A
