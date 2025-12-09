@@ -4,7 +4,7 @@
  * main.c
  */
 /*changed file path of tm4c123gh6pm.h header file*/
-#include "/Users/admin/Downloads/TivaWare_C_Series-2.2.0.295/inc/tm4c123gh6pm.h"
+#include "tm4c123gh6pm.h"
 #include <stdint.h>
 void buzzerInit(){
     SYSCTL_RCGCGPIO_R|=(1<<1);
