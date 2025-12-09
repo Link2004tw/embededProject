@@ -15,6 +15,7 @@
 #define LCD_H
 
 #include <stdint.h>
+#include <stdbool.h>
 
 /******************************************************************************
  *                              LCD Commands                                   *

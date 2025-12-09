@@ -8,6 +8,7 @@
 #define KEYPAD_H
 
 #include <stdint.h>
+#include <stdbool.h>
 
 /*
  * Keypad mapping array declaration.
