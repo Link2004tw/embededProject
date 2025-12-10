@@ -1,10 +1,10 @@
 #include <stdint.h>
 #include "tm4c123gh6pm.h"
 
-#include "keypad.h"              // Frontend 1 (TA driver)
-#include "input_manager.h"       // Your mapped key function
-#include "display_manager.h"     // Frontend 2
-
+#include "./HAL/keypad/keypad.h"              // Frontend 1 (TA driver)
+#include "./APP/input_manager.h"       // Your mapped key function
+#include "./APP/display_manager.h"     // Frontend 2
+#include "driverlib/sysctl.h"
 int main(void)
 {
     /* ---------- Initialize all frontend modules ---------- */
@@ -14,7 +14,7 @@ int main(void)
 
     /* ---------- Optional: show a startup message ---------- */
     DISPLAY_ShowMessage("Frontend Ready");
-    SysTick_Wait10ms(100);   // 1 second (if SysTick exists)
+    SysCtlDelay(1000);   // 1 second (if SysTick exists)
 
     DISPLAY_ClearScreen();
     DISPLAY_ShowMainMenu();  // Show menu while testing
@@ -34,7 +34,7 @@ int main(void)
             // LCD_WriteChar(key);
 
             /* Optional: Wait a bit to avoid flickering */
-            SysTick_Wait10ms(5);
+            SysCtlDelay(50);
         }
     }
 }

@@ -5,7 +5,7 @@
  ******************************************************************************/
 
 #include "keypad.h"
-#include "../Utils/dio.h"
+#include "../../Utils/dio.h"
 
 /*
  * Keypad mapping array.
