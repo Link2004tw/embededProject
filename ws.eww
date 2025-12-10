@@ -3,5 +3,8 @@
     <project>
         <path>$WS_DIR$\Embedded_project.ewp</path>
     </project>
+    <project>
+        <path>$WS_DIR$\..\..\..\..\..\Downloads\embededProject-frontend-test\embededProject-frontend-test\main.ewp</path>
+    </project>
     <batchBuild />
 </workspace>

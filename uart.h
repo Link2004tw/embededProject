@@ -6,7 +6,7 @@
 extern volatile uint8_t rxData;   // Last received byte
 extern volatile uint8_t rxFlag;   // Data received flag
 
-void UART0_Init(void);
-void UART0_Handler(void);
+void UART1_Init(void);
+void UART1_Handler(void);
 
 #endif

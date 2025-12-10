@@ -1,12 +1,12 @@
 #include <stdint.h>
-#include "uart.h"   // Gives us UART0_Init(), rxData, rxFlag
+#include "uart.h"   // Gives us UART1_Init(), rxData, rxFlag
 
 int main(void)
 {
     uint8_t password[5];   // Buffer to store 5-digit password
     uint8_t count = 0;     // Tracks how many characters were received so far
 
-    UART0_Init();          // Initialize UART + interrupts
+    UART1_Init();          // Initialize UART + interrupts
 
     while(1)
     {

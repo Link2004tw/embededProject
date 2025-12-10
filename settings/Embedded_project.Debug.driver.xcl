@@ -1,16 +1,10 @@
 "--endian=little" 
 
-"--cpu=Cortex-M4" 
+"--cpu=Cortex-M3" 
 
-"--fpu=VFPv4_SP" 
-
-"-p" 
-
-"C:\Users\Marti\OneDrive - University of East London\Attachments\arm\CONFIG\debugger\TexasInstruments\TM4C123GH6PM.ddf" 
+"--fpu=None" 
 
 "--semihosting" 
-
-"--device=TM4C123GH6PM" 
 
 "--multicore_nr_of_cores=1" 
 
