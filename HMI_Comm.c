@@ -39,3 +39,41 @@ void HMI_SendPassword(uint8_t* pass, uint8_t length) {
   for(uint8_t i = 0; i < length; i++) {
     UART_SendByte(pass[i]); } UART_SendByte('#'); // end marker
 }
+
+// --- New UART1 Helper Send Function ---
+/**
+ * @brief Sends a single byte of data over UART1.
+ *
+ * This function waits until the UART1 transmit buffer is ready and
+ * then sends the byte.
+ *
+ * @param data The 8-bit data to send.
+ */
+void UART1_SendByte(uint8_t data) {
+    // UARTCharPut is a DriverLib function. It targets UART1_BASE,
+    // which is defined by the TivaWare library.
+    UARTCharPut(UART1_BASE, data);
+}
+
+// --- Password Sending Function (via UART1) ---
+/**
+ * @brief Sends a password string over UART1, followed by an end marker.
+ *
+ * @param pass Pointer to the array of password bytes (uint8_t).
+ * @param length The length of the password array.
+ */
+void HMI_SendPassword_UART1(uint8_t* pass, uint8_t length) {
+    // Check for valid pointer and length
+    if (pass == NULL || length == 0) {
+        return;
+    }
+
+    // Loop through and send each byte of the password
+    for(uint8_t i = 0; i < length; i++) {
+        // Use the UART1-specific send function
+        UART1_SendByte(pass[i]);
+    }
+
+    // Send the end marker after the password
+    UART1_SendByte('#');
+}
