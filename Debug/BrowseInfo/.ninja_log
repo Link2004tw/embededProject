@@ -116,3 +116,6 @@
 188	249	7869282038366943	C:/Users/patri/Desktop/embedded/embededProject/Debug/BrowseInfo/main_part2.pbi	c055a4eb2a440e7f
 252	311	7869282039082066	C:/Users/patri/Desktop/embedded/embededProject/Debug/BrowseInfo/main.pbd	b0703c930aeb1fd5
 315	898	7869282044771549	C:/Users/patri/Desktop/embedded/embededProject/Debug/BrowseInfo/main.pbw	2f0dfafc66ed2f3d
+7	1851	7870814260000000	E:/coding/embedded/project/Debug/BrowseInfo/APP/potentiometer_manager.xcl	d1892e88aa01d6d2
+136	1869	7870814260000000	E:/coding/embedded/project/Debug/BrowseInfo/HAL/Potentiometer/potentiometer.xcl	b1d963e0df3d219c
+128	1885	7870814260000000	E:/coding/embedded/project/Debug/BrowseInfo/HAL/Keypad/dio.xcl	96d3ac20672230d3
