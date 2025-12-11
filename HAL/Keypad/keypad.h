@@ -14,7 +14,11 @@ extern const char keypad_codes[4][4];
 /* Keypad dimensions */
 #define KEYPAD_ROWS 4
 #define KEYPAD_COLS 4
+#define KEYPAD_COL_PORT PORTC
+#define KEYPAD_COL_PINS {PIN4, PIN5, PIN6, PIN7} // PC4-PC7
 
+#define KEYPAD_ROW_PORT PORTA
+#define KEYPAD_ROW_PINS {PIN2, PIN3, PIN4, PIN5} // PA2-PA5
 /*
  * Initializes the keypad GPIO pins and configures interrupts for row pins.
  * Must be called before using Keypad_GetKey.

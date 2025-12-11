@@ -1,93 +1,3 @@
-// #include "keypad.h"
-
-// const char keypad_codes[4][4] = {
-//     {'1','2','3','A'},
-//     {'4','5','6','B'},
-//     {'7','8','9','C'},
-//     {'*','0','#','D'}
-// };
-
-// #define KEYPAD_COL_PORT PORTC
-// #define KEYPAD_ROW_PIN_2  2
-// #define KEYPAD_ROW_PIN_3  3
-// #define KEYPAD_ROW_PIN_4  4
-// #define KEYPAD_ROW_PIN_5  5
-
-
-// #define KEYPAD_ROW_PORT PORTA
-// #define KEYPAD_COL_PIN_4  4
-// #define KEYPAD_COL_PIN_5  5
-// #define KEYPAD_COL_PIN_6  6
-// #define KEYPAD_COL_PIN_7  7
-
-// static volatile char last_key_pressed = 0;
-
-// void Keypad_Init(void) {
-//     uint8_t row_pins[4] = KEYPAD_ROW_PINS;
-//     uint8_t col_pins[4] = KEYPAD_COL_PINS;
-
-//     // Configure rows (PortA) as input with pull-up and enable interrupt
-//     for (uint8_t i = 0; i < 4; i++) {
-//         DIO_Init(KEYPAD_ROW_PORT, row_pins[i], INPUT);
-//         DIO_SetPUR(KEYPAD_ROW_PORT, row_pins[i], ENABLE);
-//         // Enable interrupt for falling edge (key press)
-//         GPIO_PORTA_IS_R &= ~(1 << row_pins[i]);   // Edge-sensitive
-//         GPIO_PORTA_IBE_R &= ~(1 << row_pins[i]);  // Single edge
-//         GPIO_PORTA_IEV_R &= ~(1 << row_pins[i]);  // Falling edge
-//         GPIO_PORTA_ICR_R = (1 << row_pins[i]);    // Clear any prior interrupt
-//         GPIO_PORTA_IM_R |= (1 << row_pins[i]);    // Unmask interrupt
-//     }
-//     NVIC_EN0_R |= (1 << 0); // Enable IRQ for PortA (IRQ#0)
-
-//     // Configure columns (PortC) as output and set HIGH
-//     for (uint8_t i = 0; i < 4; i++) {
-//         DIO_Init(KEYPAD_COL_PORT, col_pins[i], OUTPUT);
-//         DIO_WritePin(KEYPAD_COL_PORT, col_pins[i], HIGH);
-//     }
-// }
-
-// char Keypad_GetKey(void) {
-//     char key = last_key_pressed;
-//     last_key_pressed = 0; // Clear after read
-//     return key;
-// }
-
-// // This should be called from the GPIO PortA interrupt handler
-// void Keypad_RowISR(void) {
-//     uint8_t row_pins[4] = KEYPAD_ROW_PINS;
-//     uint8_t col_pins[4] = KEYPAD_COL_PINS;
-
-//     // Find which row triggered the interrupt
-//     uint32_t status = GPIO_PORTA_MIS_R;
-//     for (uint8_t row = 0; row < 4; row++) {
-//         if (status & (1 << row_pins[row])) {
-//             // Scan columns to find which key is pressed
-//             for (uint8_t col = 0; col < 4; col++) {
-//                 // Set all columns HIGH
-//                 for (uint8_t c = 0; c < 4; c++) {
-//                     DIO_WritePin(KEYPAD_COL_PORT, col_pins[c], HIGH);
-//                 }
-//                 // Set current column LOW
-//                 DIO_WritePin(KEYPAD_COL_PORT, col_pins[col], LOW);
-//                 for (volatile int d = 0; d < 100; d++); // Small delay
-//                 if (DIO_ReadPin(KEYPAD_ROW_PORT, row_pins[row]) == LOW) {
-//                     last_key_pressed = keypad_codes[row][col];
-//                     break;
-//                 }
-//             }
-//             GPIO_PORTA_ICR_R = (1 << row_pins[row]); // Clear interrupt
-//         }
-//     }
-// }
-
-// // In your main interrupt vector table, call Keypad_RowISR() from PortA ISR
-// // Example:
-// void GPIOPortA_Handler(void) {
-//      Keypad_RowISR();
-// }
-
-
-
 /*****************************************************************************
  * File: keypad.c
  * Description: 4x4 Keypad Driver for TM4C123GH6PM
@@ -113,11 +23,7 @@ const char keypad_codes[4][4] = {
  * Columns are connected to PortC pins PC4-PC7 (outputs).
  * Rows are connected to PortA pins PA2-PA5 (inputs with pull-up).
  */
-#define KEYPAD_COL_PORT PORTC
-#define KEYPAD_COL_PINS {PIN4, PIN5, PIN6, PIN7} // PC4-PC7
 
-#define KEYPAD_ROW_PORT PORTA
-#define KEYPAD_ROW_PINS {PIN2, PIN3, PIN4, PIN5} // PA2-PA5
 
 
 /*
@@ -154,29 +60,75 @@ void Keypad_Init(void) {
  *   3. Wait for key release (debounce).
  *   4. Return the mapped character from keypad_codes.
  */
+//char Keypad_GetKey(void) {
+ //   uint8_t row_pins[4] = KEYPAD_ROW_PINS;
+ //   uint8_t col_pins[4] = KEYPAD_COL_PINS;
+ //   for (uint8_t col = 0; col < 4; col++) {
+ //       // Set all columns HIGH (inactive)
+ //       for (uint8_t c = 0; c < 4; c++) {
+ //           DIO_WritePin(KEYPAD_COL_PORT, col_pins[c], HIGH);
+ //       }
+ //       // Set current column LOW (active)
+ //       DIO_WritePin(KEYPAD_COL_PORT, col_pins[col], LOW);
+        // Small delay for signal to settle
+ //       for (volatile int d = 0; d < 100; d++);
+        // Scan rows for key press
+ //       for (uint8_t row = 0; row < 4; row++) {
+ //           uint8_t pin_val = DIO_ReadPin(KEYPAD_ROW_PORT, row_pins[row]);
+ //           if (pin_val == LOW) {
+                // Key detected at (col, row)
+                // Wait for key release (debounce)
+  //              while (DIO_ReadPin(KEYPAD_ROW_PORT, row_pins[row]) == LOW);
+                // Return the mapped character from keypad_codes
+  //              return keypad_codes[row][col];
+//            }
+//        }
+//    }
+//    return 0; // No key pressed
+//}
 char Keypad_GetKey(void) {
     uint8_t row_pins[4] = KEYPAD_ROW_PINS;
     uint8_t col_pins[4] = KEYPAD_COL_PINS;
+    char pressed_key = 0; // Variable to hold the detected key
+
     for (uint8_t col = 0; col < 4; col++) {
+        // Step 1: Drive one column LOW
         // Set all columns HIGH (inactive)
         for (uint8_t c = 0; c < 4; c++) {
             DIO_WritePin(KEYPAD_COL_PORT, col_pins[c], HIGH);
         }
         // Set current column LOW (active)
         DIO_WritePin(KEYPAD_COL_PORT, col_pins[col], LOW);
-        // Small delay for signal to settle
-        for (volatile int d = 0; d < 100; d++);
-        // Scan rows for key press
+
+        // Small delay for signal to settle and pre-debounce
+        for (volatile int d = 0; d < 100; d++); // ~100 loop delay (depends on clock)
+
+        // Step 2: Scan rows for key press
         for (uint8_t row = 0; row < 4; row++) {
             uint8_t pin_val = DIO_ReadPin(KEYPAD_ROW_PORT, row_pins[row]);
+
             if (pin_val == LOW) {
-                // Key detected at (col, row)
-                // Wait for key release (debounce)
-                while (DIO_ReadPin(KEYPAD_ROW_PORT, row_pins[row]) == LOW);
-                // Return the mapped character from keypad_codes
-                return keypad_codes[row][col];
+                // Key detected at (row, col) - CONFIRM PRESS
+                pressed_key = keypad_codes[row][col];
+                
+                // *** CRITICAL CHANGE: Handle Key Release Blocking ***
+
+                // Wait until the key is released (pin goes back to HIGH)
+                // This is a blocking loop that ensures the same key is not 
+                // re-registered until the finger is lifted.
+                while (DIO_ReadPin(KEYPAD_ROW_PORT, row_pins[row]) == LOW) {
+                    // Optional: Add a small delay here to prevent unnecessary fast polling
+                    for (volatile int d_rel = 0; d_rel < 50; d_rel++);
+                }
+                
+                // Now that the key has been pressed AND released, 
+                // we return the key value. The function will not find this 
+                // key pressed again on the next call because the loop is done.
+                return pressed_key; 
             }
         }
     }
-    return 0; // No key pressed
+    
+    // Step 3: No key pressed, return 0
+    return 0; 
 }

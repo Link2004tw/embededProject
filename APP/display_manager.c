@@ -148,18 +148,33 @@ void DISPLAY_CHANGETIMEOUT(void){
    PotentiometerManager_HandleTimeoutConfig();
 }
 
-
-void DISPLAY_OPEN(void){
-    LCD_Clear();
+/*****************************************************************************
+ * Function: DISPLAY_OLD_PASSWORD
+ * 
+ * Description:
+ *   Prompts user to enter their old/current password for verification.
+ *   Displays asterisks on LCD for each character entered.
+ *   Compares with saved password.
+ * 
+ * Parameters: None
+ * 
+ * Returns:
+ *   true  - Password is correct
+ *   false - Password is incorrect
+ *****************************************************************************/
+void DISPLAY_OLD_PASSWORD(void)
+{
     char password[5] = "";
     char savedPassword[5] = "1234";  // Load from storage (replace with actual storage read)
     short pass_index = 0;
+    char key = 0;
     
+    LCD_Clear();
     LCD_WriteString("Enter old password");
     LCD_SetCursor(1, 0);
     
     for(pass_index = 0; pass_index < 4; pass_index++){
-        char key = InputManager_GetKey();
+        key = InputManager_GetKey();
         while(key == 0) {  
             key = InputManager_GetKey();
             SysCtlDelay(10000);
@@ -169,34 +184,163 @@ void DISPLAY_OPEN(void){
     }
     password[4] = '\0';
     
-    
     if(strcmp(password, savedPassword) != 0){
         LCD_Clear();
         LCD_WriteString("Incorrect password");
         SysCtlDelay(10000000);
-        return;
+        //return false;
     }
     
+    //return true;
+}
+
+/*****************************************************************************
+ * Function: DISPLAY_NEW_PASSWORD
+ * 
+ * Description:
+ *   Prompts user to enter a new password twice for confirmation.
+ *   Verifies both entries match.
+ *   Displays asterisks on LCD for each character entered.
+ * 
+ * Parameters: None
+ * 
+ * Returns:
+ *   true  - New password successfully entered and confirmed
+ *   false - Passwords don't match
+ *****************************************************************************/
+void DISPLAY_NEW_PASSWORD(void)
+{
+    char newPassword[5] = "";
+    char confirmPassword[5] = "";
+    short pass_index = 0;
+    char key = 0;
     
-    LCD_Clear();
-    LCD_WriteString("Enter new pass");
+    /* Get new password */
+    while(1){
+        LCD_Clear();
+        LCD_WriteString("Enter new pass");
     LCD_SetCursor(1, 0);
     
-    for(pass_index = 0; pass_index < 4; pass_index++){
-        char key = InputManager_GetKey();
+for(pass_index = 0; pass_index < 4; pass_index++){
+        key = InputManager_GetKey();
         while(key == 0) {
             key = InputManager_GetKey();
             SysCtlDelay(10000);
         }
-        password[pass_index] = key;
+        newPassword[pass_index] = key;
         LCD_WriteChar('*');
     }
-    password[4] = '\0';
+    newPassword[4] = '\0';
     
+    /* Get confirmation password */
+    LCD_Clear();
+    LCD_WriteString("Confirm new pass");
+    LCD_SetCursor(1, 0);
+    
+    for(pass_index = 0; pass_index < 4; pass_index++){
+        key = InputManager_GetKey();
+        while(key == 0) {
+            key = InputManager_GetKey();
+            SysCtlDelay(10000);
+        }
+        confirmPassword[pass_index] = key;
+        LCD_WriteChar('*');
+    }
+    confirmPassword[4] = '\0';
+    
+    /* Verify passwords match */
+    if(strcmp(newPassword, confirmPassword) != 0){
+        LCD_Clear();
+        LCD_WriteString("Passwords don't");
+        LCD_SetCursor(1, 0);
+        LCD_WriteString("match");
+        SysCtlDelay(10000000);
+        LCD_Clear();
+        //return false;
+    }else{
+        break;
+    }
+    }
+    
+    
+    /* Success message */
     LCD_Clear();
     LCD_WriteString("Password Changed");
-    SysCtlDelay(10000000);  
+    return;
+    //SysCtlDelay(10000000);
+    //return true;
 }
+
+/*****************************************************************************
+ * Function: DISPLAY_OPEN (refactored)
+ * 
+ * Description:
+ *   Handles the door open flow by verifying old password,
+ *   then allowing user to set a new password.
+ * 
+ * Parameters: None
+ * Returns: None
+ *****************************************************************************/
+short haspass = false;//dummy for the check that it is the first password will be take from the back
+ void DISPLAY_OPEN(void)
+{
+    /* Verify old password first */
+    if(haspass){
+        DISPLAY_OLD_PASSWORD();
+    }else{
+        DISPLAY_NEW_PASSWORD();
+    }
+    
+    /* Get and confirm new password */
+}
+// void DISPLAY_OPEN(void){
+//     LCD_Clear();
+//     char password[5] = "";
+//     char savedPassword[5] = "1234";  // Load from storage (replace with actual storage read)
+//     short pass_index = 0;
+    
+//     LCD_WriteString("Enter old password");
+//     LCD_SetCursor(1, 0);
+    
+//     for(pass_index = 0; pass_index < 4; pass_index++){
+//         char key = InputManager_GetKey();
+//         while(key == 0) {  
+//             key = InputManager_GetKey();
+//             SysCtlDelay(10000);
+//         }
+//         password[pass_index] = key;
+//         LCD_WriteChar('*');
+//     }
+//     password[4] = '\0';
+    
+    
+//     if(strcmp(password, savedPassword) != 0){
+//         LCD_Clear();
+//         LCD_WriteString("Incorrect password");
+//         SysCtlDelay(10000000);
+//         return;
+//     }
+    
+    
+//     LCD_Clear();
+//     LCD_WriteString("Enter new pass");
+//     LCD_SetCursor(1, 0);
+    
+//     for(pass_index = 0; pass_index < 4; pass_index++){
+//         char key = InputManager_GetKey();
+//         while(key == 0) {
+//             key = InputManager_GetKey();
+//             SysCtlDelay(10000);
+//         }
+//         password[pass_index] = key;
+//         LCD_WriteChar('*');
+//     }
+//     password[4] = '\0';
+    
+//     LCD_Clear();
+//     LCD_WriteString("Password Changed");
+//     SysCtlDelay(10000000);  
+// }
 
 void DISPLAY_ERROR(void){
     LCD_Clear();

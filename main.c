@@ -29,7 +29,7 @@ int main(void)
         {
             /* Display the character on LCD */
             
-            DISPLAY_HandleKey(key);
+            //DISPLAY_HandleKey(key);
             if(key=='+'){
               mode =1;
             }else if(key=='-'){
@@ -44,9 +44,16 @@ int main(void)
               DISPLAY_ClearScreen();
               DISPLAY_ShowMainMenu();  // Show menu while testing
             }
-            
-            if(mode == 1){
+            if(mode ==0){
+              DISPLAY_ClearScreen();
+              DISPLAY_ShowMainMenu();  // Show menu while testing
+            }
+            else if(mode == 1){
               DISPLAY_OPEN();
+              //DISPLAY_ShowMessage("hiiiii");
+              mode = 0;
+            }else if(mode == 2){
+              DISPLAY_CHANGEPASSWORD();
             }
     
             /* Debug: If needed, print raw or mapped value on second line */
