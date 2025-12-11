@@ -1,6 +1,6 @@
 ###############################################################################
 #
-# IAR ELF Linker V9.10.1.308/W64 for ARM                  10/Dec/2025  22:07:36
+# IAR ELF Linker V9.10.1.308/W64 for ARM                  11/Dec/2025  18:13:24
 # Copyright 2007-2021 IAR Systems AB.
 #
 #    Output file  =  E:\coding\embedded\embededProject\Debug\Exe\main.out
@@ -76,40 +76,48 @@ do not initialize { rw section .noinit };
   .intvec          const            0x0  0x26c  startup_ewarm.o [1]
                                 - 0x26c  0x26c
 
-"P1":                                    0xafc
+"P1":                                    0xe24
   .text            ro code        0x26c  0x4d8  dio.o [7]
-  .text            ro code        0x744  0x1e8  keypad.o [4]
-  .text            ro code        0x92c  0x1ce  lcd.o [5]
-  .text            ro code        0xafc    0x8  sysctl.o [9]
-  .text            ro code        0xb04   0x6c  display_manager.o [2]
-  .text            ro code        0xb70   0x48  main.o [1]
-  .text            ro code        0xbb8   0x44  input_manager.o [2]
-  .text            ro code        0xbfc   0x38  zero_init3.o [11]
-  .text            ro code        0xc34   0x28  data_init.o [11]
-  .text            ro code        0xc5c   0x22  startup_ewarm.o [1]
-  .text            ro code        0xc80   0x1c  cstartup_M.o [11]
-  .text            ro code        0xc9c   0x22  fpinit_M.o [10]
-  .text            ro code        0xcc0   0x1e  cmain.o [11]
-  .text            ro code        0xcde    0x4  low_level_init.o [8]
-  .text            ro code        0xce2    0x4  exit.o [8]
-  .text            ro code        0xce8    0xa  cexit.o [11]
-  .text            ro code        0xcf4   0x14  exit.o [12]
-  .iar.init_table  const          0xd08   0x10  - Linker created -
-  .rodata          const          0xd18   0x18  display_manager.o [2]
-  .rodata          const          0xd30   0x10  keypad.o [4]
-  .rodata          const          0xd40   0x10  main.o [1]
-  .rodata          const          0xd50    0x8  display_manager.o [2]
-  .rodata          const          0xd58    0x4  keypad.o [4]
-  .rodata          const          0xd5c    0x4  keypad.o [4]
-  .rodata          const          0xd60    0x4  keypad.o [4]
-  .rodata          const          0xd64    0x4  keypad.o [4]
-  .rodata          const          0xd68    0x0  zero_init3.o [11]
-                                - 0xd68  0xafc
+  .text            ro code        0x744  0x1ce  lcd.o [5]
+  .text            ro code        0x914  0x1ac  sysctl.o [9]
+  .text            ro code        0xac0  0x188  display_manager.o [2]
+  .text            ro code        0xc48    0x6  ABImemclr.o [11]
+  .text            ro code        0xc4e   0x44  input_manager.o [2]
+  .text            ro code        0xc94   0x12  strcmp.o [11]
+  .text            ro code        0xca8   0x5e  ABImemset.o [11]
+  .text            ro code        0xd08  0x12c  keypad.o [4]
+  .text            ro code        0xe34   0x8c  main.o [1]
+  .text            ro code        0xec0   0x38  zero_init3.o [11]
+  .text            ro code        0xef8   0x28  data_init.o [11]
+  .text            ro code        0xf20   0x22  startup_ewarm.o [1]
+  .text            ro code        0xf44   0x1c  cstartup_M.o [11]
+  .text            ro code        0xf60   0x22  fpinit_M.o [10]
+  .text            ro code        0xf84   0x1e  cmain.o [11]
+  .text            ro code        0xfa2    0x4  low_level_init.o [8]
+  .text            ro code        0xfa6    0x4  exit.o [8]
+  .text            ro code        0xfac    0xa  cexit.o [11]
+  .text            ro code        0xfb8   0x14  exit.o [12]
+  .iar.init_table  const          0xfcc   0x10  - Linker created -
+  .rodata          const          0xfdc   0x18  display_manager.o [2]
+  .rodata          const          0xff4   0x14  display_manager.o [2]
+  .rodata          const         0x1008   0x14  display_manager.o [2]
+  .rodata          const         0x101c   0x14  display_manager.o [2]
+  .rodata          const         0x1030   0x10  display_manager.o [2]
+  .rodata          const         0x1040   0x10  display_manager.o [2]
+  .rodata          const         0x1050   0x10  keypad.o [4]
+  .rodata          const         0x1060   0x10  main.o [1]
+  .rodata          const         0x1070    0x8  display_manager.o [2]
+  .rodata          const         0x1078    0x8  display_manager.o [2]
+  .rodata          const         0x1080    0x4  keypad.o [4]
+  .rodata          const         0x1084    0x4  keypad.o [4]
+  .rodata          const         0x1088    0x4  keypad.o [4]
+  .rodata          const         0x108c    0x4  keypad.o [4]
+  .rodata          const         0x1090    0x0  zero_init3.o [11]
+                               - 0x1090  0xe24
 
 "P2", part 1 of 2:                         0x4
   .bss             zero     0x2000'0000    0x1  display_manager.o [2]
-  .bss             zero     0x2000'0001    0x1  keypad.o [4]
-                          - 0x2000'0002    0x2
+                          - 0x2000'0001    0x1
 
 "P2", part 2 of 2:                       0x200
   .noinit          uninit   0x2000'0004  0x200  startup_ewarm.o [1]
@@ -119,7 +127,7 @@ Unused ranges:
 
          From           To      Size
          ----           --      ----
-        0xd68     0x3'ffff  0x3'f298
+       0x1090     0x3'ffff  0x3'ef70
   0x2000'0204  0x2000'7fff    0x7dfc
 
 
@@ -130,8 +138,8 @@ Unused ranges:
           Address      Size
           -------      ----
 Zero (__iar_zero_init3)
-    1 destination range, total size 0x2:
-          0x2000'0000   0x2
+    1 destination range, total size 0x1:
+          0x2000'0000   0x1
 
 
 
@@ -146,25 +154,25 @@ command line/config:
     Total:
 
 E:\coding\embedded\embededProject\Debug\Obj: [1]
-    main.o                  72       16
+    main.o                 140       16
     startup_ewarm.o         34      620      512
     --------------------------------------------
-    Total:                 106      636      512
+    Total:                 174      636      512
 
 E:\coding\embedded\embededProject\Debug\Obj\APP: [2]
-    display_manager.o      108       32        1
+    display_manager.o      392      132        1
     input_manager.o         68
     --------------------------------------------
-    Total:                 176       32        1
+    Total:                 460      132        1
 
 E:\coding\embedded\embededProject\Debug\Obj\Comm: [3]
     --------------------------------------------
     Total:
 
 E:\coding\embedded\embededProject\Debug\Obj\HAL\Keypad: [4]
-    keypad.o               488       32        1
+    keypad.o               300       32
     --------------------------------------------
-    Total:                 488       32        1
+    Total:                 300       32
 
 E:\coding\embedded\embededProject\Debug\Obj\HAL\LCD: [5]
     lcd.o                  462
@@ -187,9 +195,9 @@ dl7M_tln.a: [8]
     Total:                   8
 
 driverlib.a: [9]
-    sysctl.o                 8
+    sysctl.o               428
     --------------------------------------------
-    Total:                   8
+    Total:                 428
 
 m7M_tls.a: [10]
     fpinit_M.o              34
@@ -197,23 +205,26 @@ m7M_tls.a: [10]
     Total:                  34
 
 rt7M_tl.a: [11]
+    ABImemclr.o              6
+    ABImemset.o             94
     cexit.o                 10
     cmain.o                 30
     cstartup_M.o            28
     data_init.o             40
+    strcmp.o                18
     zero_init3.o            56
     --------------------------------------------
-    Total:                 164
+    Total:                 282
 
 shb_l.a: [12]
     exit.o                  20
     --------------------------------------------
     Total:                  20
 
-    Gaps                    10
+    Gaps                    16
     Linker created                   16
 ------------------------------------------------
-    Grand Total:         2'716      716      514
+    Grand Total:         3'424      816      513
 
 
 *******************************************************************************
@@ -222,59 +233,63 @@ shb_l.a: [12]
 
 Entry                       Address   Size  Type      Object
 -----                       -------   ----  ----      ------
-.iar.init_table$$Base         0xd08          --   Gb  - Linker created -
-.iar.init_table$$Limit        0xd18          --   Gb  - Linker created -
-?main                         0xcc1         Code  Gb  cmain.o [11]
+.iar.init_table$$Base         0xfcc          --   Gb  - Linker created -
+.iar.init_table$$Limit        0xfdc          --   Gb  - Linker created -
+?main                         0xf85         Code  Gb  cmain.o [11]
 DIO_Init                      0x26d  0x29a  Code  Gb  dio.o [7]
 DIO_ReadPin                   0x5af   0x48  Code  Gb  dio.o [7]
 DIO_SetPUR                    0x5f7   0x9c  Code  Gb  dio.o [7]
 DIO_WritePin                  0x507   0xa8  Code  Gb  dio.o [7]
-DISPLAY_ClearScreen           0xb53   0x10  Code  Gb  display_manager.o [2]
-DISPLAY_HandleKey             0xb0d   0x1a  Code  Gb  display_manager.o [2]
-DISPLAY_Init                  0xb05    0x8  Code  Gb  display_manager.o [2]
-DISPLAY_ShowMainMenu          0xb27   0x1c  Code  Gb  display_manager.o [2]
-DISPLAY_ShowMessage           0xb43   0x10  Code  Gb  display_manager.o [2]
-DelayMs                       0x92d    0xe  Code  Lc  lcd.o [5]
-FaultISR                      0xc77    0x2  Code  Lc  startup_ewarm.o [1]
-GPIOPortA_Handler             0x925    0x8  Code  Gb  keypad.o [4]
-InputManager_GetKey           0xbe3   0x1a  Code  Gb  input_manager.o [2]
-IntDefaultHandler             0xc79    0x2  Code  Lc  startup_ewarm.o [1]
-Keypad_GetKey                 0x829    0xe  Code  Gb  keypad.o [4]
-Keypad_Init                   0x745   0xe4  Code  Gb  keypad.o [4]
-Keypad_RowISR                 0x837   0xb8  Code  Gb  keypad.o [4]
-LCD_Clear                     0xab1   0x10  Code  Gb  lcd.o [5]
-LCD_EnablePulse               0x93b   0x24  Code  Lc  lcd.o [5]
-LCD_Init                      0x99f   0xaa  Code  Gb  lcd.o [5]
-LCD_Send4Bits                 0x95f   0x40  Code  Lc  lcd.o [5]
-LCD_SendCommand               0xa49   0x3e  Code  Gb  lcd.o [5]
-LCD_SendData                  0xa87   0x2a  Code  Gb  lcd.o [5]
-LCD_SetCursor                 0xac1   0x1a  Code  Gb  lcd.o [5]
-LCD_WriteChar                 0xaf1    0xa  Code  Gb  lcd.o [5]
-LCD_WriteString               0xadb   0x16  Code  Gb  lcd.o [5]
-MapKey                        0xbb9   0x2a  Code  Lc  input_manager.o [2]
-NmiSR                         0xc75    0x2  Code  Lc  startup_ewarm.o [1]
-PORTF_Handler                 0xc7d    0x2  Code  Gb  startup_ewarm.o [1]
-Region$$Table$$Base           0xd08          --   Gb  - Linker created -
-Region$$Table$$Limit          0xd18          --   Gb  - Linker created -
-ResetISR                      0xc5d   0x14  Code  Gb  startup_ewarm.o [1]
-SysCtlDelay                   0xafd    0x8  Code  Gb  sysctl.o [9]
-__cmain                       0xcc1         Code  Gb  cmain.o [11]
-__exit                        0xcf5   0x14  Code  Gb  exit.o [12]
-__iar_data_init3              0xc35   0x28  Code  Gb  data_init.o [11]
-__iar_init_vfp                0xc9d         Code  Gb  fpinit_M.o [10]
-__iar_program_start           0xc81         Code  Gb  cstartup_M.o [11]
-__iar_zero_init3              0xbfd   0x38  Code  Gb  zero_init3.o [11]
-__low_level_init              0xcdf    0x4  Code  Gb  low_level_init.o [8]
+DISPLAY_ClearScreen           0xb0f   0x10  Code  Gb  display_manager.o [2]
+DISPLAY_ERROR                 0xc0f    0xe  Code  Gb  display_manager.o [2]
+DISPLAY_HandleKey             0xac9   0x1a  Code  Gb  display_manager.o [2]
+DISPLAY_Init                  0xac1    0x8  Code  Gb  display_manager.o [2]
+DISPLAY_OPEN                  0xb1f   0xf0  Code  Gb  display_manager.o [2]
+DISPLAY_ShowMainMenu          0xae3   0x1c  Code  Gb  display_manager.o [2]
+DISPLAY_ShowMessage           0xaff   0x10  Code  Gb  display_manager.o [2]
+DelayMs                       0x745    0xe  Code  Lc  lcd.o [5]
+FaultISR                      0xf3b    0x2  Code  Lc  startup_ewarm.o [1]
+InputManager_GetKey           0xc79   0x1a  Code  Gb  input_manager.o [2]
+IntDefaultHandler             0xf3d    0x2  Code  Lc  startup_ewarm.o [1]
+Keypad_GetKey                 0xd79   0xa6  Code  Gb  keypad.o [4]
+Keypad_Init                   0xd09   0x70  Code  Gb  keypad.o [4]
+LCD_Clear                     0x8c9   0x10  Code  Gb  lcd.o [5]
+LCD_EnablePulse               0x753   0x24  Code  Lc  lcd.o [5]
+LCD_Init                      0x7b7   0xaa  Code  Gb  lcd.o [5]
+LCD_Send4Bits                 0x777   0x40  Code  Lc  lcd.o [5]
+LCD_SendCommand               0x861   0x3e  Code  Gb  lcd.o [5]
+LCD_SendData                  0x89f   0x2a  Code  Gb  lcd.o [5]
+LCD_SetCursor                 0x8d9   0x1a  Code  Gb  lcd.o [5]
+LCD_WriteChar                 0x909    0xa  Code  Gb  lcd.o [5]
+LCD_WriteString               0x8f3   0x16  Code  Gb  lcd.o [5]
+MapKey                        0xc4f   0x2a  Code  Lc  input_manager.o [2]
+NmiSR                         0xf39    0x2  Code  Lc  startup_ewarm.o [1]
+PORTF_Handler                 0xf41    0x2  Code  Gb  startup_ewarm.o [1]
+Region$$Table$$Base           0xfcc          --   Gb  - Linker created -
+Region$$Table$$Limit          0xfdc          --   Gb  - Linker created -
+ResetISR                      0xf21   0x14  Code  Gb  startup_ewarm.o [1]
+SysCtlClockGet                0x91d  0x110  Code  Gb  sysctl.o [9]
+SysCtlDelay                   0x915    0x8  Code  Gb  sysctl.o [9]
+__aeabi_memclr                0xc49         Code  Gb  ABImemclr.o [11]
+__cmain                       0xf85         Code  Gb  cmain.o [11]
+__exit                        0xfb9   0x14  Code  Gb  exit.o [12]
+__iar_Memset_word             0xca9         Code  Gb  ABImemset.o [11]
+__iar_data_init3              0xef9   0x28  Code  Gb  data_init.o [11]
+__iar_init_vfp                0xf61         Code  Gb  fpinit_M.o [10]
+__iar_program_start           0xf45         Code  Gb  cstartup_M.o [11]
+__iar_zero_init3              0xec1   0x38  Code  Gb  zero_init3.o [11]
+__low_level_init              0xfa3    0x4  Code  Gb  low_level_init.o [8]
 __vector_table                  0x0  0x26c  Data  Gb  startup_ewarm.o [1]
-_call_main                    0xccd         Code  Gb  cmain.o [11]
-_exit                         0xce9         Code  Gb  cexit.o [11]
-exit                          0xce3    0x4  Code  Gb  exit.o [8]
-keypad_codes                  0xd30   0x10  Data  Gb  keypad.o [4]
-last_key_pressed        0x2000'0001    0x1  Data  Lc  keypad.o [4]
-main                          0xb71   0x48  Code  Gb  main.o [1]
+_call_main                    0xf91         Code  Gb  cmain.o [11]
+_exit                         0xfad         Code  Gb  cexit.o [11]
+exit                          0xfa7    0x4  Code  Gb  exit.o [8]
+g_pui32Xtals                  0xa54   0x6c  Data  Lc  sysctl.o [9]
+keypad_codes                 0x1050   0x10  Data  Gb  keypad.o [4]
+main                          0xe35   0x8c  Code  Gb  main.o [1]
 password_mode           0x2000'0000    0x1  Data  Lc  display_manager.o [2]
 pui32Stack              0x2000'0004  0x200  Data  Lc  startup_ewarm.o [1]
-systick_ISR                   0xc7b    0x2  Code  Gb  startup_ewarm.o [1]
+strcmp                        0xc95         Code  Gb  strcmp.o [11]
+systick_ISR                   0xf3f    0x2  Code  Gb  startup_ewarm.o [1]
 
 
 [1] = E:\coding\embedded\embededProject\Debug\Obj
@@ -290,9 +305,9 @@ systick_ISR                   0xc7b    0x2  Code  Gb  startup_ewarm.o [1]
 [11] = rt7M_tl.a
 [12] = shb_l.a
 
-  2'716 bytes of readonly  code memory
-    716 bytes of readonly  data memory
-    514 bytes of readwrite data memory
+  3'424 bytes of readonly  code memory
+    816 bytes of readonly  data memory
+    513 bytes of readwrite data memory
 
 Errors: none
 Warnings: 1

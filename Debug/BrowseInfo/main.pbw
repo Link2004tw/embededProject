@@ -104771,7 +104771,7 @@
     "scope": null
   },
   {
-    "ID": "c:display_manager.c@1042@F@DISPLAY_CHANGEPASSWORD@password",
+    "ID": "c:display_manager.c@1037@F@DISPLAY_CHANGEPASSWORD@password",
     "What": "Variable",
     "defdec": "Def",
     "display": "password",
@@ -104785,7 +104785,7 @@
     "scope": null
   },
   {
-    "ID": "c:display_manager.c@1070@F@DISPLAY_CHANGEPASSWORD@savedPassword",
+    "ID": "c:display_manager.c@1065@F@DISPLAY_CHANGEPASSWORD@savedPassword",
     "What": "Variable",
     "defdec": "Def",
     "display": "savedPassword",
@@ -104799,7 +104799,7 @@
     "scope": null
   },
   {
-    "ID": "c:display_manager.c@1129@F@DISPLAY_CHANGEPASSWORD@newPassword",
+    "ID": "c:display_manager.c@1124@F@DISPLAY_CHANGEPASSWORD@newPassword",
     "What": "Variable",
     "defdec": "Def",
     "display": "newPassword",
@@ -104813,7 +104813,7 @@
     "scope": null
   },
   {
-    "ID": "c:display_manager.c@1160@F@DISPLAY_CHANGEPASSWORD@pass_index",
+    "ID": "c:display_manager.c@1155@F@DISPLAY_CHANGEPASSWORD@pass_index",
     "What": "Variable",
     "defdec": "Def",
     "display": "pass_index",
@@ -104827,7 +104827,7 @@
     "scope": null
   },
   {
-    "ID": "c:display_manager.c@1335@F@DISPLAY_CHANGEPASSWORD@key",
+    "ID": "c:display_manager.c@1330@F@DISPLAY_CHANGEPASSWORD@key",
     "What": "Variable",
     "defdec": "Def",
     "display": "key",
@@ -104841,7 +104841,7 @@
     "scope": null
   },
   {
-    "ID": "c:display_manager.c@1935@F@DISPLAY_CHANGEPASSWORD@key",
+    "ID": "c:display_manager.c@1930@F@DISPLAY_CHANGEPASSWORD@key",
     "What": "Variable",
     "defdec": "Def",
     "display": "key",
@@ -104855,7 +104855,7 @@
     "scope": null
   },
   {
-    "ID": "c:display_manager.c@2295@F@DISPLAY_CHANGEPASSWORD@confirmPassword",
+    "ID": "c:display_manager.c@2290@F@DISPLAY_CHANGEPASSWORD@confirmPassword",
     "What": "Variable",
     "defdec": "Def",
     "display": "confirmPassword",
@@ -104869,7 +104869,7 @@
     "scope": null
   },
   {
-    "ID": "c:display_manager.c@2390@F@DISPLAY_CHANGEPASSWORD@key",
+    "ID": "c:display_manager.c@2385@F@DISPLAY_CHANGEPASSWORD@key",
     "What": "Variable",
     "defdec": "Def",
     "display": "key",
@@ -104911,7 +104911,7 @@
     "scope": null
   },
   {
-    "ID": "c:display_manager.c@3302@F@DISPLAY_OPEN@password",
+    "ID": "c:display_manager.c@3297@F@DISPLAY_OPEN@password",
     "What": "Variable",
     "defdec": "Def",
     "display": "password",
@@ -104925,7 +104925,7 @@
     "scope": null
   },
   {
-    "ID": "c:display_manager.c@3330@F@DISPLAY_OPEN@savedPassword",
+    "ID": "c:display_manager.c@3325@F@DISPLAY_OPEN@savedPassword",
     "What": "Variable",
     "defdec": "Def",
     "display": "savedPassword",
@@ -104939,7 +104939,7 @@
     "scope": null
   },
   {
-    "ID": "c:display_manager.c@3424@F@DISPLAY_OPEN@pass_index",
+    "ID": "c:display_manager.c@3419@F@DISPLAY_OPEN@pass_index",
     "What": "Variable",
     "defdec": "Def",
     "display": "pass_index",
@@ -104953,7 +104953,7 @@
     "scope": null
   },
   {
-    "ID": "c:display_manager.c@3593@F@DISPLAY_OPEN@key",
+    "ID": "c:display_manager.c@3588@F@DISPLAY_OPEN@key",
     "What": "Variable",
     "defdec": "Def",
     "display": "key",
@@ -104967,7 +104967,7 @@
     "scope": null
   },
   {
-    "ID": "c:display_manager.c@4192@F@DISPLAY_OPEN@key",
+    "ID": "c:display_manager.c@4187@F@DISPLAY_OPEN@key",
     "What": "Variable",
     "defdec": "Def",
     "display": "key",
@@ -112289,7 +112289,7 @@
     "scope": null
   },
   {
-    "ID": "c:Keypad.h@345@macro@KEYPAD_ROWS",
+    "ID": "c:keypad.h@345@macro@KEYPAD_ROWS",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "KEYPAD_ROWS",
@@ -112303,7 +112303,7 @@
     "scope": null
   },
   {
-    "ID": "c:keypad.h@345@macro@KEYPAD_ROWS",
+    "ID": "c:Keypad.h@345@macro@KEYPAD_ROWS",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "KEYPAD_ROWS",
@@ -112411,34 +112411,6 @@
       "path": "E:\\coding\\embedded\\embededProject\\HAL\\Keypad\\keypad.h"
     },
     "name": "Keypad_RowISR",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@Keypad_RowISR",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void Keypad_RowISR(void)",
-    "location": {
-      "column": "6",
-      "line": "34",
-      "path": "E:\\coding\\embedded\\embededProject\\HAL\\Keypad\\keypad.h"
-    },
-    "name": "Keypad_RowISR",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@GPIOPortA_Handler",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void GPIOPortA_Handler(void)",
-    "location": {
-      "column": "6",
-      "line": "35",
-      "path": "E:\\coding\\embedded\\embededProject\\HAL\\Keypad\\keypad.h"
-    },
-    "name": "GPIOPortA_Handler",
     "origin": "user_include",
     "scope": null
   },
@@ -117259,398 +117231,6 @@
     "scope": null
   },
   {
-    "ID": "c:@keypad_codes",
-    "What": "Variable",
-    "defdec": "Def",
-    "display": "keypad_codes",
-    "location": {
-      "column": "12",
-      "line": "3",
-      "path": "E:\\coding\\embedded\\embededProject\\HAL\\Keypad\\keypad.c"
-    },
-    "name": "keypad_codes",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:keypad.c@167@macro@KEYPAD_COL_PORT",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "KEYPAD_COL_PORT",
-    "location": {
-      "column": "9",
-      "line": "10",
-      "path": "E:\\coding\\embedded\\embededProject\\HAL\\Keypad\\keypad.c"
-    },
-    "name": "KEYPAD_COL_PORT",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:keypad.c@198@macro@KEYPAD_ROW_PIN_2",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "KEYPAD_ROW_PIN_2",
-    "location": {
-      "column": "9",
-      "line": "11",
-      "path": "E:\\coding\\embedded\\embededProject\\HAL\\Keypad\\keypad.c"
-    },
-    "name": "KEYPAD_ROW_PIN_2",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:keypad.c@227@macro@KEYPAD_ROW_PIN_3",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "KEYPAD_ROW_PIN_3",
-    "location": {
-      "column": "9",
-      "line": "12",
-      "path": "E:\\coding\\embedded\\embededProject\\HAL\\Keypad\\keypad.c"
-    },
-    "name": "KEYPAD_ROW_PIN_3",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:keypad.c@256@macro@KEYPAD_ROW_PIN_4",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "KEYPAD_ROW_PIN_4",
-    "location": {
-      "column": "9",
-      "line": "13",
-      "path": "E:\\coding\\embedded\\embededProject\\HAL\\Keypad\\keypad.c"
-    },
-    "name": "KEYPAD_ROW_PIN_4",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:keypad.c@285@macro@KEYPAD_ROW_PIN_5",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "KEYPAD_ROW_PIN_5",
-    "location": {
-      "column": "9",
-      "line": "14",
-      "path": "E:\\coding\\embedded\\embededProject\\HAL\\Keypad\\keypad.c"
-    },
-    "name": "KEYPAD_ROW_PIN_5",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:keypad.c@318@macro@KEYPAD_ROW_PORT",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "KEYPAD_ROW_PORT",
-    "location": {
-      "column": "9",
-      "line": "17",
-      "path": "E:\\coding\\embedded\\embededProject\\HAL\\Keypad\\keypad.c"
-    },
-    "name": "KEYPAD_ROW_PORT",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:keypad.c@349@macro@KEYPAD_COL_PIN_4",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "KEYPAD_COL_PIN_4",
-    "location": {
-      "column": "9",
-      "line": "18",
-      "path": "E:\\coding\\embedded\\embededProject\\HAL\\Keypad\\keypad.c"
-    },
-    "name": "KEYPAD_COL_PIN_4",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:keypad.c@378@macro@KEYPAD_COL_PIN_5",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "KEYPAD_COL_PIN_5",
-    "location": {
-      "column": "9",
-      "line": "19",
-      "path": "E:\\coding\\embedded\\embededProject\\HAL\\Keypad\\keypad.c"
-    },
-    "name": "KEYPAD_COL_PIN_5",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:keypad.c@407@macro@KEYPAD_COL_PIN_6",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "KEYPAD_COL_PIN_6",
-    "location": {
-      "column": "9",
-      "line": "20",
-      "path": "E:\\coding\\embedded\\embededProject\\HAL\\Keypad\\keypad.c"
-    },
-    "name": "KEYPAD_COL_PIN_6",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:keypad.c@436@macro@KEYPAD_COL_PIN_7",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "KEYPAD_COL_PIN_7",
-    "location": {
-      "column": "9",
-      "line": "21",
-      "path": "E:\\coding\\embedded\\embededProject\\HAL\\Keypad\\keypad.c"
-    },
-    "name": "KEYPAD_COL_PIN_7",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:keypad.c@last_key_pressed",
-    "What": "Variable",
-    "defdec": "Def",
-    "display": "last_key_pressed",
-    "location": {
-      "column": "22",
-      "line": "23",
-      "path": "E:\\coding\\embedded\\embededProject\\HAL\\Keypad\\keypad.c"
-    },
-    "name": "last_key_pressed",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@Keypad_Init",
-    "What": "Function",
-    "defdec": "Def",
-    "display": "void Keypad_Init(void)",
-    "location": {
-      "column": "6",
-      "line": "25",
-      "path": "E:\\coding\\embedded\\embededProject\\HAL\\Keypad\\keypad.c"
-    },
-    "name": "Keypad_Init",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:keypad.c@535@F@Keypad_Init@row_pins",
-    "What": "Variable",
-    "defdec": "Def",
-    "display": "row_pins",
-    "location": {
-      "column": "13",
-      "line": "26",
-      "path": "E:\\coding\\embedded\\embededProject\\HAL\\Keypad\\keypad.c"
-    },
-    "name": "row_pins",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:keypad.c@579@F@Keypad_Init@col_pins",
-    "What": "Variable",
-    "defdec": "Def",
-    "display": "col_pins",
-    "location": {
-      "column": "13",
-      "line": "27",
-      "path": "E:\\coding\\embedded\\embededProject\\HAL\\Keypad\\keypad.c"
-    },
-    "name": "col_pins",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:keypad.c@704@F@Keypad_Init@i",
-    "What": "Variable",
-    "defdec": "Def",
-    "display": "i",
-    "location": {
-      "column": "18",
-      "line": "30",
-      "path": "E:\\coding\\embedded\\embededProject\\HAL\\Keypad\\keypad.c"
-    },
-    "name": "i",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:keypad.c@1396@F@Keypad_Init@i",
-    "What": "Variable",
-    "defdec": "Def",
-    "display": "i",
-    "location": {
-      "column": "18",
-      "line": "43",
-      "path": "E:\\coding\\embedded\\embededProject\\HAL\\Keypad\\keypad.c"
-    },
-    "name": "i",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@Keypad_GetKey",
-    "What": "Function",
-    "defdec": "Def",
-    "display": "char Keypad_GetKey(void)",
-    "location": {
-      "column": "6",
-      "line": "49",
-      "path": "E:\\coding\\embedded\\embededProject\\HAL\\Keypad\\keypad.c"
-    },
-    "name": "Keypad_GetKey",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:keypad.c@1586@F@Keypad_GetKey@key",
-    "What": "Variable",
-    "defdec": "Def",
-    "display": "key",
-    "location": {
-      "column": "10",
-      "line": "50",
-      "path": "E:\\coding\\embedded\\embededProject\\HAL\\Keypad\\keypad.c"
-    },
-    "name": "key",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@Keypad_RowISR",
-    "What": "Function",
-    "defdec": "Def",
-    "display": "void Keypad_RowISR(void)",
-    "location": {
-      "column": "6",
-      "line": "56",
-      "path": "E:\\coding\\embedded\\embededProject\\HAL\\Keypad\\keypad.c"
-    },
-    "name": "Keypad_RowISR",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:keypad.c@1781@F@Keypad_RowISR@row_pins",
-    "What": "Variable",
-    "defdec": "Def",
-    "display": "row_pins",
-    "location": {
-      "column": "13",
-      "line": "57",
-      "path": "E:\\coding\\embedded\\embededProject\\HAL\\Keypad\\keypad.c"
-    },
-    "name": "row_pins",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:keypad.c@1825@F@Keypad_RowISR@col_pins",
-    "What": "Variable",
-    "defdec": "Def",
-    "display": "col_pins",
-    "location": {
-      "column": "13",
-      "line": "58",
-      "path": "E:\\coding\\embedded\\embededProject\\HAL\\Keypad\\keypad.c"
-    },
-    "name": "col_pins",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:keypad.c@1918@F@Keypad_RowISR@status",
-    "What": "Variable",
-    "defdec": "Def",
-    "display": "status",
-    "location": {
-      "column": "14",
-      "line": "61",
-      "path": "E:\\coding\\embedded\\embededProject\\HAL\\Keypad\\keypad.c"
-    },
-    "name": "status",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:keypad.c@1964@F@Keypad_RowISR@row",
-    "What": "Variable",
-    "defdec": "Def",
-    "display": "row",
-    "location": {
-      "column": "18",
-      "line": "62",
-      "path": "E:\\coding\\embedded\\embededProject\\HAL\\Keypad\\keypad.c"
-    },
-    "name": "row",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:keypad.c@2121@F@Keypad_RowISR@col",
-    "What": "Variable",
-    "defdec": "Def",
-    "display": "col",
-    "location": {
-      "column": "26",
-      "line": "65",
-      "path": "E:\\coding\\embedded\\embededProject\\HAL\\Keypad\\keypad.c"
-    },
-    "name": "col",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:keypad.c@2219@F@Keypad_RowISR@c",
-    "What": "Variable",
-    "defdec": "Def",
-    "display": "c",
-    "location": {
-      "column": "30",
-      "line": "67",
-      "path": "E:\\coding\\embedded\\embededProject\\HAL\\Keypad\\keypad.c"
-    },
-    "name": "c",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:keypad.c@2471@F@Keypad_RowISR@d",
-    "What": "Variable",
-    "defdec": "Def",
-    "display": "d",
-    "location": {
-      "column": "35",
-      "line": "72",
-      "path": "E:\\coding\\embedded\\embededProject\\HAL\\Keypad\\keypad.c"
-    },
-    "name": "d",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@GPIOPortA_Handler",
-    "What": "Function",
-    "defdec": "Def",
-    "display": "void GPIOPortA_Handler(void)",
-    "location": {
-      "column": "6",
-      "line": "85",
-      "path": "E:\\coding\\embedded\\embededProject\\HAL\\Keypad\\keypad.c"
-    },
-    "name": "GPIOPortA_Handler",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
     "ID": "c:hw_types.h@2016@macro@__HW_TYPES_H__",
     "What": "MacroDef",
     "defdec": "Def",
@@ -117872,6 +117452,258 @@
     },
     "name": "CLASS_IS_SNOWFLAKE",
     "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@keypad_codes",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "keypad_codes",
+    "location": {
+      "column": "12",
+      "line": "104",
+      "path": "E:\\coding\\embedded\\embededProject\\HAL\\Keypad\\keypad.c"
+    },
+    "name": "keypad_codes",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:keypad.c@4004@macro@KEYPAD_COL_PORT",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "KEYPAD_COL_PORT",
+    "location": {
+      "column": "9",
+      "line": "116",
+      "path": "E:\\coding\\embedded\\embededProject\\HAL\\Keypad\\keypad.c"
+    },
+    "name": "KEYPAD_COL_PORT",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:keypad.c@4035@macro@KEYPAD_COL_PINS",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "KEYPAD_COL_PINS",
+    "location": {
+      "column": "9",
+      "line": "117",
+      "path": "E:\\coding\\embedded\\embededProject\\HAL\\Keypad\\keypad.c"
+    },
+    "name": "KEYPAD_COL_PINS",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:keypad.c@4098@macro@KEYPAD_ROW_PORT",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "KEYPAD_ROW_PORT",
+    "location": {
+      "column": "9",
+      "line": "119",
+      "path": "E:\\coding\\embedded\\embededProject\\HAL\\Keypad\\keypad.c"
+    },
+    "name": "KEYPAD_ROW_PORT",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:keypad.c@4129@macro@KEYPAD_ROW_PINS",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "KEYPAD_ROW_PINS",
+    "location": {
+      "column": "9",
+      "line": "120",
+      "path": "E:\\coding\\embedded\\embededProject\\HAL\\Keypad\\keypad.c"
+    },
+    "name": "KEYPAD_ROW_PINS",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@Keypad_Init",
+    "What": "Function",
+    "defdec": "Def",
+    "display": "void Keypad_Init(void)",
+    "location": {
+      "column": "6",
+      "line": "130",
+      "path": "E:\\coding\\embedded\\embededProject\\HAL\\Keypad\\keypad.c"
+    },
+    "name": "Keypad_Init",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:keypad.c@4482@F@Keypad_Init@row_pins",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "row_pins",
+    "location": {
+      "column": "13",
+      "line": "131",
+      "path": "E:\\coding\\embedded\\embededProject\\HAL\\Keypad\\keypad.c"
+    },
+    "name": "row_pins",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:keypad.c@4526@F@Keypad_Init@col_pins",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "col_pins",
+    "location": {
+      "column": "13",
+      "line": "132",
+      "path": "E:\\coding\\embedded\\embededProject\\HAL\\Keypad\\keypad.c"
+    },
+    "name": "col_pins",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:keypad.c@4628@F@Keypad_Init@i",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "i",
+    "location": {
+      "column": "18",
+      "line": "134",
+      "path": "E:\\coding\\embedded\\embededProject\\HAL\\Keypad\\keypad.c"
+    },
+    "name": "i",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:keypad.c@4846@F@Keypad_Init@i",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "i",
+    "location": {
+      "column": "18",
+      "line": "139",
+      "path": "E:\\coding\\embedded\\embededProject\\HAL\\Keypad\\keypad.c"
+    },
+    "name": "i",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@Keypad_GetKey",
+    "What": "Function",
+    "defdec": "Def",
+    "display": "char Keypad_GetKey(void)",
+    "location": {
+      "column": "6",
+      "line": "157",
+      "path": "E:\\coding\\embedded\\embededProject\\HAL\\Keypad\\keypad.c"
+    },
+    "name": "Keypad_GetKey",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:keypad.c@5417@F@Keypad_GetKey@row_pins",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "row_pins",
+    "location": {
+      "column": "13",
+      "line": "158",
+      "path": "E:\\coding\\embedded\\embededProject\\HAL\\Keypad\\keypad.c"
+    },
+    "name": "row_pins",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:keypad.c@5461@F@Keypad_GetKey@col_pins",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "col_pins",
+    "location": {
+      "column": "13",
+      "line": "159",
+      "path": "E:\\coding\\embedded\\embededProject\\HAL\\Keypad\\keypad.c"
+    },
+    "name": "col_pins",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:keypad.c@5510@F@Keypad_GetKey@col",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "col",
+    "location": {
+      "column": "18",
+      "line": "160",
+      "path": "E:\\coding\\embedded\\embededProject\\HAL\\Keypad\\keypad.c"
+    },
+    "name": "col",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:keypad.c@5603@F@Keypad_GetKey@c",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "c",
+    "location": {
+      "column": "22",
+      "line": "162",
+      "path": "E:\\coding\\embedded\\embededProject\\HAL\\Keypad\\keypad.c"
+    },
+    "name": "c",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:keypad.c@5869@F@Keypad_GetKey@d",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "d",
+    "location": {
+      "column": "27",
+      "line": "168",
+      "path": "E:\\coding\\embedded\\embededProject\\HAL\\Keypad\\keypad.c"
+    },
+    "name": "d",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:keypad.c@5954@F@Keypad_GetKey@row",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "row",
+    "location": {
+      "column": "22",
+      "line": "170",
+      "path": "E:\\coding\\embedded\\embededProject\\HAL\\Keypad\\keypad.c"
+    },
+    "name": "row",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:keypad.c@6002@F@Keypad_GetKey@pin_val",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "pin_val",
+    "location": {
+      "column": "21",
+      "line": "171",
+      "path": "E:\\coding\\embedded\\embededProject\\HAL\\Keypad\\keypad.c"
+    },
+    "name": "pin_val",
+    "origin": "project_file",
     "scope": null
   },
   {
@@ -118351,13 +118183,27 @@
     "scope": null
   },
   {
-    "ID": "c:main.c@843@F@main@key",
+    "ID": "c:main.c@817@F@main@mode",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "mode",
+    "location": {
+      "column": "11",
+      "line": "23",
+      "path": "E:\\coding\\embedded\\embededProject\\main.c"
+    },
+    "name": "mode",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:main.c@864@F@main@key",
     "What": "Variable",
     "defdec": "Def",
     "display": "key",
     "location": {
       "column": "14",
-      "line": "25",
+      "line": "26",
       "path": "E:\\coding\\embedded\\embededProject\\main.c"
     },
     "name": "key",

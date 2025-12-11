@@ -7,8 +7,4 @@ E:\coding\embedded\embededProject\Debug\BrowseInfo\startup_ewarm.pbi: \
   C:\Program\ Files\IAR\ Systems\Embedded\ Workbench\ 9.0\arm\inc\c\DLib_Config_Normal.h \
   C:\Program\ Files\IAR\ Systems\Embedded\ Workbench\ 9.0\arm\inc\c\DLib_Product.h \
   C:\ti\TivaWare_C_Series-2.2.0.295\inc/hw_nvic.h \
-  C:\ti\TivaWare_C_Series-2.2.0.295\inc/hw_types.h \
-  E:\coding\embedded\embededProject/HAL/keypad/keypad.h \
-  E:\coding\embedded\embededProject/HAL/keypad/../../Utils/dio.h \
-  C:\ti\TivaWare_C_Series-2.2.0.295\inc\tm4c123gh6pm.h \
-  C:\Program\ Files\IAR\ Systems\Embedded\ Workbench\ 9.0\arm\inc\c\stdbool.h
+  C:\ti\TivaWare_C_Series-2.2.0.295\inc/hw_types.h

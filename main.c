@@ -20,6 +20,7 @@ int main(void)
     DISPLAY_ShowMainMenu();  // Show menu while testing
 
     /* ---------- Main Loop ---------- */
+    short mode = 0;
     while (1)
     {
         char key = InputManager_GetKey();  // Frontend 1 returns mapped char
@@ -27,8 +28,26 @@ int main(void)
         if (key != 0)
         {
             /* Display the character on LCD */
+            
             DISPLAY_HandleKey(key);
-            DISPLAY_ClearScreen();
+            if(key=='+'){
+              mode =1;
+            }else if(key=='-'){
+              mode = 2;
+            
+            }else if(key=='*'){
+              mode =3;
+            }else {
+              DISPLAY_ERROR();
+              //SysCtlDelay(5000000);
+              SysCtlDelay(SysCtlClockGet());
+              DISPLAY_ClearScreen();
+              DISPLAY_ShowMainMenu();  // Show menu while testing
+            }
+            
+            if(mode == 1){
+              DISPLAY_OPEN();
+            }
     
             /* Debug: If needed, print raw or mapped value on second line */
             // LCD_SetCursor(1, 0);
