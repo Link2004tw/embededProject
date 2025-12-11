@@ -12,8 +12,6 @@
  *****************************************************************************/
 
 #include "lcd.h"
-#include "../../Utils/dio.h"
-#include "driverlib/sysctl.h"
 
 /******************************************************************************
  *                         Delay Function                                      *
@@ -27,13 +25,6 @@ static void DelayMs(uint32_t ms)
     SysCtlDelay((16000000 / 3 / 1000) * ms);
 }
 
-#define LCD_PORT        PORTB
-#define LCD_RS          PIN0
-#define LCD_EN          PIN1
-#define LCD_D4          PIN2
-#define LCD_D5          PIN3
-#define LCD_D6          PIN4
-#define LCD_D7          PIN5
 
 /******************************************************************************
  *                          Private Functions                                  *

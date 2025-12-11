@@ -23,12 +23,13 @@ int main(void)
     while (1)
     {
         char key = InputManager_GetKey();  // Frontend 1 returns mapped char
-
+        //printf(key);
         if (key != 0)
         {
             /* Display the character on LCD */
             DISPLAY_HandleKey(key);
-
+            DISPLAY_ClearScreen();
+    
             /* Debug: If needed, print raw or mapped value on second line */
             // LCD_SetCursor(1, 0);
             // LCD_WriteChar(key);

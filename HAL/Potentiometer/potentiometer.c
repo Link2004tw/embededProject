@@ -1,80 +1,145 @@
-#ifndef POTENTIOMETER_H
-#define POTENTIOMETER_H
-
-#include <stdint.h>
-#include <stdbool.h>
-#include "tm4c123gh6pm.h"
-#include "driverlib/sysctl.h"
-#include "driverlib/gpio.h"
-#include "driverlib/adc.h"
-#include "inc/hw_memmap.h"
-
 /*****************************************************************************
- * Macros and Constants
+ * File: potentiometer.c
+ * Description: Potentiometer ADC Driver Implementation for TM4C123GH6PM
+ * 
+ * Hardware Setup:
+ *   - ADC Module: ADC0
+ *   - Input Pin: PE0 (ADC Channel 3)
+ *   - Sequencer: Sequencer 3 (single-sample, lowest priority)
+ *   - Resolution: 12-bit (0-4095)
+ * 
+ * EEPROM Configuration:
+ *   The timeout value is saved to EEPROM by the Control_ECU
+ *   via UART communication from the HMI_ECU.
  *****************************************************************************/
 
-/* ADC Configuration */
-#define ADC_MODULE              0           /* ADC0 */
-#define ADC_SEQUENCER           3           /* Sequencer 3 */
-#define ADC_CHANNEL             3           /* PE0 = Channel 3 */
-#define ADC_MAX_VALUE           4095        /* 12-bit resolution */
+#include "potentiometer.h"
 
-/* Timeout Configuration */
-#define TIMEOUT_MIN_SECONDS     5           /* Minimum timeout */
-#define TIMEOUT_MAX_SECONDS     30          /* Maximum timeout */
-#define TIMEOUT_RANGE           (TIMEOUT_MAX_SECONDS - TIMEOUT_MIN_SECONDS)
 
-/* GPIO Configuration for Potentiometer */
-#define POT_PORT                PORTE       /* Port E */
-#define POT_PIN                 0           /* Pin 0 (PE0) */
 
 /*****************************************************************************
- * Function Prototypes
+ * Function: Potentiometer_Init
+ * 
+ * Description:
+ *   Initializes the ADC0 module for reading the potentiometer on PE0.
+ *   Configures the GPIO pin as analog input and sets up ADC sequencer.
  *****************************************************************************/
+void Potentiometer_Init(void)
+{
+    /* Enable ADC0 peripheral clock */
+    SysCtlPeripheralEnable(SYSCTL_PERIPH_ADC0);
+    while (!SysCtlPeripheralReady(SYSCTL_PERIPH_ADC0)); //make sure ADC0 is ready
+    
+    /* Enable Port E peripheral clock */
+    SysCtlPeripheralEnable(SYSCTL_PERIPH_GPIOE);
+    while (!SysCtlPeripheralReady(SYSCTL_PERIPH_GPIOE));
+    
+    /* Configure PE0 as analog input (disable digital I/O) */
+    GPIOPinTypeADC(GPIO_PORTE_BASE, GPIO_PIN_0);
+    
+    /* Guarantees that the analog mode is enabled on PE0 */
+    GPIO_PORTE_AMSEL_R |= 0x01;  /* Enable analog function on PE0 */
+    GPIO_PORTE_DEN_R &= ~0x01;   /* Disable digital I/O on PE0 */
+    
+    /* Configure ADC0 Sequencer 3
+     * Sequencer 3 is used for single-sample conversions
+     * Priority: lowest (3), so it runs after other sequencers
+     */
+    
+    /* Disable sequencer 3 before configuration */
+    ADCSequenceDisable(ADC0_BASE, ADC_SEQUENCER);
+    
+    /* Configure the ADC sequencer
+     * - Sample from PE0 (channel 3)
+     * - Trigger on processor write to ADCPSSI
+     */
+    ADCSequenceConfigure(ADC0_BASE, ADC_SEQUENCER, 
+                         ADC_TRIGGER_PROCESSOR, 3);
+    
+    /* Configure the step in the sequencer
+     * - Channel 3 (PE0)
+     * - Mark as end of sequence (ADC_CTL_END)
+     * - Enable interrupt on this step
+     */
+    ADCSequenceStepConfigure(ADC0_BASE, ADC_SEQUENCER, 0,
+                             ADC_CTL_CH3 | ADC_CTL_IE | ADC_CTL_END);
+    
+    /* Enable sequencer 3 */
+    ADCSequenceEnable(ADC0_BASE, ADC_SEQUENCER);
+    
+    /* Clear any pending interrupt flag */
+    ADCIntClear(ADC0_BASE, ADC_SEQUENCER);
+}
 
-/*
- * Potentiometer_Init
+/*****************************************************************************
+ * Function: Potentiometer_ReadRaw
  * 
  * Description:
- *   Initializes the ADC module for potentiometer reading.
- *   - Enables ADC0 peripheral
- *   - Configures PE0 as analog input
- *   - Sets up ADC sequencer for single-ended sampling
- *   - Configures 12-bit resolution
+ *   Reads the raw 12-bit ADC value from the potentiometer.
+ *   Performs a single conversion and returns the result.
  * 
- * Parameters: None
- * Returns: None
- * 
- * Must be called before using Potentiometer_ReadTimeout().
- */
-void Potentiometer_Init(void);
-
-/*
- * Potentiometer_ReadRaw
- * 
- * Description:
- *   Reads the raw ADC value from the potentiometer.
- *   Returns the 12-bit digitized analog input.
- * 
- * Parameters: None
- * Returns: 
+ * Returns:
  *   uint16_t - Raw ADC value (0-4095)
- *   - 0: Minimum voltage (0V)
- *   - 4095: Maximum voltage (3.3V)
- */
-uint16_t Potentiometer_ReadRaw(void);
+ *****************************************************************************/
+uint16_t Potentiometer_ReadRaw(void)
+{
+    uint32_t adc_value = 0;
+    
+    /* Clear any pending interrupt flag */
+    ADCIntClear(ADC0_BASE, ADC_SEQUENCER);
+    
+    /* Trigger ADC conversion on sequencer 3 */
+    ADCProcessorTrigger(ADC0_BASE, ADC_SEQUENCER);
+    
+    /* Wait for conversion to complete
+     * Poll the ADC interrupt status register
+     */
+    while (!ADCIntStatus(ADC0_BASE, ADC_SEQUENCER, false));
+    
+    /* Read the conversion result
+     * ADC stores result in the SSFIFO (Sequencer Sample FIFO)
+     */
+    ADCSequenceDataGet(ADC0_BASE, ADC_SEQUENCER, &adc_value);
+    
+    /* Return the 12-bit value */
+    return (uint16_t)(adc_value & 0xFFF);
+}
 
-/*
- *   Reads the potentiometer and maps the analog value to timeout seconds.
- *   Linear mapping from 0-4095 ADC range to 5-30 seconds.
+/*****************************************************************************
+ * Function: Potentiometer_ReadTimeout
  * 
- *  Used formula:
- *     Timeout(seconds) = ((ADC_Value / 4095) * 25) + 5
- *     Where 25 = (30 - 5) and 5 is the minimum timeout
+ * Description:
+ *   Reads the potentiometer and maps the analog value to timeout seconds.
+ *   Uses linear mapping: Timeout = ((ADC_Value / 4095) * 25) + 5
+ * 
+ *   This allows users to adjust timeout from 5 to 30 seconds via
+ *   the potentiometer, displayed live on the LCD.
  * 
  * Returns:
  *   uint8_t - Timeout value in seconds (5-30)
- */
-uint8_t Potentiometer_ReadTimeout(void);
-
-#endif 
+ *****************************************************************************/
+uint8_t Potentiometer_ReadTimeout(void)
+{
+    uint16_t adc_raw;
+    uint32_t timeout_value;
+    
+    /* Read raw ADC value */
+    adc_raw = Potentiometer_ReadRaw();
+    
+    /* Map ADC value (0-4095) to timeout range (5-30 seconds)
+     * Formula: Timeout = ((ADC / 4095) * (MAX - MIN)) + MIN
+     */
+    timeout_value = ((adc_raw * TIMEOUT_RANGE) / ADC_MAX_VALUE) + TIMEOUT_MIN_SECONDS;
+    
+    /* Ensure value is within bounds (safety check) */
+    if (timeout_value > TIMEOUT_MAX_SECONDS)
+    {
+        timeout_value = TIMEOUT_MAX_SECONDS;
+    }
+    else if (timeout_value < TIMEOUT_MIN_SECONDS)
+    {
+        timeout_value = TIMEOUT_MIN_SECONDS;
+    }
+    
+    return (uint8_t)timeout_value;
+}

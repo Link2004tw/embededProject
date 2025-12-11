@@ -17,7 +17,7 @@ static char MapKey(char k)
         case 'A': return '+';
         case 'B': return '-';
         case 'C': return '*';
-        case 'D': return 'D';  // optional: treat as cancel or unused
+        case 'D': return '='; 
         default:  return k;
     }
 }
