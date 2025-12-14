@@ -17,4 +17,5 @@ E:\coding\embedded\embededProject\Debug\BrowseInfo\APP\input_manager.pbi: \
   E:\coding\embedded\embededProject\APP/../HAL/LCD/lcd.h \
   E:\coding\embedded\embededProject\APP/../HAL/LCD/../../Utils/dio.h \
   C:\ti\TivaWare_C_Series-2.2.0.295\driverlib/sysctl.h \
-  E:\coding\embedded\embededProject\APP/potentiometer_manager.h
+  E:\coding\embedded\embededProject\APP/potentiometer_manager.h \
+  E:\coding\embedded\embededProject\APP/input_manager.h

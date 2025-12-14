@@ -1,5 +1,6 @@
 E:\coding\embedded\embededProject\Debug\BrowseInfo\APP\display_manager.pbi: \
   C:\ti\TivaWare_C_Series-2.2.0.295\driverlib\lcd.h \
+  E:\coding\embedded\embededProject\APP\input_manager.h \
   E:\coding\embedded\embededProject\APP\potentiometer_manager.h \
   C:\ti\TivaWare_C_Series-2.2.0.295\driverlib\sysctl.h \
   E:\coding\embedded\embededProject\APP\..\HAL\LCD\..\..\Utils\dio.h \

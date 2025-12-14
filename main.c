@@ -5,13 +5,21 @@
 #include "./APP/input_manager.h"       // Your mapped key function
 #include "./APP/display_manager.h"     // Frontend 2
 #include "driverlib/sysctl.h"
+
+
+
+
+void DELAY(void){
+  SysCtlDelay(SysCtlClockGet());            
+}
+
 int main(void)
 {
     /* ---------- Initialize all frontend modules ---------- */
     Keypad_Init();           // From TA keypad driver
     DISPLAY_Init();          // Initializes LCD
     DISPLAY_ClearScreen();   // Clear display
-
+    
     /* ---------- Optional: show a startup message ---------- */
     DISPLAY_ShowMessage("Frontend Ready");
     SysCtlDelay(1000);   // 1 second (if SysTick exists)
@@ -40,21 +48,27 @@ int main(void)
             }else {
               DISPLAY_ERROR();
               //SysCtlDelay(5000000);
-              SysCtlDelay(SysCtlClockGet());
               DISPLAY_ClearScreen();
               DISPLAY_ShowMainMenu();  // Show menu while testing
             }
-            if(mode ==0){
+            if(mode == 0){
               DISPLAY_ClearScreen();
               DISPLAY_ShowMainMenu();  // Show menu while testing
-            }
-            else if(mode == 1){
-              DISPLAY_OPEN();
-              //DISPLAY_ShowMessage("hiiiii");
-              mode = 0;
-            }else if(mode == 2){
-              DISPLAY_CHANGEPASSWORD();
-            }
+        }
+        else if(mode == 1){
+           DISPLAY_OPEN();
+           DISPLAY_ClearScreen();
+            DISPLAY_ShowMessage("Hello i am out");
+            DELAY();
+            DISPLAY_ClearScreen();
+            DISPLAY_ShowMainMenu();
+            
+            //DISPLAY_ShowMessage("hiiiii");
+            mode = 0;
+        }else if(mode == 2){
+          DISPLAY_CHANGEPASSWORD();
+          
+        }
     
             /* Debug: If needed, print raw or mapped value on second line */
             // LCD_SetCursor(1, 0);
@@ -63,5 +77,6 @@ int main(void)
             /* Optional: Wait a bit to avoid flickering */
             SysCtlDelay(50);
         }
+        
     }
 }

@@ -6,6 +6,7 @@
 #include <string.h>
 #include "../HAL/LCD/lcd.h"
 #include "potentiometer_manager.h"
+#include "input_manager.h"
 bool static flag = false;
 char static savedPassword[5]="";
 

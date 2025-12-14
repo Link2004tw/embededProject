@@ -176,7 +176,7 @@ void DISPLAY_OLD_PASSWORD(void)
     for(pass_index = 0; pass_index < 4; pass_index++){
         key = InputManager_GetKey();
         while(key == 0) {  
-            if(key=="=") return;
+            if(key=='=') return;
             key = InputManager_GetKey();
             SysCtlDelay(10000);
         }
@@ -184,13 +184,18 @@ void DISPLAY_OLD_PASSWORD(void)
         LCD_WriteChar('*');
     }
     password[4] = '\0';
-    
+    //send the password;
     if(strcmp(password, savedPassword) != 0){
         LCD_Clear();
         LCD_WriteString("Incorrect password");
         SysCtlDelay(10000000);
         //return false;
+    }else {
+      LCD_Clear();
+        LCD_WriteString("Correct password");
+        SysCtlDelay(10000000);
     }
+    
     
     //return true;
 }
@@ -217,21 +222,23 @@ void DISPLAY_NEW_PASSWORD(void)
     char key = 0;
     
     /* Get new password */
-    while(1){
-        LCD_Clear();
-        LCD_WriteString("Enter new pass");
+    //while(1){
+    LCD_Clear();
+    LCD_WriteString("Enter new pass");
     LCD_SetCursor(1, 0);
-    
-for(pass_index = 0; pass_index < 4; pass_index++){
+    for(pass_index = 0; pass_index < 4; pass_index++){
         key = InputManager_GetKey();
-        while(key == 0) {
-            if(key=="=") return;
+        while(key == 0) {  
             key = InputManager_GetKey();
+            if(key=='=') return;
             SysCtlDelay(10000);
         }
         newPassword[pass_index] = key;
         LCD_WriteChar('*');
     }
+    
+        
+    //}
     newPassword[4] = '\0';
     
     /* Get confirmation password */
@@ -260,9 +267,9 @@ for(pass_index = 0; pass_index < 4; pass_index++){
         LCD_Clear();
         //return false;
     }else{
-        break;
+        return;
     }
-    }
+
     
     
     /* Success message */
@@ -283,7 +290,7 @@ for(pass_index = 0; pass_index < 4; pass_index++){
  * Parameters: None
  * Returns: None
  *****************************************************************************/
-short haspass = false;//dummy for the check that it is the first password will be take from the back
+short haspass = true;//dummy for the check that it is the first password will be take from the back
  void DISPLAY_OPEN(void)
 {
     /* Verify old password first */
