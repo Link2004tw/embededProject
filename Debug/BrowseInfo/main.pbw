@@ -93232,7 +93232,7 @@
     "display": "void DISPLAY_NEW_PASSWORD(void)",
     "location": {
       "column": "6",
-      "line": "211",
+      "line": "212",
       "path": "E:\\coding\\embedded\\embededProject\\APP\\display_manager.c"
     },
     "name": "DISPLAY_NEW_PASSWORD",
@@ -93240,13 +93240,13 @@
     "scope": null
   },
   {
-    "ID": "c:display_manager.c@5139@F@DISPLAY_NEW_PASSWORD@newPassword",
+    "ID": "c:display_manager.c@5173@F@DISPLAY_NEW_PASSWORD@newPassword",
     "What": "Variable",
     "defdec": "Def",
     "display": "newPassword",
     "location": {
       "column": "10",
-      "line": "213",
+      "line": "214",
       "path": "E:\\coding\\embedded\\embededProject\\APP\\display_manager.c"
     },
     "name": "newPassword",
@@ -93254,13 +93254,13 @@
     "scope": null
   },
   {
-    "ID": "c:display_manager.c@5170@F@DISPLAY_NEW_PASSWORD@confirmPassword",
+    "ID": "c:display_manager.c@5204@F@DISPLAY_NEW_PASSWORD@confirmPassword",
     "What": "Variable",
     "defdec": "Def",
     "display": "confirmPassword",
     "location": {
       "column": "10",
-      "line": "214",
+      "line": "215",
       "path": "E:\\coding\\embedded\\embededProject\\APP\\display_manager.c"
     },
     "name": "confirmPassword",
@@ -93268,13 +93268,13 @@
     "scope": null
   },
   {
-    "ID": "c:display_manager.c@5205@F@DISPLAY_NEW_PASSWORD@pass_index",
+    "ID": "c:display_manager.c@5239@F@DISPLAY_NEW_PASSWORD@pass_index",
     "What": "Variable",
     "defdec": "Def",
     "display": "pass_index",
     "location": {
       "column": "11",
-      "line": "215",
+      "line": "216",
       "path": "E:\\coding\\embedded\\embededProject\\APP\\display_manager.c"
     },
     "name": "pass_index",
@@ -93282,13 +93282,13 @@
     "scope": null
   },
   {
-    "ID": "c:display_manager.c@5232@F@DISPLAY_NEW_PASSWORD@key",
+    "ID": "c:display_manager.c@5266@F@DISPLAY_NEW_PASSWORD@key",
     "What": "Variable",
     "defdec": "Def",
     "display": "key",
     "location": {
       "column": "10",
-      "line": "216",
+      "line": "217",
       "path": "E:\\coding\\embedded\\embededProject\\APP\\display_manager.c"
     },
     "name": "key",
@@ -93302,7 +93302,7 @@
     "display": "haspass",
     "location": {
       "column": "7",
-      "line": "284",
+      "line": "286",
       "path": "E:\\coding\\embedded\\embededProject\\APP\\display_manager.c"
     },
     "name": "haspass",
@@ -93316,7 +93316,7 @@
     "display": "void DISPLAY_OPEN(void)",
     "location": {
       "column": "7",
-      "line": "285",
+      "line": "287",
       "path": "E:\\coding\\embedded\\embededProject\\APP\\display_manager.c"
     },
     "name": "DISPLAY_OPEN",
@@ -93330,417 +93330,11 @@
     "display": "void DISPLAY_ERROR(void)",
     "location": {
       "column": "6",
-      "line": "345",
+      "line": "347",
       "path": "E:\\coding\\embedded\\embededProject\\APP\\display_manager.c"
     },
     "name": "DISPLAY_ERROR",
     "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:string.h@100@macro@_STRING",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "_STRING",
-    "location": {
-      "column": "9",
-      "line": "4",
-      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\string.h"
-    },
-    "name": "_STRING",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:string.h@344@macro@NULL",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "NULL",
-    "location": {
-      "column": "11",
-      "line": "20",
-      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\string.h"
-    },
-    "name": "NULL",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@memcmp",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "int memcmp(const void *, const void *, size_t)",
-    "location": {
-      "column": "45",
-      "line": "38",
-      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\string.h"
-    },
-    "name": "memcmp",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@memcpy",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void * memcpy(void *restrict, const void *restrict, size_t)",
-    "location": {
-      "column": "45",
-      "line": "40",
-      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\string.h"
-    },
-    "name": "memcpy",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@memmove",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void * memmove(void *, const void *, size_t)",
-    "location": {
-      "column": "45",
-      "line": "43",
-      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\string.h"
-    },
-    "name": "memmove",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@memset",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void * memset(void *, int, size_t)",
-    "location": {
-      "column": "45",
-      "line": "45",
-      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\string.h"
-    },
-    "name": "memset",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@strcat",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "char * strcat(char *restrict, const char *restrict)",
-    "location": {
-      "column": "45",
-      "line": "46",
-      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\string.h"
-    },
-    "name": "strcat",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@strcmp",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "int strcmp(const char *, const char *)",
-    "location": {
-      "column": "45",
-      "line": "48",
-      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\string.h"
-    },
-    "name": "strcmp",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@strcoll",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "int strcoll(const char *, const char *)",
-    "location": {
-      "column": "45",
-      "line": "49",
-      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\string.h"
-    },
-    "name": "strcoll",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@strcpy",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "char * strcpy(char *restrict, const char *restrict)",
-    "location": {
-      "column": "45",
-      "line": "50",
-      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\string.h"
-    },
-    "name": "strcpy",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@strcspn",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "size_t strcspn(const char *, const char *)",
-    "location": {
-      "column": "45",
-      "line": "52",
-      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\string.h"
-    },
-    "name": "strcspn",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@strerror",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "char * strerror(int)",
-    "location": {
-      "column": "45",
-      "line": "53",
-      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\string.h"
-    },
-    "name": "strerror",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@strlen",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "size_t strlen(const char *)",
-    "location": {
-      "column": "45",
-      "line": "54",
-      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\string.h"
-    },
-    "name": "strlen",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@strncat",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "char * strncat(char *restrict, const char *restrict, size_t)",
-    "location": {
-      "column": "45",
-      "line": "55",
-      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\string.h"
-    },
-    "name": "strncat",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@strncmp",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "int strncmp(const char *, const char *, size_t)",
-    "location": {
-      "column": "45",
-      "line": "58",
-      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\string.h"
-    },
-    "name": "strncmp",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@strncpy",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "char * strncpy(char *restrict, const char *restrict, size_t)",
-    "location": {
-      "column": "45",
-      "line": "60",
-      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\string.h"
-    },
-    "name": "strncpy",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@strspn",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "size_t strspn(const char *, const char *)",
-    "location": {
-      "column": "45",
-      "line": "63",
-      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\string.h"
-    },
-    "name": "strspn",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@strtok",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "char * strtok(char *restrict, const char *restrict)",
-    "location": {
-      "column": "45",
-      "line": "64",
-      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\string.h"
-    },
-    "name": "strtok",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@strxfrm",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "size_t strxfrm(char *restrict, const char *restrict, size_t)",
-    "location": {
-      "column": "45",
-      "line": "66",
-      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\string.h"
-    },
-    "name": "strxfrm",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@strdup",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "char * strdup(const char *)",
-    "location": {
-      "column": "45",
-      "line": "70",
-      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\string.h"
-    },
-    "name": "strdup",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@strcasecmp",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "int strcasecmp(const char *, const char *)",
-    "location": {
-      "column": "45",
-      "line": "71",
-      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\string.h"
-    },
-    "name": "strcasecmp",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@strncasecmp",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "int strncasecmp(const char *, const char *, size_t)",
-    "location": {
-      "column": "45",
-      "line": "73",
-      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\string.h"
-    },
-    "name": "strncasecmp",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@strtok_r",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "char * strtok_r(char *, const char *, char **)",
-    "location": {
-      "column": "45",
-      "line": "75",
-      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\string.h"
-    },
-    "name": "strtok_r",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@strnlen",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "size_t strnlen(const char *, size_t)",
-    "location": {
-      "column": "45",
-      "line": "77",
-      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\string.h"
-    },
-    "name": "strnlen",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@memchr",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void * memchr(const void *, int, size_t)",
-    "location": {
-      "column": "37",
-      "line": "171",
-      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\string.h"
-    },
-    "name": "memchr",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@strchr",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "char * strchr(const char *, int)",
-    "location": {
-      "column": "37",
-      "line": "172",
-      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\string.h"
-    },
-    "name": "strchr",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@strpbrk",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "char * strpbrk(const char *, const char *)",
-    "location": {
-      "column": "37",
-      "line": "173",
-      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\string.h"
-    },
-    "name": "strpbrk",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@strrchr",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "char * strrchr(const char *, int)",
-    "location": {
-      "column": "37",
-      "line": "174",
-      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\string.h"
-    },
-    "name": "strrchr",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@strstr",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "char * strstr(const char *, const char *)",
-    "location": {
-      "column": "37",
-      "line": "175",
-      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\string.h"
-    },
-    "name": "strstr",
-    "origin": "system_include",
     "scope": null
   },
   {
@@ -99361,7 +98955,7 @@
     "ID": "c:@F@SysCtlPeripheralReady",
     "What": "Function",
     "defdec": "Dec",
-    "display": "bool SysCtlPeripheralReady(uint32_t)",
+    "display": "_Bool SysCtlPeripheralReady(uint32_t)",
     "location": {
       "column": "13",
       "line": "601",
@@ -99375,7 +98969,7 @@
     "ID": "c:@F@SysCtlPeripheralReady",
     "What": "Function",
     "defdec": "Dec",
-    "display": "_Bool SysCtlPeripheralReady(uint32_t)",
+    "display": "bool SysCtlPeripheralReady(uint32_t)",
     "location": {
       "column": "13",
       "line": "601",
@@ -103399,6 +102993,496 @@
     "scope": null
   },
   {
+    "ID": "c:string.h@100@macro@_STRING",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "_STRING",
+    "location": {
+      "column": "9",
+      "line": "4",
+      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\string.h"
+    },
+    "name": "_STRING",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:string.h@344@macro@NULL",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "NULL",
+    "location": {
+      "column": "11",
+      "line": "20",
+      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\string.h"
+    },
+    "name": "NULL",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@memcmp",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "int memcmp(const void *, const void *, size_t)",
+    "location": {
+      "column": "45",
+      "line": "38",
+      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\string.h"
+    },
+    "name": "memcmp",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@memcpy",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void * memcpy(void *restrict, const void *restrict, size_t)",
+    "location": {
+      "column": "45",
+      "line": "40",
+      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\string.h"
+    },
+    "name": "memcpy",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@memmove",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void * memmove(void *, const void *, size_t)",
+    "location": {
+      "column": "45",
+      "line": "43",
+      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\string.h"
+    },
+    "name": "memmove",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@memset",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void * memset(void *, int, size_t)",
+    "location": {
+      "column": "45",
+      "line": "45",
+      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\string.h"
+    },
+    "name": "memset",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@strcat",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "char * strcat(char *restrict, const char *restrict)",
+    "location": {
+      "column": "45",
+      "line": "46",
+      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\string.h"
+    },
+    "name": "strcat",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@strcmp",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "int strcmp(const char *, const char *)",
+    "location": {
+      "column": "45",
+      "line": "48",
+      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\string.h"
+    },
+    "name": "strcmp",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@strcoll",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "int strcoll(const char *, const char *)",
+    "location": {
+      "column": "45",
+      "line": "49",
+      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\string.h"
+    },
+    "name": "strcoll",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@strcpy",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "char * strcpy(char *restrict, const char *restrict)",
+    "location": {
+      "column": "45",
+      "line": "50",
+      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\string.h"
+    },
+    "name": "strcpy",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@strcspn",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "size_t strcspn(const char *, const char *)",
+    "location": {
+      "column": "45",
+      "line": "52",
+      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\string.h"
+    },
+    "name": "strcspn",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@strerror",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "char * strerror(int)",
+    "location": {
+      "column": "45",
+      "line": "53",
+      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\string.h"
+    },
+    "name": "strerror",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@strlen",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "size_t strlen(const char *)",
+    "location": {
+      "column": "45",
+      "line": "54",
+      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\string.h"
+    },
+    "name": "strlen",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@strncat",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "char * strncat(char *restrict, const char *restrict, size_t)",
+    "location": {
+      "column": "45",
+      "line": "55",
+      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\string.h"
+    },
+    "name": "strncat",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@strncmp",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "int strncmp(const char *, const char *, size_t)",
+    "location": {
+      "column": "45",
+      "line": "58",
+      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\string.h"
+    },
+    "name": "strncmp",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@strncpy",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "char * strncpy(char *restrict, const char *restrict, size_t)",
+    "location": {
+      "column": "45",
+      "line": "60",
+      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\string.h"
+    },
+    "name": "strncpy",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@strspn",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "size_t strspn(const char *, const char *)",
+    "location": {
+      "column": "45",
+      "line": "63",
+      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\string.h"
+    },
+    "name": "strspn",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@strtok",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "char * strtok(char *restrict, const char *restrict)",
+    "location": {
+      "column": "45",
+      "line": "64",
+      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\string.h"
+    },
+    "name": "strtok",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@strxfrm",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "size_t strxfrm(char *restrict, const char *restrict, size_t)",
+    "location": {
+      "column": "45",
+      "line": "66",
+      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\string.h"
+    },
+    "name": "strxfrm",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@strdup",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "char * strdup(const char *)",
+    "location": {
+      "column": "45",
+      "line": "70",
+      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\string.h"
+    },
+    "name": "strdup",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@strcasecmp",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "int strcasecmp(const char *, const char *)",
+    "location": {
+      "column": "45",
+      "line": "71",
+      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\string.h"
+    },
+    "name": "strcasecmp",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@strncasecmp",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "int strncasecmp(const char *, const char *, size_t)",
+    "location": {
+      "column": "45",
+      "line": "73",
+      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\string.h"
+    },
+    "name": "strncasecmp",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@strtok_r",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "char * strtok_r(char *, const char *, char **)",
+    "location": {
+      "column": "45",
+      "line": "75",
+      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\string.h"
+    },
+    "name": "strtok_r",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@strnlen",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "size_t strnlen(const char *, size_t)",
+    "location": {
+      "column": "45",
+      "line": "77",
+      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\string.h"
+    },
+    "name": "strnlen",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@memchr",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void * memchr(const void *, int, size_t)",
+    "location": {
+      "column": "37",
+      "line": "171",
+      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\string.h"
+    },
+    "name": "memchr",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@strchr",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "char * strchr(const char *, int)",
+    "location": {
+      "column": "37",
+      "line": "172",
+      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\string.h"
+    },
+    "name": "strchr",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@strpbrk",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "char * strpbrk(const char *, const char *)",
+    "location": {
+      "column": "37",
+      "line": "173",
+      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\string.h"
+    },
+    "name": "strpbrk",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@strrchr",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "char * strrchr(const char *, int)",
+    "location": {
+      "column": "37",
+      "line": "174",
+      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\string.h"
+    },
+    "name": "strrchr",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@strstr",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "char * strstr(const char *, const char *)",
+    "location": {
+      "column": "37",
+      "line": "175",
+      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\string.h"
+    },
+    "name": "strstr",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:ysizet.h@111@macro@_YSIZET_H",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "_YSIZET_H",
+    "location": {
+      "column": "9",
+      "line": "5",
+      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\ysizet.h"
+    },
+    "name": "_YSIZET_H",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:ysizet.h@277@macro@_SIZE_T",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "_SIZE_T",
+    "location": {
+      "column": "11",
+      "line": "16",
+      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\ysizet.h"
+    },
+    "name": "_SIZE_T",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:ysizet.h@296@macro@_STD_USING_SIZE_T",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "_STD_USING_SIZE_T",
+    "location": {
+      "column": "11",
+      "line": "17",
+      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\ysizet.h"
+    },
+    "name": "_STD_USING_SIZE_T",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:ysizet.h@T@size_t",
+    "What": "Typedef",
+    "defdec": "Def",
+    "display": "_Sizet",
+    "location": {
+      "column": "18",
+      "line": "18",
+      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\ysizet.h"
+    },
+    "name": "size_t",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:ysizet.h@359@macro@__DATA_PTR_MEM_HELPER1__",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "__DATA_PTR_MEM_HELPER1__",
+    "location": {
+      "column": "9",
+      "line": "21",
+      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\ysizet.h"
+    },
+    "name": "__DATA_PTR_MEM_HELPER1__",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:ysizet.h@T@__data_size_t",
+    "What": "Typedef",
+    "defdec": "Def",
+    "display": "unsigned int",
+    "location": {
+      "column": "1",
+      "line": "23",
+      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\ysizet.h"
+    },
+    "name": "__data_size_t",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
     "ID": "c:stdint.h@101@macro@_STDINT",
     "What": "MacroDef",
     "defdec": "Def",
@@ -105947,76 +106031,6 @@
     "scope": null
   },
   {
-    "ID": "c:stdbool.h@96@macro@_STDBOOL",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "_STDBOOL",
-    "location": {
-      "column": "9",
-      "line": "5",
-      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\stdbool.h"
-    },
-    "name": "_STDBOOL",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:stdbool.h@200@macro@bool",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "bool",
-    "location": {
-      "column": "11",
-      "line": "13",
-      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\stdbool.h"
-    },
-    "name": "bool",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:stdbool.h@225@macro@true",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "true",
-    "location": {
-      "column": "11",
-      "line": "14",
-      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\stdbool.h"
-    },
-    "name": "true",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:stdbool.h@246@macro@false",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "false",
-    "location": {
-      "column": "11",
-      "line": "15",
-      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\stdbool.h"
-    },
-    "name": "false",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:stdbool.h@275@macro@__bool_true_false_are_defined",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "__bool_true_false_are_defined",
-    "location": {
-      "column": "9",
-      "line": "18",
-      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\stdbool.h"
-    },
-    "name": "__bool_true_false_are_defined",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
     "ID": "c:display_manager.h@36@macro@DISPLAY_MANAGER_H_",
     "What": "MacroDef",
     "defdec": "Def",
@@ -108295,6 +108309,76 @@
       "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\DLib_Product_string.h"
     },
     "name": "memset",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:stdbool.h@96@macro@_STDBOOL",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "_STDBOOL",
+    "location": {
+      "column": "9",
+      "line": "5",
+      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\stdbool.h"
+    },
+    "name": "_STDBOOL",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:stdbool.h@200@macro@bool",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "bool",
+    "location": {
+      "column": "11",
+      "line": "13",
+      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\stdbool.h"
+    },
+    "name": "bool",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:stdbool.h@225@macro@true",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "true",
+    "location": {
+      "column": "11",
+      "line": "14",
+      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\stdbool.h"
+    },
+    "name": "true",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:stdbool.h@246@macro@false",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "false",
+    "location": {
+      "column": "11",
+      "line": "15",
+      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\stdbool.h"
+    },
+    "name": "false",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:stdbool.h@275@macro@__bool_true_false_are_defined",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "__bool_true_false_are_defined",
+    "location": {
+      "column": "9",
+      "line": "18",
+      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\stdbool.h"
+    },
+    "name": "__bool_true_false_are_defined",
     "origin": "system_include",
     "scope": null
   },
@@ -110637,90 +110721,6 @@
     "scope": null
   },
   {
-    "ID": "c:ysizet.h@111@macro@_YSIZET_H",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "_YSIZET_H",
-    "location": {
-      "column": "9",
-      "line": "5",
-      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\ysizet.h"
-    },
-    "name": "_YSIZET_H",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:ysizet.h@277@macro@_SIZE_T",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "_SIZE_T",
-    "location": {
-      "column": "11",
-      "line": "16",
-      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\ysizet.h"
-    },
-    "name": "_SIZE_T",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:ysizet.h@296@macro@_STD_USING_SIZE_T",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "_STD_USING_SIZE_T",
-    "location": {
-      "column": "11",
-      "line": "17",
-      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\ysizet.h"
-    },
-    "name": "_STD_USING_SIZE_T",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:ysizet.h@T@size_t",
-    "What": "Typedef",
-    "defdec": "Def",
-    "display": "_Sizet",
-    "location": {
-      "column": "18",
-      "line": "18",
-      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\ysizet.h"
-    },
-    "name": "size_t",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:ysizet.h@359@macro@__DATA_PTR_MEM_HELPER1__",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "__DATA_PTR_MEM_HELPER1__",
-    "location": {
-      "column": "9",
-      "line": "21",
-      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\ysizet.h"
-    },
-    "name": "__DATA_PTR_MEM_HELPER1__",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:ysizet.h@T@__data_size_t",
-    "What": "Typedef",
-    "defdec": "Def",
-    "display": "unsigned int",
-    "location": {
-      "column": "1",
-      "line": "23",
-      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\ysizet.h"
-    },
-    "name": "__data_size_t",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
     "ID": "c:hw_memmap.h@2039@macro@__HW_MEMMAP_H__",
     "What": "MacroDef",
     "defdec": "Def",
@@ -112247,7 +112247,7 @@
     "scope": null
   },
   {
-    "ID": "c:keypad.h@368@macro@KEYPAD_COLS",
+    "ID": "c:Keypad.h@368@macro@KEYPAD_COLS",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "KEYPAD_COLS",
@@ -112261,7 +112261,7 @@
     "scope": null
   },
   {
-    "ID": "c:Keypad.h@368@macro@KEYPAD_COLS",
+    "ID": "c:keypad.h@368@macro@KEYPAD_COLS",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "KEYPAD_COLS",

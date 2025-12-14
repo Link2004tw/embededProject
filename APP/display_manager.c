@@ -176,6 +176,7 @@ void DISPLAY_OLD_PASSWORD(void)
     for(pass_index = 0; pass_index < 4; pass_index++){
         key = InputManager_GetKey();
         while(key == 0) {  
+            if(key=="=") return;
             key = InputManager_GetKey();
             SysCtlDelay(10000);
         }
@@ -224,6 +225,7 @@ void DISPLAY_NEW_PASSWORD(void)
 for(pass_index = 0; pass_index < 4; pass_index++){
         key = InputManager_GetKey();
         while(key == 0) {
+            if(key=="=") return;
             key = InputManager_GetKey();
             SysCtlDelay(10000);
         }
