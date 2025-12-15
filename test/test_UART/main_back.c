@@ -10,8 +10,10 @@
 #include "driverlib/pin_map.h"
 
 #define PASSWORD_LEN 5
+#define RX_BUFFER_SIZE 20
 
-char rxBuffer[10];
+
+char rxBuffer[RX_BUFFER_SIZE];
 uint8_t rxIndex = 0;
 
 void UART1_Init(void) {
@@ -36,6 +38,7 @@ void LED_Init(void) {
     while(!SysCtlPeripheralReady(SYSCTL_PERIPH_GPIOF));
     
     GPIOPinTypeGPIOOutput(GPIO_PORTF_BASE, GPIO_PIN_3); // PF3 is Green LED
+    GPIOPinTypeGPIOOutput(GPIO_PORTF_BASE, GPIO_PIN_1); // PF2 is Red LED
 }
 
 int main(void) {
@@ -45,32 +48,44 @@ int main(void) {
     LED_Init();
 
     GPIOPinWrite(GPIO_PORTF_BASE, GPIO_PIN_3, 0); // Start with LED OFF
-
+    short c =0;
+    short mode =0;
     while(1) {
         if (UARTCharsAvail(UART1_BASE)) {
             char receivedChar = UARTCharGet(UART1_BASE);
-
             if (receivedChar == '#') {
-                rxBuffer[rxIndex] = '\0'; 
-                
-                if (strcmp(rxBuffer, "12345") == 0) {
-                    // 1. Turn ON Green LED
-                    GPIOPinWrite(GPIO_PORTF_BASE, GPIO_PIN_3, GPIO_PIN_3);
-                    
-                    // 2. Wait 3 Seconds
-                    // 3 * 16,000,000 / 3 = 16,000,000
-                    SysCtlDelay(16000000);
-                    
-                    // 3. Turn OFF Green LED
-                    GPIOPinWrite(GPIO_PORTF_BASE, GPIO_PIN_3, 0);
-                } 
-                
-                // Clear buffer for next attempt
+                rxBuffer[rxIndex] = '\0';   // terminate string
+
+                // Expected format: mode,password
+                char *modeStr = strtok(rxBuffer, ",");
+                char *passStr = strtok(NULL, ",");
+
+                if (modeStr != NULL && passStr != NULL) {
+                    uint8_t mode = atoi(modeStr);
+
+                    if (mode == 0 && strcmp(passStr, "12345") == 0) {
+                        // ✅ Correct password
+                        GPIOPinWrite(GPIO_PORTF_BASE, GPIO_PIN_3, GPIO_PIN_3); // Green ON
+                        SysCtlDelay(16000000);
+                        GPIOPinWrite(GPIO_PORTF_BASE, GPIO_PIN_3, 0);
+                        c = 0; // reset failed attempts
+                    } else {
+                        c++;
+                        if (c == 3) {
+                            GPIOPinWrite(GPIO_PORTF_BASE, GPIO_PIN_1, GPIO_PIN_1); // Red ON
+                            SysCtlDelay(16000000);
+                            GPIOPinWrite(GPIO_PORTF_BASE, GPIO_PIN_1, 0);
+                            c = 0;
+                        }
+                    }
+                }
+
+                // Reset buffer
                 rxIndex = 0;
                 memset(rxBuffer, 0, sizeof(rxBuffer));
-            } 
+            }
             else {
-                if (rxIndex < PASSWORD_LEN) {
+                if (rxIndex < RX_BUFFER_SIZE - 1) {
                     rxBuffer[rxIndex++] = receivedChar;
                 }
             }

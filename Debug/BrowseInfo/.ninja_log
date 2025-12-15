@@ -47,3 +47,16 @@
 108	201	7875105529212716	E:/coding/embedded/embededProject/Debug/BrowseInfo/main_part2.pbi	c1b740e173da1bfb
 206	280	7875105530004616	E:/coding/embedded/embededProject/Debug/BrowseInfo/main.pbd	5ff10078ee50d1f0
 283	1146	7875105538355193	E:/coding/embedded/embededProject/Debug/BrowseInfo/main.pbw	68645a48e081bea
+24	96	7875236305952558	E:/coding/embedded/embededProject/Debug/BrowseInfo/APP/input_manager.pbi	e1c3dc15cfc2fb6a
+6	106	7875236305826924	E:/coding/embedded/embededProject/Debug/BrowseInfo/HAL/LCD/lcd.pbi	edfa9182a389e44
+2	110	7875236306066714	E:/coding/embedded/embededProject/Debug/BrowseInfo/APP/display_manager.pbi	11bd02a66195d322
+29	114	7875236306066714	E:/coding/embedded/embededProject/Debug/BrowseInfo/startup_ewarm.pbi	bade67dff69a8d8b
+10	128	7875236306287012	E:/coding/embedded/embededProject/Debug/BrowseInfo/HAL/Keypad/keypad.pbi	5fe2b5d046d33474
+13	144	7875236306457005	E:/coding/embedded/embededProject/Debug/BrowseInfo/APP/potentiometer_manager.pbi	27e15b31431a2f8f
+17	153	7875236306527005	E:/coding/embedded/embededProject/Debug/BrowseInfo/main.pbi	9e18690c91b5f219
+20	159	7875236306527005	E:/coding/embedded/embededProject/Debug/BrowseInfo/HAL/Potentiometer/potentiometer.pbi	a29e42034ed35707
+148	198	7875236307034443	E:/coding/embedded/embededProject/Debug/BrowseInfo/main_part0.pbi	1db3715b58a87f6a
+156	204	7875236307094439	E:/coding/embedded/embededProject/Debug/BrowseInfo/main_part2.pbi	944ccbbef28146d0
+163	228	7875236307324443	E:/coding/embedded/embededProject/Debug/BrowseInfo/main_part1.pbi	25e6a396f3abb82b
+233	319	7875236308246675	E:/coding/embedded/embededProject/Debug/BrowseInfo/main.pbd	5ff10078ee50d1f0
+324	1241	7875236317184059	E:/coding/embedded/embededProject/Debug/BrowseInfo/main.pbw	68645a48e081bea

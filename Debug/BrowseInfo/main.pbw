@@ -100961,7 +100961,7 @@
     "ID": "c:@F@SysCtlPLLVerificationSet",
     "What": "Function",
     "defdec": "Dec",
-    "display": "void SysCtlPLLVerificationSet(_Bool)",
+    "display": "void SysCtlPLLVerificationSet(bool)",
     "location": {
       "column": "13",
       "line": "643",
@@ -100975,7 +100975,7 @@
     "ID": "c:@F@SysCtlPLLVerificationSet",
     "What": "Function",
     "defdec": "Dec",
-    "display": "void SysCtlPLLVerificationSet(bool)",
+    "display": "void SysCtlPLLVerificationSet(_Bool)",
     "location": {
       "column": "13",
       "line": "643",
@@ -108148,7 +108148,7 @@
     "ID": "c:@F@ADCIntStatusEx",
     "What": "Function",
     "defdec": "Dec",
-    "display": "uint32_t ADCIntStatusEx(uint32_t, bool)",
+    "display": "uint32_t ADCIntStatusEx(uint32_t, _Bool)",
     "location": {
       "column": "17",
       "line": "305",
@@ -108162,7 +108162,7 @@
     "ID": "c:@F@ADCIntStatusEx",
     "What": "Function",
     "defdec": "Dec",
-    "display": "uint32_t ADCIntStatusEx(uint32_t, _Bool)",
+    "display": "uint32_t ADCIntStatusEx(uint32_t, bool)",
     "location": {
       "column": "17",
       "line": "305",
@@ -111099,230 +111099,6 @@
     "scope": null
   },
   {
-    "ID": "c:dio.c@618@macro@GPIO_LOCK_KEY",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "GPIO_LOCK_KEY",
-    "location": {
-      "column": "9",
-      "line": "19",
-      "path": "E:\\coding\\embedded\\embededProject\\HAL\\Keypad\\dio.c"
-    },
-    "name": "GPIO_LOCK_KEY",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:dio.c@729@macro@GET_GPIO_DATA",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "GET_GPIO_DATA",
-    "location": {
-      "column": "9",
-      "line": "22",
-      "path": "E:\\coding\\embedded\\embededProject\\HAL\\Keypad\\dio.c"
-    },
-    "name": "GET_GPIO_DATA",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:dio.c@1128@macro@GET_GPIO_DIR",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "GET_GPIO_DIR",
-    "location": {
-      "column": "9",
-      "line": "29",
-      "path": "E:\\coding\\embedded\\embededProject\\HAL\\Keypad\\dio.c"
-    },
-    "name": "GET_GPIO_DIR",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:dio.c@1521@macro@GET_GPIO_DEN",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "GET_GPIO_DEN",
-    "location": {
-      "column": "9",
-      "line": "36",
-      "path": "E:\\coding\\embedded\\embededProject\\HAL\\Keypad\\dio.c"
-    },
-    "name": "GET_GPIO_DEN",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:dio.c@1914@macro@GET_GPIO_AFSEL",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "GET_GPIO_AFSEL",
-    "location": {
-      "column": "9",
-      "line": "43",
-      "path": "E:\\coding\\embedded\\embededProject\\HAL\\Keypad\\dio.c"
-    },
-    "name": "GET_GPIO_AFSEL",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:dio.c@2319@macro@GET_GPIO_PUR",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "GET_GPIO_PUR",
-    "location": {
-      "column": "9",
-      "line": "50",
-      "path": "E:\\coding\\embedded\\embededProject\\HAL\\Keypad\\dio.c"
-    },
-    "name": "GET_GPIO_PUR",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:dio.c@2712@macro@GET_GPIO_PDR",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "GET_GPIO_PDR",
-    "location": {
-      "column": "9",
-      "line": "57",
-      "path": "E:\\coding\\embedded\\embededProject\\HAL\\Keypad\\dio.c"
-    },
-    "name": "GET_GPIO_PDR",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:dio.c@3105@macro@GET_GPIO_LOCK",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "GET_GPIO_LOCK",
-    "location": {
-      "column": "9",
-      "line": "64",
-      "path": "E:\\coding\\embedded\\embededProject\\HAL\\Keypad\\dio.c"
-    },
-    "name": "GET_GPIO_LOCK",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:dio.c@3504@macro@GET_GPIO_CR",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "GET_GPIO_CR",
-    "location": {
-      "column": "9",
-      "line": "71",
-      "path": "E:\\coding\\embedded\\embededProject\\HAL\\Keypad\\dio.c"
-    },
-    "name": "GET_GPIO_CR",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@DIO_Init",
-    "What": "Function",
-    "defdec": "Def",
-    "display": "void DIO_Init(uint8_t, uint8_t, uint8_t)",
-    "location": {
-      "column": "6",
-      "line": "88",
-      "path": "E:\\coding\\embedded\\embededProject\\HAL\\Keypad\\dio.c"
-    },
-    "name": "DIO_Init",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:dio.c@4403@F@DIO_Init@delay",
-    "What": "Variable",
-    "defdec": "Def",
-    "display": "delay",
-    "location": {
-      "column": "23",
-      "line": "89",
-      "path": "E:\\coding\\embedded\\embededProject\\HAL\\Keypad\\dio.c"
-    },
-    "name": "delay",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@DIO_WritePin",
-    "What": "Function",
-    "defdec": "Def",
-    "display": "void DIO_WritePin(uint8_t, uint8_t, uint8_t)",
-    "location": {
-      "column": "6",
-      "line": "113",
-      "path": "E:\\coding\\embedded\\embededProject\\HAL\\Keypad\\dio.c"
-    },
-    "name": "DIO_WritePin",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@DIO_ReadPin",
-    "What": "Function",
-    "defdec": "Def",
-    "display": "uint8_t DIO_ReadPin(uint8_t, uint8_t)",
-    "location": {
-      "column": "9",
-      "line": "126",
-      "path": "E:\\coding\\embedded\\embededProject\\HAL\\Keypad\\dio.c"
-    },
-    "name": "DIO_ReadPin",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@DIO_TogglePin",
-    "What": "Function",
-    "defdec": "Def",
-    "display": "void DIO_TogglePin(uint8_t, uint8_t)",
-    "location": {
-      "column": "6",
-      "line": "135",
-      "path": "E:\\coding\\embedded\\embededProject\\HAL\\Keypad\\dio.c"
-    },
-    "name": "DIO_TogglePin",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@DIO_SetPUR",
-    "What": "Function",
-    "defdec": "Def",
-    "display": "void DIO_SetPUR(uint8_t, uint8_t, uint8_t)",
-    "location": {
-      "column": "6",
-      "line": "144",
-      "path": "E:\\coding\\embedded\\embededProject\\HAL\\Keypad\\dio.c"
-    },
-    "name": "DIO_SetPUR",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@DIO_SetPDR",
-    "What": "Function",
-    "defdec": "Def",
-    "display": "void DIO_SetPDR(uint8_t, uint8_t, uint8_t)",
-    "location": {
-      "column": "6",
-      "line": "156",
-      "path": "E:\\coding\\embedded\\embededProject\\HAL\\Keypad\\dio.c"
-    },
-    "name": "DIO_SetPDR",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
     "ID": "c:@keypad_codes",
     "What": "Variable",
     "defdec": "Def",
@@ -112177,20 +111953,6 @@
     "scope": null
   },
   {
-    "ID": "c:@F@DIO_Init",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void DIO_Init(uint8_t, uint8_t, uint8_t)",
-    "location": {
-      "column": "6",
-      "line": "75",
-      "path": "E:\\coding\\embedded\\embededProject\\HAL\\Keypad\\dio.h"
-    },
-    "name": "DIO_Init",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
     "ID": "c:@F@DIO_WritePin",
     "What": "Function",
     "defdec": "Dec",
@@ -112201,34 +111963,6 @@
       "path": "E:\\coding\\embedded\\embededProject\\HAL\\Keypad\\dio.h"
     },
     "name": "DIO_WritePin",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@DIO_WritePin",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void DIO_WritePin(uint8_t, uint8_t, uint8_t)",
-    "location": {
-      "column": "6",
-      "line": "81",
-      "path": "E:\\coding\\embedded\\embededProject\\HAL\\Keypad\\dio.h"
-    },
-    "name": "DIO_WritePin",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@DIO_ReadPin",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "uint8_t DIO_ReadPin(uint8_t, uint8_t)",
-    "location": {
-      "column": "9",
-      "line": "87",
-      "path": "E:\\coding\\embedded\\embededProject\\HAL\\Keypad\\dio.h"
-    },
-    "name": "DIO_ReadPin",
     "origin": "user_include",
     "scope": null
   },
@@ -112261,34 +111995,6 @@
     "scope": null
   },
   {
-    "ID": "c:@F@DIO_TogglePin",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void DIO_TogglePin(uint8_t, uint8_t)",
-    "location": {
-      "column": "6",
-      "line": "93",
-      "path": "E:\\coding\\embedded\\embededProject\\HAL\\Keypad\\dio.h"
-    },
-    "name": "DIO_TogglePin",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@DIO_SetPUR",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void DIO_SetPUR(uint8_t, uint8_t, uint8_t)",
-    "location": {
-      "column": "6",
-      "line": "99",
-      "path": "E:\\coding\\embedded\\embededProject\\HAL\\Keypad\\dio.h"
-    },
-    "name": "DIO_SetPUR",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
     "ID": "c:@F@DIO_SetPUR",
     "What": "Function",
     "defdec": "Dec",
@@ -112317,17 +112023,87 @@
     "scope": null
   },
   {
-    "ID": "c:@F@DIO_SetPDR",
+    "ID": "c:@F@Potentiometer_Init",
     "What": "Function",
-    "defdec": "Dec",
-    "display": "void DIO_SetPDR(uint8_t, uint8_t, uint8_t)",
+    "defdec": "Def",
+    "display": "void Potentiometer_Init(void)",
     "location": {
       "column": "6",
-      "line": "105",
-      "path": "E:\\coding\\embedded\\embededProject\\HAL\\Keypad\\dio.h"
+      "line": "27",
+      "path": "E:\\coding\\embedded\\embededProject\\HAL\\Potentiometer\\potentiometer.c"
     },
-    "name": "DIO_SetPDR",
-    "origin": "user_include",
+    "name": "Potentiometer_Init",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@Potentiometer_ReadRaw",
+    "What": "Function",
+    "defdec": "Def",
+    "display": "uint16_t Potentiometer_ReadRaw(void)",
+    "location": {
+      "column": "10",
+      "line": "84",
+      "path": "E:\\coding\\embedded\\embededProject\\HAL\\Potentiometer\\potentiometer.c"
+    },
+    "name": "Potentiometer_ReadRaw",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:potentiometer.c@3126@F@Potentiometer_ReadRaw@adc_value",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "adc_value",
+    "location": {
+      "column": "14",
+      "line": "86",
+      "path": "E:\\coding\\embedded\\embededProject\\HAL\\Potentiometer\\potentiometer.c"
+    },
+    "name": "adc_value",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@Potentiometer_ReadTimeout",
+    "What": "Function",
+    "defdec": "Def",
+    "display": "uint8_t Potentiometer_ReadTimeout(void)",
+    "location": {
+      "column": "9",
+      "line": "121",
+      "path": "E:\\coding\\embedded\\embededProject\\HAL\\Potentiometer\\potentiometer.c"
+    },
+    "name": "Potentiometer_ReadTimeout",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:potentiometer.c@4385@F@Potentiometer_ReadTimeout@adc_raw",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "adc_raw",
+    "location": {
+      "column": "14",
+      "line": "123",
+      "path": "E:\\coding\\embedded\\embededProject\\HAL\\Potentiometer\\potentiometer.c"
+    },
+    "name": "adc_raw",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:potentiometer.c@4408@F@Potentiometer_ReadTimeout@timeout_value",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "timeout_value",
+    "location": {
+      "column": "14",
+      "line": "124",
+      "path": "E:\\coding\\embedded\\embededProject\\HAL\\Potentiometer\\potentiometer.c"
+    },
+    "name": "timeout_value",
+    "origin": "project_file",
     "scope": null
   },
   {
@@ -114288,90 +114064,6 @@
     },
     "name": "GPIO_PF4_USB0EPEN",
     "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@Potentiometer_Init",
-    "What": "Function",
-    "defdec": "Def",
-    "display": "void Potentiometer_Init(void)",
-    "location": {
-      "column": "6",
-      "line": "27",
-      "path": "E:\\coding\\embedded\\embededProject\\HAL\\Potentiometer\\potentiometer.c"
-    },
-    "name": "Potentiometer_Init",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@Potentiometer_ReadRaw",
-    "What": "Function",
-    "defdec": "Def",
-    "display": "uint16_t Potentiometer_ReadRaw(void)",
-    "location": {
-      "column": "10",
-      "line": "84",
-      "path": "E:\\coding\\embedded\\embededProject\\HAL\\Potentiometer\\potentiometer.c"
-    },
-    "name": "Potentiometer_ReadRaw",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:potentiometer.c@3126@F@Potentiometer_ReadRaw@adc_value",
-    "What": "Variable",
-    "defdec": "Def",
-    "display": "adc_value",
-    "location": {
-      "column": "14",
-      "line": "86",
-      "path": "E:\\coding\\embedded\\embededProject\\HAL\\Potentiometer\\potentiometer.c"
-    },
-    "name": "adc_value",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@Potentiometer_ReadTimeout",
-    "What": "Function",
-    "defdec": "Def",
-    "display": "uint8_t Potentiometer_ReadTimeout(void)",
-    "location": {
-      "column": "9",
-      "line": "121",
-      "path": "E:\\coding\\embedded\\embededProject\\HAL\\Potentiometer\\potentiometer.c"
-    },
-    "name": "Potentiometer_ReadTimeout",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:potentiometer.c@4385@F@Potentiometer_ReadTimeout@adc_raw",
-    "What": "Variable",
-    "defdec": "Def",
-    "display": "adc_raw",
-    "location": {
-      "column": "14",
-      "line": "123",
-      "path": "E:\\coding\\embedded\\embededProject\\HAL\\Potentiometer\\potentiometer.c"
-    },
-    "name": "adc_raw",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:potentiometer.c@4408@F@Potentiometer_ReadTimeout@timeout_value",
-    "What": "Variable",
-    "defdec": "Def",
-    "display": "timeout_value",
-    "location": {
-      "column": "14",
-      "line": "124",
-      "path": "E:\\coding\\embedded\\embededProject\\HAL\\Potentiometer\\potentiometer.c"
-    },
-    "name": "timeout_value",
-    "origin": "project_file",
     "scope": null
   },
   {
