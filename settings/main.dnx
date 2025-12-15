@@ -46,7 +46,7 @@
         <MultiCoreRunAll>1</MultiCoreRunAll>
     </Simulator>
     <DebugChecksum>
-        <Checksum>4263158524</Checksum>
+        <Checksum>3175567749</Checksum>
     </DebugChecksum>
     <LMIFTDIDriver>
         <LMIFTDIserialNo>0E233097</LMIFTDIserialNo>
@@ -66,8 +66,8 @@
         <mode>0</mode>
     </DisassembleMode>
     <Breakpoints2>
-        <Bp0>_ 1 "EMUL_CODE" "{$PROJ_DIR$\main.c}.81.17" 0 0 1 "" 0 "" 0</Bp0>
-        <Bp1>_ 1 "EMUL_CODE" "{$PROJ_DIR$\main.c}.68.9" 0 0 1 "" 0 "" 0</Bp1>
+        <Bp0>_ 1 "EMUL_CODE" "{$PROJ_DIR$\main.c}.84.21" 0 0 1 "" 0 "" 0</Bp0>
+        <Bp1>_ 1 "EMUL_CODE" "{$PROJ_DIR$\main.c}.69.13" 0 0 1 "" 0 "" 0</Bp1>
         <Count>2</Count>
     </Breakpoints2>
     <TermIOLog>
