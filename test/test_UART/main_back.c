@@ -49,7 +49,7 @@ int main(void) {
 
     GPIOPinWrite(GPIO_PORTF_BASE, GPIO_PIN_3, 0); // Start with LED OFF
     short c =0;
-    short mode =0;
+    //short mode =0;
     while(1) {
         if (UARTCharsAvail(UART1_BASE)) {
             char receivedChar = UARTCharGet(UART1_BASE);
@@ -64,7 +64,6 @@ int main(void) {
                     uint8_t mode = atoi(modeStr);
 
                     if (mode == 0 && strcmp(passStr, "12345") == 0) {
-                        // ✅ Correct password
                         GPIOPinWrite(GPIO_PORTF_BASE, GPIO_PIN_3, GPIO_PIN_3); // Green ON
                         SysCtlDelay(16000000);
                         GPIOPinWrite(GPIO_PORTF_BASE, GPIO_PIN_3, 0);

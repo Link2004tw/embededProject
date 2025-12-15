@@ -1,5 +1,6 @@
 #include <stdint.h>
 #include <stdbool.h>
+#include <string.h> 
 #include "tm4c123gh6pm.h"
 #include "inc/hw_memmap.h"
 #include "inc/hw_types.h"
@@ -8,46 +9,85 @@
 #include "driverlib/uart.h"
 #include "driverlib/pin_map.h"
 
-// Initialize UART5 on PE4 (Rx) and PE5 (Tx)
-void UART1_Init_front(void) {
-    SysCtlPeripheralEnable(SYSCTL_PERIPH_UART5);
-    SysCtlPeripheralEnable(SYSCTL_PERIPH_GPIOE);
+#define PASSWORD_LEN 5
+#define RX_BUFFER_SIZE 20
 
-    while(!SysCtlPeripheralReady(SYSCTL_PERIPH_UART5));
-    while(!SysCtlPeripheralReady(SYSCTL_PERIPH_GPIOE));
 
-    GPIOPinConfigure(GPIO_PE4_U5RX);
-    GPIOPinConfigure(GPIO_PE5_U5TX);
-    GPIOPinTypeUART(GPIO_PORTE_BASE, GPIO_PIN_4 | GPIO_PIN_5);
+char rxBuffer[RX_BUFFER_SIZE];
+uint8_t rxIndex = 0;
 
-    UARTConfigSetExpClk(UART5_BASE, SysCtlClockGet(), 9600,
+void UART1_Init(void) {
+    SysCtlPeripheralEnable(SYSCTL_PERIPH_UART1);
+    SysCtlPeripheralEnable(SYSCTL_PERIPH_GPIOB);
+
+    while(!SysCtlPeripheralReady(SYSCTL_PERIPH_UART1));
+    while(!SysCtlPeripheralReady(SYSCTL_PERIPH_GPIOB));
+
+    GPIOPinConfigure(GPIO_PB0_U1RX);
+    GPIOPinConfigure(GPIO_PB1_U1TX);
+    GPIOPinTypeUART(GPIO_PORTB_BASE, GPIO_PIN_0 | GPIO_PIN_1);
+
+    UARTConfigSetExpClk(UART1_BASE, SysCtlClockGet(), 9600,
                         (UART_CONFIG_WLEN_8 | UART_CONFIG_STOP_ONE | UART_CONFIG_PAR_NONE));
     
-    UARTEnable(UART5_BASE);
+    UARTEnable(UART1_BASE);
 }
 
-void UART1_SendString(char* str) {
-    while(*str) {
-        UARTCharPut(UART5_BASE, *str);
-        str++;
-    }
+void LED_Init(void) {
+    SysCtlPeripheralEnable(SYSCTL_PERIPH_GPIOF);
+    while(!SysCtlPeripheralReady(SYSCTL_PERIPH_GPIOF));
+    
+    GPIOPinTypeGPIOOutput(GPIO_PORTF_BASE, GPIO_PIN_3); // PF3 is Green LED
+    GPIOPinTypeGPIOOutput(GPIO_PORTF_BASE, GPIO_PIN_1); // PF2 is Red LED
 }
 
 int main(void) {
-    // Set clock to 16MHz
     SysCtlClockSet(SYSCTL_SYSDIV_1 | SYSCTL_USE_OSC | SYSCTL_OSC_MAIN | SYSCTL_XTAL_16MHZ);
 
-    UART1_Init_front();
+    UART1_Init();
+    LED_Init();
 
-    char dummyPassword[] = "12345#"; 
-
+    GPIOPinWrite(GPIO_PORTF_BASE, GPIO_PIN_3, 0); // Start with LED OFF
+    short c =0;
+    //short mode =0;
     while(1) {
-        // Send the dummy password
-        UART1_SendString(dummyPassword);
-        
-        // Wait 10 seconds
-        // SysCtlDelay count = (Seconds * Clock) / 3
-        // 10 * 16,000,000 / 3 = ~53,333,333
-        SysCtlDelay(53333333); 
+        if (UARTCharsAvail(UART1_BASE)) {
+            char receivedChar = UARTCharGet(UART1_BASE);
+            if (receivedChar == '#') {
+                rxBuffer[rxIndex] = '\0';   // terminate string
+
+                // Expected format: mode,password
+                char *modeStr = strtok(rxBuffer, ",");
+                char *passStr = strtok(NULL, ",");
+
+                if (modeStr != NULL && passStr != NULL) {
+                    uint8_t mode = atoi(modeStr);
+
+                    if (mode == 0 && strcmp(passStr, "12345") == 0) {
+                        GPIOPinWrite(GPIO_PORTF_BASE, GPIO_PIN_3, GPIO_PIN_3); // Green ON
+                        SysCtlDelay(16000000);
+                        GPIOPinWrite(GPIO_PORTF_BASE, GPIO_PIN_3, 0);
+                        c = 0; // reset failed attempts
+                    } else {
+                        c++;
+                        if (c == 3) {
+                            GPIOPinWrite(GPIO_PORTF_BASE, GPIO_PIN_1, GPIO_PIN_1); // Red ON
+                            SysCtlDelay(16000000);
+                            GPIOPinWrite(GPIO_PORTF_BASE, GPIO_PIN_1, 0);
+                            c = 0;
+                        }
+                    }
+                }
+
+                // Reset buffer
+                rxIndex = 0;
+                memset(rxBuffer, 0, sizeof(rxBuffer));
+            }
+            else {
+                if (rxIndex < RX_BUFFER_SIZE - 1) {
+                    rxBuffer[rxIndex++] = receivedChar;
+                }
+            }
+        }
     }
 }

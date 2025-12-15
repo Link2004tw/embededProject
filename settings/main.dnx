@@ -46,10 +46,10 @@
         <MultiCoreRunAll>1</MultiCoreRunAll>
     </Simulator>
     <DebugChecksum>
-        <Checksum>474088218</Checksum>
+        <Checksum>3161527381</Checksum>
     </DebugChecksum>
     <LMIFTDIDriver>
-        <LMIFTDIserialNo>0E231BF7</LMIFTDIserialNo>
+        <LMIFTDIserialNo>0E233097</LMIFTDIserialNo>
         <LMIFTDIfoundProbes />
     </LMIFTDIDriver>
     <Exceptions>
