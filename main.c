@@ -10,7 +10,7 @@
 #include "driverlib/pin_map.h"
 
 #define PASSWORD_LEN 5
-#define RX_BUFFER_SIZE 20
+#define RX_BUFFER_SIZE 8
 
 
 char rxBuffer[RX_BUFFER_SIZE]="";
@@ -60,14 +60,16 @@ int main(void) {
     GPIOPinWrite(GPIO_PORTF_BASE, GPIO_PIN_2, 0); // Start with LED OFF
     
     short c =0;
+    
     //short mode =0;
     while(1) {
       GPIOPinWrite(GPIO_PORTF_BASE, GPIO_PIN_2, 0); // Start with LED OFF
-    
+        
         if (UARTCharsAvail(UART1_BASE)) {
-
+          GPIOPinWrite(GPIO_PORTF_BASE, GPIO_PIN_2, GPIO_PIN_2); // Start with LED OFF
+    
             char receivedChar = UARTCharGet(UART1_BASE);
-            GPIOPinWrite(GPIO_PORTF_BASE, GPIO_PIN_2, GPIO_PIN_2); // Start with LED OFF
+            //GPIOPinWrite(GPIO_PORTF_BASE, GPIO_PIN_2, GPIO_PIN_2); // Start with LED OFF
     
             if (receivedChar == '#') {
                 rxBuffer[rxIndex] = '\0';   // terminate string
@@ -77,9 +79,9 @@ int main(void) {
                 char *passStr = strtok(NULL, ",");
 
                 if (modeStr != NULL && passStr != NULL) {
-                    uint8_t mode = atoi(modeStr);
+                    //uint8_t mode = atoi(modeStr);
 
-                    if (mode == 0 && strcmp(passStr, "12345") == 0) {
+                    if (*modeStr == '0' && strcmp(passStr, "12345") == 0) {
                         GPIOPinWrite(GPIO_PORTF_BASE, GPIO_PIN_3, GPIO_PIN_3); // Green ON
                         SysCtlDelay(16000000);
                         GPIOPinWrite(GPIO_PORTF_BASE, GPIO_PIN_3, 0);
@@ -98,6 +100,7 @@ int main(void) {
 
                 // Reset buffer
                 rxIndex = 0;
+                short t = sizeof(rxBuffer);
                 memset(rxBuffer, 0, sizeof(rxBuffer));
             }
             else {
@@ -105,6 +108,8 @@ int main(void) {
                     rxBuffer[rxIndex++] = receivedChar;
                 }
             }
+            //SysCtlDelay(16000000);
+                            
         }
     }
 } 

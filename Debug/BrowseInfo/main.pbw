@@ -100303,7 +100303,7 @@
     "ID": "c:@F@SysCtlPeripheralPresent",
     "What": "Function",
     "defdec": "Dec",
-    "display": "_Bool SysCtlPeripheralPresent(uint32_t)",
+    "display": "bool SysCtlPeripheralPresent(uint32_t)",
     "location": {
       "column": "13",
       "line": "600",
@@ -100317,7 +100317,7 @@
     "ID": "c:@F@SysCtlPeripheralPresent",
     "What": "Function",
     "defdec": "Dec",
-    "display": "bool SysCtlPeripheralPresent(uint32_t)",
+    "display": "_Bool SysCtlPeripheralPresent(uint32_t)",
     "location": {
       "column": "13",
       "line": "600",
@@ -100961,7 +100961,7 @@
     "ID": "c:@F@SysCtlPLLVerificationSet",
     "What": "Function",
     "defdec": "Dec",
-    "display": "void SysCtlPLLVerificationSet(_Bool)",
+    "display": "void SysCtlPLLVerificationSet(bool)",
     "location": {
       "column": "13",
       "line": "643",
@@ -100975,7 +100975,7 @@
     "ID": "c:@F@SysCtlPLLVerificationSet",
     "What": "Function",
     "defdec": "Dec",
-    "display": "void SysCtlPLLVerificationSet(bool)",
+    "display": "void SysCtlPLLVerificationSet(_Bool)",
     "location": {
       "column": "13",
       "line": "643",
@@ -124595,7 +124595,7 @@
     "scope": null
   },
   {
-    "ID": "c:main.c@1968@F@main@c",
+    "ID": "c:main.c@1967@F@main@c",
     "What": "Variable",
     "defdec": "Def",
     "display": "c",
@@ -124609,13 +124609,13 @@
     "scope": null
   },
   {
-    "ID": "c:main.c@2157@F@main@receivedChar",
+    "ID": "c:main.c@2258@F@main@receivedChar",
     "What": "Variable",
     "defdec": "Def",
     "display": "receivedChar",
     "location": {
       "column": "18",
-      "line": "69",
+      "line": "71",
       "path": "E:\\coding\\embedded\\embededProject\\main.c"
     },
     "name": "receivedChar",
@@ -124623,13 +124623,13 @@
     "scope": null
   },
   {
-    "ID": "c:main.c@2473@F@main@modeStr",
+    "ID": "c:main.c@2576@F@main@modeStr",
     "What": "Variable",
     "defdec": "Def",
     "display": "modeStr",
     "location": {
       "column": "23",
-      "line": "76",
+      "line": "78",
       "path": "E:\\coding\\embedded\\embededProject\\main.c"
     },
     "name": "modeStr",
@@ -124637,13 +124637,13 @@
     "scope": null
   },
   {
-    "ID": "c:main.c@2529@F@main@passStr",
+    "ID": "c:main.c@2632@F@main@passStr",
     "What": "Variable",
     "defdec": "Def",
     "display": "passStr",
     "location": {
       "column": "23",
-      "line": "77",
+      "line": "79",
       "path": "E:\\coding\\embedded\\embededProject\\main.c"
     },
     "name": "passStr",
@@ -124651,16 +124651,16 @@
     "scope": null
   },
   {
-    "ID": "c:main.c@2646@F@main@mode",
+    "ID": "c:main.c@3661@F@main@t",
     "What": "Variable",
     "defdec": "Def",
-    "display": "mode",
+    "display": "t",
     "location": {
-      "column": "29",
-      "line": "80",
+      "column": "23",
+      "line": "103",
       "path": "E:\\coding\\embedded\\embededProject\\main.c"
     },
-    "name": "mode",
+    "name": "t",
     "origin": "project_file",
     "scope": null
   },
@@ -126893,6 +126893,90 @@
     "scope": null
   },
   {
+    "ID": "c:ysizet.h@111@macro@_YSIZET_H",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "_YSIZET_H",
+    "location": {
+      "column": "9",
+      "line": "5",
+      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\ysizet.h"
+    },
+    "name": "_YSIZET_H",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:ysizet.h@277@macro@_SIZE_T",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "_SIZE_T",
+    "location": {
+      "column": "11",
+      "line": "16",
+      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\ysizet.h"
+    },
+    "name": "_SIZE_T",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:ysizet.h@296@macro@_STD_USING_SIZE_T",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "_STD_USING_SIZE_T",
+    "location": {
+      "column": "11",
+      "line": "17",
+      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\ysizet.h"
+    },
+    "name": "_STD_USING_SIZE_T",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:ysizet.h@T@size_t",
+    "What": "Typedef",
+    "defdec": "Def",
+    "display": "_Sizet",
+    "location": {
+      "column": "18",
+      "line": "18",
+      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\ysizet.h"
+    },
+    "name": "size_t",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:ysizet.h@359@macro@__DATA_PTR_MEM_HELPER1__",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "__DATA_PTR_MEM_HELPER1__",
+    "location": {
+      "column": "9",
+      "line": "21",
+      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\ysizet.h"
+    },
+    "name": "__DATA_PTR_MEM_HELPER1__",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:ysizet.h@T@__data_size_t",
+    "What": "Typedef",
+    "defdec": "Def",
+    "display": "unsigned int",
+    "location": {
+      "column": "1",
+      "line": "23",
+      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\ysizet.h"
+    },
+    "name": "__data_size_t",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
     "ID": "c:hw_types.h@2016@macro@__HW_TYPES_H__",
     "What": "MacroDef",
     "defdec": "Def",
@@ -127114,90 +127198,6 @@
     },
     "name": "CLASS_IS_SNOWFLAKE",
     "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:ysizet.h@111@macro@_YSIZET_H",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "_YSIZET_H",
-    "location": {
-      "column": "9",
-      "line": "5",
-      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\ysizet.h"
-    },
-    "name": "_YSIZET_H",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:ysizet.h@277@macro@_SIZE_T",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "_SIZE_T",
-    "location": {
-      "column": "11",
-      "line": "16",
-      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\ysizet.h"
-    },
-    "name": "_SIZE_T",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:ysizet.h@296@macro@_STD_USING_SIZE_T",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "_STD_USING_SIZE_T",
-    "location": {
-      "column": "11",
-      "line": "17",
-      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\ysizet.h"
-    },
-    "name": "_STD_USING_SIZE_T",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:ysizet.h@T@size_t",
-    "What": "Typedef",
-    "defdec": "Def",
-    "display": "_Sizet",
-    "location": {
-      "column": "18",
-      "line": "18",
-      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\ysizet.h"
-    },
-    "name": "size_t",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:ysizet.h@359@macro@__DATA_PTR_MEM_HELPER1__",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "__DATA_PTR_MEM_HELPER1__",
-    "location": {
-      "column": "9",
-      "line": "21",
-      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\ysizet.h"
-    },
-    "name": "__DATA_PTR_MEM_HELPER1__",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:ysizet.h@T@__data_size_t",
-    "What": "Typedef",
-    "defdec": "Def",
-    "display": "unsigned int",
-    "location": {
-      "column": "1",
-      "line": "23",
-      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\ysizet.h"
-    },
-    "name": "__data_size_t",
-    "origin": "system_include",
     "scope": null
   }
 ]
