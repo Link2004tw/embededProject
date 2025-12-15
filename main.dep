@@ -5,94 +5,79 @@
     <configuration>
         <name>Debug</name>
         <outputs>
-            <file>$PROJ_DIR$\main.c</file>
-            <file>$PROJ_DIR$\eepromDriver.h</file>
-            <file>$PROJ_DIR$\APP\potentiometer_manager.c</file>
-            <file>$PROJ_DIR$\hw_nvic.h</file>
+            <file>$PROJ_DIR$\APP\input_manager.c</file>
+            <file>C:\ti\TivaWare_C_Series-2.2.0.295\driverlib\gpio.h</file>
             <file>$PROJ_DIR$\Comm\HMI_Comm.c</file>
-            <file>$PROJ_DIR$\Debug\Obj\APP\potentiometer_manager.o</file>
+            <file>$TOOLKIT_DIR$\inc\c\DLib_Defaults.h</file>
             <file>$TOOLKIT_DIR$\inc\c\DLib_Product_string.h</file>
+            <file>$PROJ_DIR$\HAL\LCD\lcd.c</file>
+            <file>$PROJ_DIR$\UART.h</file>
+            <file>$PROJ_DIR$\Debug\List\main.map</file>
+            <file>$PROJ_DIR$\main.c</file>
+            <file>$PROJ_DIR$\APP\input_manager.h</file>
+            <file>$PROJ_DIR$\APP\potentiometer_manager.c</file>
+            <file>$PROJ_DIR$\HAL\LCD\lcd.h</file>
+            <file>$PROJ_DIR$\HAL\Potentiometer\potentiometer.c</file>
+            <file>$PROJ_DIR$\Utils\dio.c</file>
             <file>$PROJ_DIR$\APP\display_manager.h</file>
+            <file>$PROJ_DIR$\Comm\HMI_Comm.h</file>
+            <file>$PROJ_DIR$\HAL\Keypad\keypad.c</file>
+            <file>$PROJ_DIR$\HAL\Keypad\keypad.h</file>
+            <file>$PROJ_DIR$\HAL\Potentiometer\potentiometer.h</file>
+            <file>$PROJ_DIR$\Utils\dio.h</file>
+            <file>$PROJ_DIR$\consts.h</file>
+            <file>$PROJ_DIR$\hw_nvic.h</file>
+            <file>$PROJ_DIR$\startup_ewarm.c</file>
+            <file>$PROJ_DIR$\Debug\Obj\APP\potentiometer_manager.o</file>
             <file>C:\ti\TivaWare_C_Series-2.2.0.295\driverlib\ewarm\Exe\driverlib.a</file>
             <file>C:\ti\TivaWare_C_Series-2.2.0.295\driverlib\adc.h</file>
-            <file>$PROJ_DIR$\HAL\Keypad\keypad.c</file>
-            <file>$PROJ_DIR$\APP\input_manager.h</file>
-            <file>$PROJ_DIR$\Utils\dio.c</file>
             <file>$TOOLKIT_DIR$\inc\c\stdint.h</file>
             <file>C:\ti\TivaWare_C_Series-2.2.0.295\driverlib\uart.h</file>
-            <file>$PROJ_DIR$\consts.h</file>
             <file>$PROJ_DIR$\APP\potentiometer_manager.h</file>
-            <file>$TOOLKIT_DIR$\inc\c\DLib_Defaults.h</file>
-            <file>$TOOLKIT_DIR$\inc\c\stdbool.h</file>
-            <file>$PROJ_DIR$\HAL\Potentiometer\potentiometer.c</file>
-            <file>$PROJ_DIR$\APP\display_manager.c</file>
-            <file>$PROJ_DIR$\startup_ewarm.c</file>
-            <file>C:\ti\TivaWare_C_Series-2.2.0.295\driverlib\gpio.h</file>
-            <file>$PROJ_DIR$\HAL\Potentiometer\potentiometer.h</file>
-            <file>$PROJ_DIR$\Debug\List\main.map</file>
-            <file>$PROJ_DIR$\HAL\Keypad\keypad.h</file>
-            <file>$PROJ_DIR$\Comm\HMI_Comm.h</file>
-            <file>$PROJ_DIR$\HAL\LCD\lcd.h</file>
-            <file>$PROJ_DIR$\Utils\dio.h</file>
-            <file>$PROJ_DIR$\HAL\LCD\lcd.c</file>
-            <file>$TOOLKIT_DIR$\lib\m7M_tls.a</file>
-            <file>$PROJ_DIR$\UART.h</file>
-            <file>$TOOLKIT_DIR$\inc\c\DLib_Product.h</file>
-            <file>$PROJ_DIR$\Debug\Obj\HAL\LCD\lcd.o</file>
-            <file>$PROJ_DIR$\Debug\Obj\APP\display_manager.o</file>
-            <file>$PROJ_DIR$\Debug\Obj\HAL\Keypad\keypad.o</file>
-            <file>$TOOLKIT_DIR$\lib\rt7M_tl.a</file>
-            <file>$TOOLKIT_DIR$\inc\c\DLib_Config_Normal.h</file>
-            <file>$TOOLKIT_DIR$\inc\c\string.h</file>
-            <file>$PROJ_DIR$\APP\input_manager.c</file>
             <file>$PROJ_DIR$\hw_types.h</file>
-            <file>C:\ti\TivaWare_C_Series-2.2.0.295\driverlib\pin_map.h</file>
+            <file>$PROJ_DIR$\APP\display_manager.c</file>
+            <file>$PROJ_DIR$\eepromDriver.h</file>
+            <file>$TOOLKIT_DIR$\inc\c\stdbool.h</file>
+            <file>$TOOLKIT_DIR$\inc\c\DLib_Product.h</file>
+            <file>$TOOLKIT_DIR$\inc\c\DLib_Config_Normal.h</file>
             <file>C:\ti\TivaWare_C_Series-2.2.0.295\driverlib\sysctl.h</file>
-            <file>C:\ti\TivaWare_C_Series-2.2.0.295\inc\tm4c123gh6pm.h</file>
             <file>$PROJ_DIR$\Debug\Obj\Comm\HMI_Comm.o</file>
+            <file>C:\ti\TivaWare_C_Series-2.2.0.295\driverlib\pin_map.h</file>
+            <file>$PROJ_DIR$\Debug\Obj\HAL\LCD\lcd.o</file>
+            <file>$PROJ_DIR$\Debug\Obj\HAL\Keypad\keypad.o</file>
+            <file>$TOOLKIT_DIR$\inc\c\string.h</file>
+            <file>C:\ti\TivaWare_C_Series-2.2.0.295\inc\tm4c123gh6pm.h</file>
+            <file>$PROJ_DIR$\Debug\Obj\APP\input_manager.o</file>
+            <file>$TOOLKIT_DIR$\lib\m7M_tls.a</file>
+            <file>$TOOLKIT_DIR$\lib\rt7M_tl.a</file>
             <file>$TOOLKIT_DIR$\lib\dl7M_tln.a</file>
             <file>$PROJ_DIR$\Debug\Exe\main.out</file>
+            <file>$PROJ_DIR$\Debug\Obj\APP\display_manager.o</file>
             <file>C:\ti\TivaWare_C_Series-2.2.0.295\inc\hw_nvic.h</file>
-            <file>$PROJ_DIR$\Debug\Obj\APP\input_manager.o</file>
             <file>$TOOLKIT_DIR$\lib\shb_l.a</file>
             <file>C:\ti\TivaWare_C_Series-2.2.0.295\inc\hw_types.h</file>
+            <file>$PROJ_DIR$\Debug\Obj\main.o</file>
+            <file>$TOOLKIT_DIR$\inc\c\ysizet.h</file>
+            <file>$PROJ_DIR$\Debug\Obj\startup_ewarm.o</file>
+            <file>$PROJ_DIR$\Debug\Obj\Utils\dio.o</file>
+            <file>$TOOLKIT_DIR$\config\linker\TexasInstruments\TM4C123GH6.icf</file>
+            <file>$TOOLKIT_DIR$\inc\c\yvals.h</file>
+            <file>C:\ti\TivaWare_C_Series-2.2.0.295\inc\hw_memmap.h</file>
             <file>$PROJ_DIR$\Debug\Obj\HAL\Potentiometer\potentiometer.o</file>
             <file>$TOOLKIT_DIR$\inc\c\ycheck.h</file>
-            <file>$PROJ_DIR$\Debug\Obj\main.o</file>
-            <file>$PROJ_DIR$\Debug\Obj\startup_ewarm.o</file>
-            <file>$TOOLKIT_DIR$\inc\c\ysizet.h</file>
-            <file>C:\ti\TivaWare_C_Series-2.2.0.295\inc\hw_memmap.h</file>
-            <file>$TOOLKIT_DIR$\config\linker\TexasInstruments\TM4C123GH6.icf</file>
-            <file>$PROJ_DIR$\Debug\Obj\Utils\dio.o</file>
-            <file>$TOOLKIT_DIR$\inc\c\yvals.h</file>
         </outputs>
         <file>
-            <name>$PROJ_DIR$\main.c</name>
+            <name>$PROJ_DIR$\APP\input_manager.c</name>
             <outputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 53</file>
+                    <file> 42</file>
                 </tool>
             </outputs>
             <inputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 37 17 32 6 18 13 38 52 55 59 9 22 41 42 14 56 50 43 7 11 16 26 27 23 25 28</file>
-                </tool>
-            </inputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\APP\potentiometer_manager.c</name>
-            <outputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 5</file>
-                </tool>
-            </outputs>
-            <inputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 37 17 32 6 18 13 38 52 55 59 9 22 41 42 14 56 50 43 7 11 16 26 27 23 28</file>
+                    <file> 34 3 33 4 32 26 40 59 52 56 1 37 35 27 57 50 41 14 9 28 15 17 11 19</file>
                 </tool>
             </inputs>
         </file>
@@ -101,48 +86,33 @@
             <outputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 44</file>
+                    <file> 36</file>
                 </tool>
             </outputs>
             <inputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 37 17 32 18 13 52 59 22 41 42 14 56 50 43 26</file>
+                    <file> 34 3 33 32 26 59 56 1 37 35 27 57 50 41 15</file>
                 </tool>
             </inputs>
         </file>
         <file>
-            <name>$PROJ_DIR$\HAL\Keypad\keypad.c</name>
+            <name>$PROJ_DIR$\HAL\LCD\lcd.c</name>
             <outputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 35</file>
+                    <file> 38</file>
                 </tool>
             </outputs>
             <inputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 37 17 32 18 13 52 59 43 25 28</file>
+                    <file> 34 3 33 32 26 59 56 35 11 19</file>
                 </tool>
             </inputs>
         </file>
         <file>
-            <name>$PROJ_DIR$\Utils\dio.c</name>
-            <outputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 58</file>
-                </tool>
-            </outputs>
-            <inputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 37 17 32 13 52 59 43 28</file>
-                </tool>
-            </inputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\HAL\Potentiometer\potentiometer.c</name>
+            <name>$PROJ_DIR$\main.c</name>
             <outputs>
                 <tool>
                     <name>ICCARM</name>
@@ -152,27 +122,42 @@
             <inputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 37 17 32 18 13 52 59 9 22 42 56 43 23</file>
+                    <file> 34 3 33 4 32 26 40 59 52 56 25 1 37 35 27 57 50 41 14 9 28 15 11 18 17 19</file>
                 </tool>
             </inputs>
         </file>
         <file>
-            <name>$PROJ_DIR$\APP\display_manager.c</name>
+            <name>$PROJ_DIR$\APP\potentiometer_manager.c</name>
             <outputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 34</file>
+                    <file> 23</file>
                 </tool>
             </outputs>
             <inputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 37 17 32 6 18 13 38 52 55 59 22 41 42 14 56 50 43 7 11 16 26 27 28</file>
+                    <file> 34 3 33 4 32 26 40 59 52 56 25 1 37 35 27 57 50 41 14 9 28 15 11 18 19</file>
                 </tool>
             </inputs>
         </file>
         <file>
-            <name>$PROJ_DIR$\startup_ewarm.c</name>
+            <name>$PROJ_DIR$\HAL\Potentiometer\potentiometer.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 58</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 34 3 33 32 26 59 56 25 1 35 57 41 18</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\Utils\dio.c</name>
             <outputs>
                 <tool>
                     <name>ICCARM</name>
@@ -182,37 +167,52 @@
             <inputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 37 17 32 13 52 59 47 50</file>
+                    <file> 34 3 33 26 59 56 41 19</file>
                 </tool>
             </inputs>
         </file>
         <file>
-            <name>$PROJ_DIR$\HAL\LCD\lcd.c</name>
+            <name>$PROJ_DIR$\HAL\Keypad\keypad.c</name>
             <outputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 33</file>
+                    <file> 39</file>
                 </tool>
             </outputs>
             <inputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 37 17 32 18 13 52 59 42 27 28</file>
+                    <file> 34 3 33 32 26 59 56 41 17 19</file>
                 </tool>
             </inputs>
         </file>
         <file>
-            <name>$PROJ_DIR$\APP\input_manager.c</name>
+            <name>$PROJ_DIR$\startup_ewarm.c</name>
             <outputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 48</file>
+                    <file> 53</file>
                 </tool>
             </outputs>
             <inputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 37 17 32 6 18 13 38 52 55 59 22 41 42 14 56 50 43 7 11 16 26 25 27 28</file>
+                    <file> 34 3 33 26 59 56 48 50</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\APP\display_manager.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 47</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 34 3 33 4 32 26 40 59 52 56 1 37 35 27 57 50 41 14 9 28 15 11 19</file>
                 </tool>
             </inputs>
         </file>
@@ -221,13 +221,13 @@
             <outputs>
                 <tool>
                     <name>ILINK</name>
-                    <file> 24</file>
+                    <file> 7</file>
                 </tool>
             </outputs>
             <inputs>
                 <tool>
                     <name>ILINK</name>
-                    <file> 57 45 30 36 49 8 34 48 5 44 35 33 51 58 53 54</file>
+                    <file> 55 45 43 44 49 24 47 42 23 36 39 38 58 54 51 53</file>
                 </tool>
             </inputs>
         </file>
@@ -236,7 +236,7 @@
             <outputs>
                 <tool>
                     <name>ILINK</name>
-                    <file> 46 24</file>
+                    <file> 46 7</file>
                 </tool>
             </outputs>
         </file>

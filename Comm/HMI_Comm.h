@@ -9,9 +9,9 @@
 #include "driverlib/gpio.h"
 #include "driverlib/uart.h"
 #include "driverlib/pin_map.h"
-#define PASSMODE "0"
-#define ADD "1"
-#define TIME "2"
+#define PASSMODE '0'
+#define ADDMODE '1'
+#define TIMEMODE '2'
 
 //void HMI_SendPassword(uint8_t* pass, uint8_t length);
 void UART5_Init_front(void);
