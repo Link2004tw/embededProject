@@ -46,7 +46,7 @@
         <MultiCoreRunAll>1</MultiCoreRunAll>
     </Simulator>
     <DebugChecksum>
-        <Checksum>36685210</Checksum>
+        <Checksum>4263158524</Checksum>
     </DebugChecksum>
     <LMIFTDIDriver>
         <LMIFTDIserialNo>0E233097</LMIFTDIserialNo>
@@ -66,7 +66,9 @@
         <mode>0</mode>
     </DisassembleMode>
     <Breakpoints2>
-        <Count>0</Count>
+        <Bp0>_ 1 "EMUL_CODE" "{$PROJ_DIR$\main.c}.81.17" 0 0 1 "" 0 "" 0</Bp0>
+        <Bp1>_ 1 "EMUL_CODE" "{$PROJ_DIR$\main.c}.68.9" 0 0 1 "" 0 "" 0</Bp1>
+        <Count>2</Count>
     </Breakpoints2>
     <TermIOLog>
         <LoggingEnabled>_ 0</LoggingEnabled>
@@ -79,9 +81,10 @@
     </LogFile>
     <Aliases>
         <A0>_ "C:\Jenkins\workspace\TivaWare-Git-Release\DriverLib\build\DriverLib.test\driverlib\adc.c" "C:\ti\TivaWare_C_Series-2.2.0.295\driverlib\adc.c"</A0>
-        <A1>_ "C:\Jenkins\workspace\TivaWare-Git-Release\DriverLib\build\DriverLib.test\driverlib\sysctl.c" ""</A1>
-        <A2>_ "C:\Jenkins\workspace\TivaWare-Git-Release\DriverLib\build\DriverLib.test\driverlib\uart.c" "C:\ti\TivaWare_C_Series-2.2.0.295\driverlib\uart.c"</A2>
-        <Count>3</Count>
+        <A1>_ "C:\Jenkins\workspace\TivaWare-Git-Release\DriverLib\build\DriverLib.test\driverlib\gpio.c" "C:\ti\TivaWare_C_Series-2.2.0.295\driverlib\uart.c"</A1>
+        <A2>_ "C:\Jenkins\workspace\TivaWare-Git-Release\DriverLib\build\DriverLib.test\driverlib\sysctl.c" ""</A2>
+        <A3>_ "C:\Jenkins\workspace\TivaWare-Git-Release\DriverLib\build\DriverLib.test\driverlib\uart.c" "C:\ti\TivaWare_C_Series-2.2.0.295\driverlib\uart.c"</A3>
+        <Count>4</Count>
         <SuppressDialog>1</SuppressDialog>
     </Aliases>
     <CallStackLog>

@@ -1,6 +1,6 @@
 ###############################################################################
 #
-# IAR ELF Linker V9.10.1.308/W64 for ARM                  16/Dec/2025  00:07:40
+# IAR ELF Linker V9.10.1.308/W64 for ARM                  16/Dec/2025  01:08:40
 # Copyright 2007-2021 IAR Systems AB.
 #
 #    Output file  =  E:\coding\embedded\embededProject\Debug\Exe\main.out
@@ -100,22 +100,22 @@ do not initialize { rw section .noinit };
   .rodata          const          0xcd4    0x0  zero_init3.o [9]
                                 - 0xcd4  0xa68
 
-"P2", part 1 of 2:                        0x10
-  .bss             zero     0x2000'0000    0x8  main.o [1]
-  .bss             zero     0x2000'0008    0x4  strtok.o [6]
-  .bss             zero     0x2000'000c    0x1  main.o [1]
-                          - 0x2000'000d    0xd
+"P2", part 1 of 2:                        0x1c
+  .bss             zero     0x2000'0000   0x14  main.o [1]
+  .bss             zero     0x2000'0014    0x4  strtok.o [6]
+  .bss             zero     0x2000'0018    0x1  main.o [1]
+                          - 0x2000'0019   0x19
 
 "P2", part 2 of 2:                       0x200
-  .noinit          uninit   0x2000'0010  0x200  startup_ewarm.o [1]
-                          - 0x2000'0210  0x200
+  .noinit          uninit   0x2000'001c  0x200  startup_ewarm.o [1]
+                          - 0x2000'021c  0x200
 
 Unused ranges:
 
          From           To      Size
          ----           --      ----
         0xcd4     0x3'ffff  0x3'f32c
-  0x2000'0210  0x2000'7fff    0x7df0
+  0x2000'021c  0x2000'7fff    0x7de4
 
 
 *******************************************************************************
@@ -125,8 +125,8 @@ Unused ranges:
           Address      Size
           -------      ----
 Zero (__iar_zero_init3)
-    1 destination range, total size 0xd:
-          0x2000'0000   0xd
+    1 destination range, total size 0x19:
+          0x2000'0000  0x19
 
 
 
@@ -141,10 +141,10 @@ command line/config:
     Total:
 
 E:\coding\embedded\embededProject\Debug\Obj: [1]
-    main.o                504        8        9
+    main.o                504        8       21
     startup_ewarm.o        34      620      512
     -------------------------------------------
-    Total:                538      628      521
+    Total:                538      628      533
 
 E:\coding\embedded\embededProject\Debug\Obj\APP: [2]
     -------------------------------------------
@@ -202,7 +202,7 @@ shb_l.a: [10]
     Gaps                   14
     Linker created                  16
 -----------------------------------------------
-    Grand Total:        2'640      644      525
+    Grand Total:        2'640      644      537
 
 
 *******************************************************************************
@@ -239,7 +239,7 @@ UARTCharsAvail                0xa89    0x6  Code  Gb  uart.o [7]
 UARTConfigSetExpClk           0xa01   0x4c  Code  Gb  uart.o [7]
 UARTDisable                   0xa67   0x1e  Code  Gb  uart.o [7]
 UARTEnable                    0xa4d   0x1a  Code  Gb  uart.o [7]
-_Strtok_ssave           0x2000'0008    0x4  Data  Lc  strtok.o [6]
+_Strtok_ssave           0x2000'0014    0x4  Data  Lc  strtok.o [6]
 __aeabi_memset                0xb05         Code  Gb  ABImemset.o [9]
 __cmain                       0xc75         Code  Gb  cmain.o [9]
 __exit                        0xca9   0x14  Code  Gb  exit.o [10]
@@ -257,9 +257,9 @@ exit                          0xc97    0x4  Code  Gb  exit.o [6]
 g_pui32GPIOBaseAddrs          0x778   0x90  Data  Lc  gpio.o [7]
 g_pui32Xtals                  0x4e4   0x6c  Data  Lc  sysctl.o [7]
 main                          0x8ad  0x11e  Code  Gb  main.o [1]
-pui32Stack              0x2000'0010  0x200  Data  Lc  startup_ewarm.o [1]
-rxBuffer                0x2000'0000    0x8  Data  Gb  main.o [1]
-rxIndex                 0x2000'000c    0x1  Data  Gb  main.o [1]
+pui32Stack              0x2000'001c  0x200  Data  Lc  startup_ewarm.o [1]
+rxBuffer                0x2000'0000   0x14  Data  Gb  main.o [1]
+rxIndex                 0x2000'0018    0x1  Data  Gb  main.o [1]
 strcmp                        0xaf1         Code  Gb  strcmp.o [9]
 strcspn                       0xb8d   0x22  Code  Gb  strcspn.o [6]
 strspn                        0xb6b   0x22  Code  Gb  strspn.o [6]
@@ -280,7 +280,7 @@ systick_ISR                   0xc2f    0x2  Code  Gb  startup_ewarm.o [1]
 
   2'640 bytes of readonly  code memory
     644 bytes of readonly  data memory
-    525 bytes of readwrite data memory
+    537 bytes of readwrite data memory
 
 Errors: none
 Warnings: 1

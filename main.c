@@ -10,7 +10,7 @@
 #include "driverlib/pin_map.h"
 
 #define PASSWORD_LEN 5
-#define RX_BUFFER_SIZE 8
+#define RX_BUFFER_SIZE 20
 
 
 char rxBuffer[RX_BUFFER_SIZE]="";
