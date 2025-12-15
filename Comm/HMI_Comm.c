@@ -40,22 +40,3 @@ void UART5_SendString(char* str) {
     GPIOPinWrite(GPIO_PORTF_BASE, GPIO_PIN_3, 0); // Start with LED OFF
     
 }
-//example how to use the uart
-// int main(void) {
-    // Set clock to 16MHz
-//     SysCtlClockSet(SYSCTL_SYSDIV_1 | SYSCTL_USE_OSC | SYSCTL_OSC_MAIN | SYSCTL_XTAL_16MHZ);
-
-//     UART1_Init_front();
-
-//     char dummyPassword[] = "12345#"; 
-
-//     while(1) {
-//         // Send the dummy password
-//         UART1_SendString(dummyPassword);
-        
-//         // Wait 10 seconds
-//         // SysCtlDelay count = (Seconds * Clock) / 3
-//         // 10 * 16,000,000 / 3 = ~53,333,333
-//         SysCtlDelay(53333333); 
-//     }
-// }
