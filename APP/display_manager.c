@@ -1,6 +1,5 @@
 #include "display_manager.h"
-#include "lcd.h"
-
+ 
 static uint8_t password_mode = 0;
 
 void DISPLAY_Init(void)
@@ -169,8 +168,8 @@ void DISPLAY_CHANGETIMEOUT(void){
  *****************************************************************************/
 void DISPLAY_OLD_PASSWORD(void)
 {
-    char password[5] = "";
-    char savedPassword[5] = "1234";  // Load from storage (replace with actual storage read)
+    char password[7] = "";
+    //char savedPassword[5] = "1234";  // Load from storage (replace with actual storage read)
     short pass_index = 0;
     char key = 0;
     
@@ -178,7 +177,7 @@ void DISPLAY_OLD_PASSWORD(void)
     LCD_WriteString("Enter old password");
     LCD_SetCursor(1, 0);
     
-    for(pass_index = 0; pass_index < 4; pass_index++){
+    for(pass_index = 0; pass_index < 5; pass_index++){
         key = InputManager_GetKey();
         while(key == 0) {  
             key = InputManager_GetKey();
@@ -189,18 +188,21 @@ void DISPLAY_OLD_PASSWORD(void)
         password[pass_index] = key;
         LCD_WriteChar('*');
     }
-    password[4] = '\0';
+    password[5] ='#';
+    password[6] = '\0';
+    UART5_SendString(password);
+    SysCtlDelay(10000000);
     //send the password;
-    if(strcmp(password, savedPassword) != 0){
-        LCD_Clear();
-        LCD_WriteString("Incorrect password");
-        SysCtlDelay(10000000);
-        //return false;
-    }else {
-      LCD_Clear();
-        LCD_WriteString("Correct password");
-        SysCtlDelay(10000000);
-    }
+    // if(strcmp(password, savedPassword) != 0){
+    //     LCD_Clear();
+    //     LCD_WriteString("Incorrect password");
+    //     SysCtlDelay(10000000);
+    //     //return false;
+    // }else {
+    //   LCD_Clear();
+    //     LCD_WriteString("Correct password");
+    //     SysCtlDelay(10000000);
+    // }
     
     
     //return true;
@@ -222,8 +224,8 @@ void DISPLAY_OLD_PASSWORD(void)
  *****************************************************************************/
 void DISPLAY_NEW_PASSWORD(void)
 {
-    char newPassword[5] = "";
-    char confirmPassword[5] = "";
+    char newPassword[7] = "";
+    char confirmPassword[7] = "";
     short pass_index = 0;
     char key = 0;
     
@@ -245,7 +247,8 @@ void DISPLAY_NEW_PASSWORD(void)
     
         
     //}
-    newPassword[4] = '\0';
+    newPassword[6] = '\0';
+    UART5_SendString(newPassword);
     
     /* Get confirmation password */
     LCD_Clear();

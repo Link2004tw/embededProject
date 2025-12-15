@@ -6,7 +6,7 @@
 #include "./APP/display_manager.h"     // Frontend 2
 #include "driverlib/sysctl.h"
 #include "./HAL/Potentiometer/potentiometer.h"
-
+#include "Comm/HMI_Comm.h"
 
 
 void DELAY(void){
@@ -19,7 +19,7 @@ int main(void)
     Keypad_Init();           // From TA keypad driver
     DISPLAY_Init();          // Initializes LCD
     Potentiometer_Init(); //initialize potentiometer
-    
+    UART5_Init_front();
     DISPLAY_ClearScreen();   // Clear display
     
     /* ---------- Optional: show a startup message ---------- */

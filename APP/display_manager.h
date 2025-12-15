@@ -7,6 +7,8 @@
 #include "../HAL/LCD/lcd.h"
 #include "potentiometer_manager.h"
 #include "input_manager.h"
+//#include "lcd.h"
+#include "../Comm/HMI_Comm.h"
 bool static flag = false;
 char static savedPassword[5]="";
 
