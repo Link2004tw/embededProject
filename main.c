@@ -15,12 +15,12 @@ void DELAY(void){
 
 int main(void)
 {
+    UART5_Init_front();
       
     /* ---------- Initialize all frontend modules ---------- */
     Keypad_Init();           // From TA keypad driver
     DISPLAY_Init();          // Initializes LCD
     Potentiometer_Init(); //initialize potentiometer
-    UART5_Init_front();
     DISPLAY_ClearScreen();   // Clear display
     
     /* ---------- Optional: show a startup message ---------- */

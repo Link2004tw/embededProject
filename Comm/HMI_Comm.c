@@ -36,7 +36,7 @@ void UART5_SendString(char* str) {
         UARTCharPut(UART5_BASE, *str);
         str++;
     }
-    SysCtlDelay(53333333);
+    //SysCtlDelay(53333333);
     GPIOPinWrite(GPIO_PORTF_BASE, GPIO_PIN_3, 0); // Start with LED OFF
     
 }
