@@ -190,7 +190,7 @@ void DISPLAY_OLD_PASSWORD(void)
     }
     password[5] ='#';
     password[6] = '\0';
-    UART5_SendString(password);
+    UART5_SendString(PASSMODE +"," + password);
     SysCtlDelay(10000000);
     //send the password;
     // if(strcmp(password, savedPassword) != 0){
