@@ -1,74 +1,53 @@
 #include <stdint.h>
 #include <stdbool.h>
 #include "tm4c123gh6pm.h"
-
-#include "HAL/Keypad/keypad.h"              // Frontend 1 (TA driver)      // Potentiometer ADC
-#include "APP/input_manager.h"       // Your mapped key function
-#include "APP/display_manager.h"     // Frontend 2
-#include "APP/potentiometer_manager.h" // Potentiometer manager
+#include "inc/hw_memmap.h"
+#include "inc/hw_types.h"
 #include "driverlib/sysctl.h"
-#include "HAL/Potentiometer/potentiometer.h"
+#include "driverlib/gpio.h"
+#include "driverlib/uart.h"
+#include "driverlib/pin_map.h"
 
+// Initialize UART5 on PE4 (Rx) and PE5 (Tx)
+void UART1_Init_front(void) {
+    SysCtlPeripheralEnable(SYSCTL_PERIPH_UART5);
+    SysCtlPeripheralEnable(SYSCTL_PERIPH_GPIOE);
 
+    while(!SysCtlPeripheralReady(SYSCTL_PERIPH_UART5));
+    while(!SysCtlPeripheralReady(SYSCTL_PERIPH_GPIOE));
 
-int main(void)
-{
-    /* ---------- Initialize all frontend modules ---------- */
-    Keypad_Init();           // From TA keypad driver
-    Potentiometer_Init();    // Initialize ADC for potentiometer
-    DISPLAY_Init();          // Initializes LCD
-    DISPLAY_ClearScreen();   // Clear display
+    GPIOPinConfigure(GPIO_PE4_U5RX);
+    GPIOPinConfigure(GPIO_PE5_U5TX);
+    GPIOPinTypeUART(GPIO_PORTE_BASE, GPIO_PIN_4 | GPIO_PIN_5);
 
-    /* ---------- Optional: show a startup message ---------- */
-    DISPLAY_ShowMessage("Frontend Ready");
-    SysCtlDelay(5333300);  // 1s delay
-
-    DISPLAY_ClearScreen();
-    DISPLAY_ShowMainMenu();  // Show menu while testing
-
+    UARTConfigSetExpClk(UART5_BASE, SysCtlClockGet(), 9600,
+                        (UART_CONFIG_WLEN_8 | UART_CONFIG_STOP_ONE | UART_CONFIG_PAR_NONE));
     
+    UARTEnable(UART5_BASE);
+}
 
-    /* ---------- Main Loop ---------- */
-    while (1)
-    {
-        char key = InputManager_GetKey();  // Frontend 1 returns mapped char
+void UART1_SendString(char* str) {
+    while(*str) {
+        UARTCharPut(UART5_BASE, *str);
+        str++;
+    }
+}
 
-        if (key != 0)
-        {
-            /* Handle menu selections */
-            if (key == '*')
-            {
-                /* User pressed '*' - Set Auto-Lock Timeout */
-                PotentiometerManager_HandleTimeoutConfig();
-                
-                /* Return to main menu after timeout config */
-                DISPLAY_ClearScreen();
-                DISPLAY_ShowMainMenu();
-            }
-            else if (key == '+')
-            {
-                /* User pressed '+' - Open Door (to be implemented) */
-                DISPLAY_ShowMessage("Open Door");
-                SysCtlDelay(1066666);  // 200ms
-                DISPLAY_ClearScreen();
-                DISPLAY_ShowMainMenu();
-            }
-            else if (key == '-')
-            {
-                /* User pressed '-' - Change Password (to be implemented) */
-                DISPLAY_ShowMessage("Change Password");
-                SysCtlDelay(1066666);  // 200ms
-                DISPLAY_ClearScreen();
-                DISPLAY_ShowMainMenu();
-            }
-            else
-            {
-                /* Display other characters on LCD */
-                DISPLAY_HandleKey(key);
-            }
+int main(void) {
+    // Set clock to 16MHz
+    SysCtlClockSet(SYSCTL_SYSDIV_1 | SYSCTL_USE_OSC | SYSCTL_OSC_MAIN | SYSCTL_XTAL_16MHZ);
 
-            /* Optional: Wait a bit to avoid flickering */
-            SysCtlDelay(266650);   // 50ms delay
-        }
+    UART1_Init_front();
+
+    char dummyPassword[] = "12345#"; 
+
+    while(1) {
+        // Send the dummy password
+        UART1_SendString(dummyPassword);
+        
+        // Wait 10 seconds
+        // SysCtlDelay count = (Seconds * Clock) / 3
+        // 10 * 16,000,000 / 3 = ~53,333,333
+        SysCtlDelay(53333333); 
     }
 }

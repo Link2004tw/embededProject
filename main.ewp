@@ -99,7 +99,7 @@
                 <option>
                     <name>GBECoreSlave</name>
                     <version>29</version>
-                    <state>38</state>
+                    <state>39</state>
                 </option>
                 <option>
                     <name>OGUseCmsis</name>
@@ -581,7 +581,7 @@
                 </option>
                 <option>
                     <name>AOutputFile</name>
-                    <state></state>
+                    <state>$FILE_BNAME$.o</state>
                 </option>
                 <option>
                     <name>ALimitErrorsCheck</name>
@@ -635,7 +635,7 @@
                 </option>
                 <option>
                     <name>OOCOutputFile</name>
-                    <state></state>
+                    <state>main.srec</state>
                 </option>
                 <option>
                     <name>OOCCommandLineProducer</name>
@@ -653,7 +653,7 @@
             <data>
                 <extensions></extensions>
                 <cmdline></cmdline>
-                <hasPrio>0</hasPrio>
+                <hasPrio>208</hasPrio>
                 <buildSequence>inputOutputBased</buildSequence>
             </data>
         </settings>
@@ -2149,12 +2149,6 @@
     </file>
     <file>
         <name>$PROJ_DIR$\eepromDriver.h</name>
-    </file>
-    <file>
-        <name>$PROJ_DIR$\HMI_Comm.c</name>
-    </file>
-    <file>
-        <name>$PROJ_DIR$\HMI_Comm.h</name>
     </file>
     <file>
         <name>$PROJ_DIR$\hw_nvic.h</name>

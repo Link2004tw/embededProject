@@ -2905,12 +2905,6 @@
         <name>$PROJ_DIR$\eepromDriver.h</name>
     </file>
     <file>
-        <name>$PROJ_DIR$\HMI_Comm.c</name>
-    </file>
-    <file>
-        <name>$PROJ_DIR$\HMI_Comm.h</name>
-    </file>
-    <file>
         <name>$PROJ_DIR$\hw_nvic.h</name>
     </file>
     <file>

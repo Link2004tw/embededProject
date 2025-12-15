@@ -8,36 +8,36 @@
 #include "driverlib/uart.h"
 #include "driverlib/pin_map.h"
 
-// Initialize UART1 on PB0 (Rx) and PB1 (Tx)
-void UART1_Init(void) {
-    SysCtlPeripheralEnable(SYSCTL_PERIPH_UART1);
-    SysCtlPeripheralEnable(SYSCTL_PERIPH_GPIOB);
+// Initialize UART5 on PE4 (Rx) and PE5 (Tx)
+void UART1_Init_front(void) {
+    SysCtlPeripheralEnable(SYSCTL_PERIPH_UART5);
+    SysCtlPeripheralEnable(SYSCTL_PERIPH_GPIOE);
 
-    while(!SysCtlPeripheralReady(SYSCTL_PERIPH_UART1));
-    while(!SysCtlPeripheralReady(SYSCTL_PERIPH_GPIOB));
+    while(!SysCtlPeripheralReady(SYSCTL_PERIPH_UART5));
+    while(!SysCtlPeripheralReady(SYSCTL_PERIPH_GPIOE));
 
-    GPIOPinConfigure(GPIO_PB0_U1RX);
-    GPIOPinConfigure(GPIO_PB1_U1TX);
-    GPIOPinTypeUART(GPIO_PORTB_BASE, GPIO_PIN_0 | GPIO_PIN_1);
+    GPIOPinConfigure(GPIO_PE4_U5RX);
+    GPIOPinConfigure(GPIO_PE5_U5TX);
+    GPIOPinTypeUART(GPIO_PORTE_BASE, GPIO_PIN_4 | GPIO_PIN_5);
 
-    UARTConfigSetExpClk(UART1_BASE, SysCtlClockGet(), 9600,
+    UARTConfigSetExpClk(UART5_BASE, SysCtlClockGet(), 9600,
                         (UART_CONFIG_WLEN_8 | UART_CONFIG_STOP_ONE | UART_CONFIG_PAR_NONE));
     
-    UARTEnable(UART1_BASE);
+    UARTEnable(UART5_BASE);
 }
 
 void UART1_SendString(char* str) {
     while(*str) {
-        UARTCharPut(UART1_BASE, *str);
+        UARTCharPut(UART5_BASE, *str);
         str++;
     }
 }
 
-int main(void) {
+int main2(void) {
     // Set clock to 16MHz
     SysCtlClockSet(SYSCTL_SYSDIV_1 | SYSCTL_USE_OSC | SYSCTL_OSC_MAIN | SYSCTL_XTAL_16MHZ);
 
-    UART1_Init();
+    UART1_Init_front();
 
     char dummyPassword[] = "12345#"; 
 
