@@ -75,6 +75,8 @@ void DISPLAY_CHANGEPASSWORD(void){
         char key = InputManager_GetKey();
         while(key == 0) {
             key = InputManager_GetKey();
+            if(key=='=') return;
+            
             SysCtlDelay(10000);
         }
         password[pass_index] = key;
@@ -99,6 +101,7 @@ void DISPLAY_CHANGEPASSWORD(void){
         char key = InputManager_GetKey();
         while(key == 0) {
             key = InputManager_GetKey();
+            if(key=='=') return;
             SysCtlDelay(10000);
         }
         newPassword[pass_index] = key;
@@ -116,6 +119,8 @@ void DISPLAY_CHANGEPASSWORD(void){
         char key = InputManager_GetKey();
         while(key == 0) {
             key = InputManager_GetKey();
+            if(key=='=') return;
+            
             SysCtlDelay(10000);
         }
         confirmPassword[pass_index] = key;
@@ -176,8 +181,9 @@ void DISPLAY_OLD_PASSWORD(void)
     for(pass_index = 0; pass_index < 4; pass_index++){
         key = InputManager_GetKey();
         while(key == 0) {  
-            if(key=='=') return;
             key = InputManager_GetKey();
+            if(key=='=') return;
+            
             SysCtlDelay(10000);
         }
         password[pass_index] = key;

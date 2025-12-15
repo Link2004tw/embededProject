@@ -93100,13 +93100,13 @@
     "scope": null
   },
   {
-    "ID": "c:display_manager.c@1930@F@DISPLAY_CHANGEPASSWORD@key",
+    "ID": "c:display_manager.c@1978@F@DISPLAY_CHANGEPASSWORD@key",
     "What": "Variable",
     "defdec": "Def",
     "display": "key",
     "location": {
       "column": "14",
-      "line": "99",
+      "line": "101",
       "path": "E:\\coding\\embedded\\embededProject\\APP\\display_manager.c"
     },
     "name": "key",
@@ -93114,13 +93114,13 @@
     "scope": null
   },
   {
-    "ID": "c:display_manager.c@2290@F@DISPLAY_CHANGEPASSWORD@confirmPassword",
+    "ID": "c:display_manager.c@2372@F@DISPLAY_CHANGEPASSWORD@confirmPassword",
     "What": "Variable",
     "defdec": "Def",
     "display": "confirmPassword",
     "location": {
       "column": "10",
-      "line": "114",
+      "line": "117",
       "path": "E:\\coding\\embedded\\embededProject\\APP\\display_manager.c"
     },
     "name": "confirmPassword",
@@ -93128,13 +93128,13 @@
     "scope": null
   },
   {
-    "ID": "c:display_manager.c@2385@F@DISPLAY_CHANGEPASSWORD@key",
+    "ID": "c:display_manager.c@2467@F@DISPLAY_CHANGEPASSWORD@key",
     "What": "Variable",
     "defdec": "Def",
     "display": "key",
     "location": {
       "column": "14",
-      "line": "116",
+      "line": "119",
       "path": "E:\\coding\\embedded\\embededProject\\APP\\display_manager.c"
     },
     "name": "key",
@@ -93148,7 +93148,7 @@
     "display": "void DISPLAY_CHANGETIMEOUT(void)",
     "location": {
       "column": "6",
-      "line": "140",
+      "line": "145",
       "path": "E:\\coding\\embedded\\embededProject\\APP\\display_manager.c"
     },
     "name": "DISPLAY_CHANGETIMEOUT",
@@ -93162,7 +93162,7 @@
     "display": "void DISPLAY_OLD_PASSWORD(void)",
     "location": {
       "column": "6",
-      "line": "165",
+      "line": "170",
       "path": "E:\\coding\\embedded\\embededProject\\APP\\display_manager.c"
     },
     "name": "DISPLAY_OLD_PASSWORD",
@@ -93170,13 +93170,13 @@
     "scope": null
   },
   {
-    "ID": "c:display_manager.c@3788@F@DISPLAY_OLD_PASSWORD@password",
+    "ID": "c:display_manager.c@3918@F@DISPLAY_OLD_PASSWORD@password",
     "What": "Variable",
     "defdec": "Def",
     "display": "password",
     "location": {
       "column": "10",
-      "line": "167",
+      "line": "172",
       "path": "E:\\coding\\embedded\\embededProject\\APP\\display_manager.c"
     },
     "name": "password",
@@ -93184,13 +93184,13 @@
     "scope": null
   },
   {
-    "ID": "c:display_manager.c@3816@F@DISPLAY_OLD_PASSWORD@savedPassword",
+    "ID": "c:display_manager.c@3946@F@DISPLAY_OLD_PASSWORD@savedPassword",
     "What": "Variable",
     "defdec": "Def",
     "display": "savedPassword",
     "location": {
       "column": "10",
-      "line": "168",
+      "line": "173",
       "path": "E:\\coding\\embedded\\embededProject\\APP\\display_manager.c"
     },
     "name": "savedPassword",
@@ -93198,13 +93198,13 @@
     "scope": null
   },
   {
-    "ID": "c:display_manager.c@3910@F@DISPLAY_OLD_PASSWORD@pass_index",
+    "ID": "c:display_manager.c@4040@F@DISPLAY_OLD_PASSWORD@pass_index",
     "What": "Variable",
     "defdec": "Def",
     "display": "pass_index",
     "location": {
       "column": "11",
-      "line": "169",
+      "line": "174",
       "path": "E:\\coding\\embedded\\embededProject\\APP\\display_manager.c"
     },
     "name": "pass_index",
@@ -93212,13 +93212,13 @@
     "scope": null
   },
   {
-    "ID": "c:display_manager.c@3937@F@DISPLAY_OLD_PASSWORD@key",
+    "ID": "c:display_manager.c@4067@F@DISPLAY_OLD_PASSWORD@key",
     "What": "Variable",
     "defdec": "Def",
     "display": "key",
     "location": {
       "column": "10",
-      "line": "170",
+      "line": "175",
       "path": "E:\\coding\\embedded\\embededProject\\APP\\display_manager.c"
     },
     "name": "key",
@@ -93232,7 +93232,7 @@
     "display": "void DISPLAY_NEW_PASSWORD(void)",
     "location": {
       "column": "6",
-      "line": "217",
+      "line": "223",
       "path": "E:\\coding\\embedded\\embededProject\\APP\\display_manager.c"
     },
     "name": "DISPLAY_NEW_PASSWORD",
@@ -93240,13 +93240,13 @@
     "scope": null
   },
   {
-    "ID": "c:display_manager.c@5310@F@DISPLAY_NEW_PASSWORD@newPassword",
+    "ID": "c:display_manager.c@5454@F@DISPLAY_NEW_PASSWORD@newPassword",
     "What": "Variable",
     "defdec": "Def",
     "display": "newPassword",
     "location": {
       "column": "10",
-      "line": "219",
+      "line": "225",
       "path": "E:\\coding\\embedded\\embededProject\\APP\\display_manager.c"
     },
     "name": "newPassword",
@@ -93254,13 +93254,13 @@
     "scope": null
   },
   {
-    "ID": "c:display_manager.c@5341@F@DISPLAY_NEW_PASSWORD@confirmPassword",
+    "ID": "c:display_manager.c@5485@F@DISPLAY_NEW_PASSWORD@confirmPassword",
     "What": "Variable",
     "defdec": "Def",
     "display": "confirmPassword",
     "location": {
       "column": "10",
-      "line": "220",
+      "line": "226",
       "path": "E:\\coding\\embedded\\embededProject\\APP\\display_manager.c"
     },
     "name": "confirmPassword",
@@ -93268,13 +93268,13 @@
     "scope": null
   },
   {
-    "ID": "c:display_manager.c@5376@F@DISPLAY_NEW_PASSWORD@pass_index",
+    "ID": "c:display_manager.c@5520@F@DISPLAY_NEW_PASSWORD@pass_index",
     "What": "Variable",
     "defdec": "Def",
     "display": "pass_index",
     "location": {
       "column": "11",
-      "line": "221",
+      "line": "227",
       "path": "E:\\coding\\embedded\\embededProject\\APP\\display_manager.c"
     },
     "name": "pass_index",
@@ -93282,13 +93282,13 @@
     "scope": null
   },
   {
-    "ID": "c:display_manager.c@5403@F@DISPLAY_NEW_PASSWORD@key",
+    "ID": "c:display_manager.c@5547@F@DISPLAY_NEW_PASSWORD@key",
     "What": "Variable",
     "defdec": "Def",
     "display": "key",
     "location": {
       "column": "10",
-      "line": "222",
+      "line": "228",
       "path": "E:\\coding\\embedded\\embededProject\\APP\\display_manager.c"
     },
     "name": "key",
@@ -93302,7 +93302,7 @@
     "display": "haspass",
     "location": {
       "column": "7",
-      "line": "293",
+      "line": "299",
       "path": "E:\\coding\\embedded\\embededProject\\APP\\display_manager.c"
     },
     "name": "haspass",
@@ -93316,7 +93316,7 @@
     "display": "void DISPLAY_OPEN(void)",
     "location": {
       "column": "7",
-      "line": "294",
+      "line": "300",
       "path": "E:\\coding\\embedded\\embededProject\\APP\\display_manager.c"
     },
     "name": "DISPLAY_OPEN",
@@ -93330,11 +93330,81 @@
     "display": "void DISPLAY_ERROR(void)",
     "location": {
       "column": "6",
-      "line": "354",
+      "line": "360",
       "path": "E:\\coding\\embedded\\embededProject\\APP\\display_manager.c"
     },
     "name": "DISPLAY_ERROR",
     "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:input_manager.h@34@macro@INPUT_MANAGER_H_",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "INPUT_MANAGER_H_",
+    "location": {
+      "column": "9",
+      "line": "2",
+      "path": "E:\\coding\\embedded\\embededProject\\APP\\input_manager.h"
+    },
+    "name": "INPUT_MANAGER_H_",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@InputManager_GetKey",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "char InputManager_GetKey(void)",
+    "location": {
+      "column": "6",
+      "line": "11",
+      "path": "E:\\coding\\embedded\\embededProject\\APP\\input_manager.h"
+    },
+    "name": "InputManager_GetKey",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@InputManager_GetKey",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "char InputManager_GetKey(void)",
+    "location": {
+      "column": "6",
+      "line": "11",
+      "path": "E:\\coding\\embedded\\embededProject\\APP\\input_manager.h"
+    },
+    "name": "InputManager_GetKey",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@InputManager_HandleKey",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void InputManager_HandleKey(void)",
+    "location": {
+      "column": "6",
+      "line": "19",
+      "path": "E:\\coding\\embedded\\embededProject\\APP\\input_manager.h"
+    },
+    "name": "InputManager_HandleKey",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@InputManager_HandleKey",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void InputManager_HandleKey(void)",
+    "location": {
+      "column": "6",
+      "line": "19",
+      "path": "E:\\coding\\embedded\\embededProject\\APP\\input_manager.h"
+    },
+    "name": "InputManager_HandleKey",
+    "origin": "user_include",
     "scope": null
   },
   {
@@ -99529,7 +99599,7 @@
     "ID": "c:@F@SysCtlIOSCVerificationSet",
     "What": "Function",
     "defdec": "Dec",
-    "display": "void SysCtlIOSCVerificationSet(_Bool)",
+    "display": "void SysCtlIOSCVerificationSet(bool)",
     "location": {
       "column": "13",
       "line": "641",
@@ -99543,7 +99613,7 @@
     "ID": "c:@F@SysCtlIOSCVerificationSet",
     "What": "Function",
     "defdec": "Dec",
-    "display": "void SysCtlIOSCVerificationSet(bool)",
+    "display": "void SysCtlIOSCVerificationSet(_Bool)",
     "location": {
       "column": "13",
       "line": "641",
@@ -99585,7 +99655,7 @@
     "ID": "c:@F@SysCtlPLLVerificationSet",
     "What": "Function",
     "defdec": "Dec",
-    "display": "void SysCtlPLLVerificationSet(_Bool)",
+    "display": "void SysCtlPLLVerificationSet(bool)",
     "location": {
       "column": "13",
       "line": "643",
@@ -99599,7 +99669,7 @@
     "ID": "c:@F@SysCtlPLLVerificationSet",
     "What": "Function",
     "defdec": "Dec",
-    "display": "void SysCtlPLLVerificationSet(bool)",
+    "display": "void SysCtlPLLVerificationSet(_Bool)",
     "location": {
       "column": "13",
       "line": "643",
@@ -109559,689 +109629,73 @@
     "scope": null
   },
   {
-    "ID": "c:display_manager.h@36@macro@DISPLAY_MANAGER_H_",
-    "What": "MacroDef",
+    "ID": "c:input_manager.c@F@MapKey",
+    "What": "Function",
     "defdec": "Def",
-    "display": "DISPLAY_MANAGER_H_",
-    "location": {
-      "column": "9",
-      "line": "2",
-      "path": "E:\\coding\\embedded\\embededProject\\APP\\display_manager.h"
-    },
-    "name": "DISPLAY_MANAGER_H_",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:display_manager.h@flag",
-    "What": "Variable",
-    "defdec": "Def",
-    "display": "flag",
+    "display": "char MapKey(char)",
     "location": {
       "column": "13",
-      "line": "10",
-      "path": "E:\\coding\\embedded\\embededProject\\APP\\display_manager.h"
+      "line": "13",
+      "path": "E:\\coding\\embedded\\embededProject\\APP\\input_manager.c"
     },
-    "name": "flag",
-    "origin": "user_include",
+    "name": "MapKey",
+    "origin": "project_file",
     "scope": null
   },
   {
-    "ID": "c:display_manager.h@savedPassword",
-    "What": "Variable",
+    "ID": "c:@F@InputManager_GetKey",
+    "What": "Function",
     "defdec": "Def",
-    "display": "savedPassword",
-    "location": {
-      "column": "13",
-      "line": "11",
-      "path": "E:\\coding\\embedded\\embededProject\\APP\\display_manager.h"
-    },
-    "name": "savedPassword",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@DISPLAY_Init",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void DISPLAY_Init(void)",
-    "location": {
-      "column": "6",
-      "line": "13",
-      "path": "E:\\coding\\embedded\\embededProject\\APP\\display_manager.h"
-    },
-    "name": "DISPLAY_Init",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@DISPLAY_Init",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void DISPLAY_Init(void)",
-    "location": {
-      "column": "6",
-      "line": "13",
-      "path": "E:\\coding\\embedded\\embededProject\\APP\\display_manager.h"
-    },
-    "name": "DISPLAY_Init",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@DISPLAY_HandleKey",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void DISPLAY_HandleKey(char)",
-    "location": {
-      "column": "6",
-      "line": "15",
-      "path": "E:\\coding\\embedded\\embededProject\\APP\\display_manager.h"
-    },
-    "name": "DISPLAY_HandleKey",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@DISPLAY_HandleKey",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void DISPLAY_HandleKey(char)",
-    "location": {
-      "column": "6",
-      "line": "15",
-      "path": "E:\\coding\\embedded\\embededProject\\APP\\display_manager.h"
-    },
-    "name": "DISPLAY_HandleKey",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@DISPLAY_EnablePasswordMode",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void DISPLAY_EnablePasswordMode(void)",
-    "location": {
-      "column": "6",
-      "line": "17",
-      "path": "E:\\coding\\embedded\\embededProject\\APP\\display_manager.h"
-    },
-    "name": "DISPLAY_EnablePasswordMode",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@DISPLAY_EnablePasswordMode",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void DISPLAY_EnablePasswordMode(void)",
-    "location": {
-      "column": "6",
-      "line": "17",
-      "path": "E:\\coding\\embedded\\embededProject\\APP\\display_manager.h"
-    },
-    "name": "DISPLAY_EnablePasswordMode",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@DISPLAY_DisablePasswordMode",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void DISPLAY_DisablePasswordMode(void)",
-    "location": {
-      "column": "6",
-      "line": "18",
-      "path": "E:\\coding\\embedded\\embededProject\\APP\\display_manager.h"
-    },
-    "name": "DISPLAY_DisablePasswordMode",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@DISPLAY_DisablePasswordMode",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void DISPLAY_DisablePasswordMode(void)",
-    "location": {
-      "column": "6",
-      "line": "18",
-      "path": "E:\\coding\\embedded\\embededProject\\APP\\display_manager.h"
-    },
-    "name": "DISPLAY_DisablePasswordMode",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@DISPLAY_ShowMainMenu",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void DISPLAY_ShowMainMenu(void)",
-    "location": {
-      "column": "6",
-      "line": "20",
-      "path": "E:\\coding\\embedded\\embededProject\\APP\\display_manager.h"
-    },
-    "name": "DISPLAY_ShowMainMenu",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@DISPLAY_ShowMainMenu",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void DISPLAY_ShowMainMenu(void)",
-    "location": {
-      "column": "6",
-      "line": "20",
-      "path": "E:\\coding\\embedded\\embededProject\\APP\\display_manager.h"
-    },
-    "name": "DISPLAY_ShowMainMenu",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@DISPLAY_ShowMessage",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void DISPLAY_ShowMessage(const char *)",
-    "location": {
-      "column": "6",
-      "line": "21",
-      "path": "E:\\coding\\embedded\\embededProject\\APP\\display_manager.h"
-    },
-    "name": "DISPLAY_ShowMessage",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@DISPLAY_ShowMessage",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void DISPLAY_ShowMessage(const char *)",
-    "location": {
-      "column": "6",
-      "line": "21",
-      "path": "E:\\coding\\embedded\\embededProject\\APP\\display_manager.h"
-    },
-    "name": "DISPLAY_ShowMessage",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@DISPLAY_ShowTimeoutValue",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void DISPLAY_ShowTimeoutValue(uint8_t)",
-    "location": {
-      "column": "6",
-      "line": "22",
-      "path": "E:\\coding\\embedded\\embededProject\\APP\\display_manager.h"
-    },
-    "name": "DISPLAY_ShowTimeoutValue",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@DISPLAY_ShowTimeoutValue",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void DISPLAY_ShowTimeoutValue(uint8_t)",
-    "location": {
-      "column": "6",
-      "line": "22",
-      "path": "E:\\coding\\embedded\\embededProject\\APP\\display_manager.h"
-    },
-    "name": "DISPLAY_ShowTimeoutValue",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@DISPLAY_ClearScreen",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void DISPLAY_ClearScreen(void)",
-    "location": {
-      "column": "6",
-      "line": "23",
-      "path": "E:\\coding\\embedded\\embededProject\\APP\\display_manager.h"
-    },
-    "name": "DISPLAY_ClearScreen",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@DISPLAY_ClearScreen",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void DISPLAY_ClearScreen(void)",
-    "location": {
-      "column": "6",
-      "line": "23",
-      "path": "E:\\coding\\embedded\\embededProject\\APP\\display_manager.h"
-    },
-    "name": "DISPLAY_ClearScreen",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@DISPLAY_OPEN",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void DISPLAY_OPEN(void)",
-    "location": {
-      "column": "6",
-      "line": "24",
-      "path": "E:\\coding\\embedded\\embededProject\\APP\\display_manager.h"
-    },
-    "name": "DISPLAY_OPEN",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@DISPLAY_OPEN",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void DISPLAY_OPEN(void)",
-    "location": {
-      "column": "6",
-      "line": "24",
-      "path": "E:\\coding\\embedded\\embededProject\\APP\\display_manager.h"
-    },
-    "name": "DISPLAY_OPEN",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@DISPLAY_CHANGEPASSWORD",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void DISPLAY_CHANGEPASSWORD(void)",
+    "display": "char InputManager_GetKey(void)",
     "location": {
       "column": "6",
       "line": "25",
-      "path": "E:\\coding\\embedded\\embededProject\\APP\\display_manager.h"
+      "path": "E:\\coding\\embedded\\embededProject\\APP\\input_manager.c"
     },
-    "name": "DISPLAY_CHANGEPASSWORD",
-    "origin": "user_include",
+    "name": "InputManager_GetKey",
+    "origin": "project_file",
     "scope": null
   },
   {
-    "ID": "c:@F@DISPLAY_CHANGEPASSWORD",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void DISPLAY_CHANGEPASSWORD(void)",
-    "location": {
-      "column": "6",
-      "line": "25",
-      "path": "E:\\coding\\embedded\\embededProject\\APP\\display_manager.h"
-    },
-    "name": "DISPLAY_CHANGEPASSWORD",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@DISPLAY_CHANGETIMEOUT",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void DISPLAY_CHANGETIMEOUT(void)",
-    "location": {
-      "column": "6",
-      "line": "26",
-      "path": "E:\\coding\\embedded\\embededProject\\APP\\display_manager.h"
-    },
-    "name": "DISPLAY_CHANGETIMEOUT",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@DISPLAY_CHANGETIMEOUT",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void DISPLAY_CHANGETIMEOUT(void)",
-    "location": {
-      "column": "6",
-      "line": "26",
-      "path": "E:\\coding\\embedded\\embededProject\\APP\\display_manager.h"
-    },
-    "name": "DISPLAY_CHANGETIMEOUT",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@DISPLAY_ERROR",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void DISPLAY_ERROR(void)",
-    "location": {
-      "column": "6",
-      "line": "27",
-      "path": "E:\\coding\\embedded\\embededProject\\APP\\display_manager.h"
-    },
-    "name": "DISPLAY_ERROR",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@DISPLAY_ERROR",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void DISPLAY_ERROR(void)",
-    "location": {
-      "column": "6",
-      "line": "27",
-      "path": "E:\\coding\\embedded\\embededProject\\APP\\display_manager.h"
-    },
-    "name": "DISPLAY_ERROR",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:keypad.h@26@macro@KEYPAD_H",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "KEYPAD_H",
-    "location": {
-      "column": "9",
-      "line": "2",
-      "path": "E:\\coding\\embedded\\embededProject\\HAL\\Keypad\\keypad.h"
-    },
-    "name": "KEYPAD_H",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:Keypad.h@26@macro@KEYPAD_H",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "KEYPAD_H",
-    "location": {
-      "column": "9",
-      "line": "2",
-      "path": "E:\\coding\\embedded\\embededProject\\HAL\\Keypad\\keypad.h"
-    },
-    "name": "KEYPAD_H",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@keypad_codes",
+    "ID": "c:input_manager.c@524@F@InputManager_GetKey@raw",
     "What": "Variable",
-    "defdec": "Dec",
-    "display": "keypad_codes",
-    "location": {
-      "column": "19",
-      "line": "12",
-      "path": "E:\\coding\\embedded\\embededProject\\HAL\\Keypad\\keypad.h"
-    },
-    "name": "keypad_codes",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@keypad_codes",
-    "What": "Variable",
-    "defdec": "Dec",
-    "display": "keypad_codes",
-    "location": {
-      "column": "19",
-      "line": "12",
-      "path": "E:\\coding\\embedded\\embededProject\\HAL\\Keypad\\keypad.h"
-    },
-    "name": "keypad_codes",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:keypad.h@345@macro@KEYPAD_ROWS",
-    "What": "MacroDef",
     "defdec": "Def",
-    "display": "KEYPAD_ROWS",
+    "display": "raw",
     "location": {
-      "column": "9",
-      "line": "15",
-      "path": "E:\\coding\\embedded\\embededProject\\HAL\\Keypad\\keypad.h"
+      "column": "10",
+      "line": "27",
+      "path": "E:\\coding\\embedded\\embededProject\\APP\\input_manager.c"
     },
-    "name": "KEYPAD_ROWS",
-    "origin": "user_include",
+    "name": "raw",
+    "origin": "project_file",
     "scope": null
   },
   {
-    "ID": "c:Keypad.h@345@macro@KEYPAD_ROWS",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "KEYPAD_ROWS",
-    "location": {
-      "column": "9",
-      "line": "15",
-      "path": "E:\\coding\\embedded\\embededProject\\HAL\\Keypad\\keypad.h"
-    },
-    "name": "KEYPAD_ROWS",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:Keypad.h@368@macro@KEYPAD_COLS",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "KEYPAD_COLS",
-    "location": {
-      "column": "9",
-      "line": "16",
-      "path": "E:\\coding\\embedded\\embededProject\\HAL\\Keypad\\keypad.h"
-    },
-    "name": "KEYPAD_COLS",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:keypad.h@368@macro@KEYPAD_COLS",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "KEYPAD_COLS",
-    "location": {
-      "column": "9",
-      "line": "16",
-      "path": "E:\\coding\\embedded\\embededProject\\HAL\\Keypad\\keypad.h"
-    },
-    "name": "KEYPAD_COLS",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:keypad.h@391@macro@KEYPAD_COL_PORT",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "KEYPAD_COL_PORT",
-    "location": {
-      "column": "9",
-      "line": "17",
-      "path": "E:\\coding\\embedded\\embededProject\\HAL\\Keypad\\keypad.h"
-    },
-    "name": "KEYPAD_COL_PORT",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:Keypad.h@391@macro@KEYPAD_COL_PORT",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "KEYPAD_COL_PORT",
-    "location": {
-      "column": "9",
-      "line": "17",
-      "path": "E:\\coding\\embedded\\embededProject\\HAL\\Keypad\\keypad.h"
-    },
-    "name": "KEYPAD_COL_PORT",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:Keypad.h@422@macro@KEYPAD_COL_PINS",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "KEYPAD_COL_PINS",
-    "location": {
-      "column": "9",
-      "line": "18",
-      "path": "E:\\coding\\embedded\\embededProject\\HAL\\Keypad\\keypad.h"
-    },
-    "name": "KEYPAD_COL_PINS",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:keypad.h@422@macro@KEYPAD_COL_PINS",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "KEYPAD_COL_PINS",
-    "location": {
-      "column": "9",
-      "line": "18",
-      "path": "E:\\coding\\embedded\\embededProject\\HAL\\Keypad\\keypad.h"
-    },
-    "name": "KEYPAD_COL_PINS",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:keypad.h@485@macro@KEYPAD_ROW_PORT",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "KEYPAD_ROW_PORT",
-    "location": {
-      "column": "9",
-      "line": "20",
-      "path": "E:\\coding\\embedded\\embededProject\\HAL\\Keypad\\keypad.h"
-    },
-    "name": "KEYPAD_ROW_PORT",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:Keypad.h@485@macro@KEYPAD_ROW_PORT",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "KEYPAD_ROW_PORT",
-    "location": {
-      "column": "9",
-      "line": "20",
-      "path": "E:\\coding\\embedded\\embededProject\\HAL\\Keypad\\keypad.h"
-    },
-    "name": "KEYPAD_ROW_PORT",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:keypad.h@516@macro@KEYPAD_ROW_PINS",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "KEYPAD_ROW_PINS",
-    "location": {
-      "column": "9",
-      "line": "21",
-      "path": "E:\\coding\\embedded\\embededProject\\HAL\\Keypad\\keypad.h"
-    },
-    "name": "KEYPAD_ROW_PINS",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:Keypad.h@516@macro@KEYPAD_ROW_PINS",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "KEYPAD_ROW_PINS",
-    "location": {
-      "column": "9",
-      "line": "21",
-      "path": "E:\\coding\\embedded\\embededProject\\HAL\\Keypad\\keypad.h"
-    },
-    "name": "KEYPAD_ROW_PINS",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@Keypad_Init",
+    "ID": "c:@F@InputManager_HandleKey",
     "What": "Function",
-    "defdec": "Dec",
-    "display": "void Keypad_Init(void)",
-    "location": {
-      "column": "6",
-      "line": "26",
-      "path": "E:\\coding\\embedded\\embededProject\\HAL\\Keypad\\keypad.h"
-    },
-    "name": "Keypad_Init",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@Keypad_Init",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void Keypad_Init(void)",
-    "location": {
-      "column": "6",
-      "line": "26",
-      "path": "E:\\coding\\embedded\\embededProject\\HAL\\Keypad\\keypad.h"
-    },
-    "name": "Keypad_Init",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@Keypad_GetKey",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "char Keypad_GetKey(void)",
-    "location": {
-      "column": "6",
-      "line": "32",
-      "path": "E:\\coding\\embedded\\embededProject\\HAL\\Keypad\\keypad.h"
-    },
-    "name": "Keypad_GetKey",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@Keypad_GetKey",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "char Keypad_GetKey(void)",
-    "location": {
-      "column": "6",
-      "line": "32",
-      "path": "E:\\coding\\embedded\\embededProject\\HAL\\Keypad\\keypad.h"
-    },
-    "name": "Keypad_GetKey",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@Keypad_RowISR",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void Keypad_RowISR(void)",
+    "defdec": "Def",
+    "display": "void InputManager_HandleKey(void)",
     "location": {
       "column": "6",
       "line": "38",
-      "path": "E:\\coding\\embedded\\embededProject\\HAL\\Keypad\\keypad.h"
+      "path": "E:\\coding\\embedded\\embededProject\\APP\\input_manager.c"
     },
-    "name": "Keypad_RowISR",
-    "origin": "user_include",
+    "name": "InputManager_HandleKey",
+    "origin": "project_file",
     "scope": null
   },
   {
-    "ID": "c:@F@GPIOPortA_Handler",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void GPIOPortA_Handler(void)",
+    "ID": "c:input_manager.c@861@F@InputManager_HandleKey@key",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "key",
     "location": {
-      "column": "6",
-      "line": "39",
-      "path": "E:\\coding\\embedded\\embededProject\\HAL\\Keypad\\keypad.h"
+      "column": "10",
+      "line": "40",
+      "path": "E:\\coding\\embedded\\embededProject\\APP\\input_manager.c"
     },
-    "name": "GPIOPortA_Handler",
-    "origin": "user_include",
+    "name": "key",
+    "origin": "project_file",
     "scope": null
   },
   {
@@ -111785,72 +111239,380 @@
     "scope": null
   },
   {
-    "ID": "c:input_manager.h@34@macro@INPUT_MANAGER_H_",
+    "ID": "c:display_manager.h@36@macro@DISPLAY_MANAGER_H_",
     "What": "MacroDef",
     "defdec": "Def",
-    "display": "INPUT_MANAGER_H_",
+    "display": "DISPLAY_MANAGER_H_",
     "location": {
       "column": "9",
       "line": "2",
-      "path": "E:\\coding\\embedded\\embededProject\\APP\\input_manager.h"
+      "path": "E:\\coding\\embedded\\embededProject\\APP\\display_manager.h"
     },
-    "name": "INPUT_MANAGER_H_",
+    "name": "DISPLAY_MANAGER_H_",
     "origin": "user_include",
     "scope": null
   },
   {
-    "ID": "c:@F@InputManager_GetKey",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "char InputManager_GetKey(void)",
+    "ID": "c:display_manager.h@flag",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "flag",
     "location": {
-      "column": "6",
+      "column": "13",
+      "line": "10",
+      "path": "E:\\coding\\embedded\\embededProject\\APP\\display_manager.h"
+    },
+    "name": "flag",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:display_manager.h@savedPassword",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "savedPassword",
+    "location": {
+      "column": "13",
       "line": "11",
-      "path": "E:\\coding\\embedded\\embededProject\\APP\\input_manager.h"
+      "path": "E:\\coding\\embedded\\embededProject\\APP\\display_manager.h"
     },
-    "name": "InputManager_GetKey",
+    "name": "savedPassword",
     "origin": "user_include",
     "scope": null
   },
   {
-    "ID": "c:@F@InputManager_GetKey",
+    "ID": "c:@F@DISPLAY_Init",
     "What": "Function",
     "defdec": "Dec",
-    "display": "char InputManager_GetKey(void)",
+    "display": "void DISPLAY_Init(void)",
     "location": {
       "column": "6",
-      "line": "11",
-      "path": "E:\\coding\\embedded\\embededProject\\APP\\input_manager.h"
+      "line": "13",
+      "path": "E:\\coding\\embedded\\embededProject\\APP\\display_manager.h"
     },
-    "name": "InputManager_GetKey",
+    "name": "DISPLAY_Init",
     "origin": "user_include",
     "scope": null
   },
   {
-    "ID": "c:@F@InputManager_HandleKey",
+    "ID": "c:@F@DISPLAY_Init",
     "What": "Function",
     "defdec": "Dec",
-    "display": "void InputManager_HandleKey(void)",
+    "display": "void DISPLAY_Init(void)",
     "location": {
       "column": "6",
-      "line": "19",
-      "path": "E:\\coding\\embedded\\embededProject\\APP\\input_manager.h"
+      "line": "13",
+      "path": "E:\\coding\\embedded\\embededProject\\APP\\display_manager.h"
     },
-    "name": "InputManager_HandleKey",
+    "name": "DISPLAY_Init",
     "origin": "user_include",
     "scope": null
   },
   {
-    "ID": "c:@F@InputManager_HandleKey",
+    "ID": "c:@F@DISPLAY_HandleKey",
     "What": "Function",
     "defdec": "Dec",
-    "display": "void InputManager_HandleKey(void)",
+    "display": "void DISPLAY_HandleKey(char)",
     "location": {
       "column": "6",
-      "line": "19",
-      "path": "E:\\coding\\embedded\\embededProject\\APP\\input_manager.h"
+      "line": "15",
+      "path": "E:\\coding\\embedded\\embededProject\\APP\\display_manager.h"
     },
-    "name": "InputManager_HandleKey",
+    "name": "DISPLAY_HandleKey",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@DISPLAY_HandleKey",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void DISPLAY_HandleKey(char)",
+    "location": {
+      "column": "6",
+      "line": "15",
+      "path": "E:\\coding\\embedded\\embededProject\\APP\\display_manager.h"
+    },
+    "name": "DISPLAY_HandleKey",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@DISPLAY_EnablePasswordMode",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void DISPLAY_EnablePasswordMode(void)",
+    "location": {
+      "column": "6",
+      "line": "17",
+      "path": "E:\\coding\\embedded\\embededProject\\APP\\display_manager.h"
+    },
+    "name": "DISPLAY_EnablePasswordMode",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@DISPLAY_EnablePasswordMode",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void DISPLAY_EnablePasswordMode(void)",
+    "location": {
+      "column": "6",
+      "line": "17",
+      "path": "E:\\coding\\embedded\\embededProject\\APP\\display_manager.h"
+    },
+    "name": "DISPLAY_EnablePasswordMode",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@DISPLAY_DisablePasswordMode",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void DISPLAY_DisablePasswordMode(void)",
+    "location": {
+      "column": "6",
+      "line": "18",
+      "path": "E:\\coding\\embedded\\embededProject\\APP\\display_manager.h"
+    },
+    "name": "DISPLAY_DisablePasswordMode",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@DISPLAY_DisablePasswordMode",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void DISPLAY_DisablePasswordMode(void)",
+    "location": {
+      "column": "6",
+      "line": "18",
+      "path": "E:\\coding\\embedded\\embededProject\\APP\\display_manager.h"
+    },
+    "name": "DISPLAY_DisablePasswordMode",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@DISPLAY_ShowMainMenu",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void DISPLAY_ShowMainMenu(void)",
+    "location": {
+      "column": "6",
+      "line": "20",
+      "path": "E:\\coding\\embedded\\embededProject\\APP\\display_manager.h"
+    },
+    "name": "DISPLAY_ShowMainMenu",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@DISPLAY_ShowMainMenu",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void DISPLAY_ShowMainMenu(void)",
+    "location": {
+      "column": "6",
+      "line": "20",
+      "path": "E:\\coding\\embedded\\embededProject\\APP\\display_manager.h"
+    },
+    "name": "DISPLAY_ShowMainMenu",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@DISPLAY_ShowMessage",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void DISPLAY_ShowMessage(const char *)",
+    "location": {
+      "column": "6",
+      "line": "21",
+      "path": "E:\\coding\\embedded\\embededProject\\APP\\display_manager.h"
+    },
+    "name": "DISPLAY_ShowMessage",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@DISPLAY_ShowMessage",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void DISPLAY_ShowMessage(const char *)",
+    "location": {
+      "column": "6",
+      "line": "21",
+      "path": "E:\\coding\\embedded\\embededProject\\APP\\display_manager.h"
+    },
+    "name": "DISPLAY_ShowMessage",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@DISPLAY_ShowTimeoutValue",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void DISPLAY_ShowTimeoutValue(uint8_t)",
+    "location": {
+      "column": "6",
+      "line": "22",
+      "path": "E:\\coding\\embedded\\embededProject\\APP\\display_manager.h"
+    },
+    "name": "DISPLAY_ShowTimeoutValue",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@DISPLAY_ShowTimeoutValue",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void DISPLAY_ShowTimeoutValue(uint8_t)",
+    "location": {
+      "column": "6",
+      "line": "22",
+      "path": "E:\\coding\\embedded\\embededProject\\APP\\display_manager.h"
+    },
+    "name": "DISPLAY_ShowTimeoutValue",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@DISPLAY_ClearScreen",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void DISPLAY_ClearScreen(void)",
+    "location": {
+      "column": "6",
+      "line": "23",
+      "path": "E:\\coding\\embedded\\embededProject\\APP\\display_manager.h"
+    },
+    "name": "DISPLAY_ClearScreen",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@DISPLAY_ClearScreen",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void DISPLAY_ClearScreen(void)",
+    "location": {
+      "column": "6",
+      "line": "23",
+      "path": "E:\\coding\\embedded\\embededProject\\APP\\display_manager.h"
+    },
+    "name": "DISPLAY_ClearScreen",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@DISPLAY_OPEN",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void DISPLAY_OPEN(void)",
+    "location": {
+      "column": "6",
+      "line": "24",
+      "path": "E:\\coding\\embedded\\embededProject\\APP\\display_manager.h"
+    },
+    "name": "DISPLAY_OPEN",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@DISPLAY_OPEN",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void DISPLAY_OPEN(void)",
+    "location": {
+      "column": "6",
+      "line": "24",
+      "path": "E:\\coding\\embedded\\embededProject\\APP\\display_manager.h"
+    },
+    "name": "DISPLAY_OPEN",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@DISPLAY_CHANGEPASSWORD",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void DISPLAY_CHANGEPASSWORD(void)",
+    "location": {
+      "column": "6",
+      "line": "25",
+      "path": "E:\\coding\\embedded\\embededProject\\APP\\display_manager.h"
+    },
+    "name": "DISPLAY_CHANGEPASSWORD",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@DISPLAY_CHANGEPASSWORD",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void DISPLAY_CHANGEPASSWORD(void)",
+    "location": {
+      "column": "6",
+      "line": "25",
+      "path": "E:\\coding\\embedded\\embededProject\\APP\\display_manager.h"
+    },
+    "name": "DISPLAY_CHANGEPASSWORD",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@DISPLAY_CHANGETIMEOUT",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void DISPLAY_CHANGETIMEOUT(void)",
+    "location": {
+      "column": "6",
+      "line": "26",
+      "path": "E:\\coding\\embedded\\embededProject\\APP\\display_manager.h"
+    },
+    "name": "DISPLAY_CHANGETIMEOUT",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@DISPLAY_CHANGETIMEOUT",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void DISPLAY_CHANGETIMEOUT(void)",
+    "location": {
+      "column": "6",
+      "line": "26",
+      "path": "E:\\coding\\embedded\\embededProject\\APP\\display_manager.h"
+    },
+    "name": "DISPLAY_CHANGETIMEOUT",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@DISPLAY_ERROR",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void DISPLAY_ERROR(void)",
+    "location": {
+      "column": "6",
+      "line": "27",
+      "path": "E:\\coding\\embedded\\embededProject\\APP\\display_manager.h"
+    },
+    "name": "DISPLAY_ERROR",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@DISPLAY_ERROR",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void DISPLAY_ERROR(void)",
+    "location": {
+      "column": "6",
+      "line": "27",
+      "path": "E:\\coding\\embedded\\embededProject\\APP\\display_manager.h"
+    },
+    "name": "DISPLAY_ERROR",
     "origin": "user_include",
     "scope": null
   },
@@ -111935,6 +111697,216 @@
       "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\ysizet.h"
     },
     "name": "__data_size_t",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:potentiometer_manager.c@810@macro@TIMEOUT_DISPLAY_UPDATE_INTERVAL",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "TIMEOUT_DISPLAY_UPDATE_INTERVAL",
+    "location": {
+      "column": "9",
+      "line": "21",
+      "path": "E:\\coding\\embedded\\embededProject\\APP\\potentiometer_manager.c"
+    },
+    "name": "TIMEOUT_DISPLAY_UPDATE_INTERVAL",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:potentiometer_manager.c@886@macro@TIMEOUT_CONFIRM_KEY",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "TIMEOUT_CONFIRM_KEY",
+    "location": {
+      "column": "9",
+      "line": "22",
+      "path": "E:\\coding\\embedded\\embededProject\\APP\\potentiometer_manager.c"
+    },
+    "name": "TIMEOUT_CONFIRM_KEY",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:potentiometer_manager.c@958@macro@DEFAULT_TIMEOUT",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "DEFAULT_TIMEOUT",
+    "location": {
+      "column": "9",
+      "line": "23",
+      "path": "E:\\coding\\embedded\\embededProject\\APP\\potentiometer_manager.c"
+    },
+    "name": "DEFAULT_TIMEOUT",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:potentiometer_manager.c@stored_timeout",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "stored_timeout",
+    "location": {
+      "column": "16",
+      "line": "30",
+      "path": "E:\\coding\\embedded\\embededProject\\APP\\potentiometer_manager.c"
+    },
+    "name": "stored_timeout",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@PotentiometerManager_GetTimeout",
+    "What": "Function",
+    "defdec": "Def",
+    "display": "uint8_t PotentiometerManager_GetTimeout(void)",
+    "location": {
+      "column": "9",
+      "line": "45",
+      "path": "E:\\coding\\embedded\\embededProject\\APP\\potentiometer_manager.c"
+    },
+    "name": "PotentiometerManager_GetTimeout",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@PotentiometerManager_HandleTimeoutConfig",
+    "What": "Function",
+    "defdec": "Def",
+    "display": "void PotentiometerManager_HandleTimeoutConfig(void)",
+    "location": {
+      "column": "6",
+      "line": "71",
+      "path": "E:\\coding\\embedded\\embededProject\\APP\\potentiometer_manager.c"
+    },
+    "name": "PotentiometerManager_HandleTimeoutConfig",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:potentiometer_manager.c@2658@F@PotentiometerManager_HandleTimeoutConfig@current_timeout",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "current_timeout",
+    "location": {
+      "column": "13",
+      "line": "73",
+      "path": "E:\\coding\\embedded\\embededProject\\APP\\potentiometer_manager.c"
+    },
+    "name": "current_timeout",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:potentiometer_manager.c@2688@F@PotentiometerManager_HandleTimeoutConfig@last_displayed_timeout",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "last_displayed_timeout",
+    "location": {
+      "column": "13",
+      "line": "74",
+      "path": "E:\\coding\\embedded\\embededProject\\APP\\potentiometer_manager.c"
+    },
+    "name": "last_displayed_timeout",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:potentiometer_manager.c@2729@F@PotentiometerManager_HandleTimeoutConfig@update_counter",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "update_counter",
+    "location": {
+      "column": "14",
+      "line": "75",
+      "path": "E:\\coding\\embedded\\embededProject\\APP\\potentiometer_manager.c"
+    },
+    "name": "update_counter",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:potentiometer_manager.c@2763@F@PotentiometerManager_HandleTimeoutConfig@key",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "key",
+    "location": {
+      "column": "10",
+      "line": "76",
+      "path": "E:\\coding\\embedded\\embededProject\\APP\\potentiometer_manager.c"
+    },
+    "name": "key",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:stdbool.h@96@macro@_STDBOOL",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "_STDBOOL",
+    "location": {
+      "column": "9",
+      "line": "5",
+      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\stdbool.h"
+    },
+    "name": "_STDBOOL",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:stdbool.h@200@macro@bool",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "bool",
+    "location": {
+      "column": "11",
+      "line": "13",
+      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\stdbool.h"
+    },
+    "name": "bool",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:stdbool.h@225@macro@true",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "true",
+    "location": {
+      "column": "11",
+      "line": "14",
+      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\stdbool.h"
+    },
+    "name": "true",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:stdbool.h@246@macro@false",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "false",
+    "location": {
+      "column": "11",
+      "line": "15",
+      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\stdbool.h"
+    },
+    "name": "false",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:stdbool.h@275@macro@__bool_true_false_are_defined",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "__bool_true_false_are_defined",
+    "location": {
+      "column": "9",
+      "line": "18",
+      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\stdbool.h"
+    },
+    "name": "__bool_true_false_are_defined",
     "origin": "system_include",
     "scope": null
   },
@@ -112317,216 +112289,6 @@
     "scope": null
   },
   {
-    "ID": "c:potentiometer_manager.c@810@macro@TIMEOUT_DISPLAY_UPDATE_INTERVAL",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "TIMEOUT_DISPLAY_UPDATE_INTERVAL",
-    "location": {
-      "column": "9",
-      "line": "21",
-      "path": "E:\\coding\\embedded\\embededProject\\APP\\potentiometer_manager.c"
-    },
-    "name": "TIMEOUT_DISPLAY_UPDATE_INTERVAL",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:potentiometer_manager.c@886@macro@TIMEOUT_CONFIRM_KEY",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "TIMEOUT_CONFIRM_KEY",
-    "location": {
-      "column": "9",
-      "line": "22",
-      "path": "E:\\coding\\embedded\\embededProject\\APP\\potentiometer_manager.c"
-    },
-    "name": "TIMEOUT_CONFIRM_KEY",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:potentiometer_manager.c@958@macro@DEFAULT_TIMEOUT",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "DEFAULT_TIMEOUT",
-    "location": {
-      "column": "9",
-      "line": "23",
-      "path": "E:\\coding\\embedded\\embededProject\\APP\\potentiometer_manager.c"
-    },
-    "name": "DEFAULT_TIMEOUT",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:potentiometer_manager.c@stored_timeout",
-    "What": "Variable",
-    "defdec": "Def",
-    "display": "stored_timeout",
-    "location": {
-      "column": "16",
-      "line": "30",
-      "path": "E:\\coding\\embedded\\embededProject\\APP\\potentiometer_manager.c"
-    },
-    "name": "stored_timeout",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@PotentiometerManager_GetTimeout",
-    "What": "Function",
-    "defdec": "Def",
-    "display": "uint8_t PotentiometerManager_GetTimeout(void)",
-    "location": {
-      "column": "9",
-      "line": "45",
-      "path": "E:\\coding\\embedded\\embededProject\\APP\\potentiometer_manager.c"
-    },
-    "name": "PotentiometerManager_GetTimeout",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@PotentiometerManager_HandleTimeoutConfig",
-    "What": "Function",
-    "defdec": "Def",
-    "display": "void PotentiometerManager_HandleTimeoutConfig(void)",
-    "location": {
-      "column": "6",
-      "line": "71",
-      "path": "E:\\coding\\embedded\\embededProject\\APP\\potentiometer_manager.c"
-    },
-    "name": "PotentiometerManager_HandleTimeoutConfig",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:potentiometer_manager.c@2658@F@PotentiometerManager_HandleTimeoutConfig@current_timeout",
-    "What": "Variable",
-    "defdec": "Def",
-    "display": "current_timeout",
-    "location": {
-      "column": "13",
-      "line": "73",
-      "path": "E:\\coding\\embedded\\embededProject\\APP\\potentiometer_manager.c"
-    },
-    "name": "current_timeout",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:potentiometer_manager.c@2688@F@PotentiometerManager_HandleTimeoutConfig@last_displayed_timeout",
-    "What": "Variable",
-    "defdec": "Def",
-    "display": "last_displayed_timeout",
-    "location": {
-      "column": "13",
-      "line": "74",
-      "path": "E:\\coding\\embedded\\embededProject\\APP\\potentiometer_manager.c"
-    },
-    "name": "last_displayed_timeout",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:potentiometer_manager.c@2729@F@PotentiometerManager_HandleTimeoutConfig@update_counter",
-    "What": "Variable",
-    "defdec": "Def",
-    "display": "update_counter",
-    "location": {
-      "column": "14",
-      "line": "75",
-      "path": "E:\\coding\\embedded\\embededProject\\APP\\potentiometer_manager.c"
-    },
-    "name": "update_counter",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:potentiometer_manager.c@2763@F@PotentiometerManager_HandleTimeoutConfig@key",
-    "What": "Variable",
-    "defdec": "Def",
-    "display": "key",
-    "location": {
-      "column": "10",
-      "line": "76",
-      "path": "E:\\coding\\embedded\\embededProject\\APP\\potentiometer_manager.c"
-    },
-    "name": "key",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:stdbool.h@96@macro@_STDBOOL",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "_STDBOOL",
-    "location": {
-      "column": "9",
-      "line": "5",
-      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\stdbool.h"
-    },
-    "name": "_STDBOOL",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:stdbool.h@200@macro@bool",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "bool",
-    "location": {
-      "column": "11",
-      "line": "13",
-      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\stdbool.h"
-    },
-    "name": "bool",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:stdbool.h@225@macro@true",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "true",
-    "location": {
-      "column": "11",
-      "line": "14",
-      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\stdbool.h"
-    },
-    "name": "true",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:stdbool.h@246@macro@false",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "false",
-    "location": {
-      "column": "11",
-      "line": "15",
-      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\stdbool.h"
-    },
-    "name": "false",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:stdbool.h@275@macro@__bool_true_false_are_defined",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "__bool_true_false_are_defined",
-    "location": {
-      "column": "9",
-      "line": "18",
-      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\stdbool.h"
-    },
-    "name": "__bool_true_false_are_defined",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
     "ID": "c:potentiometer_manager.h@546@macro@POTENTIOMETER_MANAGER_H",
     "What": "MacroDef",
     "defdec": "Def",
@@ -112611,73 +112373,325 @@
     "scope": null
   },
   {
-    "ID": "c:input_manager.c@F@MapKey",
-    "What": "Function",
+    "ID": "c:ycheck.h@1402@macro@__AEABI_PORTABILITY_INTERNAL_LEVEL",
+    "What": "MacroDef",
     "defdec": "Def",
-    "display": "char MapKey(char)",
+    "display": "__AEABI_PORTABILITY_INTERNAL_LEVEL",
     "location": {
-      "column": "13",
-      "line": "13",
-      "path": "E:\\coding\\embedded\\embededProject\\APP\\input_manager.c"
+      "column": "11",
+      "line": "42",
+      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\ycheck.h"
     },
-    "name": "MapKey",
-    "origin": "project_file",
+    "name": "__AEABI_PORTABILITY_INTERNAL_LEVEL",
+    "origin": "system_include",
     "scope": null
   },
   {
-    "ID": "c:@F@InputManager_GetKey",
-    "What": "Function",
+    "ID": "c:keypad.h@26@macro@KEYPAD_H",
+    "What": "MacroDef",
     "defdec": "Def",
-    "display": "char InputManager_GetKey(void)",
+    "display": "KEYPAD_H",
+    "location": {
+      "column": "9",
+      "line": "2",
+      "path": "E:\\coding\\embedded\\embededProject\\HAL\\Keypad\\keypad.h"
+    },
+    "name": "KEYPAD_H",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:Keypad.h@26@macro@KEYPAD_H",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "KEYPAD_H",
+    "location": {
+      "column": "9",
+      "line": "2",
+      "path": "E:\\coding\\embedded\\embededProject\\HAL\\Keypad\\keypad.h"
+    },
+    "name": "KEYPAD_H",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@keypad_codes",
+    "What": "Variable",
+    "defdec": "Dec",
+    "display": "keypad_codes",
+    "location": {
+      "column": "19",
+      "line": "12",
+      "path": "E:\\coding\\embedded\\embededProject\\HAL\\Keypad\\keypad.h"
+    },
+    "name": "keypad_codes",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@keypad_codes",
+    "What": "Variable",
+    "defdec": "Dec",
+    "display": "keypad_codes",
+    "location": {
+      "column": "19",
+      "line": "12",
+      "path": "E:\\coding\\embedded\\embededProject\\HAL\\Keypad\\keypad.h"
+    },
+    "name": "keypad_codes",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:keypad.h@345@macro@KEYPAD_ROWS",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "KEYPAD_ROWS",
+    "location": {
+      "column": "9",
+      "line": "15",
+      "path": "E:\\coding\\embedded\\embededProject\\HAL\\Keypad\\keypad.h"
+    },
+    "name": "KEYPAD_ROWS",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:Keypad.h@345@macro@KEYPAD_ROWS",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "KEYPAD_ROWS",
+    "location": {
+      "column": "9",
+      "line": "15",
+      "path": "E:\\coding\\embedded\\embededProject\\HAL\\Keypad\\keypad.h"
+    },
+    "name": "KEYPAD_ROWS",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:Keypad.h@368@macro@KEYPAD_COLS",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "KEYPAD_COLS",
+    "location": {
+      "column": "9",
+      "line": "16",
+      "path": "E:\\coding\\embedded\\embededProject\\HAL\\Keypad\\keypad.h"
+    },
+    "name": "KEYPAD_COLS",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:keypad.h@368@macro@KEYPAD_COLS",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "KEYPAD_COLS",
+    "location": {
+      "column": "9",
+      "line": "16",
+      "path": "E:\\coding\\embedded\\embededProject\\HAL\\Keypad\\keypad.h"
+    },
+    "name": "KEYPAD_COLS",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:Keypad.h@391@macro@KEYPAD_COL_PORT",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "KEYPAD_COL_PORT",
+    "location": {
+      "column": "9",
+      "line": "17",
+      "path": "E:\\coding\\embedded\\embededProject\\HAL\\Keypad\\keypad.h"
+    },
+    "name": "KEYPAD_COL_PORT",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:keypad.h@391@macro@KEYPAD_COL_PORT",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "KEYPAD_COL_PORT",
+    "location": {
+      "column": "9",
+      "line": "17",
+      "path": "E:\\coding\\embedded\\embededProject\\HAL\\Keypad\\keypad.h"
+    },
+    "name": "KEYPAD_COL_PORT",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:keypad.h@422@macro@KEYPAD_COL_PINS",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "KEYPAD_COL_PINS",
+    "location": {
+      "column": "9",
+      "line": "18",
+      "path": "E:\\coding\\embedded\\embededProject\\HAL\\Keypad\\keypad.h"
+    },
+    "name": "KEYPAD_COL_PINS",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:Keypad.h@422@macro@KEYPAD_COL_PINS",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "KEYPAD_COL_PINS",
+    "location": {
+      "column": "9",
+      "line": "18",
+      "path": "E:\\coding\\embedded\\embededProject\\HAL\\Keypad\\keypad.h"
+    },
+    "name": "KEYPAD_COL_PINS",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:keypad.h@485@macro@KEYPAD_ROW_PORT",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "KEYPAD_ROW_PORT",
+    "location": {
+      "column": "9",
+      "line": "20",
+      "path": "E:\\coding\\embedded\\embededProject\\HAL\\Keypad\\keypad.h"
+    },
+    "name": "KEYPAD_ROW_PORT",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:Keypad.h@485@macro@KEYPAD_ROW_PORT",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "KEYPAD_ROW_PORT",
+    "location": {
+      "column": "9",
+      "line": "20",
+      "path": "E:\\coding\\embedded\\embededProject\\HAL\\Keypad\\keypad.h"
+    },
+    "name": "KEYPAD_ROW_PORT",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:keypad.h@516@macro@KEYPAD_ROW_PINS",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "KEYPAD_ROW_PINS",
+    "location": {
+      "column": "9",
+      "line": "21",
+      "path": "E:\\coding\\embedded\\embededProject\\HAL\\Keypad\\keypad.h"
+    },
+    "name": "KEYPAD_ROW_PINS",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:Keypad.h@516@macro@KEYPAD_ROW_PINS",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "KEYPAD_ROW_PINS",
+    "location": {
+      "column": "9",
+      "line": "21",
+      "path": "E:\\coding\\embedded\\embededProject\\HAL\\Keypad\\keypad.h"
+    },
+    "name": "KEYPAD_ROW_PINS",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@Keypad_Init",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void Keypad_Init(void)",
     "location": {
       "column": "6",
-      "line": "25",
-      "path": "E:\\coding\\embedded\\embededProject\\APP\\input_manager.c"
+      "line": "26",
+      "path": "E:\\coding\\embedded\\embededProject\\HAL\\Keypad\\keypad.h"
     },
-    "name": "InputManager_GetKey",
-    "origin": "project_file",
+    "name": "Keypad_Init",
+    "origin": "user_include",
     "scope": null
   },
   {
-    "ID": "c:input_manager.c@524@F@InputManager_GetKey@raw",
-    "What": "Variable",
-    "defdec": "Def",
-    "display": "raw",
-    "location": {
-      "column": "10",
-      "line": "27",
-      "path": "E:\\coding\\embedded\\embededProject\\APP\\input_manager.c"
-    },
-    "name": "raw",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@InputManager_HandleKey",
+    "ID": "c:@F@Keypad_Init",
     "What": "Function",
-    "defdec": "Def",
-    "display": "void InputManager_HandleKey(void)",
+    "defdec": "Dec",
+    "display": "void Keypad_Init(void)",
+    "location": {
+      "column": "6",
+      "line": "26",
+      "path": "E:\\coding\\embedded\\embededProject\\HAL\\Keypad\\keypad.h"
+    },
+    "name": "Keypad_Init",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@Keypad_GetKey",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "char Keypad_GetKey(void)",
+    "location": {
+      "column": "6",
+      "line": "32",
+      "path": "E:\\coding\\embedded\\embededProject\\HAL\\Keypad\\keypad.h"
+    },
+    "name": "Keypad_GetKey",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@Keypad_GetKey",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "char Keypad_GetKey(void)",
+    "location": {
+      "column": "6",
+      "line": "32",
+      "path": "E:\\coding\\embedded\\embededProject\\HAL\\Keypad\\keypad.h"
+    },
+    "name": "Keypad_GetKey",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@Keypad_RowISR",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void Keypad_RowISR(void)",
     "location": {
       "column": "6",
       "line": "38",
-      "path": "E:\\coding\\embedded\\embededProject\\APP\\input_manager.c"
+      "path": "E:\\coding\\embedded\\embededProject\\HAL\\Keypad\\keypad.h"
     },
-    "name": "InputManager_HandleKey",
-    "origin": "project_file",
+    "name": "Keypad_RowISR",
+    "origin": "user_include",
     "scope": null
   },
   {
-    "ID": "c:input_manager.c@861@F@InputManager_HandleKey@key",
-    "What": "Variable",
-    "defdec": "Def",
-    "display": "key",
+    "ID": "c:@F@GPIOPortA_Handler",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void GPIOPortA_Handler(void)",
     "location": {
-      "column": "10",
-      "line": "40",
-      "path": "E:\\coding\\embedded\\embededProject\\APP\\input_manager.c"
+      "column": "6",
+      "line": "39",
+      "path": "E:\\coding\\embedded\\embededProject\\HAL\\Keypad\\keypad.h"
     },
-    "name": "key",
-    "origin": "project_file",
+    "name": "GPIOPortA_Handler",
+    "origin": "user_include",
     "scope": null
   },
   {
@@ -112915,20 +112929,6 @@
       "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\DLib_Config_Normal.h"
     },
     "name": "_DLIB_CONFIG_H",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:ycheck.h@1402@macro@__AEABI_PORTABILITY_INTERNAL_LEVEL",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "__AEABI_PORTABILITY_INTERNAL_LEVEL",
-    "location": {
-      "column": "11",
-      "line": "42",
-      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\ycheck.h"
-    },
-    "name": "__AEABI_PORTABILITY_INTERNAL_LEVEL",
     "origin": "system_include",
     "scope": null
   },
@@ -118057,6 +118057,90 @@
     "scope": null
   },
   {
+    "ID": "c:@F@Potentiometer_Init",
+    "What": "Function",
+    "defdec": "Def",
+    "display": "void Potentiometer_Init(void)",
+    "location": {
+      "column": "6",
+      "line": "27",
+      "path": "E:\\coding\\embedded\\embededProject\\HAL\\Potentiometer\\potentiometer.c"
+    },
+    "name": "Potentiometer_Init",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@Potentiometer_ReadRaw",
+    "What": "Function",
+    "defdec": "Def",
+    "display": "uint16_t Potentiometer_ReadRaw(void)",
+    "location": {
+      "column": "10",
+      "line": "84",
+      "path": "E:\\coding\\embedded\\embededProject\\HAL\\Potentiometer\\potentiometer.c"
+    },
+    "name": "Potentiometer_ReadRaw",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:potentiometer.c@3126@F@Potentiometer_ReadRaw@adc_value",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "adc_value",
+    "location": {
+      "column": "14",
+      "line": "86",
+      "path": "E:\\coding\\embedded\\embededProject\\HAL\\Potentiometer\\potentiometer.c"
+    },
+    "name": "adc_value",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@Potentiometer_ReadTimeout",
+    "What": "Function",
+    "defdec": "Def",
+    "display": "uint8_t Potentiometer_ReadTimeout(void)",
+    "location": {
+      "column": "9",
+      "line": "121",
+      "path": "E:\\coding\\embedded\\embededProject\\HAL\\Potentiometer\\potentiometer.c"
+    },
+    "name": "Potentiometer_ReadTimeout",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:potentiometer.c@4385@F@Potentiometer_ReadTimeout@adc_raw",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "adc_raw",
+    "location": {
+      "column": "14",
+      "line": "123",
+      "path": "E:\\coding\\embedded\\embededProject\\HAL\\Potentiometer\\potentiometer.c"
+    },
+    "name": "adc_raw",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:potentiometer.c@4408@F@Potentiometer_ReadTimeout@timeout_value",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "timeout_value",
+    "location": {
+      "column": "14",
+      "line": "124",
+      "path": "E:\\coding\\embedded\\embededProject\\HAL\\Potentiometer\\potentiometer.c"
+    },
+    "name": "timeout_value",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
     "ID": "c:dio.c@618@macro@GPIO_LOCK_KEY",
     "What": "MacroDef",
     "defdec": "Def",
@@ -118281,90 +118365,6 @@
     "scope": null
   },
   {
-    "ID": "c:@F@Potentiometer_Init",
-    "What": "Function",
-    "defdec": "Def",
-    "display": "void Potentiometer_Init(void)",
-    "location": {
-      "column": "6",
-      "line": "27",
-      "path": "E:\\coding\\embedded\\embededProject\\HAL\\Potentiometer\\potentiometer.c"
-    },
-    "name": "Potentiometer_Init",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@Potentiometer_ReadRaw",
-    "What": "Function",
-    "defdec": "Def",
-    "display": "uint16_t Potentiometer_ReadRaw(void)",
-    "location": {
-      "column": "10",
-      "line": "84",
-      "path": "E:\\coding\\embedded\\embededProject\\HAL\\Potentiometer\\potentiometer.c"
-    },
-    "name": "Potentiometer_ReadRaw",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:potentiometer.c@3126@F@Potentiometer_ReadRaw@adc_value",
-    "What": "Variable",
-    "defdec": "Def",
-    "display": "adc_value",
-    "location": {
-      "column": "14",
-      "line": "86",
-      "path": "E:\\coding\\embedded\\embededProject\\HAL\\Potentiometer\\potentiometer.c"
-    },
-    "name": "adc_value",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@Potentiometer_ReadTimeout",
-    "What": "Function",
-    "defdec": "Def",
-    "display": "uint8_t Potentiometer_ReadTimeout(void)",
-    "location": {
-      "column": "9",
-      "line": "121",
-      "path": "E:\\coding\\embedded\\embededProject\\HAL\\Potentiometer\\potentiometer.c"
-    },
-    "name": "Potentiometer_ReadTimeout",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:potentiometer.c@4385@F@Potentiometer_ReadTimeout@adc_raw",
-    "What": "Variable",
-    "defdec": "Def",
-    "display": "adc_raw",
-    "location": {
-      "column": "14",
-      "line": "123",
-      "path": "E:\\coding\\embedded\\embededProject\\HAL\\Potentiometer\\potentiometer.c"
-    },
-    "name": "adc_raw",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:potentiometer.c@4408@F@Potentiometer_ReadTimeout@timeout_value",
-    "What": "Variable",
-    "defdec": "Def",
-    "display": "timeout_value",
-    "location": {
-      "column": "14",
-      "line": "124",
-      "path": "E:\\coding\\embedded\\embededProject\\HAL\\Potentiometer\\potentiometer.c"
-    },
-    "name": "timeout_value",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
     "ID": "c:@F@DELAY",
     "What": "Function",
     "defdec": "Def",
@@ -118393,13 +118393,13 @@
     "scope": null
   },
   {
-    "ID": "c:main.c@899@F@main@mode",
+    "ID": "c:main.c@1003@F@main@mode",
     "What": "Variable",
     "defdec": "Def",
     "display": "mode",
     "location": {
       "column": "11",
-      "line": "31",
+      "line": "32",
       "path": "E:\\coding\\embedded\\embededProject\\main.c"
     },
     "name": "mode",
@@ -118407,13 +118407,13 @@
     "scope": null
   },
   {
-    "ID": "c:main.c@946@F@main@key",
+    "ID": "c:main.c@1050@F@main@key",
     "What": "Variable",
     "defdec": "Def",
     "display": "key",
     "location": {
       "column": "14",
-      "line": "34",
+      "line": "35",
       "path": "E:\\coding\\embedded\\embededProject\\main.c"
     },
     "name": "key",

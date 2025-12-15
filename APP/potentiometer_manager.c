@@ -19,7 +19,7 @@
  *****************************************************************************/
 
 #define TIMEOUT_DISPLAY_UPDATE_INTERVAL  100  /* Update LCD every 100ms */
-#define TIMEOUT_CONFIRM_KEY              '#' /* Key to save timeout */
+#define TIMEOUT_CONFIRM_KEY              '=' /* Key to save timeout */
 #define DEFAULT_TIMEOUT                  10   /* Default timeout in seconds */
 
 /*****************************************************************************
@@ -81,14 +81,15 @@ void PotentiometerManager_HandleTimeoutConfig(void)
     SysCtlDelay(533333);  /* 100ms delay */
     
     /* Main loop for timeout configuration */
+    current_timeout = PotentiometerManager_GetTimeout();
     while (1)
     {
         /* Increment counter to control update rate */
         update_counter++;
         
         /* Get current timeout value from potentiometer */
-        current_timeout = PotentiometerManager_GetTimeout();
-        
+         
+        current_timeout = Potentiometer_ReadTimeout();
         /* Update display only when value changes or after timeout interval
          * This reduces LCD writes for smoother operation
          */
