@@ -15,6 +15,7 @@ void DELAY(void){
 
 int main(void)
 {
+      
     /* ---------- Initialize all frontend modules ---------- */
     Keypad_Init();           // From TA keypad driver
     DISPLAY_Init();          // Initializes LCD

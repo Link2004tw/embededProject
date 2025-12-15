@@ -114979,7 +114979,7 @@
     "display": "void UART5_SendString(char *)",
     "location": {
       "column": "6",
-      "line": "21",
+      "line": "32",
       "path": "E:\\coding\\embedded\\embededProject\\Comm\\HMI_Comm.c"
     },
     "name": "UART5_SendString",
@@ -115701,13 +115701,13 @@
     "scope": null
   },
   {
-    "ID": "c:main.c@1048@F@main@mode",
+    "ID": "c:main.c@1056@F@main@mode",
     "What": "Variable",
     "defdec": "Def",
     "display": "mode",
     "location": {
       "column": "11",
-      "line": "32",
+      "line": "33",
       "path": "E:\\coding\\embedded\\embededProject\\main.c"
     },
     "name": "mode",
@@ -115715,13 +115715,13 @@
     "scope": null
   },
   {
-    "ID": "c:main.c@1095@F@main@key",
+    "ID": "c:main.c@1103@F@main@key",
     "What": "Variable",
     "defdec": "Def",
     "display": "key",
     "location": {
       "column": "14",
-      "line": "35",
+      "line": "36",
       "path": "E:\\coding\\embedded\\embededProject\\main.c"
     },
     "name": "key",

@@ -50,7 +50,7 @@
         <LMIFTDIfoundProbes />
     </LMIFTDIDriver>
     <DebugChecksum>
-        <Checksum>3109525942</Checksum>
+        <Checksum>2606034974</Checksum>
     </DebugChecksum>
     <Exceptions>
         <StopOnUncaught>_ 0</StopOnUncaught>
@@ -79,7 +79,8 @@
     </LogFile>
     <Aliases>
         <A0>_ "C:\Jenkins\workspace\TivaWare-Git-Release\DriverLib\build\DriverLib.test\driverlib\adc.c" "C:\ti\TivaWare_C_Series-2.2.0.295\driverlib\adc.c"</A0>
-        <Count>1</Count>
+        <A1>_ "C:\Jenkins\workspace\TivaWare-Git-Release\DriverLib\build\DriverLib.test\driverlib\sysctl.c" ""</A1>
+        <Count>2</Count>
         <SuppressDialog>0</SuppressDialog>
     </Aliases>
     <CallStackLog>
