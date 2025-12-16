@@ -125,7 +125,7 @@ void PotentiometerManager_HandleTimeoutConfig(void)
              * Save the timeout and return to caller
              */
             stored_timeout = current_timeout;  /* Store confirmed value */
-            char message[5];
+            char message[6];
             message[0] ='2'; //mode
             message[1]=',';
             message[2]= '0' + (stored_timeout / 10);
@@ -144,8 +144,9 @@ void PotentiometerManager_HandleTimeoutConfig(void)
             //LCD_WriteString(message);
             UART5_SendString(message);
             char *ack_buffer;
-            UART5_ReceiveString(ack_buffer, 20);
             LCD_Clear();
+            DISPLAY_ShowMessage("Waiting for Ack...");
+            UART5_ReceiveString(ack_buffer, 20);
             DISPLAY_ShowMessage(ack_buffer);
             SysCtlDelay(1066666);  /* 200ms delay */
             break;
