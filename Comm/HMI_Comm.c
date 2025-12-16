@@ -44,3 +44,29 @@ void UART5_SendString(char* str) {
     while(UARTBusy(UART5_BASE));  // Wait for last char to finish
     GPIOPinWrite(GPIO_PORTF_BASE, GPIO_PIN_3, 0);
 }
+
+// uint8_t UART_ReceiveByte(void) {
+//     while(UARTBusy(UART5_BASE));
+//     return UARTCharGet(UART5_BASE);
+// }
+
+void UART5_ReceiveString(char* buffer, uint16_t max_length) {
+    uint16_t index = 0;
+    char received_char;
+    
+    while(index < max_length - 1) {  // Leave room for null terminator
+        // Wait for data to be available
+        while(!UARTCharsAvail(UART5_BASE));
+        
+        received_char = UARTCharGet(UART5_BASE);
+        
+        // Check for end-of-string conditions (newline or carriage return)
+        if(received_char == '\n' || received_char == '\r') {
+            break;
+        }
+        
+        buffer[index++] = received_char;
+    }
+    
+    buffer[index] = '\0';  // Null terminate the string
+}

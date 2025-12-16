@@ -102259,7 +102259,7 @@
     "ID": "c:@F@SysCtlMOSCVerificationSet",
     "What": "Function",
     "defdec": "Dec",
-    "display": "void SysCtlMOSCVerificationSet(bool)",
+    "display": "void SysCtlMOSCVerificationSet(_Bool)",
     "location": {
       "column": "13",
       "line": "642",
@@ -102273,7 +102273,7 @@
     "ID": "c:@F@SysCtlMOSCVerificationSet",
     "What": "Function",
     "defdec": "Dec",
-    "display": "void SysCtlMOSCVerificationSet(_Bool)",
+    "display": "void SysCtlMOSCVerificationSet(bool)",
     "location": {
       "column": "13",
       "line": "642",
@@ -102525,7 +102525,7 @@
     "ID": "c:@F@SysCtlVCOGet",
     "What": "Function",
     "defdec": "Dec",
-    "display": "bool SysCtlVCOGet(uint32_t, uint32_t *)",
+    "display": "_Bool SysCtlVCOGet(uint32_t, uint32_t *)",
     "location": {
       "column": "13",
       "line": "660",
@@ -102539,7 +102539,7 @@
     "ID": "c:@F@SysCtlVCOGet",
     "What": "Function",
     "defdec": "Dec",
-    "display": "_Bool SysCtlVCOGet(uint32_t, uint32_t *)",
+    "display": "bool SysCtlVCOGet(uint32_t, uint32_t *)",
     "location": {
       "column": "13",
       "line": "660",
@@ -102952,90 +102952,6 @@
       "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\string.h"
     },
     "name": "strstr",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:ysizet.h@111@macro@_YSIZET_H",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "_YSIZET_H",
-    "location": {
-      "column": "9",
-      "line": "5",
-      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\ysizet.h"
-    },
-    "name": "_YSIZET_H",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:ysizet.h@277@macro@_SIZE_T",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "_SIZE_T",
-    "location": {
-      "column": "11",
-      "line": "16",
-      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\ysizet.h"
-    },
-    "name": "_SIZE_T",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:ysizet.h@296@macro@_STD_USING_SIZE_T",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "_STD_USING_SIZE_T",
-    "location": {
-      "column": "11",
-      "line": "17",
-      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\ysizet.h"
-    },
-    "name": "_STD_USING_SIZE_T",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:ysizet.h@T@size_t",
-    "What": "Typedef",
-    "defdec": "Def",
-    "display": "_Sizet",
-    "location": {
-      "column": "18",
-      "line": "18",
-      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\ysizet.h"
-    },
-    "name": "size_t",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:ysizet.h@359@macro@__DATA_PTR_MEM_HELPER1__",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "__DATA_PTR_MEM_HELPER1__",
-    "location": {
-      "column": "9",
-      "line": "21",
-      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\ysizet.h"
-    },
-    "name": "__DATA_PTR_MEM_HELPER1__",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:ysizet.h@T@__data_size_t",
-    "What": "Typedef",
-    "defdec": "Def",
-    "display": "unsigned int",
-    "location": {
-      "column": "1",
-      "line": "23",
-      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\ysizet.h"
-    },
-    "name": "__data_size_t",
     "origin": "system_include",
     "scope": null
   },
@@ -107416,20 +107332,6 @@
     "ID": "c:@F@GPIOIntStatus",
     "What": "Function",
     "defdec": "Dec",
-    "display": "uint32_t GPIOIntStatus(uint32_t, _Bool)",
-    "location": {
-      "column": "17",
-      "line": "153",
-      "path": "C:\\ti\\TivaWare_C_Series-2.2.0.295\\driverlib\\gpio.h"
-    },
-    "name": "GPIOIntStatus",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@GPIOIntStatus",
-    "What": "Function",
-    "defdec": "Dec",
     "display": "uint32_t GPIOIntStatus(uint32_t, bool)",
     "location": {
       "column": "17",
@@ -108970,20 +108872,6 @@
     "ID": "c:@F@UARTEnableSIR",
     "What": "Function",
     "defdec": "Dec",
-    "display": "void UARTEnableSIR(uint32_t, _Bool)",
-    "location": {
-      "column": "13",
-      "line": "208",
-      "path": "C:\\ti\\TivaWare_C_Series-2.2.0.295\\driverlib\\uart.h"
-    },
-    "name": "UARTEnableSIR",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@UARTEnableSIR",
-    "What": "Function",
-    "defdec": "Dec",
     "display": "void UARTEnableSIR(uint32_t, bool)",
     "location": {
       "column": "13",
@@ -109023,38 +108911,10 @@
     "scope": null
   },
   {
-    "ID": "c:@F@UARTCharsAvail",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "_Bool UARTCharsAvail(uint32_t)",
-    "location": {
-      "column": "13",
-      "line": "210",
-      "path": "C:\\ti\\TivaWare_C_Series-2.2.0.295\\driverlib\\uart.h"
-    },
-    "name": "UARTCharsAvail",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
     "ID": "c:@F@UARTSpaceAvail",
     "What": "Function",
     "defdec": "Dec",
     "display": "bool UARTSpaceAvail(uint32_t)",
-    "location": {
-      "column": "13",
-      "line": "211",
-      "path": "C:\\ti\\TivaWare_C_Series-2.2.0.295\\driverlib\\uart.h"
-    },
-    "name": "UARTSpaceAvail",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@UARTSpaceAvail",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "_Bool UARTSpaceAvail(uint32_t)",
     "location": {
       "column": "13",
       "line": "211",
@@ -109107,20 +108967,6 @@
     "scope": null
   },
   {
-    "ID": "c:@F@UARTCharPutNonBlocking",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "_Bool UARTCharPutNonBlocking(uint32_t, unsigned char)",
-    "location": {
-      "column": "13",
-      "line": "214",
-      "path": "C:\\ti\\TivaWare_C_Series-2.2.0.295\\driverlib\\uart.h"
-    },
-    "name": "UARTCharPutNonBlocking",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
     "ID": "c:@F@UARTCharPut",
     "What": "Function",
     "defdec": "Dec",
@@ -109149,38 +108995,10 @@
     "scope": null
   },
   {
-    "ID": "c:@F@UARTBreakCtl",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void UARTBreakCtl(uint32_t, _Bool)",
-    "location": {
-      "column": "13",
-      "line": "216",
-      "path": "C:\\ti\\TivaWare_C_Series-2.2.0.295\\driverlib\\uart.h"
-    },
-    "name": "UARTBreakCtl",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
     "ID": "c:@F@UARTBusy",
     "What": "Function",
     "defdec": "Dec",
     "display": "bool UARTBusy(uint32_t)",
-    "location": {
-      "column": "13",
-      "line": "217",
-      "path": "C:\\ti\\TivaWare_C_Series-2.2.0.295\\driverlib\\uart.h"
-    },
-    "name": "UARTBusy",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@UARTBusy",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "_Bool UARTBusy(uint32_t)",
     "location": {
       "column": "13",
       "line": "217",
@@ -109243,20 +109061,6 @@
       "path": "C:\\ti\\TivaWare_C_Series-2.2.0.295\\driverlib\\uart.h"
     },
     "name": "UARTIntDisable",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@UARTIntStatus",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "uint32_t UARTIntStatus(uint32_t, _Bool)",
-    "location": {
-      "column": "17",
-      "line": "222",
-      "path": "C:\\ti\\TivaWare_C_Series-2.2.0.295\\driverlib\\uart.h"
-    },
-    "name": "UARTIntStatus",
     "origin": "user_include",
     "scope": null
   },
@@ -112411,6 +112215,146 @@
     "scope": null
   },
   {
+    "ID": "c:HMI_Comm.h@28@macro@HMI_COMM_H",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "HMI_COMM_H",
+    "location": {
+      "column": "9",
+      "line": "2",
+      "path": "E:\\coding\\embedded\\embededProject\\Comm\\HMI_Comm.h"
+    },
+    "name": "HMI_COMM_H",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:HMI_Comm.h@294@macro@PASSMODE",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "PASSMODE",
+    "location": {
+      "column": "9",
+      "line": "12",
+      "path": "E:\\coding\\embedded\\embededProject\\Comm\\HMI_Comm.h"
+    },
+    "name": "PASSMODE",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:HMI_Comm.h@316@macro@ADDMODE",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "ADDMODE",
+    "location": {
+      "column": "9",
+      "line": "13",
+      "path": "E:\\coding\\embedded\\embededProject\\Comm\\HMI_Comm.h"
+    },
+    "name": "ADDMODE",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:HMI_Comm.h@337@macro@TIMEMODE",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "TIMEMODE",
+    "location": {
+      "column": "9",
+      "line": "14",
+      "path": "E:\\coding\\embedded\\embededProject\\Comm\\HMI_Comm.h"
+    },
+    "name": "TIMEMODE",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@UART5_Init_front",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void UART5_Init_front(void)",
+    "location": {
+      "column": "6",
+      "line": "17",
+      "path": "E:\\coding\\embedded\\embededProject\\Comm\\HMI_Comm.h"
+    },
+    "name": "UART5_Init_front",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@UART5_Init_front",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void UART5_Init_front(void)",
+    "location": {
+      "column": "6",
+      "line": "17",
+      "path": "E:\\coding\\embedded\\embededProject\\Comm\\HMI_Comm.h"
+    },
+    "name": "UART5_Init_front",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@UART5_SendString",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void UART5_SendString(char *)",
+    "location": {
+      "column": "6",
+      "line": "18",
+      "path": "E:\\coding\\embedded\\embededProject\\Comm\\HMI_Comm.h"
+    },
+    "name": "UART5_SendString",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@UART5_SendString",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void UART5_SendString(char *)",
+    "location": {
+      "column": "6",
+      "line": "18",
+      "path": "E:\\coding\\embedded\\embededProject\\Comm\\HMI_Comm.h"
+    },
+    "name": "UART5_SendString",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@UART5_ReceiveString",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void UART5_ReceiveString(char *, uint16_t)",
+    "location": {
+      "column": "6",
+      "line": "19",
+      "path": "E:\\coding\\embedded\\embededProject\\Comm\\HMI_Comm.h"
+    },
+    "name": "UART5_ReceiveString",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@UART5_ReceiveString",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void UART5_ReceiveString(char *, uint16_t)",
+    "location": {
+      "column": "6",
+      "line": "19",
+      "path": "E:\\coding\\embedded\\embededProject\\Comm\\HMI_Comm.h"
+    },
+    "name": "UART5_ReceiveString",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
     "ID": "c:DLib_Defaults.h@1169@macro@_DLIB_DEFAULTS_H",
     "What": "MacroDef",
     "defdec": "Def",
@@ -114595,114 +114539,170 @@
     "scope": null
   },
   {
-    "ID": "c:HMI_Comm.h@28@macro@HMI_COMM_H",
+    "ID": "c:ysizet.h@111@macro@_YSIZET_H",
     "What": "MacroDef",
     "defdec": "Def",
-    "display": "HMI_COMM_H",
+    "display": "_YSIZET_H",
     "location": {
       "column": "9",
-      "line": "2",
-      "path": "E:\\coding\\embedded\\embededProject\\Comm\\HMI_Comm.h"
+      "line": "5",
+      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\ysizet.h"
     },
-    "name": "HMI_COMM_H",
-    "origin": "user_include",
+    "name": "_YSIZET_H",
+    "origin": "system_include",
     "scope": null
   },
   {
-    "ID": "c:HMI_Comm.h@294@macro@PASSMODE",
+    "ID": "c:ysizet.h@277@macro@_SIZE_T",
     "What": "MacroDef",
     "defdec": "Def",
-    "display": "PASSMODE",
+    "display": "_SIZE_T",
+    "location": {
+      "column": "11",
+      "line": "16",
+      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\ysizet.h"
+    },
+    "name": "_SIZE_T",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:ysizet.h@296@macro@_STD_USING_SIZE_T",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "_STD_USING_SIZE_T",
+    "location": {
+      "column": "11",
+      "line": "17",
+      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\ysizet.h"
+    },
+    "name": "_STD_USING_SIZE_T",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:ysizet.h@T@size_t",
+    "What": "Typedef",
+    "defdec": "Def",
+    "display": "_Sizet",
+    "location": {
+      "column": "18",
+      "line": "18",
+      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\ysizet.h"
+    },
+    "name": "size_t",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:ysizet.h@359@macro@__DATA_PTR_MEM_HELPER1__",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "__DATA_PTR_MEM_HELPER1__",
+    "location": {
+      "column": "9",
+      "line": "21",
+      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\ysizet.h"
+    },
+    "name": "__DATA_PTR_MEM_HELPER1__",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:ysizet.h@T@__data_size_t",
+    "What": "Typedef",
+    "defdec": "Def",
+    "display": "unsigned int",
+    "location": {
+      "column": "1",
+      "line": "23",
+      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\ysizet.h"
+    },
+    "name": "__data_size_t",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:potentiometer_manager.h@546@macro@POTENTIOMETER_MANAGER_H",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "POTENTIOMETER_MANAGER_H",
     "location": {
       "column": "9",
       "line": "12",
-      "path": "E:\\coding\\embedded\\embededProject\\Comm\\HMI_Comm.h"
+      "path": "E:\\coding\\embedded\\embededProject\\APP\\potentiometer_manager.h"
     },
-    "name": "PASSMODE",
+    "name": "POTENTIOMETER_MANAGER_H",
     "origin": "user_include",
     "scope": null
   },
   {
-    "ID": "c:HMI_Comm.h@316@macro@ADDMODE",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "ADDMODE",
+    "ID": "c:@F@PotentiometerManager_Init",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void PotentiometerManager_Init(void)",
+    "location": {
+      "column": "6",
+      "line": "31",
+      "path": "E:\\coding\\embedded\\embededProject\\APP\\potentiometer_manager.h"
+    },
+    "name": "PotentiometerManager_Init",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@PotentiometerManager_HandleTimeoutConfig",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void PotentiometerManager_HandleTimeoutConfig(void)",
+    "location": {
+      "column": "6",
+      "line": "53",
+      "path": "E:\\coding\\embedded\\embededProject\\APP\\potentiometer_manager.h"
+    },
+    "name": "PotentiometerManager_HandleTimeoutConfig",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@PotentiometerManager_HandleTimeoutConfig",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void PotentiometerManager_HandleTimeoutConfig(void)",
+    "location": {
+      "column": "6",
+      "line": "53",
+      "path": "E:\\coding\\embedded\\embededProject\\APP\\potentiometer_manager.h"
+    },
+    "name": "PotentiometerManager_HandleTimeoutConfig",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@PotentiometerManager_GetTimeout",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "uint8_t PotentiometerManager_GetTimeout(void)",
     "location": {
       "column": "9",
-      "line": "13",
-      "path": "E:\\coding\\embedded\\embededProject\\Comm\\HMI_Comm.h"
+      "line": "66",
+      "path": "E:\\coding\\embedded\\embededProject\\APP\\potentiometer_manager.h"
     },
-    "name": "ADDMODE",
+    "name": "PotentiometerManager_GetTimeout",
     "origin": "user_include",
     "scope": null
   },
   {
-    "ID": "c:HMI_Comm.h@337@macro@TIMEMODE",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "TIMEMODE",
+    "ID": "c:@F@PotentiometerManager_GetTimeout",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "uint8_t PotentiometerManager_GetTimeout(void)",
     "location": {
       "column": "9",
-      "line": "14",
-      "path": "E:\\coding\\embedded\\embededProject\\Comm\\HMI_Comm.h"
+      "line": "66",
+      "path": "E:\\coding\\embedded\\embededProject\\APP\\potentiometer_manager.h"
     },
-    "name": "TIMEMODE",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@UART5_Init_front",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void UART5_Init_front(void)",
-    "location": {
-      "column": "6",
-      "line": "17",
-      "path": "E:\\coding\\embedded\\embededProject\\Comm\\HMI_Comm.h"
-    },
-    "name": "UART5_Init_front",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@UART5_Init_front",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void UART5_Init_front(void)",
-    "location": {
-      "column": "6",
-      "line": "17",
-      "path": "E:\\coding\\embedded\\embededProject\\Comm\\HMI_Comm.h"
-    },
-    "name": "UART5_Init_front",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@UART5_SendString",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void UART5_SendString(char *)",
-    "location": {
-      "column": "6",
-      "line": "18",
-      "path": "E:\\coding\\embedded\\embededProject\\Comm\\HMI_Comm.h"
-    },
-    "name": "UART5_SendString",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@UART5_SendString",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void UART5_SendString(char *)",
-    "location": {
-      "column": "6",
-      "line": "18",
-      "path": "E:\\coding\\embedded\\embededProject\\Comm\\HMI_Comm.h"
-    },
-    "name": "UART5_SendString",
+    "name": "PotentiometerManager_GetTimeout",
     "origin": "user_include",
     "scope": null
   },
@@ -114861,87 +114861,17 @@
     "scope": null
   },
   {
-    "ID": "c:potentiometer_manager.h@546@macro@POTENTIOMETER_MANAGER_H",
-    "What": "MacroDef",
+    "ID": "c:potentiometer_manager.c@5339@F@PotentiometerManager_HandleTimeoutConfig@ack_buffer",
+    "What": "Variable",
     "defdec": "Def",
-    "display": "POTENTIOMETER_MANAGER_H",
+    "display": "ack_buffer",
     "location": {
-      "column": "9",
-      "line": "12",
-      "path": "E:\\coding\\embedded\\embededProject\\APP\\potentiometer_manager.h"
+      "column": "19",
+      "line": "146",
+      "path": "E:\\coding\\embedded\\embededProject\\APP\\potentiometer_manager.c"
     },
-    "name": "POTENTIOMETER_MANAGER_H",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@PotentiometerManager_Init",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void PotentiometerManager_Init(void)",
-    "location": {
-      "column": "6",
-      "line": "31",
-      "path": "E:\\coding\\embedded\\embededProject\\APP\\potentiometer_manager.h"
-    },
-    "name": "PotentiometerManager_Init",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@PotentiometerManager_HandleTimeoutConfig",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void PotentiometerManager_HandleTimeoutConfig(void)",
-    "location": {
-      "column": "6",
-      "line": "53",
-      "path": "E:\\coding\\embedded\\embededProject\\APP\\potentiometer_manager.h"
-    },
-    "name": "PotentiometerManager_HandleTimeoutConfig",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@PotentiometerManager_HandleTimeoutConfig",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void PotentiometerManager_HandleTimeoutConfig(void)",
-    "location": {
-      "column": "6",
-      "line": "53",
-      "path": "E:\\coding\\embedded\\embededProject\\APP\\potentiometer_manager.h"
-    },
-    "name": "PotentiometerManager_HandleTimeoutConfig",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@PotentiometerManager_GetTimeout",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "uint8_t PotentiometerManager_GetTimeout(void)",
-    "location": {
-      "column": "9",
-      "line": "66",
-      "path": "E:\\coding\\embedded\\embededProject\\APP\\potentiometer_manager.h"
-    },
-    "name": "PotentiometerManager_GetTimeout",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@PotentiometerManager_GetTimeout",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "uint8_t PotentiometerManager_GetTimeout(void)",
-    "location": {
-      "column": "9",
-      "line": "66",
-      "path": "E:\\coding\\embedded\\embededProject\\APP\\potentiometer_manager.h"
-    },
-    "name": "PotentiometerManager_GetTimeout",
-    "origin": "user_include",
+    "name": "ack_buffer",
+    "origin": "project_file",
     "scope": null
   },
   {
@@ -114997,6 +114927,48 @@
       "path": "E:\\coding\\embedded\\embededProject\\Comm\\HMI_Comm.c"
     },
     "name": "UART5_SendString",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@UART5_ReceiveString",
+    "What": "Function",
+    "defdec": "Def",
+    "display": "void UART5_ReceiveString(char *, uint16_t)",
+    "location": {
+      "column": "6",
+      "line": "53",
+      "path": "E:\\coding\\embedded\\embededProject\\Comm\\HMI_Comm.c"
+    },
+    "name": "UART5_ReceiveString",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:HMI_Comm.c@1674@F@UART5_ReceiveString@index",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "index",
+    "location": {
+      "column": "14",
+      "line": "54",
+      "path": "E:\\coding\\embedded\\embededProject\\Comm\\HMI_Comm.c"
+    },
+    "name": "index",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:HMI_Comm.c@1699@F@UART5_ReceiveString@received_char",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "received_char",
+    "location": {
+      "column": "10",
+      "line": "55",
+      "path": "E:\\coding\\embedded\\embededProject\\Comm\\HMI_Comm.c"
+    },
+    "name": "received_char",
     "origin": "project_file",
     "scope": null
   },

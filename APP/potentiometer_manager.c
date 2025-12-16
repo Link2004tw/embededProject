@@ -143,6 +143,10 @@ void PotentiometerManager_HandleTimeoutConfig(void)
             //LCD_Clear();
             //LCD_WriteString(message);
             UART5_SendString(message);
+            char *ack_buffer;
+            UART5_ReceiveString(ack_buffer, 20);
+            LCD_Clear();
+            DISPLAY_ShowMessage(ack_buffer);
             SysCtlDelay(1066666);  /* 200ms delay */
             break;
         }

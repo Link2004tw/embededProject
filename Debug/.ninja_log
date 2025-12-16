@@ -68,3 +68,11 @@
 114	168	7875531342264283	E:/coding/embedded/embededProject/Debug/Exe/main.out	4e26ed53336a9033
 1	178	7875532273454857	E:/coding/embedded/embededProject/Debug/Obj/APP/potentiometer_manager.o	fa4606974259b24a
 184	272	7875532274417872	E:/coding/embedded/embededProject/Debug/Exe/main.out	4e26ed53336a9033
+1	113	7875532963497586	E:/coding/embedded/embededProject/Debug/Obj/APP/potentiometer_manager.o	fa4606974259b24a
+118	209	7875532964486835	E:/coding/embedded/embededProject/Debug/Exe/main.out	4e26ed53336a9033
+206	1211	7876280988665381	E:/coding/embedded/embededProject/Debug/Obj/Comm/HMI_Comm.o	a31a8a4b6b4f5823
+212	1217	7876280988665381	E:/coding/embedded/embededProject/Debug/Obj/main.o	a9747b32b48427fb
+209	1224	7876280988665381	E:/coding/embedded/embededProject/Debug/Obj/APP/potentiometer_manager.o	fa4606974259b24a
+19	1230	7876280988689955	E:/coding/embedded/embededProject/Debug/Obj/APP/display_manager.o	d886a4c709422c1e
+203	1235	7876280988665381	E:/coding/embedded/embededProject/Debug/Obj/APP/input_manager.o	d2dd814b9889253d
+1242	1599	7876280992664034	E:/coding/embedded/embededProject/Debug/Exe/main.out	4e26ed53336a9033

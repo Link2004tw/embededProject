@@ -16,5 +16,6 @@
 //void HMI_SendPassword(uint8_t* pass, uint8_t length);
 void UART5_Init_front(void);
 void UART5_SendString(char* str);
+void UART5_ReceiveString(char* buffer, uint16_t max_length);
 
 #endif
