@@ -61,7 +61,7 @@ void UART5_ReceiveString(char* buffer, uint16_t max_length) {
         received_char = UARTCharGet(UART5_BASE);
         
         // Check for end-of-string conditions (newline or carriage return)
-        if(received_char == '\n' || received_char == '\r') {
+        if(received_char == '#') {
             break;
         }
         
