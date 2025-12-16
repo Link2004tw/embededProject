@@ -21,6 +21,8 @@ void UART5_Init_front(void) {
 
     
     UARTEnable(UART5_BASE);
+    SysCtlDelay(1000);  // Add delay to let UART settle
+    
     while (UARTCharsAvail(UART5_BASE)) {
         UARTCharGet(UART5_BASE);
     }
@@ -29,14 +31,16 @@ void UART5_Init_front(void) {
     
 }
 
+
 void UART5_SendString(char* str) {
-    GPIOPinWrite(GPIO_PORTF_BASE, GPIO_PIN_3, GPIO_PIN_3); // Start with LED OFF
-  
+    GPIOPinWrite(GPIO_PORTF_BASE, GPIO_PIN_3, GPIO_PIN_3);
+    
     while(*str) {
+        while(UARTBusy(UART5_BASE));  // Wait until TX ready
         UARTCharPut(UART5_BASE, *str);
         str++;
     }
-    //SysCtlDelay(53333333);
-    GPIOPinWrite(GPIO_PORTF_BASE, GPIO_PIN_3, 0); // Start with LED OFF
     
+    while(UARTBusy(UART5_BASE));  // Wait for last char to finish
+    GPIOPinWrite(GPIO_PORTF_BASE, GPIO_PIN_3, 0);
 }

@@ -96,12 +96,7 @@ void DISPLAY_CHANGEPASSWORD(void){
     message[7] = ',';
     
    
-    //if(strcmp(password, savedPassword) != 0){
-      //  LCD_Clear();
-        //LCD_WriteString("Incorrect password");
-        //SysCtlDelay(10000000);
-        //return;
-    //}
+    
     
     
     LCD_Clear();
@@ -128,7 +123,7 @@ void DISPLAY_CHANGEPASSWORD(void){
     
     char confirmPassword[5] = "";
     while(1){
-    for(pass_index = 0; pass_index < 4; pass_index++){
+    for(pass_index = 0; pass_index < 5; pass_index++){
         char key = InputManager_GetKey();
         while(key == 0) {
             key = InputManager_GetKey();
@@ -148,7 +143,7 @@ void DISPLAY_CHANGEPASSWORD(void){
         SysCtlDelay(10000000);
         
     }else { break;}
-    }
+    }                  
     if(strcmp(message, "1,12345,67890#") != 0){
         LCD_Clear();
         LCD_WriteString("C is wrong");
@@ -156,12 +151,14 @@ void DISPLAY_CHANGEPASSWORD(void){
         
     }else {
     LCD_Clear();
-        LCD_WriteString("Congrats");
+        //LCD_WriteString("Congrats");
+        LCD_WriteString("Password Updated!");
+        UART5_SendString(message);
+
         SysCtlDelay(10000000);
     }
     
     LCD_Clear();
-    LCD_WriteString("Password Updated!");
     SysCtlDelay(10000000);
 }
 
