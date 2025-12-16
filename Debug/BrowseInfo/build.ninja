@@ -59,6 +59,11 @@ build E$:\coding\embedded\embededProject\Debug\BrowseInfo\HAL\Potentiometer\pote
   flags = E$:\coding\embedded\embededProject\HAL\Potentiometer\potentiometer.c -D PART_TM4C123GH6PM -o E$:\coding\embedded\embededProject\Debug\Obj\HAL\Potentiometer --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa --no_clustering --no_scheduling --debug --endian=little --cpu=Cortex-M4 -e --fpu=VFPv4_sp --dlib_config "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\arm\inc\c\DLib_Config_Normal.h" -I C$:\ti\TivaWare_C_Series-2.2.0.295\ -I C$:\ti\TivaWare_C_Series-2.2.0.295\inc\ -I C$:\ti\TivaWare_C_Series-2.2.0.295\driverlib\ -On --predef_macros E$:\coding\embedded\embededProject\Debug\BrowseInfo\HAL\Potentiometer\potentiometer.tmp
   rspfile_name = E$:\coding\embedded\embededProject\Debug\BrowseInfo\HAL\Potentiometer\potentiometer.xcl.rsp
 
+build E$:\coding\embedded\embededProject\Debug\BrowseInfo\UART\HMI_Comm.xcl : COMPILER_XCL 
+  xclcommand = -source_file E$:\coding\embedded\embededProject\BACK\UART\HMI_Comm.c -xcl_file E$:\coding\embedded\embededProject\Debug\BrowseInfo\UART\HMI_Comm.xcl -macro_file E$:\coding\embedded\embededProject\Debug\BrowseInfo\UART\HMI_Comm.tmp -icc_path "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\arm\bin\iccarm.exe"
+  flags = E$:\coding\embedded\embededProject\BACK\UART\HMI_Comm.c -D PART_TM4C123GH6PM -o E$:\coding\embedded\embededProject\Debug\Obj\UART --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa --no_clustering --no_scheduling --debug --endian=little --cpu=Cortex-M4 -e --fpu=VFPv4_sp --dlib_config "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\arm\inc\c\DLib_Config_Normal.h" -I C$:\ti\TivaWare_C_Series-2.2.0.295\ -I C$:\ti\TivaWare_C_Series-2.2.0.295\inc\ -I C$:\ti\TivaWare_C_Series-2.2.0.295\driverlib\ -On --predef_macros E$:\coding\embedded\embededProject\Debug\BrowseInfo\UART\HMI_Comm.tmp
+  rspfile_name = E$:\coding\embedded\embededProject\Debug\BrowseInfo\UART\HMI_Comm.xcl.rsp
+
 build E$:\coding\embedded\embededProject\Debug\BrowseInfo\main.xcl : COMPILER_XCL 
   xclcommand = -source_file E$:\coding\embedded\embededProject\main.c -xcl_file E$:\coding\embedded\embededProject\Debug\BrowseInfo\main.xcl -macro_file E$:\coding\embedded\embededProject\Debug\BrowseInfo\main.tmp -icc_path "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\arm\bin\iccarm.exe"
   flags = E$:\coding\embedded\embededProject\main.c -D PART_TM4C123GH6PM -o E$:\coding\embedded\embededProject\Debug\Obj\ --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa --no_clustering --no_scheduling --debug --endian=little --cpu=Cortex-M4 -e --fpu=VFPv4_sp --dlib_config "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\arm\inc\c\DLib_Config_Normal.h" -I C$:\ti\TivaWare_C_Series-2.2.0.295\ -I C$:\ti\TivaWare_C_Series-2.2.0.295\inc\ -I C$:\ti\TivaWare_C_Series-2.2.0.295\driverlib\ -On --predef_macros E$:\coding\embedded\embededProject\Debug\BrowseInfo\main.tmp
@@ -97,6 +102,10 @@ build E$:\coding\embedded\embededProject\Debug\BrowseInfo\HAL\Potentiometer\pote
 E$:\coding\embedded\embededProject\HAL\Potentiometer\potentiometer.c
   flags = -out=E$:\coding\embedded\embededProject\Debug\BrowseInfo\HAL\Potentiometer\potentiometer.pbi -f E$:\coding\embedded\embededProject\Debug\BrowseInfo\HAL\Potentiometer\potentiometer.xcl
 
+build E$:\coding\embedded\embededProject\Debug\BrowseInfo\UART\HMI_Comm.pbi : INDEXER E$:\coding\embedded\embededProject\Debug\BrowseInfo\UART\HMI_Comm.xcl |  $
+E$:\coding\embedded\embededProject\BACK\UART\HMI_Comm.c
+  flags = -out=E$:\coding\embedded\embededProject\Debug\BrowseInfo\UART\HMI_Comm.pbi -f E$:\coding\embedded\embededProject\Debug\BrowseInfo\UART\HMI_Comm.xcl
+
 build E$:\coding\embedded\embededProject\Debug\BrowseInfo\main.pbi : INDEXER E$:\coding\embedded\embededProject\Debug\BrowseInfo\main.xcl |  $
 E$:\coding\embedded\embededProject\main.c
   flags = -out=E$:\coding\embedded\embededProject\Debug\BrowseInfo\main.pbi -f E$:\coding\embedded\embededProject\Debug\BrowseInfo\main.xcl
@@ -119,12 +128,16 @@ E$:\coding\embedded\embededProject\Debug\BrowseInfo\HAL\LCD\lcd.pbi
   flags = -M E$:\coding\embedded\embededProject\Debug\BrowseInfo\main_part1.pbi E$:\coding\embedded\embededProject\Debug\BrowseInfo\HAL\Keypad\dio.pbi E$:\coding\embedded\embededProject\Debug\BrowseInfo\HAL\Keypad\keypad.pbi E$:\coding\embedded\embededProject\Debug\BrowseInfo\HAL\LCD\lcd.pbi
 
 build E$:\coding\embedded\embededProject\Debug\BrowseInfo\main_part2.pbi : PDBLINK E$:\coding\embedded\embededProject\Debug\BrowseInfo\HAL\Potentiometer\potentiometer.pbi |  $
-E$:\coding\embedded\embededProject\Debug\BrowseInfo\main.pbi $
-E$:\coding\embedded\embededProject\Debug\BrowseInfo\startup_ewarm.pbi
-  flags = -M E$:\coding\embedded\embededProject\Debug\BrowseInfo\main_part2.pbi E$:\coding\embedded\embededProject\Debug\BrowseInfo\HAL\Potentiometer\potentiometer.pbi E$:\coding\embedded\embededProject\Debug\BrowseInfo\main.pbi E$:\coding\embedded\embededProject\Debug\BrowseInfo\startup_ewarm.pbi
+E$:\coding\embedded\embededProject\Debug\BrowseInfo\UART\HMI_Comm.pbi $
+E$:\coding\embedded\embededProject\Debug\BrowseInfo\main.pbi
+  flags = -M E$:\coding\embedded\embededProject\Debug\BrowseInfo\main_part2.pbi E$:\coding\embedded\embededProject\Debug\BrowseInfo\HAL\Potentiometer\potentiometer.pbi E$:\coding\embedded\embededProject\Debug\BrowseInfo\UART\HMI_Comm.pbi E$:\coding\embedded\embededProject\Debug\BrowseInfo\main.pbi
+
+build E$:\coding\embedded\embededProject\Debug\BrowseInfo\main_part3.pbi : PDBLINK E$:\coding\embedded\embededProject\Debug\BrowseInfo\startup_ewarm.pbi
+  flags = -M E$:\coding\embedded\embededProject\Debug\BrowseInfo\main_part3.pbi E$:\coding\embedded\embededProject\Debug\BrowseInfo\startup_ewarm.pbi
 
 build E$:\coding\embedded\embededProject\Debug\BrowseInfo\main.pbd : PDBLINK E$:\coding\embedded\embededProject\Debug\BrowseInfo\main_part0.pbi |  $
 E$:\coding\embedded\embededProject\Debug\BrowseInfo\main_part1.pbi $
-E$:\coding\embedded\embededProject\Debug\BrowseInfo\main_part2.pbi
-  flags = -M E$:\coding\embedded\embededProject\Debug\BrowseInfo\main.pbd E$:\coding\embedded\embededProject\Debug\BrowseInfo\main_part0.pbi E$:\coding\embedded\embededProject\Debug\BrowseInfo\main_part1.pbi E$:\coding\embedded\embededProject\Debug\BrowseInfo\main_part2.pbi
+E$:\coding\embedded\embededProject\Debug\BrowseInfo\main_part2.pbi $
+E$:\coding\embedded\embededProject\Debug\BrowseInfo\main_part3.pbi
+  flags = -M E$:\coding\embedded\embededProject\Debug\BrowseInfo\main.pbd E$:\coding\embedded\embededProject\Debug\BrowseInfo\main_part0.pbi E$:\coding\embedded\embededProject\Debug\BrowseInfo\main_part1.pbi E$:\coding\embedded\embededProject\Debug\BrowseInfo\main_part2.pbi E$:\coding\embedded\embededProject\Debug\BrowseInfo\main_part3.pbi
 
