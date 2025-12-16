@@ -10,6 +10,7 @@
 
 #ifndef POTENTIOMETER_MANAGER_H
 #define POTENTIOMETER_MANAGER_H
+#include "../Comm/HMI_Comm.h"
 
 #include <stdint.h>
 

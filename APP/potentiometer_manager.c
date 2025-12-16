@@ -125,13 +125,24 @@ void PotentiometerManager_HandleTimeoutConfig(void)
              * Save the timeout and return to caller
              */
             stored_timeout = current_timeout;  /* Store confirmed value */
-            
+            char message[5];
+            message[0] ='2'; //mode
+            message[1]=',';
+            message[2]= '0' + (stored_timeout / 10);
+            message[3]= '0' + (stored_timeout % 10);
+            message[4] ='#';
+            message[5] = '\0';
             DISPLAY_ClearScreen();
             DISPLAY_ShowMessage("Timeout Saved!");
             LCD_SetCursor(1, 0);
             LCD_WriteChar('0' + (stored_timeout / 10));
             LCD_WriteChar('0' + (stored_timeout % 10));
+            //LCD_WriteChar(message[2]);
+            //LCD_WriteChar(message[3]);
             LCD_WriteString(" seconds");
+            //LCD_Clear();
+            //LCD_WriteString(message);
+            UART5_SendString(message);
             SysCtlDelay(1066666);  /* 200ms delay */
             break;
         }

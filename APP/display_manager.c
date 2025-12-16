@@ -95,9 +95,6 @@ void DISPLAY_CHANGEPASSWORD(void){
     }
     message[7] = ',';
     
-   
-    
-    
     
     LCD_Clear();
     LCD_WriteString("New password:");
@@ -159,7 +156,7 @@ void DISPLAY_CHANGEPASSWORD(void){
     }
     
     LCD_Clear();
-    SysCtlDelay(10000000);
+    //SysCtlDelay(10000000);
 }
 
 void DISPLAY_CHANGETIMEOUT(void){
