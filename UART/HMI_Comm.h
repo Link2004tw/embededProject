@@ -13,3 +13,4 @@
 #define RX_BUFFER_SIZE 20
 void UART1_Init(void);
 void WAIT_FOR_MESSAGE(void);
+void UART1_SendString(char* str);

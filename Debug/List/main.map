@@ -1,6 +1,6 @@
 ###############################################################################
 #
-# IAR ELF Linker V9.10.1.308/W64 for ARM                  16/Dec/2025  03:37:34
+# IAR ELF Linker V9.10.1.308/W64 for ARM                  17/Dec/2025  01:25:55
 # Copyright 2007-2021 IAR Systems AB.
 #
 #    Output file  =  E:\coding\embedded\embededProject\Debug\Exe\main.out
@@ -76,31 +76,32 @@ do not initialize { rw section .noinit };
   .intvec          const            0x0  0x26c  startup_ewarm.o [1]
                                 - 0x26c  0x26c
 
-"P1":                                    0xb54
-  .text            ro code        0x26c  0x2e4  sysctl.o [8]
-  .text            ro code        0x550  0x2b8  gpio.o [8]
-  .text            ro code        0x808  0x278  HMI_Comm.o [6]
-  .text            ro code        0xa80   0xa2  uart.o [8]
-  .text            ro code        0xb24   0x4c  strtok.o [7]
-  .text            ro code        0xb70   0x66  ABImemset.o [10]
-  .text            ro code        0xbd8   0x12  strcmp.o [10]
-  .text            ro code        0xbea   0x22  strspn.o [7]
-  .text            ro code        0xc0c   0x22  strcspn.o [7]
-  .text            ro code        0xc30   0x6c  main.o [1]
-  .text            ro code        0xc9c   0x38  zero_init3.o [10]
-  .text            ro code        0xcd4   0x28  data_init.o [10]
-  .text            ro code        0xcfc   0x22  startup_ewarm.o [1]
-  .text            ro code        0xd20   0x1c  cstartup_M.o [10]
-  .text            ro code        0xd3c   0x22  fpinit_M.o [9]
-  .text            ro code        0xd60   0x1e  cmain.o [10]
-  .text            ro code        0xd7e    0x4  low_level_init.o [7]
-  .text            ro code        0xd82    0x4  exit.o [7]
-  .text            ro code        0xd88    0xa  cexit.o [10]
-  .text            ro code        0xd94   0x14  exit.o [11]
-  .iar.init_table  const          0xda8   0x10  - Linker created -
-  .rodata          const          0xdb8    0x8  HMI_Comm.o [6]
-  .rodata          const          0xdc0    0x0  zero_init3.o [10]
-                                - 0xdc0  0xb54
+"P1":                                    0xbe4
+  .text            ro code        0x26c  0x2e4  HMI_Comm.o [6]
+  .text            ro code        0x550  0x2e4  sysctl.o [8]
+  .text            ro code        0x834  0x2b8  gpio.o [8]
+  .text            ro code        0xaec   0xb6  uart.o [8]
+  .text            ro code        0xba4   0x4c  strtok.o [7]
+  .text            ro code        0xbf0   0x66  ABImemset.o [10]
+  .text            ro code        0xc58   0x12  strcmp.o [10]
+  .text            ro code        0xc6a   0x22  strspn.o [7]
+  .text            ro code        0xc8c   0x22  strcspn.o [7]
+  .text            ro code        0xcb0   0x6c  main.o [1]
+  .text            ro code        0xd1c   0x38  zero_init3.o [10]
+  .text            ro code        0xd54   0x28  data_init.o [10]
+  .text            ro code        0xd7c   0x22  startup_ewarm.o [1]
+  .text            ro code        0xda0   0x1c  cstartup_M.o [10]
+  .text            ro code        0xdbc   0x22  fpinit_M.o [9]
+  .text            ro code        0xde0   0x1e  cmain.o [10]
+  .text            ro code        0xdfe    0x4  low_level_init.o [7]
+  .text            ro code        0xe02    0x4  exit.o [7]
+  .text            ro code        0xe08    0xa  cexit.o [10]
+  .text            ro code        0xe14   0x14  exit.o [11]
+  .iar.init_table  const          0xe28   0x10  - Linker created -
+  .rodata          const          0xe38   0x10  HMI_Comm.o [6]
+  .rodata          const          0xe48    0x8  HMI_Comm.o [6]
+  .rodata          const          0xe50    0x0  zero_init3.o [10]
+                                - 0xe50  0xbe4
 
 "P2", part 1 of 2:                        0x1c
   .bss             zero     0x2000'0000   0x14  HMI_Comm.o [6]
@@ -117,7 +118,7 @@ Unused ranges:
 
          From           To      Size
          ----           --      ----
-        0xdc0     0x3'ffff  0x3'f240
+        0xe50     0x3'ffff  0x3'f1b0
   0x2000'021c  0x2000'7fff    0x7de4
 
 
@@ -166,9 +167,9 @@ E:\coding\embedded\embededProject\Debug\Obj\HAL\Potentiometer: [5]
     Total:
 
 E:\coding\embedded\embededProject\Debug\Obj\UART: [6]
-    HMI_Comm.o            632        8       23
+    HMI_Comm.o            740       24       23
     -------------------------------------------
-    Total:                632        8       23
+    Total:                740       24       23
 
 dl7M_tln.a: [7]
     exit.o                  4
@@ -182,9 +183,9 @@ dl7M_tln.a: [7]
 driverlib.a: [8]
     gpio.o                696
     sysctl.o              740
-    uart.o                162
+    uart.o                182
     -------------------------------------------
-    Total:              1'598
+    Total:              1'618
 
 m7M_tls.a: [9]
     fpinit_M.o             34
@@ -210,7 +211,7 @@ shb_l.a: [11]
     Gaps                   14
     Linker created                  16
 -----------------------------------------------
-    Grand Total:        2'876      644      539
+    Grand Total:        3'004      660      539
 
 
 *******************************************************************************
@@ -219,63 +220,66 @@ shb_l.a: [11]
 
 Entry                       Address   Size  Type      Object
 -----                       -------   ----  ----      ------
-.iar.init_table$$Base         0xda8          --   Gb  - Linker created -
-.iar.init_table$$Limit        0xdb8          --   Gb  - Linker created -
-?main                         0xd61         Code  Gb  cmain.o [10]
-BUZZ                          0x881   0x1e  Code  Gb  HMI_Comm.o [6]
-FaultISR                      0xd17    0x2  Code  Lc  startup_ewarm.o [1]
-GPIODirModeSet                0x551   0x28  Code  Gb  gpio.o [8]
-GPIOPadConfigSet              0x579  0x174  Code  Gb  gpio.o [8]
-GPIOPinConfigure              0x72f   0x38  Code  Gb  gpio.o [8]
-GPIOPinTypeGPIOOutput         0x6f7    0xa  Code  Gb  gpio.o [8]
-GPIOPinTypeUART               0x71b   0x14  Code  Gb  gpio.o [8]
-GPIOPinWrite                  0x6ed    0x6  Code  Gb  gpio.o [8]
-IntDefaultHandler             0xd19    0x2  Code  Lc  startup_ewarm.o [1]
-LED_Init                      0xc31   0x2c  Code  Gb  main.o [1]
-NmiSR                         0xd15    0x2  Code  Lc  startup_ewarm.o [1]
-PORTF_Handler                 0xd1d    0x2  Code  Gb  startup_ewarm.o [1]
-Region$$Table$$Base           0xda8          --   Gb  - Linker created -
-Region$$Table$$Limit          0xdb8          --   Gb  - Linker created -
-ResetISR                      0xcfd   0x14  Code  Gb  startup_ewarm.o [1]
-SysCtlClockGet                0x389  0x110  Code  Gb  sysctl.o [8]
-SysCtlClockSet                0x2b1   0xd8  Code  Gb  sysctl.o [8]
-SysCtlDelay                   0x2a9    0x8  Code  Gb  sysctl.o [8]
-SysCtlPeripheralEnable        0x28d    0x8  Code  Gb  sysctl.o [8]
-SysCtlPeripheralReady         0x26d    0x8  Code  Gb  sysctl.o [8]
-UART1_Init                    0x809   0x78  Code  Gb  HMI_Comm.o [6]
-UARTCharGet                   0xb19    0xa  Code  Gb  uart.o [8]
-UARTCharsAvail                0xb09    0x6  Code  Gb  uart.o [8]
-UARTConfigSetExpClk           0xa81   0x4c  Code  Gb  uart.o [8]
-UARTDisable                   0xae7   0x1e  Code  Gb  uart.o [8]
-UARTEnable                    0xacd   0x1a  Code  Gb  uart.o [8]
-WAIT_FOR_MESSAGE              0x89f  0x1ac  Code  Gb  HMI_Comm.o [6]
+.iar.init_table$$Base         0xe28          --   Gb  - Linker created -
+.iar.init_table$$Limit        0xe38          --   Gb  - Linker created -
+?main                         0xde1         Code  Gb  cmain.o [10]
+BUZZ                          0x2e5   0x1e  Code  Gb  HMI_Comm.o [6]
+FaultISR                      0xd97    0x2  Code  Lc  startup_ewarm.o [1]
+GPIODirModeSet                0x835   0x28  Code  Gb  gpio.o [8]
+GPIOPadConfigSet              0x85d  0x174  Code  Gb  gpio.o [8]
+GPIOPinConfigure              0xa13   0x38  Code  Gb  gpio.o [8]
+GPIOPinTypeGPIOOutput         0x9db    0xa  Code  Gb  gpio.o [8]
+GPIOPinTypeUART               0x9ff   0x14  Code  Gb  gpio.o [8]
+GPIOPinWrite                  0x9d1    0x6  Code  Gb  gpio.o [8]
+IntDefaultHandler             0xd99    0x2  Code  Lc  startup_ewarm.o [1]
+LED_Init                      0xcb1   0x2c  Code  Gb  main.o [1]
+NmiSR                         0xd95    0x2  Code  Lc  startup_ewarm.o [1]
+PORTF_Handler                 0xd9d    0x2  Code  Gb  startup_ewarm.o [1]
+Region$$Table$$Base           0xe28          --   Gb  - Linker created -
+Region$$Table$$Limit          0xe38          --   Gb  - Linker created -
+ResetISR                      0xd7d   0x14  Code  Gb  startup_ewarm.o [1]
+SysCtlClockGet                0x66d  0x110  Code  Gb  sysctl.o [8]
+SysCtlClockSet                0x595   0xd8  Code  Gb  sysctl.o [8]
+SysCtlDelay                   0x58d    0x8  Code  Gb  sysctl.o [8]
+SysCtlPeripheralEnable        0x571    0x8  Code  Gb  sysctl.o [8]
+SysCtlPeripheralReady         0x551    0x8  Code  Gb  sysctl.o [8]
+UART1_Init                    0x26d   0x78  Code  Gb  HMI_Comm.o [6]
+UART1_SendString              0x303   0x2c  Code  Gb  HMI_Comm.o [6]
+UARTBusy                      0xb99    0xa  Code  Gb  uart.o [8]
+UARTCharGet                   0xb85    0xa  Code  Gb  uart.o [8]
+UARTCharPut                   0xb8f    0xa  Code  Gb  uart.o [8]
+UARTCharsAvail                0xb75    0x6  Code  Gb  uart.o [8]
+UARTConfigSetExpClk           0xaed   0x4c  Code  Gb  uart.o [8]
+UARTDisable                   0xb53   0x1e  Code  Gb  uart.o [8]
+UARTEnable                    0xb39   0x1a  Code  Gb  uart.o [8]
+WAIT_FOR_MESSAGE              0x32f  0x1e6  Code  Gb  HMI_Comm.o [6]
 _Strtok_ssave           0x2000'0014    0x4  Data  Lc  strtok.o [7]
-__aeabi_memset                0xb71         Code  Gb  ABImemset.o [10]
-__cmain                       0xd61         Code  Gb  cmain.o [10]
-__exit                        0xd95   0x14  Code  Gb  exit.o [11]
-__iar_Memset                  0xb71         Code  Gb  ABImemset.o [10]
-__iar_Memset_word             0xb79         Code  Gb  ABImemset.o [10]
-__iar_data_init3              0xcd5   0x28  Code  Gb  data_init.o [10]
-__iar_init_vfp                0xd3d         Code  Gb  fpinit_M.o [9]
-__iar_program_start           0xd21         Code  Gb  cstartup_M.o [10]
-__iar_zero_init3              0xc9d   0x38  Code  Gb  zero_init3.o [10]
-__low_level_init              0xd7f    0x4  Code  Gb  low_level_init.o [7]
+__aeabi_memset                0xbf1         Code  Gb  ABImemset.o [10]
+__cmain                       0xde1         Code  Gb  cmain.o [10]
+__exit                        0xe15   0x14  Code  Gb  exit.o [11]
+__iar_Memset                  0xbf1         Code  Gb  ABImemset.o [10]
+__iar_Memset_word             0xbf9         Code  Gb  ABImemset.o [10]
+__iar_data_init3              0xd55   0x28  Code  Gb  data_init.o [10]
+__iar_init_vfp                0xdbd         Code  Gb  fpinit_M.o [9]
+__iar_program_start           0xda1         Code  Gb  cstartup_M.o [10]
+__iar_zero_init3              0xd1d   0x38  Code  Gb  zero_init3.o [10]
+__low_level_init              0xdff    0x4  Code  Gb  low_level_init.o [7]
 __vector_table                  0x0  0x26c  Data  Gb  startup_ewarm.o [1]
-_call_main                    0xd6d         Code  Gb  cmain.o [10]
-_exit                         0xd89         Code  Gb  cexit.o [10]
-exit                          0xd83    0x4  Code  Gb  exit.o [7]
+_call_main                    0xded         Code  Gb  cmain.o [10]
+_exit                         0xe09         Code  Gb  cexit.o [10]
+exit                          0xe03    0x4  Code  Gb  exit.o [7]
 failedAttempts          0x2000'0018    0x2  Data  Gb  HMI_Comm.o [6]
-g_pui32GPIOBaseAddrs          0x778   0x90  Data  Lc  gpio.o [8]
-g_pui32Xtals                  0x4e4   0x6c  Data  Lc  sysctl.o [8]
-main                          0xc5d   0x34  Code  Gb  main.o [1]
+g_pui32GPIOBaseAddrs          0xa5c   0x90  Data  Lc  gpio.o [8]
+g_pui32Xtals                  0x7c8   0x6c  Data  Lc  sysctl.o [8]
+main                          0xcdd   0x34  Code  Gb  main.o [1]
 pui32Stack              0x2000'001c  0x200  Data  Lc  startup_ewarm.o [1]
 rxBuffer                0x2000'0000   0x14  Data  Gb  HMI_Comm.o [6]
 rxIndex                 0x2000'001a    0x1  Data  Gb  HMI_Comm.o [6]
-strcmp                        0xbd9         Code  Gb  strcmp.o [10]
-strcspn                       0xc0d   0x22  Code  Gb  strcspn.o [7]
-strspn                        0xbeb   0x22  Code  Gb  strspn.o [7]
-strtok                        0xb25   0x4c  Code  Gb  strtok.o [7]
-systick_ISR                   0xd1b    0x2  Code  Gb  startup_ewarm.o [1]
+strcmp                        0xc59         Code  Gb  strcmp.o [10]
+strcspn                       0xc8d   0x22  Code  Gb  strcspn.o [7]
+strspn                        0xc6b   0x22  Code  Gb  strspn.o [7]
+strtok                        0xba5   0x4c  Code  Gb  strtok.o [7]
+systick_ISR                   0xd9b    0x2  Code  Gb  startup_ewarm.o [1]
 
 
 [1] = E:\coding\embedded\embededProject\Debug\Obj
@@ -290,8 +294,8 @@ systick_ISR                   0xd1b    0x2  Code  Gb  startup_ewarm.o [1]
 [10] = rt7M_tl.a
 [11] = shb_l.a
 
-  2'876 bytes of readonly  code memory
-    644 bytes of readonly  data memory
+  3'004 bytes of readonly  code memory
+    660 bytes of readonly  data memory
     539 bytes of readwrite data memory
 
 Errors: none

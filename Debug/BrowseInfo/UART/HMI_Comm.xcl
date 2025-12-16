@@ -1,4 +1,4 @@
-"E:\coding\embedded\embededProject\BACK\UART\HMI_Comm.c"
+"E:\coding\embedded\embededProject\UART\HMI_Comm.c"
 -std=c11
 -ferror-limit=0
 -fbracket-depth=512
@@ -9,7 +9,7 @@ E:\coding\embedded\embededProject\Debug\BrowseInfo\UART\HMI_Comm.pbi.dep
 -o
 E:\coding\embedded\embededProject\Debug\BrowseInfo\UART\HMI_Comm.pbi
 -I
-E:\coding\embedded\embededProject\BACK\UART
+E:\coding\embedded\embededProject\UART
 -I
 C:\ti\TivaWare_C_Series-2.2.0.295
 -I

@@ -102,6 +102,19 @@ GPIOPinWrite(GPIO_PORTF_BASE, GPIO_PIN_1, GPIO_PIN_1); // Red ON
 
 // }
 
+
+void UART1_SendString(char* str) {
+    //GPIOPinWrite(GPIO_PORTF_BASE, GPIO_PIN_3, GPIO_PIN_3);
+    
+    while(*str) {
+        while(UARTBusy(UART1_BASE));  // Wait until TX ready
+        UARTCharPut(UART1_BASE, *str);
+        str++;
+    }
+    while(UARTBusy(UART1_BASE));  // Wait for last char to finish
+    //GPIOPinWrite(GPIO_PORTF_BASE, GPIO_PIN_3, 0);
+}
+
 void WAIT_FOR_MESSAGE(void)
 {
     if (UARTCharsAvail(UART1_BASE))
@@ -197,6 +210,14 @@ void WAIT_FOR_MESSAGE(void)
                         GPIOPinWrite(GPIO_PORTF_BASE, GPIO_PIN_1, 0);
                         failedAttempts = 0;
                     }
+                }
+            }else if (modeStr[0] == '2' && modeStr[1] == '\0')
+            {
+                if(strcmp(pass1Str, "26") == 0){
+                    GPIOPinWrite(GPIO_PORTF_BASE, GPIO_PIN_1, GPIO_PIN_1); // Blue ON
+                    SysCtlDelay(16000000);
+                    GPIOPinWrite(GPIO_PORTF_BASE, GPIO_PIN_1, 0);
+                    UART1_SendString("Timeout saved");
                 }
             }
 
