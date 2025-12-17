@@ -170,19 +170,24 @@ void DISPLAY_CHANGEPASSWORD(void){
             continue;
         }else { break;}
     }                  
-    if(strcmp(message, "1,12345,67890#") != 0){
-        LCD_Clear();
-        LCD_WriteString("C is wrong");
-        SysCtlDelay(10000000);
-        
-    }else {
     LCD_Clear();
-        //LCD_WriteString("Congrats");
-        LCD_WriteString("Password Updated!");
-        UART5_SendString(message);
+    //LCD_WriteString("Congrats");
+    //LCD_WriteString("Password Updated!");
+    UART5_SendString(message);
+    char ack_buffer[20];
+    LCD_Clear();
+    DISPLAY_ShowMessage("Waiting for Ack...");
+    UART5_ReceiveString(ack_buffer, 20);
 
-        SysCtlDelay(10000000);
+    LCD_Clear();
+    if(ack_buffer != NULL){
+        SHOW_BUFFER(ack_buffer);   
+        SysCtlDelay(16000000);  
+
+    }else {
+        DISPLAY_ShowMessage("No response");
     }
+    SysCtlDelay(10000000);
     
     LCD_Clear();
     //SysCtlDelay(10000000);
@@ -252,9 +257,8 @@ void DISPLAY_OLD_PASSWORD(void)
 
     LCD_Clear();
     if(ack_buffer != NULL){
-        DISPLAY_ShowMessage("Correct Password");
-        SysCtlDelay(16000000);  
         SHOW_BUFFER(ack_buffer);   
+        SysCtlDelay(16000000);  
 
     }else {
         DISPLAY_ShowMessage("No response");
