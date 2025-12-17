@@ -1,6 +1,6 @@
 ###############################################################################
 #
-# IAR ELF Linker V9.10.1.308/W64 for ARM                  17/Dec/2025  23:24:19
+# IAR ELF Linker V9.10.1.308/W64 for ARM                  18/Dec/2025  00:02:03
 # Copyright 2007-2021 IAR Systems AB.
 #
 #    Output file  =  E:\coding\embedded\embededProject\Debug\Exe\main.out
@@ -33,8 +33,8 @@
 ***
 
 Warning[Lt009]: Inconsistent wchar_t size
-            sysctl.o(driverlib.a) and 5 other objects in driverlib.a have
-                      wchar_t size 16 bits
+            gpio.o(driverlib.a) and 5 other objects in driverlib.a have wchar_t
+                      size 16 bits
             dio.o and 22 other objects, some of them in dl7M_tln.a and 11 other
                       libraries have wchar_t size 32 bits
 
@@ -77,60 +77,60 @@ initialize by copy { rw };
   .intvec            const            0x0   0x26c  startup_ewarm.o [1]
                                   - 0x26c   0x26c
 
-"P1":                                      0x1a24
+"P1":                                      0x1b38
   .text              ro code        0x26c   0x4e0  dio.o [7]
-  .text              ro code        0x74c   0x370  display_manager.o [2]
-  .text              ro code        0xabc   0x1de  lcd.o [5]
-  .text              ro code        0xc9a    0x2a  copy_init3.o [11]
-  .text              ro code        0xcc4    0x16  strchr.o [11]
-  .text              ro code        0xcdc     0x6  ABImemclr.o [11]
-  .text              ro code        0xce2    0x4c  input_manager.o [2]
-  .text              ro code        0xd30   0x1f0  sysctl.o [9]
-  .text              ro code        0xf20    0x12  strcmp.o [11]
-  .text              ro code        0xf34   0x128  HMI_Comm.o [3]
-  .text              ro code       0x105c   0x184  potentiometer_manager.o [2]
-  .text              ro code       0x11e0    0x66  ABImemset.o [11]
-  .text              ro code       0x1248   0x154  keypad.o [4]
-  .text              ro code       0x139c   0x2d0  gpio.o [9]
-  .text              ro code       0x166c    0xb6  uart.o [9]
-  .text              ro code       0x1724    0xf4  potentiometer.o [6]
-  .text              ro code       0x1818   0x170  adc.o [9]
-  .text              ro code       0x1988    0xf8  main.o [1]
-  .text              ro code       0x1a80    0x28  data_init.o [11]
-  .text              ro code       0x1aa8    0x22  startup_ewarm.o [1]
-  .text              ro code       0x1acc    0x1c  cstartup_M.o [11]
-  .text              ro code       0x1ae8    0x22  fpinit_M.o [10]
-  .text              ro code       0x1b0c    0x1e  cmain.o [11]
-  .text              ro code       0x1b2a     0x4  low_level_init.o [8]
-  .text              ro code       0x1b2e     0x4  exit.o [8]
-  .text              ro code       0x1b34     0xa  cexit.o [11]
-  .text              ro code       0x1b40    0x14  exit.o [12]
-  .iar.init_table    const         0x1b54    0x14  - Linker created -
-  .rodata            const         0x1b68    0x14  display_manager.o [2]
-  .rodata            const         0x1b7c    0x14  display_manager.o [2]
-  .rodata            const         0x1b90    0x14  display_manager.o [2]
-  .rodata            const         0x1ba4    0x14  display_manager.o [2]
-  .rodata            const         0x1bb8    0x14  potentiometer_manager.o [2]
-  .rodata            const         0x1bcc    0x10  display_manager.o [2]
-  .rodata            const         0x1bdc    0x10  display_manager.o [2]
-  .rodata            const         0x1bec    0x10  display_manager.o [2]
-  .rodata            const         0x1bfc    0x10  display_manager.o [2]
-  .rodata            const         0x1c0c    0x10  keypad.o [4]
-  .rodata            const         0x1c1c    0x10  main.o [1]
-  .rodata            const         0x1c2c    0x10  potentiometer_manager.o [2]
-  .rodata            const         0x1c3c    0x10  potentiometer_manager.o [2]
-  .rodata            const         0x1c4c     0xc  display_manager.o [2]
-  .rodata            const         0x1c58     0xc  potentiometer_manager.o [2]
-  .rodata            const         0x1c64     0x8  display_manager.o [2]
-  .rodata            const         0x1c6c     0x8  potentiometer_manager.o [2]
-  .rodata            const         0x1c74     0x8  potentiometer_manager.o [2]
-  .rodata            const         0x1c7c     0x4  keypad.o [4]
-  .rodata            const         0x1c80     0x4  keypad.o [4]
-  .rodata            const         0x1c84     0x4  keypad.o [4]
-  .rodata            const         0x1c88     0x4  keypad.o [4]
-  Initializer bytes  const         0x1c8c     0x4  <for P2-1>
-  .rodata            const         0x1c90     0x0  copy_init3.o [11]
-                                 - 0x1c90  0x1a24
+  .text              ro code        0x74c   0x458  display_manager.o [2]
+  .text              ro code        0xba4   0x1de  lcd.o [5]
+  .text              ro code        0xd82    0x2a  copy_init3.o [11]
+  .text              ro code        0xdac    0x16  strchr.o [11]
+  .text              ro code        0xdc4     0x6  ABImemclr.o [11]
+  .text              ro code        0xdca    0x4c  input_manager.o [2]
+  .text              ro code        0xe18   0x1f0  sysctl.o [9]
+  .text              ro code       0x1008    0x12  strcmp.o [11]
+  .text              ro code       0x101c   0x2d0  gpio.o [9]
+  .text              ro code       0x12ec   0x154  HMI_Comm.o [3]
+  .text              ro code       0x1440   0x184  potentiometer_manager.o [2]
+  .text              ro code       0x15c4    0x66  ABImemset.o [11]
+  .text              ro code       0x162c   0x154  keypad.o [4]
+  .text              ro code       0x1780    0xb6  uart.o [9]
+  .text              ro code       0x1838    0xf4  potentiometer.o [6]
+  .text              ro code       0x192c   0x170  adc.o [9]
+  .text              ro code       0x1a9c    0xf8  main.o [1]
+  .text              ro code       0x1b94    0x28  data_init.o [11]
+  .text              ro code       0x1bbc    0x22  startup_ewarm.o [1]
+  .text              ro code       0x1be0    0x1c  cstartup_M.o [11]
+  .text              ro code       0x1bfc    0x22  fpinit_M.o [10]
+  .text              ro code       0x1c20    0x1e  cmain.o [11]
+  .text              ro code       0x1c3e     0x4  low_level_init.o [8]
+  .text              ro code       0x1c42     0x4  exit.o [8]
+  .text              ro code       0x1c48     0xa  cexit.o [11]
+  .text              ro code       0x1c54    0x14  exit.o [12]
+  .iar.init_table    const         0x1c68    0x14  - Linker created -
+  .rodata            const         0x1c7c    0x14  display_manager.o [2]
+  .rodata            const         0x1c90    0x14  display_manager.o [2]
+  .rodata            const         0x1ca4    0x14  display_manager.o [2]
+  .rodata            const         0x1cb8    0x14  display_manager.o [2]
+  .rodata            const         0x1ccc    0x14  potentiometer_manager.o [2]
+  .rodata            const         0x1ce0    0x10  display_manager.o [2]
+  .rodata            const         0x1cf0    0x10  display_manager.o [2]
+  .rodata            const         0x1d00    0x10  display_manager.o [2]
+  .rodata            const         0x1d10    0x10  display_manager.o [2]
+  .rodata            const         0x1d20    0x10  keypad.o [4]
+  .rodata            const         0x1d30    0x10  main.o [1]
+  .rodata            const         0x1d40    0x10  potentiometer_manager.o [2]
+  .rodata            const         0x1d50    0x10  potentiometer_manager.o [2]
+  .rodata            const         0x1d60     0xc  display_manager.o [2]
+  .rodata            const         0x1d6c     0xc  potentiometer_manager.o [2]
+  .rodata            const         0x1d78     0x8  display_manager.o [2]
+  .rodata            const         0x1d80     0x8  potentiometer_manager.o [2]
+  .rodata            const         0x1d88     0x8  potentiometer_manager.o [2]
+  .rodata            const         0x1d90     0x4  keypad.o [4]
+  .rodata            const         0x1d94     0x4  keypad.o [4]
+  .rodata            const         0x1d98     0x4  keypad.o [4]
+  .rodata            const         0x1d9c     0x4  keypad.o [4]
+  Initializer bytes  const         0x1da0     0x4  <for P2-1>
+  .rodata            const         0x1da4     0x0  copy_init3.o [11]
+                                 - 0x1da4  0x1b38
 
 "P2", part 1 of 2:                            0x4
   P2-1                        0x2000'0000     0x1  <Init block>
@@ -145,7 +145,7 @@ Unused ranges:
 
          From           To      Size
          ----           --      ----
-       0x1c90     0x3'ffff  0x3'e370
+       0x1da4     0x3'ffff  0x3'e25c
   0x2000'0204  0x2000'7fff    0x7dfc
 
 
@@ -157,7 +157,7 @@ Unused ranges:
           -------      ----
 Copy (__iar_copy_init3)
     1 source range, total size 0x4 (400% of destination):
-               0x1c8c   0x4
+               0x1da0   0x4
     1 destination range, total size 0x1:
           0x2000'0000   0x1
 
@@ -180,16 +180,16 @@ E:\coding\embedded\embededProject\Debug\Obj: [1]
     Total:                       282      636      512
 
 E:\coding\embedded\embededProject\Debug\Obj\APP: [2]
-    display_manager.o            880      164
+    display_manager.o          1'112      164
     input_manager.o               76
     potentiometer_manager.o      388       81        1
     --------------------------------------------------
-    Total:                     1'344      245        1
+    Total:                     1'576      245        1
 
 E:\coding\embedded\embededProject\Debug\Obj\Comm: [3]
-    HMI_Comm.o                   296
+    HMI_Comm.o                   340
     --------------------------------------------------
-    Total:                       296
+    Total:                       340
 
 E:\coding\embedded\embededProject\Debug\Obj\HAL\Keypad: [4]
     keypad.o                     340       32
@@ -251,7 +251,7 @@ shb_l.a: [12]
     Gaps                          18
     Linker created                         23
 ------------------------------------------------------
-    Grand Total:               6'376      936      513
+    Grand Total:               6'652      936      513
 
 
 *******************************************************************************
@@ -260,108 +260,108 @@ shb_l.a: [12]
 
 Entry                       Address   Size  Type      Object
 -----                       -------   ----  ----      ------
-.iar.init_table$$Base        0x1b54          --   Gb  - Linker created -
-.iar.init_table$$Limit       0x1b68          --   Gb  - Linker created -
-?main                        0x1b0d         Code  Gb  cmain.o [11]
-ADCIntClear                  0x1843    0xa  Code  Gb  adc.o [9]
-ADCIntStatus                 0x1819   0x2a  Code  Gb  adc.o [9]
-ADCProcessorTrigger          0x1963   0x1c  Code  Gb  adc.o [9]
-ADCSequenceConfigure         0x1867   0x52  Code  Gb  adc.o [9]
-ADCSequenceDataGet           0x1945   0x1e  Code  Gb  adc.o [9]
-ADCSequenceDisable           0x1857    0x2  Code  Gb  adc.o [9]
-ADCSequenceEnable            0x184d    0xa  Code  Gb  adc.o [9]
+.iar.init_table$$Base        0x1c68          --   Gb  - Linker created -
+.iar.init_table$$Limit       0x1c7c          --   Gb  - Linker created -
+?main                        0x1c21         Code  Gb  cmain.o [11]
+ADCIntClear                  0x1957    0xa  Code  Gb  adc.o [9]
+ADCIntStatus                 0x192d   0x2a  Code  Gb  adc.o [9]
+ADCProcessorTrigger          0x1a77   0x1c  Code  Gb  adc.o [9]
+ADCSequenceConfigure         0x197b   0x52  Code  Gb  adc.o [9]
+ADCSequenceDataGet           0x1a59   0x1e  Code  Gb  adc.o [9]
+ADCSequenceDisable           0x196b    0x2  Code  Gb  adc.o [9]
+ADCSequenceEnable            0x1961    0xa  Code  Gb  adc.o [9]
 ADCSequenceStepConfigure
-                             0x18b9   0x76  Code  Gb  adc.o [9]
-DELAY                        0x1989    0xc  Code  Gb  main.o [1]
+                             0x19cd   0x76  Code  Gb  adc.o [9]
+DELAY                        0x1a9d    0xc  Code  Gb  main.o [1]
 DIO_Init                      0x26d  0x29c  Code  Gb  dio.o [7]
 DIO_ReadPin                   0x5b5   0x48  Code  Gb  dio.o [7]
 DIO_SetPUR                    0x5fd   0xa0  Code  Gb  dio.o [7]
 DIO_WritePin                  0x509   0xac  Code  Gb  dio.o [7]
-DISPLAY_CHANGEPASSWORD        0x7d5  0x1c6  Code  Gb  display_manager.o [2]
-DISPLAY_CHANGETIMEOUT         0x99b    0x8  Code  Gb  display_manager.o [2]
+DISPLAY_CHANGEPASSWORD        0x7d5  0x236  Code  Gb  display_manager.o [2]
+DISPLAY_CHANGETIMEOUT         0xa0b    0x8  Code  Gb  display_manager.o [2]
 DISPLAY_ClearScreen           0x7c5   0x10  Code  Gb  display_manager.o [2]
-DISPLAY_ERROR                 0xa7b    0xe  Code  Gb  display_manager.o [2]
+DISPLAY_ERROR                 0xb55    0xe  Code  Gb  display_manager.o [2]
 DISPLAY_Init                  0x74d    0x8  Code  Gb  display_manager.o [2]
-DISPLAY_OLD_PASSWORD          0x9a3   0xd0  Code  Gb  display_manager.o [2]
-DISPLAY_OPEN                  0xa73    0x8  Code  Gb  display_manager.o [2]
+DISPLAY_OLD_PASSWORD          0xa13  0x13a  Code  Gb  display_manager.o [2]
+DISPLAY_OPEN                  0xb4d    0x8  Code  Gb  display_manager.o [2]
 DISPLAY_ShowMainMenu          0x795   0x20  Code  Gb  display_manager.o [2]
 DISPLAY_ShowMessage           0x7b5   0x10  Code  Gb  display_manager.o [2]
-DelayMs                       0xabd   0x12  Code  Lc  lcd.o [5]
-FaultISR                     0x1ac3    0x2  Code  Lc  startup_ewarm.o [1]
-GPIODirModeSet               0x139d   0x28  Code  Gb  gpio.o [9]
-GPIOPadConfigSet             0x13c5  0x174  Code  Gb  gpio.o [9]
-GPIOPinConfigure             0x1595   0x38  Code  Gb  gpio.o [9]
-GPIOPinTypeADC               0x153f    0x4  Code  Gb  gpio.o [9]
-GPIOPinTypeGPIOOutput        0x155d    0xa  Code  Gb  gpio.o [9]
-GPIOPinTypeUART              0x1581   0x14  Code  Gb  gpio.o [9]
-GPIOPinWrite                 0x1539    0x6  Code  Gb  gpio.o [9]
-InputManager_GetKey           0xd11   0x1e  Code  Gb  input_manager.o [2]
-IntDefaultHandler            0x1ac5    0x2  Code  Lc  startup_ewarm.o [1]
-Keypad_GetKey                0x12b9   0xce  Code  Gb  keypad.o [4]
-Keypad_Init                  0x1249   0x70  Code  Gb  keypad.o [4]
-LCD_Clear                     0xc45   0x10  Code  Gb  lcd.o [5]
-LCD_EnablePulse               0xacf   0x24  Code  Lc  lcd.o [5]
-LCD_Init                      0xb33   0xaa  Code  Gb  lcd.o [5]
-LCD_Send4Bits                 0xaf3   0x40  Code  Lc  lcd.o [5]
-LCD_SendCommand               0xbdd   0x40  Code  Gb  lcd.o [5]
-LCD_SendData                  0xc1d   0x28  Code  Gb  lcd.o [5]
-LCD_SetCursor                 0xc55   0x22  Code  Gb  lcd.o [5]
-LCD_WriteChar                 0xc8d    0xe  Code  Gb  lcd.o [5]
-LCD_WriteString               0xc77   0x16  Code  Gb  lcd.o [5]
-MapKey                        0xce3   0x2e  Code  Lc  input_manager.o [2]
-NmiSR                        0x1ac1    0x2  Code  Lc  startup_ewarm.o [1]
-PORTF_Handler                0x1ac9    0x2  Code  Gb  startup_ewarm.o [1]
+DelayMs                       0xba5   0x12  Code  Lc  lcd.o [5]
+FaultISR                     0x1bd7    0x2  Code  Lc  startup_ewarm.o [1]
+GPIODirModeSet               0x101d   0x28  Code  Gb  gpio.o [9]
+GPIOPadConfigSet             0x1045  0x174  Code  Gb  gpio.o [9]
+GPIOPinConfigure             0x1215   0x38  Code  Gb  gpio.o [9]
+GPIOPinTypeADC               0x11bf    0x4  Code  Gb  gpio.o [9]
+GPIOPinTypeGPIOOutput        0x11dd    0xa  Code  Gb  gpio.o [9]
+GPIOPinTypeUART              0x1201   0x14  Code  Gb  gpio.o [9]
+GPIOPinWrite                 0x11b9    0x6  Code  Gb  gpio.o [9]
+InputManager_GetKey           0xdf9   0x1e  Code  Gb  input_manager.o [2]
+IntDefaultHandler            0x1bd9    0x2  Code  Lc  startup_ewarm.o [1]
+Keypad_GetKey                0x169d   0xce  Code  Gb  keypad.o [4]
+Keypad_Init                  0x162d   0x70  Code  Gb  keypad.o [4]
+LCD_Clear                     0xd2d   0x10  Code  Gb  lcd.o [5]
+LCD_EnablePulse               0xbb7   0x24  Code  Lc  lcd.o [5]
+LCD_Init                      0xc1b   0xaa  Code  Gb  lcd.o [5]
+LCD_Send4Bits                 0xbdb   0x40  Code  Lc  lcd.o [5]
+LCD_SendCommand               0xcc5   0x40  Code  Gb  lcd.o [5]
+LCD_SendData                  0xd05   0x28  Code  Gb  lcd.o [5]
+LCD_SetCursor                 0xd3d   0x22  Code  Gb  lcd.o [5]
+LCD_WriteChar                 0xd75    0xe  Code  Gb  lcd.o [5]
+LCD_WriteString               0xd5f   0x16  Code  Gb  lcd.o [5]
+MapKey                        0xdcb   0x2e  Code  Lc  input_manager.o [2]
+NmiSR                        0x1bd5    0x2  Code  Lc  startup_ewarm.o [1]
+PORTF_Handler                0x1bdd    0x2  Code  Gb  startup_ewarm.o [1]
 PotentiometerManager_GetTimeout
-                             0x105d    0x6  Code  Gb  potentiometer_manager.o [2]
+                             0x1441    0x6  Code  Gb  potentiometer_manager.o [2]
 PotentiometerManager_HandleTimeoutConfig
-                             0x1063  0x156  Code  Gb  potentiometer_manager.o [2]
-Potentiometer_Init           0x1725   0x74  Code  Gb  potentiometer.o [6]
-Potentiometer_ReadRaw        0x1799   0x36  Code  Gb  potentiometer.o [6]
+                             0x1447  0x156  Code  Gb  potentiometer_manager.o [2]
+Potentiometer_Init           0x1839   0x74  Code  Gb  potentiometer.o [6]
+Potentiometer_ReadRaw        0x18ad   0x36  Code  Gb  potentiometer.o [6]
 Potentiometer_ReadTimeout
-                             0x17e9   0x30  Code  Gb  potentiometer.o [6]
-Region$$Table$$Base          0x1b54          --   Gb  - Linker created -
-Region$$Table$$Limit         0x1b68          --   Gb  - Linker created -
-ResetISR                     0x1aa9   0x14  Code  Gb  startup_ewarm.o [1]
+                             0x18fd   0x30  Code  Gb  potentiometer.o [6]
+Region$$Table$$Base          0x1c68          --   Gb  - Linker created -
+Region$$Table$$Limit         0x1c7c          --   Gb  - Linker created -
+ResetISR                     0x1bbd   0x14  Code  Gb  startup_ewarm.o [1]
 SHOW_BUFFER                   0x755   0x40  Code  Gb  display_manager.o [2]
-SysCtlClockGet                0xd75  0x110  Code  Gb  sysctl.o [9]
-SysCtlDelay                   0xd6d    0x8  Code  Gb  sysctl.o [9]
-SysCtlPeripheralEnable        0xd51    0x8  Code  Gb  sysctl.o [9]
-SysCtlPeripheralReady         0xd31    0x8  Code  Gb  sysctl.o [9]
-UART5_Init_front              0xf35   0x82  Code  Gb  HMI_Comm.o [3]
-UART5_ReceiveString           0xff7   0x44  Code  Gb  HMI_Comm.o [3]
-UART5_SendString              0xfb7   0x40  Code  Gb  HMI_Comm.o [3]
-UARTBusy                     0x1719    0xa  Code  Gb  uart.o [9]
-UARTCharGet                  0x1705    0xa  Code  Gb  uart.o [9]
-UARTCharPut                  0x170f    0xa  Code  Gb  uart.o [9]
-UARTCharsAvail               0x16f5    0x6  Code  Gb  uart.o [9]
-UARTConfigSetExpClk          0x166d   0x4c  Code  Gb  uart.o [9]
-UARTDisable                  0x16d3   0x1e  Code  Gb  uart.o [9]
-UARTEnable                   0x16b9   0x1a  Code  Gb  uart.o [9]
-__aeabi_memclr                0xcdd         Code  Gb  ABImemclr.o [11]
-__aeabi_memset               0x11e1         Code  Gb  ABImemset.o [11]
-__cmain                      0x1b0d         Code  Gb  cmain.o [11]
-__exit                       0x1b41   0x14  Code  Gb  exit.o [12]
-__iar_Memset                 0x11e1         Code  Gb  ABImemset.o [11]
-__iar_Memset_word            0x11e9         Code  Gb  ABImemset.o [11]
-__iar_Strchr                  0xcc5         Code  Gb  strchr.o [11]
-__iar_copy_init3              0xc9b   0x2a  Code  Gb  copy_init3.o [11]
-__iar_data_init3             0x1a81   0x28  Code  Gb  data_init.o [11]
-__iar_init_vfp               0x1ae9         Code  Gb  fpinit_M.o [10]
-__iar_program_start          0x1acd         Code  Gb  cstartup_M.o [11]
-__low_level_init             0x1b2b    0x4  Code  Gb  low_level_init.o [8]
+SysCtlClockGet                0xe5d  0x110  Code  Gb  sysctl.o [9]
+SysCtlDelay                   0xe55    0x8  Code  Gb  sysctl.o [9]
+SysCtlPeripheralEnable        0xe39    0x8  Code  Gb  sysctl.o [9]
+SysCtlPeripheralReady         0xe19    0x8  Code  Gb  sysctl.o [9]
+UART5_Init_front             0x12ed   0x82  Code  Gb  HMI_Comm.o [3]
+UART5_ReceiveString          0x13af   0x6e  Code  Gb  HMI_Comm.o [3]
+UART5_SendString             0x136f   0x40  Code  Gb  HMI_Comm.o [3]
+UARTBusy                     0x182d    0xa  Code  Gb  uart.o [9]
+UARTCharGet                  0x1819    0xa  Code  Gb  uart.o [9]
+UARTCharPut                  0x1823    0xa  Code  Gb  uart.o [9]
+UARTCharsAvail               0x1809    0x6  Code  Gb  uart.o [9]
+UARTConfigSetExpClk          0x1781   0x4c  Code  Gb  uart.o [9]
+UARTDisable                  0x17e7   0x1e  Code  Gb  uart.o [9]
+UARTEnable                   0x17cd   0x1a  Code  Gb  uart.o [9]
+__aeabi_memclr                0xdc5         Code  Gb  ABImemclr.o [11]
+__aeabi_memset               0x15c5         Code  Gb  ABImemset.o [11]
+__cmain                      0x1c21         Code  Gb  cmain.o [11]
+__exit                       0x1c55   0x14  Code  Gb  exit.o [12]
+__iar_Memset                 0x15c5         Code  Gb  ABImemset.o [11]
+__iar_Memset_word            0x15cd         Code  Gb  ABImemset.o [11]
+__iar_Strchr                  0xdad         Code  Gb  strchr.o [11]
+__iar_copy_init3              0xd83   0x2a  Code  Gb  copy_init3.o [11]
+__iar_data_init3             0x1b95   0x28  Code  Gb  data_init.o [11]
+__iar_init_vfp               0x1bfd         Code  Gb  fpinit_M.o [10]
+__iar_program_start          0x1be1         Code  Gb  cstartup_M.o [11]
+__low_level_init             0x1c3f    0x4  Code  Gb  low_level_init.o [8]
 __vector_table                  0x0  0x26c  Data  Gb  startup_ewarm.o [1]
-_call_main                   0x1b19         Code  Gb  cmain.o [11]
-_exit                        0x1b35         Code  Gb  cexit.o [11]
-exit                         0x1b2f    0x4  Code  Gb  exit.o [8]
-g_pui32GPIOBaseAddrs         0x15dc   0x90  Data  Lc  gpio.o [9]
-g_pui32Xtals                  0xeb4   0x6c  Data  Lc  sysctl.o [9]
-keypad_codes                 0x1c0c   0x10  Data  Gb  keypad.o [4]
-main                         0x1995   0xe8  Code  Gb  main.o [1]
+_call_main                   0x1c2d         Code  Gb  cmain.o [11]
+_exit                        0x1c49         Code  Gb  cexit.o [11]
+exit                         0x1c43    0x4  Code  Gb  exit.o [8]
+g_pui32GPIOBaseAddrs         0x125c   0x90  Data  Lc  gpio.o [9]
+g_pui32Xtals                  0xf9c   0x6c  Data  Lc  sysctl.o [9]
+keypad_codes                 0x1d20   0x10  Data  Gb  keypad.o [4]
+main                         0x1aa9   0xe8  Code  Gb  main.o [1]
 pui32Stack              0x2000'0004  0x200  Data  Lc  startup_ewarm.o [1]
 stored_timeout          0x2000'0000    0x1  Data  Lc  potentiometer_manager.o [2]
-strchr                        0xcc5         Code  Gb  strchr.o [11]
-strcmp                        0xf21         Code  Gb  strcmp.o [11]
-systick_ISR                  0x1ac7    0x2  Code  Gb  startup_ewarm.o [1]
+strchr                        0xdad         Code  Gb  strchr.o [11]
+strcmp                       0x1009         Code  Gb  strcmp.o [11]
+systick_ISR                  0x1bdb    0x2  Code  Gb  startup_ewarm.o [1]
 
 
 [1] = E:\coding\embedded\embededProject\Debug\Obj
@@ -377,7 +377,7 @@ systick_ISR                  0x1ac7    0x2  Code  Gb  startup_ewarm.o [1]
 [11] = rt7M_tl.a
 [12] = shb_l.a
 
-  6'376 bytes of readonly  code memory
+  6'652 bytes of readonly  code memory
     936 bytes of readonly  data memory
     513 bytes of readwrite data memory
 

@@ -53,19 +53,27 @@ void UART5_SendString(char* str) {
 void UART5_ReceiveString(char* buffer, uint16_t max_length) {
     uint16_t index = 0;
     char received_char;
+    uint32_t timeout_counter = 0;
+    const uint32_t TIMEOUT_LIMIT = 16000000;  // ~1 second timeout
     
-    while(index < max_length - 1) {  // Leave room for null terminator
-        // Wait for data to be available
-        while(!UARTCharsAvail(UART5_BASE));
-        
-        received_char = UARTCharGet(UART5_BASE);
-        
-        // Check for end-of-string conditions (newline or carriage return)
-        if(received_char == '#') {
-            break;
+    while(index < max_length - 1) {
+        if(UARTCharsAvail(UART5_BASE)) {
+            received_char = UARTCharGet(UART5_BASE);
+            timeout_counter = 0;  // Reset timeout on successful receive
+            
+            if(received_char == '#') {
+                break;
+            }
+            
+            buffer[index++] = received_char;
+        } else {
+            timeout_counter++;
+            if(timeout_counter > TIMEOUT_LIMIT) {
+                buffer[index] = '\0';
+                return;  // Timeout - exit gracefully
+            }
+            SysCtlDelay(100);  // Small delay
         }
-        
-        buffer[index++] = received_char;
     }
     
     buffer[index] = '\0';  // Null terminate the string

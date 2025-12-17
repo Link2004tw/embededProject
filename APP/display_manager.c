@@ -173,18 +173,40 @@ void DISPLAY_CHANGEPASSWORD(void){
     LCD_Clear();
     //LCD_WriteString("Congrats");
     //LCD_WriteString("Password Updated!");
+    
+    // TEST LED: Green flash before sending
+    GPIOPinWrite(GPIO_PORTF_BASE, GPIO_PIN_3, GPIO_PIN_3);
+    SysCtlDelay(2000000);
+    GPIOPinWrite(GPIO_PORTF_BASE, GPIO_PIN_3, 0);
+    
     UART5_SendString(message);
     char ack_buffer[20];
     LCD_Clear();
     DISPLAY_ShowMessage("Waiting for Ack...");
+    
+    // TEST LED: Blue flash while waiting
+    GPIOPinWrite(GPIO_PORTF_BASE, GPIO_PIN_2, GPIO_PIN_2);
+    SysCtlDelay(1000000);
+    GPIOPinWrite(GPIO_PORTF_BASE, GPIO_PIN_2, 0);
+    
     UART5_ReceiveString(ack_buffer, 20);
 
     LCD_Clear();
-    if(ack_buffer != NULL){
+    if(ack_buffer[0] != '\0'){
+        // TEST LED: Red flash on successful receive
+        GPIOPinWrite(GPIO_PORTF_BASE, GPIO_PIN_1, GPIO_PIN_1);
+        SysCtlDelay(2000000);
+        GPIOPinWrite(GPIO_PORTF_BASE, GPIO_PIN_1, 0);
+        
         SHOW_BUFFER(ack_buffer);   
         SysCtlDelay(16000000);  
 
     }else {
+        // TEST LED: Long red on timeout
+        GPIOPinWrite(GPIO_PORTF_BASE, GPIO_PIN_1, GPIO_PIN_1);
+        SysCtlDelay(8000000);
+        GPIOPinWrite(GPIO_PORTF_BASE, GPIO_PIN_1, 0);
+        
         DISPLAY_ShowMessage("No response");
     }
     SysCtlDelay(10000000);
@@ -248,19 +270,40 @@ void DISPLAY_OLD_PASSWORD(void)
     password[8] = '\0';
     
     
+    // TEST LED: Green flash before sending
+    GPIOPinWrite(GPIO_PORTF_BASE, GPIO_PIN_3, GPIO_PIN_3);
+    SysCtlDelay(20000000);
+    GPIOPinWrite(GPIO_PORTF_BASE, GPIO_PIN_3, 0);
+    
     UART5_SendString(password);
     SysCtlDelay(10000000);
     char ack_buffer[20];
     LCD_Clear();
     DISPLAY_ShowMessage("Waiting for Ack...");
+    
+    // TEST LED: Blue flash while waiting
+    GPIOPinWrite(GPIO_PORTF_BASE, GPIO_PIN_2, GPIO_PIN_2);
+    //SysCtlDelay(1000000);
+    
     UART5_ReceiveString(ack_buffer, 20);
+    GPIOPinWrite(GPIO_PORTF_BASE, GPIO_PIN_2, 0);
 
     LCD_Clear();
-    if(ack_buffer != NULL){
+    if(ack_buffer[0] != '\0'){
+        // TEST LED: Red flash on successful receive
+        GPIOPinWrite(GPIO_PORTF_BASE, GPIO_PIN_1, GPIO_PIN_1);
+        SysCtlDelay(2000000);
+        GPIOPinWrite(GPIO_PORTF_BASE, GPIO_PIN_1, 0);
+        
         SHOW_BUFFER(ack_buffer);   
         SysCtlDelay(16000000);  
 
     }else {
+        // TEST LED: Long red on timeout
+        GPIOPinWrite(GPIO_PORTF_BASE, GPIO_PIN_1, GPIO_PIN_1);
+        SysCtlDelay(8000000);
+        GPIOPinWrite(GPIO_PORTF_BASE, GPIO_PIN_1, 0);
+        
         DISPLAY_ShowMessage("No response");
     }
     SysCtlDelay(16000000);  
