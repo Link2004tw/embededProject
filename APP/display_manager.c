@@ -189,7 +189,7 @@ void DISPLAY_CHANGEPASSWORD(void){
     }
     SysCtlDelay(10000000);
     
-    LCD_Clear();
+    //LCD_Clear();
     //SysCtlDelay(10000000);
 }
 
