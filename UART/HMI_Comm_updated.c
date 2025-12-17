@@ -157,7 +157,7 @@ void WAIT_FOR_MESSAGE(void) {
             // Mode 1: Change Password
             // ------------------------------------------------------------------
             else if (modeStr[0] == '1' && modeStr[1] == '\0') {
-                if (strcmp(pass1Str, currentPassword) == 0) {                        // Check if old password is correct or not
+                if (strcmp(pass1Str, currentPassword) == 0) {                 // Check if old password is correct or not
                     if (pass2Str != NULL && pass2Str[0] != '\0') {            // Check the new password not equal NULL
                         // 1. Update RAM Variable
                         memset(currentPassword, 0, PASSWORD_MAX_LEN);         // Clear old
@@ -201,7 +201,7 @@ void WAIT_FOR_MESSAGE(void) {
                     // Write New Timeout to EEPROM
                     EEPROMProgram(&currentTimeout, EEPROM_ADDR_TIMEOUT, sizeof(currentTimeout));
 
-                    GPIOPinWrite(GPIO_PORTF_BASE, GPIO_PIN_1, GPIO_PIN_1); // Blue ON (feedback)
+                    GPIOPinWrite(GPIO_PORTF_BASE, GPIO_PIN_2, GPIO_PIN_2); // Blue ON (feedback)
                     SysCtlDelay(16000000);
                     GPIOPinWrite(GPIO_PORTF_BASE, GPIO_PIN_1, 0);
                     UART1_SendString("Timeout$Saved#");
