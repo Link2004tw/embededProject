@@ -7,6 +7,31 @@ void DISPLAY_Init(void)
     LCD_Init();
 }
 
+void SHOW_BUFFER(char* buffer){
+    LCD_Clear();
+    char* dollar_pos = strchr(buffer, '$');
+    
+    if(dollar_pos != NULL) {
+        // Find length of first part (before $)
+        int first_len = dollar_pos - buffer;
+        
+        // Write first part
+        for(int i = 0; i < first_len; i++) {
+            LCD_WriteChar(buffer[i]);
+        }
+        
+        // Set cursor to second line
+        LCD_SetCursor(1, 0);
+        
+        // Write second part (skip the $)
+        LCD_WriteString(dollar_pos + 1);
+    } else {
+        // No $ found, just write the whole buffer
+        LCD_WriteString(buffer);
+    }
+}
+
+
 void DISPLAY_HandleKey(char key)
 {
     if (password_mode)
@@ -220,27 +245,21 @@ void DISPLAY_OLD_PASSWORD(void)
     
     UART5_SendString(password);
     SysCtlDelay(10000000);
-    char *ack_buffer;
+    char ack_buffer[20];
     LCD_Clear();
     DISPLAY_ShowMessage("Waiting for Ack...");
     UART5_ReceiveString(ack_buffer, 20);
-    DISPLAY_ShowMessage(ack_buffer);    
-    SysCtlDelay(1066666);  /* 200ms delay */
-            
-    //send the password;
-    // if(strcmp(password, "0,12345#") != 0){
-    //      LCD_Clear();
-    //      LCD_WriteString("Incorrect password");
-    //      SysCtlDelay(10000000);
-    //      //return false;
-    // }else {
-    //    LCD_Clear();
-    //      LCD_WriteString("Correct password");
-    //      SysCtlDelay(10000000);
-    // }
-    
-    
-    //return true;
+
+    LCD_Clear();
+    if(ack_buffer != NULL){
+        DISPLAY_ShowMessage("Correct Password");
+        SysCtlDelay(16000000);  
+        SHOW_BUFFER(ack_buffer);   
+
+    }else {
+        DISPLAY_ShowMessage("No response");
+    }
+    SysCtlDelay(16000000);  
 }
 
 /*****************************************************************************
@@ -351,3 +370,5 @@ void DISPLAY_ERROR(void){
     LCD_Clear();
     LCD_WriteString("Invalid input");
 }
+
+
