@@ -150,7 +150,7 @@ void PotentiometerManager_HandleTimeoutConfig(void)
             
             DISPLAY_ShowMessage(ack_buffer);
             
-            SysCtlDelay(1066666);  /* 200ms delay */
+            SysCtlDelay(160000);  /* 200ms delay */
             break;
         }
         
