@@ -220,17 +220,24 @@ void DISPLAY_OLD_PASSWORD(void)
     
     UART5_SendString(password);
     SysCtlDelay(10000000);
+    char *ack_buffer;
+    LCD_Clear();
+    DISPLAY_ShowMessage("Waiting for Ack...");
+    UART5_ReceiveString(ack_buffer, 20);
+    DISPLAY_ShowMessage(ack_buffer);    
+    SysCtlDelay(1066666);  /* 200ms delay */
+            
     //send the password;
-    if(strcmp(password, "0,12345#") != 0){
-         LCD_Clear();
-         LCD_WriteString("Incorrect password");
-         SysCtlDelay(10000000);
-         //return false;
-    }else {
-       LCD_Clear();
-         LCD_WriteString("Correct password");
-         SysCtlDelay(10000000);
-    }
+    // if(strcmp(password, "0,12345#") != 0){
+    //      LCD_Clear();
+    //      LCD_WriteString("Incorrect password");
+    //      SysCtlDelay(10000000);
+    //      //return false;
+    // }else {
+    //    LCD_Clear();
+    //      LCD_WriteString("Correct password");
+    //      SysCtlDelay(10000000);
+    // }
     
     
     //return true;
@@ -338,54 +345,7 @@ void DISPLAY_NEW_PASSWORD(void)
     
     /* Get and confirm new password */
 }
-// void DISPLAY_OPEN(void){
-//     LCD_Clear();
-//     char password[5] = "";
-//     char savedPassword[5] = "1234";  // Load from storage (replace with actual storage read)
-//     short pass_index = 0;
-    
-//     LCD_WriteString("Enter old password");
-//     LCD_SetCursor(1, 0);
-    
-//     for(pass_index = 0; pass_index < 4; pass_index++){
-//         char key = InputManager_GetKey();
-//         while(key == 0) {  
-//             key = InputManager_GetKey();
-//             SysCtlDelay(10000);
-//         }
-//         password[pass_index] = key;
-//         LCD_WriteChar('*');
-//     }
-//     password[4] = '\0';
-    
-    
-//     if(strcmp(password, savedPassword) != 0){
-//         LCD_Clear();
-//         LCD_WriteString("Incorrect password");
-//         SysCtlDelay(10000000);
-//         return;
-//     }
-    
-    
-//     LCD_Clear();
-//     LCD_WriteString("Enter new pass");
-//     LCD_SetCursor(1, 0);
-    
-//     for(pass_index = 0; pass_index < 4; pass_index++){
-//         char key = InputManager_GetKey();
-//         while(key == 0) {
-//             key = InputManager_GetKey();
-//             SysCtlDelay(10000);
-//         }
-//         password[pass_index] = key;
-//         LCD_WriteChar('*');
-//     }
-//     password[4] = '\0';
-    
-//     LCD_Clear();
-//     LCD_WriteString("Password Changed");
-//     SysCtlDelay(10000000);  
-// }
+
 
 void DISPLAY_ERROR(void){
     LCD_Clear();
