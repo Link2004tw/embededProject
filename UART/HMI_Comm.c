@@ -35,74 +35,6 @@ GPIOPinWrite(GPIO_PORTF_BASE, GPIO_PIN_1, GPIO_PIN_1); // Red ON
 
 }
 
-
-// void WAIT_FOR_MESSAGE(void){
-// if (UARTCharsAvail(UART1_BASE)) {
-//           //GPIOPinWrite(GPIO_PORTF_BASE, GPIO_PIN_2, GPIO_PIN_2); // Start with LED OFF
-    
-//             char receivedChar = UARTCharGet(UART1_BASE);
-//             //GPIOPinWrite(GPIO_PORTF_BASE, GPIO_PIN_2, GPIO_PIN_2); // Start with LED OFF
-    
-//             if (receivedChar == '#') {
-//                 rxBuffer[rxIndex] = '\0';   // terminate string
-
-//                 // Expected format: mode,password
-//                 char *modeStr = strtok(rxBuffer, ",");
-//                 char *passStr = strtok(NULL, ",");
-
-//                 if (modeStr != NULL && passStr != NULL) {
-//                     //uint8_t mode = atoi(modeStr);
-//                   if(*modeStr == '0'){
-//                     if ( strcmp(passStr, PASSWORD) == 0) {
-//                         GPIOPinWrite(GPIO_PORTF_BASE, GPIO_PIN_3, GPIO_PIN_3); // Green ON
-//                         SysCtlDelay(16000000);
-//                         GPIOPinWrite(GPIO_PORTF_BASE, GPIO_PIN_3, 0);
-//                         c = 0; // reset failed attempts
-//                     } else {
-//                         c++;
-//                         if (c == 3) {
-//                             BUZZ();
-//                             c = 0;
-//                         }
-                        
-//                     }
-//                   }else if(*modeStr == '1'){
-//                     if ( strcmp(passStr, "54321") == 0) {
-//                         GPIOPinWrite(GPIO_PORTF_BASE, GPIO_PIN_3, GPIO_PIN_3); // Green ON
-//                         SysCtlDelay(16000000);
-//                         GPIOPinWrite(GPIO_PORTF_BASE, GPIO_PIN_3, 0);
-//                         c = 0; // reset failed attempts
-//                     } else {
-//                         c++;
-//                         if (c == 3) {
-//                             GPIOPinWrite(GPIO_PORTF_BASE, GPIO_PIN_1, GPIO_PIN_1); // Red ON
-//                             SysCtlDelay(16000000);
-//                             GPIOPinWrite(GPIO_PORTF_BASE, GPIO_PIN_1, 0);
-//                             c = 0;
-//                         }
-                        
-//                     }
-//                   }
-//                 }
-
-//                 // Reset buffer
-//                 rxIndex = 0;
-//                 short t = sizeof(rxBuffer);
-//                 memset(rxBuffer, 0, sizeof(rxBuffer));
-//             }
-//             else {
-//                 if (rxIndex < RX_BUFFER_SIZE - 1) {
-//                     rxBuffer[rxIndex++] = receivedChar;
-//                 }
-//             }
-//             //SysCtlDelay(16000000);
-                            
-//         }
-
-
-// }
-
-
 void UART1_SendString(char* str) {
     //GPIOPinWrite(GPIO_PORTF_BASE, GPIO_PIN_3, GPIO_PIN_3);
     
@@ -153,9 +85,11 @@ void WAIT_FOR_MESSAGE(void)
             {
                 if (strcmp(pass1Str, PASSWORD) == 0)  // Use stored password
                 {
+                    
                     GPIOPinWrite(GPIO_PORTF_BASE, GPIO_PIN_3, GPIO_PIN_3); // Green ON
                     SysCtlDelay(16000000);  // ~500ms at 16MHz
                     GPIOPinWrite(GPIO_PORTF_BASE, GPIO_PIN_3, 0);
+                    UART1_SendString("Correct$Password#");
                     failedAttempts = 0;
                 }
                 else

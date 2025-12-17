@@ -114395,7 +114395,7 @@
     "display": "void UART1_SendString(char *)",
     "location": {
       "column": "6",
-      "line": "106",
+      "line": "38",
       "path": "E:\\coding\\embedded\\embededProject\\UART\\HMI_Comm.c"
     },
     "name": "UART1_SendString",
@@ -114409,7 +114409,7 @@
     "display": "void WAIT_FOR_MESSAGE(void)",
     "location": {
       "column": "6",
-      "line": "118",
+      "line": "50",
       "path": "E:\\coding\\embedded\\embededProject\\UART\\HMI_Comm.c"
     },
     "name": "WAIT_FOR_MESSAGE",
@@ -114417,13 +114417,13 @@
     "scope": null
   },
   {
-    "ID": "c:HMI_Comm.c@4436@F@WAIT_FOR_MESSAGE@receivedChar",
+    "ID": "c:HMI_Comm.c@1676@F@WAIT_FOR_MESSAGE@receivedChar",
     "What": "Variable",
     "defdec": "Def",
     "display": "receivedChar",
     "location": {
       "column": "14",
-      "line": "122",
+      "line": "54",
       "path": "E:\\coding\\embedded\\embededProject\\UART\\HMI_Comm.c"
     },
     "name": "receivedChar",
@@ -114431,13 +114431,13 @@
     "scope": null
   },
   {
-    "ID": "c:HMI_Comm.c@4941@F@WAIT_FOR_MESSAGE@modeStr",
+    "ID": "c:HMI_Comm.c@2181@F@WAIT_FOR_MESSAGE@modeStr",
     "What": "Variable",
     "defdec": "Def",
     "display": "modeStr",
     "location": {
       "column": "19",
-      "line": "134",
+      "line": "66",
       "path": "E:\\coding\\embedded\\embededProject\\UART\\HMI_Comm.c"
     },
     "name": "modeStr",
@@ -114445,13 +114445,13 @@
     "scope": null
   },
   {
-    "ID": "c:HMI_Comm.c@4969@F@WAIT_FOR_MESSAGE@pass1Str",
+    "ID": "c:HMI_Comm.c@2209@F@WAIT_FOR_MESSAGE@pass1Str",
     "What": "Variable",
     "defdec": "Def",
     "display": "pass1Str",
     "location": {
       "column": "19",
-      "line": "135",
+      "line": "67",
       "path": "E:\\coding\\embedded\\embededProject\\UART\\HMI_Comm.c"
     },
     "name": "pass1Str",
@@ -114459,13 +114459,13 @@
     "scope": null
   },
   {
-    "ID": "c:HMI_Comm.c@4998@F@WAIT_FOR_MESSAGE@pass2Str",
+    "ID": "c:HMI_Comm.c@2238@F@WAIT_FOR_MESSAGE@pass2Str",
     "What": "Variable",
     "defdec": "Def",
     "display": "pass2Str",
     "location": {
       "column": "19",
-      "line": "136",
+      "line": "68",
       "path": "E:\\coding\\embedded\\embededProject\\UART\\HMI_Comm.c"
     },
     "name": "pass2Str",
