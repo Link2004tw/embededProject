@@ -23,7 +23,7 @@ void UART1_Init(void) {
     
     while (UARTCharsAvail(UART1_BASE)) {
         UARTCharGet(UART1_BASE);
-      }
+    }
     GPIOPinWrite(GPIO_PORTF_BASE, GPIO_PIN_3, 0); // Start with LED OFF
     
 }
@@ -35,59 +35,93 @@ GPIOPinWrite(GPIO_PORTF_BASE, GPIO_PIN_1, GPIO_PIN_1); // Red ON
 
 }
 
+// void UART1_SendString(char* str) {
+//     //GPIOPinWrite(GPIO_PORTF_BASE, GPIO_PIN_3, GPIO_PIN_3);
+    
+//     while(*str) {
+//         while(UARTBusy(UART1_BASE));  // Wait until TX ready
+//         UARTCharPut(UART1_BASE, *str);
+//         str++;
+//     }
+//     while(UARTBusy(UART1_BASE));  // Wait for last char to finish
+//     //GPIOPinWrite(GPIO_PORTF_BASE, GPIO_PIN_3, 0);
+// }
+
+
 void UART1_SendString(char* str) {
-    //GPIOPinWrite(GPIO_PORTF_BASE, GPIO_PIN_3, GPIO_PIN_3);
+    GPIOPinWrite(GPIO_PORTF_BASE, GPIO_PIN_3, GPIO_PIN_3);
     
     while(*str) {
         while(UARTBusy(UART1_BASE));  // Wait until TX ready
         UARTCharPut(UART1_BASE, *str);
         str++;
     }
+    
     while(UARTBusy(UART1_BASE));  // Wait for last char to finish
-    //GPIOPinWrite(GPIO_PORTF_BASE, GPIO_PIN_3, 0);
+    GPIOPinWrite(GPIO_PORTF_BASE, GPIO_PIN_3, 0);
 }
-
 void WAIT_FOR_MESSAGE(void)
 {
     if (UARTCharsAvail(UART1_BASE))
     {
         char receivedChar = UARTCharGet(UART1_BASE);
+        
+        // TEST LED: Flash blue when character received
+        GPIOPinWrite(GPIO_PORTF_BASE, GPIO_PIN_2, GPIO_PIN_2);
+        SysCtlDelay(800000);  // ~50ms
+        GPIOPinWrite(GPIO_PORTF_BASE, GPIO_PIN_2, 0);
 
         if (receivedChar == '#')  // End of message marker
         {
+            // TEST LED: Long flash red when message complete
+            GPIOPinWrite(GPIO_PORTF_BASE, GPIO_PIN_1, GPIO_PIN_1);
+            SysCtlDelay(4000000);  // ~250ms
+            GPIOPinWrite(GPIO_PORTF_BASE, GPIO_PIN_1, 0);
+            
             rxBuffer[rxIndex] = '\0';  // Null-terminate the string
             rxIndex = 0;              // Prepare for next message
 
-            // Expected formats:
-            //   0,12345#              → normal unlock
-            //   1,54321#              → enter admin mode
-            //   1,54321,67890#        → admin: change user password to 67890
-
-            char *modeStr;
-            char *pass1Str;
-            char *pass2Str;
-
-            modeStr = strtok(rxBuffer, ",");
-            pass1Str = strtok(NULL, ",");
-            pass2Str = strtok(NULL, ",");  // May be NULL
-
-            if (modeStr == NULL || pass1Str == NULL)
-            {
-                // Invalid format
+            // Parse manually to avoid strtok issues
+            // Expected formats: "0,12345#", "1,54321#", "1,54321,67890#"
+            
+            if(rxBuffer[0] == '\0') {
                 memset(rxBuffer, 0, sizeof(rxBuffer));
-                return;
+                return;  // Empty message
+            }
+            
+            char mode = rxBuffer[0];
+            
+            // Find first comma
+            char *comma1 = strchr(rxBuffer, ',');
+            if(comma1 == NULL) {
+                memset(rxBuffer, 0, sizeof(rxBuffer));
+                return;  // No comma found
+            }
+            
+            // Extract password between first and second comma (or end)
+            char *comma2 = strchr(comma1 + 1, ',');
+            int pass1Len = (comma2 != NULL) ? (comma2 - comma1 - 1) : (rxIndex - (comma1 - rxBuffer) - 1);
+            
+            char pass1[20] = "";
+            strncpy(pass1, comma1 + 1, pass1Len);
+            pass1[pass1Len] = '\0';
+            
+            char pass2[20] = "";
+            if(comma2 != NULL) {
+                int pass2Len = rxIndex - (comma2 - rxBuffer) - 1;
+                strncpy(pass2, comma2 + 1, pass2Len);
+                pass2[pass2Len] = '\0';
             }
 
             // ------------------------------------------------------------------
             // Mode 0: Normal unlock with user password
             // ------------------------------------------------------------------
-            if (modeStr[0] == '0' && modeStr[1] == '\0')
+            if (mode == '0')
             {
-                if (strcmp(pass1Str, PASSWORD) == 0)  // Use stored password
+                if (strcmp(pass1, PASSWORD) == 0)
                 {
-                    
-                    GPIOPinWrite(GPIO_PORTF_BASE, GPIO_PIN_3, GPIO_PIN_3); // Green ON
-                    SysCtlDelay(16000000);  // ~500ms at 16MHz
+                    GPIOPinWrite(GPIO_PORTF_BASE, GPIO_PIN_3, GPIO_PIN_3);
+                    SysCtlDelay(16000000);
                     GPIOPinWrite(GPIO_PORTF_BASE, GPIO_PIN_3, 0);
                     UART1_SendString("Correct Password#");
                     failedAttempts = 0;
@@ -96,34 +130,31 @@ void WAIT_FOR_MESSAGE(void)
                 {
                     failedAttempts++;
                     UART1_SendString("Wrong Password#");
-                        
+                    
                     if (failedAttempts >= 3)
                     {
-                        BUZZ();  // Alarm for 3 wrong attempts
+                        BUZZ();
                         failedAttempts = 0;
                     }
                 }
             }
-            // ba8ayar el password
-            else if (modeStr[0] == '1' && modeStr[1] == '\0')
+            // ------------------------------------------------------------------
+            // Mode 1: Change password
+            // ------------------------------------------------------------------
+            else if (mode == '1')
             {
-                if (strcmp(pass1Str, PASSWORD) == 0)  // Master password correct
+                if (strcmp(pass1, PASSWORD) == 0)
                 {
-                    if (pass2Str != NULL && pass2Str[0] != '\0')
+                    if (pass2[0] != '\0')
                     {
-                        //save new user password
                         UART1_SendString("Password Changed#");
-                          
-                        // Confirm success
-                        GPIOPinWrite(GPIO_PORTF_BASE, GPIO_PIN_3, GPIO_PIN_3); // Green
-                        SysCtlDelay(16000000);  // 1 second
+                        GPIOPinWrite(GPIO_PORTF_BASE, GPIO_PIN_3, GPIO_PIN_3);
+                        SysCtlDelay(16000000);
                         GPIOPinWrite(GPIO_PORTF_BASE, GPIO_PIN_3, 0);
-                        // Optional: save to Flash here for persistence
-                        // SavePasswordToFlash(currentUserPassword);
                     }
                     else
                     {
-                        GPIOPinWrite(GPIO_PORTF_BASE, GPIO_PIN_2, GPIO_PIN_2); // Blue LED?
+                        GPIOPinWrite(GPIO_PORTF_BASE, GPIO_PIN_2, GPIO_PIN_2);
                         SysCtlDelay(8000000);
                         GPIOPinWrite(GPIO_PORTF_BASE, GPIO_PIN_2, 0);
                     }
@@ -136,23 +167,26 @@ void WAIT_FOR_MESSAGE(void)
                     
                     if (failedAttempts >= 3)
                     {
-                        GPIOPinWrite(GPIO_PORTF_BASE, GPIO_PIN_1, GPIO_PIN_1); // Red ON
+                        GPIOPinWrite(GPIO_PORTF_BASE, GPIO_PIN_1, GPIO_PIN_1);
                         SysCtlDelay(16000000);
                         GPIOPinWrite(GPIO_PORTF_BASE, GPIO_PIN_1, 0);
                         failedAttempts = 0;
                     }
                 }
-            }else if (modeStr[0] == '2' && modeStr[1] == '\0')
+            }
+            // ------------------------------------------------------------------
+            // Mode 2: Timeout setting
+            // ------------------------------------------------------------------
+            else if (mode == '2')
             {
-                if(strcmp(pass1Str, "26") == 0){
+                if(strcmp(pass1, "26") == 0) {
                     UART1_SendString("Timeout saved#");
-                    GPIOPinWrite(GPIO_PORTF_BASE, GPIO_PIN_1, GPIO_PIN_1); // Blue ON
+                    GPIOPinWrite(GPIO_PORTF_BASE, GPIO_PIN_1, GPIO_PIN_1);
                     SysCtlDelay(16000000);
                     GPIOPinWrite(GPIO_PORTF_BASE, GPIO_PIN_1, 0);
                 }
             }
 
-            // Clear buffer for next message
             memset(rxBuffer, 0, sizeof(rxBuffer));
         }
         else  // Normal character received
@@ -163,7 +197,6 @@ void WAIT_FOR_MESSAGE(void)
             }
             else
             {
-                // Buffer overflow → reset
                 rxIndex = 0;
                 memset(rxBuffer, 0, sizeof(rxBuffer));
             }

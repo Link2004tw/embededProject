@@ -114395,7 +114395,7 @@
     "display": "void UART1_SendString(char *)",
     "location": {
       "column": "6",
-      "line": "38",
+      "line": "51",
       "path": "E:\\coding\\embedded\\embededProject\\UART\\HMI_Comm.c"
     },
     "name": "UART1_SendString",
@@ -114409,7 +114409,7 @@
     "display": "void WAIT_FOR_MESSAGE(void)",
     "location": {
       "column": "6",
-      "line": "50",
+      "line": "63",
       "path": "E:\\coding\\embedded\\embededProject\\UART\\HMI_Comm.c"
     },
     "name": "WAIT_FOR_MESSAGE",
@@ -114417,13 +114417,13 @@
     "scope": null
   },
   {
-    "ID": "c:HMI_Comm.c@1676@F@WAIT_FOR_MESSAGE@receivedChar",
+    "ID": "c:HMI_Comm.c@2079@F@WAIT_FOR_MESSAGE@receivedChar",
     "What": "Variable",
     "defdec": "Def",
     "display": "receivedChar",
     "location": {
       "column": "14",
-      "line": "54",
+      "line": "67",
       "path": "E:\\coding\\embedded\\embededProject\\UART\\HMI_Comm.c"
     },
     "name": "receivedChar",
@@ -114431,129 +114431,101 @@
     "scope": null
   },
   {
-    "ID": "c:HMI_Comm.c@2181@F@WAIT_FOR_MESSAGE@modeStr",
+    "ID": "c:HMI_Comm.c@3134@F@WAIT_FOR_MESSAGE@mode",
     "What": "Variable",
     "defdec": "Def",
-    "display": "modeStr",
-    "location": {
-      "column": "19",
-      "line": "66",
-      "path": "E:\\coding\\embedded\\embededProject\\UART\\HMI_Comm.c"
-    },
-    "name": "modeStr",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:HMI_Comm.c@2209@F@WAIT_FOR_MESSAGE@pass1Str",
-    "What": "Variable",
-    "defdec": "Def",
-    "display": "pass1Str",
-    "location": {
-      "column": "19",
-      "line": "67",
-      "path": "E:\\coding\\embedded\\embededProject\\UART\\HMI_Comm.c"
-    },
-    "name": "pass1Str",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:HMI_Comm.c@2238@F@WAIT_FOR_MESSAGE@pass2Str",
-    "What": "Variable",
-    "defdec": "Def",
-    "display": "pass2Str",
-    "location": {
-      "column": "19",
-      "line": "68",
-      "path": "E:\\coding\\embedded\\embededProject\\UART\\HMI_Comm.c"
-    },
-    "name": "pass2Str",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:ysizet.h@111@macro@_YSIZET_H",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "_YSIZET_H",
-    "location": {
-      "column": "9",
-      "line": "5",
-      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\ysizet.h"
-    },
-    "name": "_YSIZET_H",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:ysizet.h@277@macro@_SIZE_T",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "_SIZE_T",
-    "location": {
-      "column": "11",
-      "line": "16",
-      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\ysizet.h"
-    },
-    "name": "_SIZE_T",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:ysizet.h@296@macro@_STD_USING_SIZE_T",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "_STD_USING_SIZE_T",
-    "location": {
-      "column": "11",
-      "line": "17",
-      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\ysizet.h"
-    },
-    "name": "_STD_USING_SIZE_T",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:ysizet.h@T@size_t",
-    "What": "Typedef",
-    "defdec": "Def",
-    "display": "_Sizet",
+    "display": "mode",
     "location": {
       "column": "18",
-      "line": "18",
-      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\ysizet.h"
+      "line": "92",
+      "path": "E:\\coding\\embedded\\embededProject\\UART\\HMI_Comm.c"
     },
-    "name": "size_t",
-    "origin": "system_include",
+    "name": "mode",
+    "origin": "project_file",
     "scope": null
   },
   {
-    "ID": "c:ysizet.h@359@macro@__DATA_PTR_MEM_HELPER1__",
-    "What": "MacroDef",
+    "ID": "c:HMI_Comm.c@3219@F@WAIT_FOR_MESSAGE@comma1",
+    "What": "Variable",
     "defdec": "Def",
-    "display": "__DATA_PTR_MEM_HELPER1__",
+    "display": "comma1",
     "location": {
-      "column": "9",
-      "line": "21",
-      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\ysizet.h"
+      "column": "19",
+      "line": "95",
+      "path": "E:\\coding\\embedded\\embededProject\\UART\\HMI_Comm.c"
     },
-    "name": "__DATA_PTR_MEM_HELPER1__",
-    "origin": "system_include",
+    "name": "comma1",
+    "origin": "project_file",
     "scope": null
   },
   {
-    "ID": "c:ysizet.h@T@__data_size_t",
-    "What": "Typedef",
+    "ID": "c:HMI_Comm.c@3506@F@WAIT_FOR_MESSAGE@comma2",
+    "What": "Variable",
     "defdec": "Def",
-    "display": "unsigned int",
+    "display": "comma2",
     "location": {
-      "column": "1",
-      "line": "23",
-      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\ysizet.h"
+      "column": "19",
+      "line": "102",
+      "path": "E:\\coding\\embedded\\embededProject\\UART\\HMI_Comm.c"
     },
-    "name": "__data_size_t",
-    "origin": "system_include",
+    "name": "comma2",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:HMI_Comm.c@3559@F@WAIT_FOR_MESSAGE@pass1Len",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "pass1Len",
+    "location": {
+      "column": "17",
+      "line": "103",
+      "path": "E:\\coding\\embedded\\embededProject\\UART\\HMI_Comm.c"
+    },
+    "name": "pass1Len",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:HMI_Comm.c@3681@F@WAIT_FOR_MESSAGE@pass1",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "pass1",
+    "location": {
+      "column": "18",
+      "line": "105",
+      "path": "E:\\coding\\embedded\\embededProject\\UART\\HMI_Comm.c"
+    },
+    "name": "pass1",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:HMI_Comm.c@3817@F@WAIT_FOR_MESSAGE@pass2",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "pass2",
+    "location": {
+      "column": "18",
+      "line": "109",
+      "path": "E:\\coding\\embedded\\embededProject\\UART\\HMI_Comm.c"
+    },
+    "name": "pass2",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:HMI_Comm.c@3889@F@WAIT_FOR_MESSAGE@pass2Len",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "pass2Len",
+    "location": {
+      "column": "21",
+      "line": "111",
+      "path": "E:\\coding\\embedded\\embededProject\\UART\\HMI_Comm.c"
+    },
+    "name": "pass2Len",
+    "origin": "project_file",
     "scope": null
   },
   {
@@ -114735,6 +114707,90 @@
       "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\DLib_Product_string.h"
     },
     "name": "memset",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:ysizet.h@111@macro@_YSIZET_H",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "_YSIZET_H",
+    "location": {
+      "column": "9",
+      "line": "5",
+      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\ysizet.h"
+    },
+    "name": "_YSIZET_H",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:ysizet.h@277@macro@_SIZE_T",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "_SIZE_T",
+    "location": {
+      "column": "11",
+      "line": "16",
+      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\ysizet.h"
+    },
+    "name": "_SIZE_T",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:ysizet.h@296@macro@_STD_USING_SIZE_T",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "_STD_USING_SIZE_T",
+    "location": {
+      "column": "11",
+      "line": "17",
+      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\ysizet.h"
+    },
+    "name": "_STD_USING_SIZE_T",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:ysizet.h@T@size_t",
+    "What": "Typedef",
+    "defdec": "Def",
+    "display": "_Sizet",
+    "location": {
+      "column": "18",
+      "line": "18",
+      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\ysizet.h"
+    },
+    "name": "size_t",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:ysizet.h@359@macro@__DATA_PTR_MEM_HELPER1__",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "__DATA_PTR_MEM_HELPER1__",
+    "location": {
+      "column": "9",
+      "line": "21",
+      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\ysizet.h"
+    },
+    "name": "__DATA_PTR_MEM_HELPER1__",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:ysizet.h@T@__data_size_t",
+    "What": "Typedef",
+    "defdec": "Def",
+    "display": "unsigned int",
+    "location": {
+      "column": "1",
+      "line": "23",
+      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\ysizet.h"
+    },
+    "name": "__data_size_t",
     "origin": "system_include",
     "scope": null
   },
