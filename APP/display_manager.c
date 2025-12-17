@@ -120,26 +120,30 @@ void DISPLAY_CHANGEPASSWORD(void){
     
     char confirmPassword[5] = "";
     while(1){
-    for(pass_index = 0; pass_index < 5; pass_index++){
-        char key = InputManager_GetKey();
-        while(key == 0) {
-            key = InputManager_GetKey();
-            if(key=='=') return;
-            
-            SysCtlDelay(10000);
-        }
-        confirmPassword[pass_index] = key;
-        LCD_WriteChar('*');
-    }
-    confirmPassword[4] = '\0';
-    
-    
-    if(strcmp(newPassword, confirmPassword) != 0){
         LCD_Clear();
-        LCD_WriteString("They don't match");
-        SysCtlDelay(10000000);
+        LCD_WriteString("Confirm new pass");
+        LCD_SetCursor(1, 0);
         
-    }else { break;}
+        for(pass_index = 0; pass_index < 5; pass_index++){
+            char key = InputManager_GetKey();
+            while(key == 0) {
+                key = InputManager_GetKey();
+                if(key=='=') return;
+                
+                SysCtlDelay(10000);
+            }
+            confirmPassword[pass_index] = key;
+            LCD_WriteChar('*');
+        }
+        confirmPassword[4] = '\0';
+        
+        
+        if(strcmp(newPassword, confirmPassword) != 0){
+            LCD_Clear();
+            LCD_WriteString("They don't match");
+            SysCtlDelay(10000000);
+            continue;
+        }else { break;}
     }                  
     if(strcmp(message, "1,12345,67890#") != 0){
         LCD_Clear();
