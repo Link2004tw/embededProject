@@ -89,13 +89,13 @@ void WAIT_FOR_MESSAGE(void)
                     GPIOPinWrite(GPIO_PORTF_BASE, GPIO_PIN_3, GPIO_PIN_3); // Green ON
                     SysCtlDelay(16000000);  // ~500ms at 16MHz
                     GPIOPinWrite(GPIO_PORTF_BASE, GPIO_PIN_3, 0);
-                    UART1_SendString("Correct$Password#");
+                    UART1_SendString("Correct Password#");
                     failedAttempts = 0;
                 }
                 else
                 {
                     failedAttempts++;
-                    UART1_SendString("Wrong$Password#");
+                    UART1_SendString("Wrong Password#");
                         
                     if (failedAttempts >= 3)
                     {
@@ -112,7 +112,7 @@ void WAIT_FOR_MESSAGE(void)
                     if (pass2Str != NULL && pass2Str[0] != '\0')
                     {
                         //save new user password
-                        UART1_SendString("Password$Changed#");
+                        UART1_SendString("Password Changed#");
                           
                         // Confirm success
                         GPIOPinWrite(GPIO_PORTF_BASE, GPIO_PIN_3, GPIO_PIN_3); // Green
@@ -132,7 +132,7 @@ void WAIT_FOR_MESSAGE(void)
                 else
                 {
                     failedAttempts++;
-                    UART1_SendString("Wrong$Password#");
+                    UART1_SendString("Wrong Password#");
                     
                     if (failedAttempts >= 3)
                     {
