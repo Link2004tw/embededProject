@@ -145,10 +145,10 @@ void WAIT_FOR_MESSAGE(void)
             }else if (modeStr[0] == '2' && modeStr[1] == '\0')
             {
                 if(strcmp(pass1Str, "26") == 0){
+                    UART1_SendString("Timeout saved#");
                     GPIOPinWrite(GPIO_PORTF_BASE, GPIO_PIN_1, GPIO_PIN_1); // Blue ON
                     SysCtlDelay(16000000);
                     GPIOPinWrite(GPIO_PORTF_BASE, GPIO_PIN_1, 0);
-                    UART1_SendString("Timeout saved#");
                 }
             }
 
