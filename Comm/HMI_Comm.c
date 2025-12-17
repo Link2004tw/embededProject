@@ -24,7 +24,7 @@ void UART5_Init_front(void) {
     SysCtlDelay(1000);  // Add delay to let UART settle
     
     while (UARTCharsAvail(UART5_BASE)) {
-        UARTCharGet(UART5_BASE);
+        int x = UARTCharGet(UART5_BASE);
     }
     //GPIOPinWrite(GPIO_PORTF_BASE, GPIO_PIN_3, GPIO_PIN_3); // Start with LED OFF
     
@@ -59,21 +59,22 @@ void UART5_ReceiveString(char* buffer, uint16_t max_length) {
     while(index < max_length - 1) {
         if(UARTCharsAvail(UART5_BASE)) {
             received_char = UARTCharGet(UART5_BASE);
-            timeout_counter = 0;  // Reset timeout on successful receive
+           // timeout_counter = 0;  // Reset timeout on successful receive
             
             if(received_char == '#') {
                 break;
             }
             
             buffer[index++] = received_char;
-        } else {
-            timeout_counter++;
-            if(timeout_counter > TIMEOUT_LIMIT) {
-                buffer[index] = '\0';
-                return;  // Timeout - exit gracefully
-            }
-            SysCtlDelay(100);  // Small delay
         }
+         else {
+             timeout_counter++;
+             if(timeout_counter > TIMEOUT_LIMIT) {
+                 buffer[index] = '\0';
+                 return;  // Timeout - exit gracefully
+             }
+             SysCtlDelay(100);  // Small delay
+         }
     }
     
     buffer[index] = '\0';  // Null terminate the string

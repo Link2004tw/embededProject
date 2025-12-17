@@ -115029,6 +115029,20 @@
     "scope": null
   },
   {
+    "ID": "c:HMI_Comm.c@974@F@UART5_Init_front@x",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "x",
+    "location": {
+      "column": "13",
+      "line": "27",
+      "path": "E:\\coding\\embedded\\embededProject\\Comm\\HMI_Comm.c"
+    },
+    "name": "x",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
     "ID": "c:@F@UART5_SendString",
     "What": "Function",
     "defdec": "Def",
@@ -115057,7 +115071,7 @@
     "scope": null
   },
   {
-    "ID": "c:HMI_Comm.c@1674@F@UART5_ReceiveString@index",
+    "ID": "c:HMI_Comm.c@1682@F@UART5_ReceiveString@index",
     "What": "Variable",
     "defdec": "Def",
     "display": "index",
@@ -115071,7 +115085,7 @@
     "scope": null
   },
   {
-    "ID": "c:HMI_Comm.c@1699@F@UART5_ReceiveString@received_char",
+    "ID": "c:HMI_Comm.c@1707@F@UART5_ReceiveString@received_char",
     "What": "Variable",
     "defdec": "Def",
     "display": "received_char",
@@ -115085,7 +115099,7 @@
     "scope": null
   },
   {
-    "ID": "c:HMI_Comm.c@1724@F@UART5_ReceiveString@timeout_counter",
+    "ID": "c:HMI_Comm.c@1732@F@UART5_ReceiveString@timeout_counter",
     "What": "Variable",
     "defdec": "Def",
     "display": "timeout_counter",
@@ -115099,7 +115113,7 @@
     "scope": null
   },
   {
-    "ID": "c:HMI_Comm.c@1759@F@UART5_ReceiveString@TIMEOUT_LIMIT",
+    "ID": "c:HMI_Comm.c@1767@F@UART5_ReceiveString@TIMEOUT_LIMIT",
     "What": "Variable",
     "defdec": "Def",
     "display": "TIMEOUT_LIMIT",
