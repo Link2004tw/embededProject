@@ -161,6 +161,8 @@ void WAIT_FOR_MESSAGE(void)
                 else
                 {
                     failedAttempts++;
+                    UART1_SendString("Wrong$Password#");
+                        
                     if (failedAttempts >= 3)
                     {
                         BUZZ();  // Alarm for 3 wrong attempts
@@ -168,10 +170,7 @@ void WAIT_FOR_MESSAGE(void)
                     }
                 }
             }
-
-            // ------------------------------------------------------------------
-            // Mode 1: Admin / Programming mode
-            // ------------------------------------------------------------------
+            // ba8ayar el password
             else if (modeStr[0] == '1' && modeStr[1] == '\0')
             {
                 if (strcmp(pass1Str, PASSWORD) == 0)  // Master password correct
@@ -179,20 +178,17 @@ void WAIT_FOR_MESSAGE(void)
                     if (pass2Str != NULL && pass2Str[0] != '\0')
                     {
                         //save new user password
-                            
+                        UART1_SendString("Password$Changed#");
+                          
                         // Confirm success
                         GPIOPinWrite(GPIO_PORTF_BASE, GPIO_PIN_3, GPIO_PIN_3); // Green
                         SysCtlDelay(16000000);  // 1 second
                         GPIOPinWrite(GPIO_PORTF_BASE, GPIO_PIN_3, 0);
-
                         // Optional: save to Flash here for persistence
                         // SavePasswordToFlash(currentUserPassword);
                     }
                     else
                     {
-                        // Only master password sent → just enter admin mode (optional)
-                        // You can set a flag: adminModeActive = 1;
-                        // Then next normal entry could allow changing password
                         GPIOPinWrite(GPIO_PORTF_BASE, GPIO_PIN_2, GPIO_PIN_2); // Blue LED?
                         SysCtlDelay(8000000);
                         GPIOPinWrite(GPIO_PORTF_BASE, GPIO_PIN_2, 0);
@@ -201,8 +197,9 @@ void WAIT_FOR_MESSAGE(void)
                 }
                 else
                 {
-                    // Wrong master password
                     failedAttempts++;
+                    UART1_SendString("Wrong$Password#");
+                    
                     if (failedAttempts >= 3)
                     {
                         GPIOPinWrite(GPIO_PORTF_BASE, GPIO_PIN_1, GPIO_PIN_1); // Red ON
@@ -217,7 +214,7 @@ void WAIT_FOR_MESSAGE(void)
                     GPIOPinWrite(GPIO_PORTF_BASE, GPIO_PIN_1, GPIO_PIN_1); // Blue ON
                     SysCtlDelay(16000000);
                     GPIOPinWrite(GPIO_PORTF_BASE, GPIO_PIN_1, 0);
-                    UART1_SendString("Timeout saved");
+                    UART1_SendString("Timeout saved#");
                 }
             }
 
