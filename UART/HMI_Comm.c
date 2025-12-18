@@ -1,10 +1,10 @@
 #include "HMI_Comm.h"
 #define PASSWORD "12345" // will be changed to eeprom later
-char rxBuffer1[RX_BUFFER_SIZE]="";
-uint8_t rxIndex1 = 0;
+char rxBuffer[RX_BUFFER_SIZE]="";
+uint8_t rxIndex = 0;
 
-short failedAttempts1 =0;
-void UART1_Init1(void) {
+short failedAttempts =0;
+void UART1_Init(void) {
     SysCtlPeripheralEnable(SYSCTL_PERIPH_UART1);
     SysCtlPeripheralEnable(SYSCTL_PERIPH_GPIOB);
 
@@ -34,7 +34,7 @@ void UART1_Init1(void) {
     
 }
 
-void BUZZ1(void){
+void BUZZ(void){
 GPIOPinWrite(GPIO_PORTF_BASE, GPIO_PIN_1, GPIO_PIN_1); // Red ON
                             SysCtlDelay(16000000);
                             GPIOPinWrite(GPIO_PORTF_BASE, GPIO_PIN_1, 0);
@@ -42,7 +42,7 @@ GPIOPinWrite(GPIO_PORTF_BASE, GPIO_PIN_1, GPIO_PIN_1); // Red ON
 }
 
 
-void UART1_SendString1(char* str) {
+void UART1_SendString(char* str) {
     GPIOPinWrite(GPIO_PORTF_BASE, GPIO_PIN_3, GPIO_PIN_3);
     
     while(*str) {
@@ -56,7 +56,7 @@ void UART1_SendString1(char* str) {
 }
 
 
-void WAIT_FOR_MESSAGE1(void)
+void WAIT_FOR_MESSAGE(void)
 {
     if (UARTCharsAvail(UART1_BASE))
     {
@@ -74,12 +74,12 @@ void WAIT_FOR_MESSAGE1(void)
             SysCtlDelay(4000000);  // ~250ms
             GPIOPinWrite(GPIO_PORTF_BASE, GPIO_PIN_1, 0);
             
-            rxBuffer1[rxIndex1] = '\0';  // Null-terminate the string
-            rxIndex1 = 0;              // Prepare for next message
+            rxBuffer[rxIndex] = '\0';  // Null-terminate the string
+            rxIndex = 0;              // Prepare for next message
 
             // Make a copy for parsing (strtok modifies the buffer)
-            char rxBuffer1Copy[RX_BUFFER_SIZE];
-            strcpy(rxBuffer1Copy, rxBuffer1);
+            char rxBufferCopy[RX_BUFFER_SIZE];
+            strcpy(rxBufferCopy, rxBuffer);
 
             // Expected formats:
             //   0,12345#              → normal unlock
@@ -90,7 +90,7 @@ void WAIT_FOR_MESSAGE1(void)
             char *pass1Str;
             char *pass2Str;
 
-            modeStr = strtok(rxBuffer1Copy, ",");
+            modeStr = strtok(rxBufferCopy, ",");
             pass1Str = strtok(NULL, ",");
             pass2Str = strtok(NULL, ",");  // May be NULL
 
@@ -98,7 +98,7 @@ void WAIT_FOR_MESSAGE1(void)
             {
                 // Invalid format - send error
                 UART1_SendString("Invalid Format#");
-                memset(rxBuffer1, 0, sizeof(rxBuffer1));
+                memset(rxBuffer, 0, sizeof(rxBuffer));
                 return;
             }
 
@@ -113,17 +113,17 @@ void WAIT_FOR_MESSAGE1(void)
                     SysCtlDelay(16000000);
                     GPIOPinWrite(GPIO_PORTF_BASE, GPIO_PIN_3, 0);
                     UART1_SendString("Correct Password#");
-                    failedAttempts1 = 0;
+                    failedAttempts = 0;
                 }
                 else
                 {
-                    failedAttempts1++;
+                    failedAttempts++;
                     UART1_SendString("Wrong Password#");
                     
-                    if (failedAttempts1 >= 3)
+                    if (failedAttempts >= 3)
                     {
                         BUZZ();
-                        failedAttempts1 = 0;
+                        failedAttempts = 0;
                     }
                 }
             }
@@ -147,19 +147,19 @@ void WAIT_FOR_MESSAGE1(void)
                         SysCtlDelay(8000000);
                         GPIOPinWrite(GPIO_PORTF_BASE, GPIO_PIN_2, 0);
                     }
-                    failedAttempts1 = 0;
+                    failedAttempts = 0;
                 }
                 else
                 {
-                    failedAttempts1++;
+                    failedAttempts++;
                     UART1_SendString("Wrong Password#");
                     
-                    if (failedAttempts1 >= 3)
+                    if (failedAttempts >= 3)
                     {
                         GPIOPinWrite(GPIO_PORTF_BASE, GPIO_PIN_1, GPIO_PIN_1);
                         SysCtlDelay(16000000);
                         GPIOPinWrite(GPIO_PORTF_BASE, GPIO_PIN_1, 0);
-                        failedAttempts1 = 0;
+                        failedAttempts = 0;
                     }
                 }
             }
@@ -176,18 +176,18 @@ void WAIT_FOR_MESSAGE1(void)
                 }
             }
 
-            memset(rxBuffer1, 0, sizeof(rxBuffer1));
+            memset(rxBuffer, 0, sizeof(rxBuffer));
         }
         else  // Normal character received
         {
-            if (rxIndex1 < RX_BUFFER_SIZE - 1)
+            if (rxIndex < RX_BUFFER_SIZE - 1)
             {
-                rxBuffer1[rxIndex1++] = receivedChar;
+                rxBuffer[rxIndex++] = receivedChar;
             }
             else
             {
-                rxIndex1 = 0;
-                memset(rxBuffer1, 0, sizeof(rxBuffer1));
+                rxIndex = 0;
+                memset(rxBuffer, 0, sizeof(rxBuffer));
             }
         }
     }
