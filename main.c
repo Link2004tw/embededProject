@@ -18,12 +18,13 @@ void LED_Init(void) {
     GPIOPinTypeGPIOOutput(GPIO_PORTF_BASE, GPIO_PIN_1); // PF2 is Red LED
     GPIOPinTypeGPIOOutput(GPIO_PORTF_BASE, GPIO_PIN_2); // PF2 is Red LED
 }
-volatile bool messageReady = false;
+
 
 int main(void) {
   SysCtlClockSet(SYSCTL_SYSDIV_1 | SYSCTL_USE_OSC | SYSCTL_OSC_MAIN | SYSCTL_XTAL_16MHZ);
   LED_Init();
   UART1_Init();
+  IntMasterEnable();
   SysCtlDelay(SysCtlClockGet() / 10);  // 100ms delay
   //UART1_SendString("Ready#");
     
@@ -36,7 +37,7 @@ int main(void) {
     //short mode =0;
     while(1) {
       if(messageReady){
-        mesaageReady = false;
+        messageReady = false;
         PROCESS_MESSAGE();
       }
     }

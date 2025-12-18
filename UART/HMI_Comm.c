@@ -1,23 +1,25 @@
 #include "HMI_Comm.h"
 
-
-
+volatile short failedAttempts = 0;  // ← definition
+char rxBuffer[RX_BUFFER_SIZE];       // define buffer
+volatile uint8_t rxIndex = 0;        // define index
+volatile bool messageReady = false;  // define message flag
 
 void UART1_Init(void)
 {
-    // 1️⃣ Enable peripherals
+    // 1️Enable peripherals
     SysCtlPeripheralEnable(SYSCTL_PERIPH_UART1);
     SysCtlPeripheralEnable(SYSCTL_PERIPH_GPIOB);
 
     while (!SysCtlPeripheralReady(SYSCTL_PERIPH_UART1));
     while (!SysCtlPeripheralReady(SYSCTL_PERIPH_GPIOB));
 
-    // 2️⃣ Configure GPIO pins for UART1
+    // 2️Configure GPIO pins for UART1
     GPIOPinConfigure(GPIO_PB0_U1RX);
     GPIOPinConfigure(GPIO_PB1_U1TX);
     GPIOPinTypeUART(GPIO_PORTB_BASE, GPIO_PIN_0 | GPIO_PIN_1);
 
-    // 3️⃣ Configure UART
+    // 3️Configure UART
     UARTDisable(UART1_BASE);
 
     UARTConfigSetExpClk(
@@ -41,14 +43,14 @@ void UART1_Init(void)
     // Clear UART errors
     UARTRxErrorClear(UART1_BASE);
 
-    // 4️⃣ Enable UART interrupts
+    // 4️Enable UART interrupts
     UARTIntDisable(UART1_BASE, 0xFFFFFFFF);
 
     UARTIntEnable(UART1_BASE, UART_INT_RX | UART_INT_RT);
 
     IntEnable(INT_UART1);
 
-    // 5️⃣ Enable UART
+    // 5Enable UART
     UARTEnable(UART1_BASE);
 }
 
@@ -189,7 +191,24 @@ void PROCESS_MESSAGE(void)
     // Clear buffer after processing
     memset(rxBuffer, 0, sizeof(rxBuffer));
 }
+void UART1_SendString(char* str)
+{
+    while (*str)
+    {
+        // Wait until space is available in TX FIFO
+        UARTCharPut(UART1_BASE, *str++);
+    }
+}
 
+// Simple placeholder function
+void EEPROMWriteByte(uint32_t base, uint32_t addr, uint8_t data)
+{
+    // TODO: implement actual EEPROM or Flash writing
+    // For now, just ignore or store in RAM for testing
+    (void)base;
+    (void)addr;
+    (void)data;
+}
 
 void Door_Unlock(void) {
     // Activate the unlocking mechanism
@@ -205,14 +224,14 @@ void Start_AutoLock_Timer(void) {
 }
 
 void Activate_Lockout(void) {
-    // Disable keypad input
-    Keypad_Disable();
     // Optionally turn on an LED or buzzer
     GPIOPinWrite(LED_PORT, LED_PIN, 1);
+
     // Start lockout timer
     TimerLoadSet(TIMER1_BASE, TIMER_A, LOCKOUT_DURATION);
     TimerEnable(TIMER1_BASE, TIMER_A);
 }
+
 
 void SavePasswordToEEPROM(char *newPass) {
     for(uint8_t i = 0; i < PASSWORD_LENGTH; i++) {
