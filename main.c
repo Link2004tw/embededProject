@@ -15,6 +15,7 @@ void DELAY(void){
 // <>
 int main(void)
 {
+     SysCtlClockSet(SYSCTL_SYSDIV_1 | SYSCTL_USE_OSC | SYSCTL_OSC_MAIN | SYSCTL_XTAL_16MHZ);
     UART5_Init_front();
       
     /* ---------- Initialize all frontend modules ---------- */

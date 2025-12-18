@@ -295,7 +295,7 @@ void DISPLAY_OLD_PASSWORD(void)
     
     GPIOPinWrite(GPIO_PORTF_BASE, GPIO_PIN_2, 0);
 
-    LCD_Clear();
+   // LCD_Clear();
     if(ack_buffer[0] != '\0'){
         // TEST LED: Red flash on successful receive
         GPIOPinWrite(GPIO_PORTF_BASE, GPIO_PIN_1, GPIO_PIN_1);
@@ -307,7 +307,7 @@ void DISPLAY_OLD_PASSWORD(void)
 
     }else {
         // TEST LED: Long red on timeout
-        LCD_Clear();
+        //LCD_Clear();
         // TEST LED: Long red on timeout
         GPIOPinWrite(GPIO_PORTF_BASE, GPIO_PIN_1, GPIO_PIN_1);
         SysCtlDelay(8000000);
