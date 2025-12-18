@@ -110,6 +110,12 @@ void WAIT_FOR_MESSAGE(void)
             GPIOPinWrite(GPIO_PORTF_BASE, GPIO_PIN_1, 0);
             
             rxBuffer[rxIndex] = '\0';  // Null-terminate the string
+            
+            // DEBUG: Send back what we received
+            char debugMsg[50];
+            sprintf(debugMsg, "RX:%s Len:%d#", rxBuffer, rxIndex);
+            //UART1_SendString(debugMsg);
+            
             rxIndex = 0;              // Prepare for next message
 
             // Make a copy for parsing (strtok modifies the buffer)
