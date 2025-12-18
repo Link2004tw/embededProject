@@ -62,7 +62,12 @@ void UART1_Init(void) {
     SysCtlDelay(1000);  // Add delay to let UART settle
     
     while (UARTCharsAvail(UART1_BASE)) {
-        UARTCharGet(UART1_BASE);
+        int x = UARTCharGet(UART1_BASE);
+        if(x == '\0'){
+            GPIOPinWrite(GPIO_PORTF_BASE, GPIO_PIN_3, GPIO_PIN_3); // Start with LED OFF
+    
+
+        }
     }
     //GPIOPinWrite(GPIO_PORTF_BASE, GPIO_PIN_3, GPIO_PIN_3); // Start with LED OFF
     
