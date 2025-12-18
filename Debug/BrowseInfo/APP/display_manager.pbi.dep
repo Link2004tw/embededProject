@@ -1,11 +1,11 @@
-C:\Users\patri\Desktop\embedded\embededProject\Debug\BrowseInfo\APP\display_manager.pbi: \
-  C:\Users\patri\Desktop\embedded\embededProject\APP\display_manager.c \
-  C:\Program\ Files\IAR\ Systems\Embedded\ Workbench\ 9.0_2\arm\inc\c\stdbool.h \
-  C:\Users\patri\Desktop\embedded\embededProject\APP/display_manager.h \
-  C:\Program\ Files\IAR\ Systems\Embedded\ Workbench\ 9.0_2\arm\inc\c\stdint.h \
-  C:\Program\ Files\IAR\ Systems\Embedded\ Workbench\ 9.0_2\arm\inc\c\ycheck.h \
-  C:\Program\ Files\IAR\ Systems\Embedded\ Workbench\ 9.0_2\arm\inc\c\yvals.h \
-  C:\Program\ Files\IAR\ Systems\Embedded\ Workbench\ 9.0_2\arm\inc\c\DLib_Defaults.h \
-  C:\Program\ Files\IAR\ Systems\Embedded\ Workbench\ 9.0_2\arm\inc\c\DLib_Config_Normal.h \
-  C:\Program\ Files\IAR\ Systems\Embedded\ Workbench\ 9.0_2\arm\inc\c\DLib_Product.h \
+E:\coding\embedded\embededProject\Debug\BrowseInfo\APP\display_manager.pbi: \
+  E:\coding\embedded\embededProject\APP\display_manager.c \
+  C:\Program\ Files\IAR\ Systems\Embedded\ Workbench\ 9.0\arm\inc\c\stdbool.h \
+  E:\coding\embedded\embededProject\APP/display_manager.h \
+  C:\Program\ Files\IAR\ Systems\Embedded\ Workbench\ 9.0\arm\inc\c\stdint.h \
+  C:\Program\ Files\IAR\ Systems\Embedded\ Workbench\ 9.0\arm\inc\c\ycheck.h \
+  C:\Program\ Files\IAR\ Systems\Embedded\ Workbench\ 9.0\arm\inc\c\yvals.h \
+  C:\Program\ Files\IAR\ Systems\Embedded\ Workbench\ 9.0\arm\inc\c\DLib_Defaults.h \
+  C:\Program\ Files\IAR\ Systems\Embedded\ Workbench\ 9.0\arm\inc\c\DLib_Config_Normal.h \
+  C:\Program\ Files\IAR\ Systems\Embedded\ Workbench\ 9.0\arm\inc\c\DLib_Product.h \
   C:\ti\TivaWare_C_Series-2.2.0.295\driverlib\lcd.h
