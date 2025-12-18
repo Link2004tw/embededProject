@@ -1,8 +1,7 @@
 #include "TIMER.h"
 
 // Example: Initialize one-shot timer with interrupt
-void Timer0A_Init(void)
-{
+void Timer0A_Init(void) {
     SysCtlPeripheralEnable(SYSCTL_PERIPH_TIMER0);
     while(!SysCtlPeripheralReady(SYSCTL_PERIPH_TIMER0));
 
@@ -13,8 +12,7 @@ void Timer0A_Init(void)
    // IntMasterEnable();
 }
 
-void Timer0A_Handler(void)
-{
+void Timer0A_Handler(void) {
     // Clear the interrupt flag
     TimerIntClear(TIMER0_BASE, TIMER_TIMA_TIMEOUT);
 
@@ -27,8 +25,7 @@ void Timer0A_Handler(void)
 }
 
 
-void TimerStart(uint32_t timeoutTicks)
-{
+void TimerStart(uint32_t timeoutTicks) {
     TimerLoadSet(TIMER0_BASE, TIMER_A, timeoutTicks);
     TimerIntClear(TIMER0_BASE, TIMER_TIMA_TIMEOUT);
     TimerEnable(TIMER0_BASE, TIMER_A);
