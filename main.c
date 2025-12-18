@@ -256,7 +256,7 @@ int main(void) {
   LED_Init();
   UART1_Init();
   SysCtlDelay(SysCtlClockGet() / 10);  // 100ms delay
-  //UART1_SendString("Ready#");
+  UART1_SendString("Ready#");
     
     GPIOPinWrite(GPIO_PORTF_BASE, GPIO_PIN_3, 0); // Start with LED OFF
     GPIOPinWrite(GPIO_PORTF_BASE, GPIO_PIN_1, 0); // Start with LED OFF

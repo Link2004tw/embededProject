@@ -100303,7 +100303,7 @@
     "ID": "c:@F@SysCtlPeripheralPresent",
     "What": "Function",
     "defdec": "Dec",
-    "display": "_Bool SysCtlPeripheralPresent(uint32_t)",
+    "display": "bool SysCtlPeripheralPresent(uint32_t)",
     "location": {
       "column": "13",
       "line": "600",
@@ -100317,7 +100317,7 @@
     "ID": "c:@F@SysCtlPeripheralPresent",
     "What": "Function",
     "defdec": "Dec",
-    "display": "bool SysCtlPeripheralPresent(uint32_t)",
+    "display": "_Bool SysCtlPeripheralPresent(uint32_t)",
     "location": {
       "column": "13",
       "line": "600",
@@ -100485,7 +100485,7 @@
     "ID": "c:@F@SysCtlPeripheralClockGating",
     "What": "Function",
     "defdec": "Dec",
-    "display": "void SysCtlPeripheralClockGating(bool)",
+    "display": "void SysCtlPeripheralClockGating(_Bool)",
     "location": {
       "column": "13",
       "line": "611",
@@ -100499,7 +100499,7 @@
     "ID": "c:@F@SysCtlPeripheralClockGating",
     "What": "Function",
     "defdec": "Dec",
-    "display": "void SysCtlPeripheralClockGating(_Bool)",
+    "display": "void SysCtlPeripheralClockGating(bool)",
     "location": {
       "column": "13",
       "line": "611",
@@ -100583,7 +100583,7 @@
     "ID": "c:@F@SysCtlIntStatus",
     "What": "Function",
     "defdec": "Dec",
-    "display": "uint32_t SysCtlIntStatus(bool)",
+    "display": "uint32_t SysCtlIntStatus(_Bool)",
     "location": {
       "column": "17",
       "line": "617",
@@ -100597,7 +100597,7 @@
     "ID": "c:@F@SysCtlIntStatus",
     "What": "Function",
     "defdec": "Dec",
-    "display": "uint32_t SysCtlIntStatus(_Bool)",
+    "display": "uint32_t SysCtlIntStatus(bool)",
     "location": {
       "column": "17",
       "line": "617",
@@ -116923,146 +116923,6 @@
     "scope": null
   },
   {
-    "ID": "c:ysizet.h@111@macro@_YSIZET_H",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "_YSIZET_H",
-    "location": {
-      "column": "9",
-      "line": "5",
-      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\ysizet.h"
-    },
-    "name": "_YSIZET_H",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:ysizet.h@277@macro@_SIZE_T",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "_SIZE_T",
-    "location": {
-      "column": "11",
-      "line": "16",
-      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\ysizet.h"
-    },
-    "name": "_SIZE_T",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:ysizet.h@296@macro@_STD_USING_SIZE_T",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "_STD_USING_SIZE_T",
-    "location": {
-      "column": "11",
-      "line": "17",
-      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\ysizet.h"
-    },
-    "name": "_STD_USING_SIZE_T",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:ysizet.h@T@size_t",
-    "What": "Typedef",
-    "defdec": "Def",
-    "display": "_Sizet",
-    "location": {
-      "column": "18",
-      "line": "18",
-      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\ysizet.h"
-    },
-    "name": "size_t",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:ysizet.h@359@macro@__DATA_PTR_MEM_HELPER1__",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "__DATA_PTR_MEM_HELPER1__",
-    "location": {
-      "column": "9",
-      "line": "21",
-      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\ysizet.h"
-    },
-    "name": "__DATA_PTR_MEM_HELPER1__",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:ysizet.h@T@__data_size_t",
-    "What": "Typedef",
-    "defdec": "Def",
-    "display": "unsigned int",
-    "location": {
-      "column": "1",
-      "line": "23",
-      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\ysizet.h"
-    },
-    "name": "__data_size_t",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:HMI_Comm.h@280@macro@RX_BUFFER_SIZE",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "RX_BUFFER_SIZE",
-    "location": {
-      "column": "9",
-      "line": "13",
-      "path": "E:\\coding\\embedded\\embededProject\\UART\\HMI_Comm.h"
-    },
-    "name": "RX_BUFFER_SIZE",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@UART1_Init",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void UART1_Init(void)",
-    "location": {
-      "column": "6",
-      "line": "14",
-      "path": "E:\\coding\\embedded\\embededProject\\UART\\HMI_Comm.h"
-    },
-    "name": "UART1_Init",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@WAIT_FOR_MESSAGE",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void WAIT_FOR_MESSAGE(void)",
-    "location": {
-      "column": "6",
-      "line": "15",
-      "path": "E:\\coding\\embedded\\embededProject\\UART\\HMI_Comm.h"
-    },
-    "name": "WAIT_FOR_MESSAGE",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@UART1_SendString",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void UART1_SendString(char *)",
-    "location": {
-      "column": "6",
-      "line": "16",
-      "path": "E:\\coding\\embedded\\embededProject\\UART\\HMI_Comm.h"
-    },
-    "name": "UART1_SendString",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
     "ID": "c:DLib_Product_string.h@326@macro@_DLIB_PRODUCTS_STRING_H_",
     "What": "MacroDef",
     "defdec": "Def",
@@ -117242,6 +117102,146 @@
     },
     "name": "memset",
     "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:ysizet.h@111@macro@_YSIZET_H",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "_YSIZET_H",
+    "location": {
+      "column": "9",
+      "line": "5",
+      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\ysizet.h"
+    },
+    "name": "_YSIZET_H",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:ysizet.h@277@macro@_SIZE_T",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "_SIZE_T",
+    "location": {
+      "column": "11",
+      "line": "16",
+      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\ysizet.h"
+    },
+    "name": "_SIZE_T",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:ysizet.h@296@macro@_STD_USING_SIZE_T",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "_STD_USING_SIZE_T",
+    "location": {
+      "column": "11",
+      "line": "17",
+      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\ysizet.h"
+    },
+    "name": "_STD_USING_SIZE_T",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:ysizet.h@T@size_t",
+    "What": "Typedef",
+    "defdec": "Def",
+    "display": "_Sizet",
+    "location": {
+      "column": "18",
+      "line": "18",
+      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\ysizet.h"
+    },
+    "name": "size_t",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:ysizet.h@359@macro@__DATA_PTR_MEM_HELPER1__",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "__DATA_PTR_MEM_HELPER1__",
+    "location": {
+      "column": "9",
+      "line": "21",
+      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\ysizet.h"
+    },
+    "name": "__DATA_PTR_MEM_HELPER1__",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:ysizet.h@T@__data_size_t",
+    "What": "Typedef",
+    "defdec": "Def",
+    "display": "unsigned int",
+    "location": {
+      "column": "1",
+      "line": "23",
+      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\ysizet.h"
+    },
+    "name": "__data_size_t",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:HMI_Comm.h@280@macro@RX_BUFFER_SIZE",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "RX_BUFFER_SIZE",
+    "location": {
+      "column": "9",
+      "line": "13",
+      "path": "E:\\coding\\embedded\\embededProject\\UART\\HMI_Comm.h"
+    },
+    "name": "RX_BUFFER_SIZE",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@UART1_Init",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void UART1_Init(void)",
+    "location": {
+      "column": "6",
+      "line": "14",
+      "path": "E:\\coding\\embedded\\embededProject\\UART\\HMI_Comm.h"
+    },
+    "name": "UART1_Init",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@WAIT_FOR_MESSAGE",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void WAIT_FOR_MESSAGE(void)",
+    "location": {
+      "column": "6",
+      "line": "15",
+      "path": "E:\\coding\\embedded\\embededProject\\UART\\HMI_Comm.h"
+    },
+    "name": "WAIT_FOR_MESSAGE",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@UART1_SendString",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void UART1_SendString(char *)",
+    "location": {
+      "column": "6",
+      "line": "16",
+      "path": "E:\\coding\\embedded\\embededProject\\UART\\HMI_Comm.h"
+    },
+    "name": "UART1_SendString",
+    "origin": "user_include",
     "scope": null
   },
   {
