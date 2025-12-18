@@ -46,9 +46,8 @@ void PASSWORD_SetNew(void)
     char new_pass[PASSWORD_LENGTH + 1];
     char confirm[PASSWORD_LENGTH + 1];
 
-    while (1)
-    {
-        DISPLAY_AskEnterPassword();
+    
+        //DISPLAY_AskEnterPassword();
         GetPasswordFromUser(new_pass, PASSWORD_LENGTH);
 
         DISPLAY_AskConfirmPassword();
@@ -59,14 +58,14 @@ void PASSWORD_SetNew(void)
             strncpy(stored_password, new_pass, PASSWORD_LENGTH);
             stored_password[PASSWORD_LENGTH] = '\0';
             EEPROM_Write(0x00, (uint8_t*)stored_password, PASSWORD_LENGTH);
-            DISPLAY_ShowMessage("Password Saved!");
+            //DISPLAY_ShowMessage("Password Saved!");
             break;
         }
         else
         {
             DISPLAY_PasswordMismatch();
         }
-    }
+    
 }
 
 bool PASSWORD_Check(void)

@@ -1,74 +1,39 @@
-#include <stdint.h>
-#include <stdbool.h>
-#include "tm4c123gh6pm.h"
+#include "UART/HMI_Comm.h"
+//#include <stdint.h>
+//#include <stdbool.h>
+//#include <string.h> 
+//#include "tm4c123gh6pm.h"
+//#include "inc/hw_memmap.h"
+//#include "inc/hw_types.h"
+//#include "driverlib/sysctl.h"
+//#include "driverlib/gpio.h"
+//#include "driverlib/uart.h"
+//#include "driverlib/pin_map.h"
 
-#include "HAL/Keypad/keypad.h"              // Frontend 1 (TA driver)      // Potentiometer ADC
-#include "APP/input_manager.h"       // Your mapped key function
-#include "APP/display_manager.h"     // Frontend 2
-#include "APP/potentiometer_manager.h" // Potentiometer manager
-#include "driverlib/sysctl.h"
-#include "HAL/Potentiometer/potentiometer.h"
-
-
-
-int main(void)
-{
-    /* ---------- Initialize all frontend modules ---------- */
-    Keypad_Init();           // From TA keypad driver
-    Potentiometer_Init();    // Initialize ADC for potentiometer
-    DISPLAY_Init();          // Initializes LCD
-    DISPLAY_ClearScreen();   // Clear display
-
-    /* ---------- Optional: show a startup message ---------- */
-    DISPLAY_ShowMessage("Frontend Ready");
-    SysCtlDelay(5333300);  // 1s delay
-
-    DISPLAY_ClearScreen();
-    DISPLAY_ShowMainMenu();  // Show menu while testing
-
+void LED_Init(void) {
+    SysCtlPeripheralEnable(SYSCTL_PERIPH_GPIOF);
+    while(!SysCtlPeripheralReady(SYSCTL_PERIPH_GPIOF));
     
+    GPIOPinTypeGPIOOutput(GPIO_PORTF_BASE, GPIO_PIN_3); // PF3 is Green LED
+    GPIOPinTypeGPIOOutput(GPIO_PORTF_BASE, GPIO_PIN_1); // PF2 is Red LED
+    GPIOPinTypeGPIOOutput(GPIO_PORTF_BASE, GPIO_PIN_2); // PF2 is Red LED
+}
 
-    /* ---------- Main Loop ---------- */
-    while (1)
-    {
-        char key = InputManager_GetKey();  // Frontend 1 returns mapped char
-
-        if (key != 0)
-        {
-            /* Handle menu selections */
-            if (key == '*')
-            {
-                /* User pressed '*' - Set Auto-Lock Timeout */
-                PotentiometerManager_HandleTimeoutConfig();
-                
-                /* Return to main menu after timeout config */
-                DISPLAY_ClearScreen();
-                DISPLAY_ShowMainMenu();
-            }
-            else if (key == '+')
-            {
-                /* User pressed '+' - Open Door (to be implemented) */
-                DISPLAY_ShowMessage("Open Door");
-                SysCtlDelay(1066666);  // 200ms
-                DISPLAY_ClearScreen();
-                DISPLAY_ShowMainMenu();
-            }
-            else if (key == '-')
-            {
-                /* User pressed '-' - Change Password (to be implemented) */
-                DISPLAY_ShowMessage("Change Password");
-                SysCtlDelay(1066666);  // 200ms
-                DISPLAY_ClearScreen();
-                DISPLAY_ShowMainMenu();
-            }
-            else
-            {
-                /* Display other characters on LCD */
-                DISPLAY_HandleKey(key);
-            }
-
-            /* Optional: Wait a bit to avoid flickering */
-            SysCtlDelay(266650);   // 50ms delay
-        }
+int main(void) {
+  SysCtlClockSet(SYSCTL_SYSDIV_1 | SYSCTL_USE_OSC | SYSCTL_OSC_MAIN | SYSCTL_XTAL_16MHZ);
+  LED_Init();
+  UART1_Init();
+  SysCtlDelay(SysCtlClockGet() / 10);  // 100ms delay
+  //UART1_SendString("Ready#");
+    
+    GPIOPinWrite(GPIO_PORTF_BASE, GPIO_PIN_3, 0); // Start with LED OFF
+    GPIOPinWrite(GPIO_PORTF_BASE, GPIO_PIN_1, 0); // Start with LED OFF
+    GPIOPinWrite(GPIO_PORTF_BASE, GPIO_PIN_2, 0); // Start with LED OFF
+    
+    //short c =0;
+    
+    //short mode =0;
+    while(1) {
+      WAIT_FOR_MESSAGE();
     }
 }
