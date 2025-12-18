@@ -8,10 +8,21 @@
 #include "driverlib/gpio.h"
 #include "driverlib/uart.h"
 #include "driverlib/pin_map.h"
-#define PASSWORD "12345" // will be changed to eeprom later
+#include "driverlib/interrupt.h"
+#include "inc/hw_ints.h"
 
+#define PASSWORD "12345" // will be changed to eeprom later
+#define LOCK_PORT GPIO_PORTB_BASE
+#define LOCK_PIN  GPIO_PIN_6
 #define RX_BUFFER_SIZE 20
 
+
+void Door_Unlock(void);
+void Start_AutoLock_Timer(void);
+void Activate_Lockout(void);
+void SavePasswordToEEPROM(char *newPass);
+void SaveTimeoutToEEPROM(uint8_t timeout);
+
 void UART1_Init(void);
-void WAIT_FOR_MESSAGE(void);
+void PROCESS_MESSAGE(void);
 void UART1_SendString(char* str);
