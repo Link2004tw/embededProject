@@ -32,7 +32,7 @@ int main(void)
     DISPLAY_ShowMainMenu();  // Show menu while testing
     
     /* ---------- Main Loop ---------- */
-    short mode = 0;
+    short mode = 0;    
     while (1)
     {
         char key = InputManager_GetKey();  // Frontend 1 returns mapped char

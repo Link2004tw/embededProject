@@ -269,7 +269,7 @@ void DISPLAY_OLD_PASSWORD(void)
             SysCtlDelay(10000);
         }
         password[pass_index] = key;
-        LCD_WriteChar('*');
+        LCD_WriteChar(key);
     }
     password[7] ='#';
     password[8] = '\0';
@@ -315,7 +315,7 @@ void DISPLAY_OLD_PASSWORD(void)
         
         DISPLAY_ShowMessage("No response");
     }
-    SysCtlDelay(16000000);  
+    //SysCtlDelay(16000000);  
 }
 
 
@@ -426,6 +426,8 @@ void DISPLAY_NEW_PASSWORD(void)
 void DISPLAY_ERROR(void){
     LCD_Clear();
     LCD_WriteString("Invalid input");
+    SysCtlDelay(10000000);
+    
 }
 
 
