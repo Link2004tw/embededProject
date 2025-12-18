@@ -2145,6 +2145,15 @@
         </group>
     </group>
     <group>
+        <name>TIMER</name>
+        <file>
+            <name>$PROJ_DIR$\TIMER\timer.c</name>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\TIMER\timer.h</name>
+        </file>
+    </group>
+    <group>
         <name>UART</name>
         <file>
             <name>$PROJ_DIR$\UART\HMI_Comm.c</name>

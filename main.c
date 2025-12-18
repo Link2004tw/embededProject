@@ -1,4 +1,5 @@
 #include "UART/HMI_Comm.h"
+#include "TIMER/TIMER.h"
 //#include <stdint.h>
 //#include <stdbool.h>
 //#include <string.h> 
@@ -17,6 +18,9 @@ void LED_Init(void) {
     GPIOPinTypeGPIOOutput(GPIO_PORTF_BASE, GPIO_PIN_3); // PF3 is Green LED
     GPIOPinTypeGPIOOutput(GPIO_PORTF_BASE, GPIO_PIN_1); // PF2 is Red LED
     GPIOPinTypeGPIOOutput(GPIO_PORTF_BASE, GPIO_PIN_2); // PF2 is Red LED
+    GPIOPinWrite(GPIO_PORTF_BASE, GPIO_PIN_3, 0); // Start with LED OFF
+    GPIOPinWrite(GPIO_PORTF_BASE, GPIO_PIN_1, 0); // Start with LED OFF
+    GPIOPinWrite(GPIO_PORTF_BASE, GPIO_PIN_2, 0); // Start with LED OFF
 }
 
 
@@ -24,14 +28,16 @@ int main(void) {
   SysCtlClockSet(SYSCTL_SYSDIV_1 | SYSCTL_USE_OSC | SYSCTL_OSC_MAIN | SYSCTL_XTAL_16MHZ);
   LED_Init();
   UART1_Init();
-  IntMasterEnable();
   SysCtlDelay(SysCtlClockGet() / 10);  // 100ms delay
+  Timer0A_Init();
+  IntMasterEnable();
+  
   //UART1_SendString("Ready#");
     
-    GPIOPinWrite(GPIO_PORTF_BASE, GPIO_PIN_3, 0); // Start with LED OFF
-    GPIOPinWrite(GPIO_PORTF_BASE, GPIO_PIN_1, 0); // Start with LED OFF
-    GPIOPinWrite(GPIO_PORTF_BASE, GPIO_PIN_2, 0); // Start with LED OFF
-    
+//    GPIOPinWrite(GPIO_PORTF_BASE, GPIO_PIN_3, 0); // Start with LED OFF
+//    GPIOPinWrite(GPIO_PORTF_BASE, GPIO_PIN_1, 0); // Start with LED OFF
+//    GPIOPinWrite(GPIO_PORTF_BASE, GPIO_PIN_2, 0); // Start with LED OFF
+//    
     //short c =0;
     
     //short mode =0;

@@ -49,7 +49,7 @@ void UART1_Init(void)
     UARTIntEnable(UART1_BASE, UART_INT_RX | UART_INT_RT);
 
     IntEnable(INT_UART1);
-
+    
     // 5Enable UART
     UARTEnable(UART1_BASE);
 }
@@ -108,7 +108,7 @@ void PROCESS_MESSAGE(void)
             UART1_SendString("OK#");
 
             Door_Unlock();          // motor unlock
-            Start_AutoLock_Timer(); // uses stored timeout
+            TimerStart(TIMEOUT_VALUE); // uses stored timeout
         }
         else
         {
@@ -152,32 +152,19 @@ void PROCESS_MESSAGE(void)
     // ------------------------------
     else if (strcmp(modeStr, "2") == 0)
     {
-        if (strcmp(passStr, PASSWORD) == 0 && valueStr != NULL)
-        {
-            uint8_t timeout = atoi(valueStr);
+            uint8_t timeout = atoi(passStr);
 
             if (timeout >= 5 && timeout <= 30)
             {
                 SaveTimeoutToEEPROM(timeout);
                 UART1_SendString("TIMEOUT_OK#");
-                failedAttempts = 0;
-            }
+             
             else
             {
                 UART1_SendString("BAD_VALUE#");
             }
-        }
-        else
-        {
-            failedAttempts++;
-            UART1_SendString("WRONG#");
-
-            if (failedAttempts >= 3)
-            {
-                failedAttempts = 0;
-                Activate_Lockout();
-            }
-        }
+        
+        
     }
 
     // ------------------------------
@@ -212,20 +199,24 @@ void EEPROMWriteByte(uint32_t base, uint32_t addr, uint8_t data)
 
 void Door_Unlock(void) {
     // Activate the unlocking mechanism
-    GPIOPinWrite(LOCK_PORT, LOCK_PIN, LOCK_PIN); // Example for Tiva C, set pin low to unlock
+    GPIOPinWrite(GPIO_PORTF_BASE, GPIO_PIN_3, GPIO_PIN_3); // Start with LED OFF
+   // Example for Tiva C, set pin low to unlock
     // Optionally start a timer to relock
-    Start_AutoLock_Timer();
+    TimerStart(TIMEOUT_VALUE);
+    //Start_AutoLock_Timer();
 }
 
-void Start_AutoLock_Timer(void) {
-    // Configure a timer (SysTick or hardware timer) to call AutoLock function after timeout
-    TimerLoadSet(TIMER0_BASE, TIMER_A, TIMEOUT_VALUE); // Example
-    TimerEnable(TIMER0_BASE, TIMER_A);
-}
+//void Start_AutoLock_Timer(void)
+//{
+    // Reload the timer with the auto-lock timeout value
+      // Use the reusable TimerStart function
+
+    // Optional: if you want, you can clear any pending interrupts inside TimerStart itself
+//}
 
 void Activate_Lockout(void) {
     // Optionally turn on an LED or buzzer
-    GPIOPinWrite(LED_PORT, LED_PIN, 1);
+    GPIOPinWrite(LED_PORT, LED_PIN, LED_PIN);
 
     // Start lockout timer
     TimerLoadSet(TIMER1_BASE, TIMER_A, LOCKOUT_DURATION);
@@ -241,4 +232,10 @@ void SavePasswordToEEPROM(char *newPass) {
 
 void SaveTimeoutToEEPROM(uint8_t timeout) {
     EEPROMWriteByte(EEPROM_BASE, TIMEOUT_ADDRESS, timeout);
+}
+
+void Door_Lock(void){
+
+  GPIOPinWrite(GPIO_PORTF_BASE, GPIO_PIN_3, 0); // Start with LED OFF
+
 }
