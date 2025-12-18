@@ -59,15 +59,11 @@ void UART1_Init(void) {
 
     
     UARTEnable(UART1_BASE);
-    SysCtlDelay(1000);  // Add delay to let UART settle
+    //SysCtlDelay(1000);  // Add delay to let UART settle
+    SysCtlDelay(SysCtlClockGet() / 100);  // Add delay to let UART settle
     
     while (UARTCharsAvail(UART1_BASE)) {
-        int x = UARTCharGet(UART1_BASE);
-        if(x == '\0'){
-            GPIOPinWrite(GPIO_PORTF_BASE, GPIO_PIN_3, GPIO_PIN_3); // Start with LED OFF
-    
-
-        }
+        UARTCharGet(UART1_BASE);
     }
     //GPIOPinWrite(GPIO_PORTF_BASE, GPIO_PIN_3, GPIO_PIN_3); // Start with LED OFF
     
@@ -82,7 +78,7 @@ GPIOPinWrite(GPIO_PORTF_BASE, GPIO_PIN_1, GPIO_PIN_1); // Red ON
 }
 
 
-void UART1_SendString(char* str) {
+void UART1_SendString2(char* str) {
     GPIOPinWrite(GPIO_PORTF_BASE, GPIO_PIN_3, GPIO_PIN_3);
     
     while(*str) {
@@ -92,6 +88,22 @@ void UART1_SendString(char* str) {
     }
 
     while(UARTBusy(UART1_BASE));  // Wait for last char to finish
+    GPIOPinWrite(GPIO_PORTF_BASE, GPIO_PIN_3, 0);
+}
+
+void UART1_SendString(char* str) {
+    if (str == NULL || *str == '\0') return;  // Guard against empty strings
+    
+    GPIOPinWrite(GPIO_PORTF_BASE, GPIO_PIN_3, GPIO_PIN_3);
+    
+    while(*str) {
+        while(UARTBusy(UART1_BASE));  // Wait until TX ready
+        UARTCharPut(UART1_BASE, *str);
+        str++;
+    }
+    
+    while(UARTBusy(UART1_BASE));  // Wait for last char to finish
+    SysCtlDelay(160);  // Small delay to ensure transmission completes
     GPIOPinWrite(GPIO_PORTF_BASE, GPIO_PIN_3, 0);
 }
 
@@ -115,12 +127,6 @@ void WAIT_FOR_MESSAGE(void)
             GPIOPinWrite(GPIO_PORTF_BASE, GPIO_PIN_1, 0);
             
             rxBuffer[rxIndex] = '\0';  // Null-terminate the string
-            
-            // DEBUG: Send back what we received
-            char debugMsg[50];
-            sprintf(debugMsg, "RX:%s Len:%d#", rxBuffer, rxIndex);
-            //UART1_SendString(debugMsg);
-            
             rxIndex = 0;              // Prepare for next message
 
             // Make a copy for parsing (strtok modifies the buffer)
@@ -245,12 +251,12 @@ void WAIT_FOR_MESSAGE(void)
 }
 
 
-
 int main(void) {
   SysCtlClockSet(SYSCTL_SYSDIV_1 | SYSCTL_USE_OSC | SYSCTL_OSC_MAIN | SYSCTL_XTAL_16MHZ);
   LED_Init();
   UART1_Init();
-
+  SysCtlDelay(SysCtlClockGet() / 10);  // 100ms delay
+  //UART1_SendString("Ready#");
     
     GPIOPinWrite(GPIO_PORTF_BASE, GPIO_PIN_3, 0); // Start with LED OFF
     GPIOPinWrite(GPIO_PORTF_BASE, GPIO_PIN_1, 0); // Start with LED OFF
@@ -262,4 +268,4 @@ int main(void) {
     while(1) {
       WAIT_FOR_MESSAGE();
     }
-} 
+}

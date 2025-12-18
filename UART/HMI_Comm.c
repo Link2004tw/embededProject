@@ -24,7 +24,7 @@ void UART1_Init1(void) {
 
     
     UARTEnable(UART1_BASE);
-    SysCtlDelay(1000);  // Add delay to let UART settle
+    SysCtlDelay(SysCtlClockGet() / 100);  // Add delay to let UART settle
     
     while (UARTCharsAvail(UART1_BASE)) {
         UARTCharGet(UART1_BASE);

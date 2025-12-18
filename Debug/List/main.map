@@ -1,6 +1,6 @@
 ###############################################################################
 #
-# IAR ELF Linker V9.10.1.308/W64 for ARM                  18/Dec/2025  02:52:29
+# IAR ELF Linker V9.10.1.308/W64 for ARM                  18/Dec/2025  04:23:33
 # Copyright 2007-2021 IAR Systems AB.
 #
 #    Output file  =  E:\coding\embedded\embededProject\Debug\Exe\main.out
@@ -35,7 +35,7 @@
 Warning[Lt009]: Inconsistent wchar_t size
             gpio.o(driverlib.a) and 5 other objects in driverlib.a have wchar_t
                       size 16 bits
-            dio.o and 29 other objects, some of them in dl7M_tln.a and 11 other
+            dio.o and 25 other objects, some of them in dl7M_tln.a and 11 other
                       libraries have wchar_t size 32 bits
 
 
@@ -70,84 +70,60 @@ define block HEAP with size = 8K, alignment = 8 { };
           rw, block CSTACK, block HEAP };
 do not initialize { rw section .noinit };
 
-  Section          Kind         Address    Size  Object
-  -------          ----         -------    ----  ------
-"A0":                                     0x26c
-  .intvec          const            0x0   0x26c  startup_ewarm.o [1]
-                                - 0x26c   0x26c
+  Section          Kind         Address   Size  Object
+  -------          ----         -------   ----  ------
+"A0":                                    0x26c
+  .intvec          const            0x0  0x26c  startup_ewarm.o [1]
+                                - 0x26c  0x26c
 
-"P1":                                    0x2934
-  .text            ro code        0x26c   0xf16  xprintffull_nomb.o [7]
-  .text            ro code       0x1182     0xa  xsprout.o [7]
-  .text            ro code       0x118c    0x16  strchr.o [10]
-  .text            ro code       0x11a4    0x40  xfail_s.o [7]
-  .text            ro code       0x11e4    0x36  strlen.o [10]
-  .text            ro code       0x121c    0x58  memchr.o [10]
-  .text            ro code       0x1274    0x76  ABImemcpy_unaligned.o [10]
-  .text            ro code       0x12ec    0x70  frexp.o [9]
-  .text            ro code       0x135c    0x34  DblCmpLe.o [9]
-  .text            ro code       0x1390    0x34  DblCmpGe.o [9]
-  .text            ro code       0x13c4   0x13a  ldexp.o [9]
-  .text            ro code       0x1500    0x36  DblToS32.o [9]
-  .text            ro code       0x1538    0x22  S32ToDbl.o [9]
-  .text            ro code       0x155c   0x24e  DblAddSub.o [9]
-  .text            ro code       0x17ac   0x246  DblDiv.o [9]
-  .text            ro code       0x19f4    0x22  DblToU32.o [9]
-  .text            ro code       0x1a18    0x1c  U32ToDbl.o [9]
-  .text            ro code       0x1a34   0x1aa  DblMul.o [9]
-  .text            ro code       0x1be0   0x230  I64DivMod.o [10]
-  .text            ro code       0x1e10     0x6  abort.o [7]
-  .text            ro code       0x1e18     0x2  I64DivZer.o [10]
-  .text            ro code       0x1e1c    0x14  exit.o [11]
-  .text            ro code       0x1e30   0x454  main.o [1]
-  .text            ro code       0x2284   0x2e4  sysctl.o [8]
-  .text            ro code       0x2568   0x2b8  gpio.o [8]
-  .text            ro code       0x2820    0xb6  uart.o [8]
-  .text            ro code       0x28d8    0x40  sprintf.o [7]
-  .text            ro code       0x2918    0x18  strcpy.o [10]
-  .text            ro code       0x2930    0x4c  strtok.o [7]
-  .text            ro code       0x297c    0x66  ABImemset.o [10]
-  .text            ro code       0x29e4    0x12  strcmp.o [10]
-  .text            ro code       0x29f6    0x22  strspn.o [7]
-  .text            ro code       0x2a18    0x22  strcspn.o [7]
-  .text            ro code       0x2a3a    0x38  zero_init3.o [10]
-  .text            ro code       0x2a74    0x28  data_init.o [10]
-  .text            ro code       0x2a9c    0x22  startup_ewarm.o [1]
-  .text            ro code       0x2ac0    0x1c  cstartup_M.o [10]
-  .text            ro code       0x2adc    0x22  fpinit_M.o [9]
-  .text            ro code       0x2b00    0x1e  cmain.o [10]
-  .text            ro code       0x2b1e     0x4  low_level_init.o [7]
-  .text            ro code       0x2b22     0x4  exit.o [7]
-  .text            ro code       0x2b28     0xa  cexit.o [10]
-  .iar.init_table  const         0x2b34    0x10  - Linker created -
-  .rodata          const         0x2b44    0x14  main.o [1]
-  .rodata          const         0x2b58    0x10  main.o [1]
-  .rodata          const         0x2b68    0x10  main.o [1]
-  .rodata          const         0x2b78    0x10  main.o [1]
-  .rodata          const         0x2b88    0x10  main.o [1]
-  .rodata          const         0x2b98     0x8  main.o [1]
-  .rodata          const         0x2ba0     0x0  zero_init3.o [10]
-                               - 0x2ba0  0x2934
+"P1":                                    0xd38
+  .text            ro code        0x26c  0x458  main.o [1]
+  .text            ro code        0x6c4  0x2e4  sysctl.o [8]
+  .text            ro code        0x9a8  0x2b8  gpio.o [8]
+  .text            ro code        0xc60   0xb6  uart.o [8]
+  .text            ro code        0xd18   0x18  strcpy.o [10]
+  .text            ro code        0xd30   0x4c  strtok.o [7]
+  .text            ro code        0xd7c   0x66  ABImemset.o [10]
+  .text            ro code        0xde4   0x12  strcmp.o [10]
+  .text            ro code        0xdf6   0x22  strspn.o [7]
+  .text            ro code        0xe18   0x22  strcspn.o [7]
+  .text            ro code        0xe3a   0x38  zero_init3.o [10]
+  .text            ro code        0xe74   0x28  data_init.o [10]
+  .text            ro code        0xe9c   0x22  startup_ewarm.o [1]
+  .text            ro code        0xec0   0x1c  cstartup_M.o [10]
+  .text            ro code        0xedc   0x22  fpinit_M.o [9]
+  .text            ro code        0xf00   0x1e  cmain.o [10]
+  .text            ro code        0xf1e    0x4  low_level_init.o [7]
+  .text            ro code        0xf22    0x4  exit.o [7]
+  .text            ro code        0xf28    0xa  cexit.o [10]
+  .text            ro code        0xf34   0x14  exit.o [11]
+  .iar.init_table  const          0xf48   0x10  - Linker created -
+  .rodata          const          0xf58   0x14  main.o [1]
+  .rodata          const          0xf6c   0x10  main.o [1]
+  .rodata          const          0xf7c   0x10  main.o [1]
+  .rodata          const          0xf8c   0x10  main.o [1]
+  .rodata          const          0xf9c    0x8  main.o [1]
+  .rodata          const          0xfa4    0x0  zero_init3.o [10]
+                                - 0xfa4  0xd38
 
-"P2", part 1 of 2:                         0x24
-  .bss             zero     0x2000'0000    0x14  main.o [1]
-  .bss             zero     0x2000'0014     0x4  strtok.o [7]
-  .bss             zero     0x2000'0018     0x4  xfail_s.o [7]
-  .bss             zero     0x2000'001c     0x2  main.o [1]
-  .bss             zero     0x2000'001e     0x2  main.o [1]
-  .bss             zero     0x2000'0020     0x1  main.o [1]
-                          - 0x2000'0021    0x21
+"P2", part 1 of 2:                        0x20
+  .bss             zero     0x2000'0000   0x14  main.o [1]
+  .bss             zero     0x2000'0014    0x4  strtok.o [7]
+  .bss             zero     0x2000'0018    0x2  main.o [1]
+  .bss             zero     0x2000'001a    0x2  main.o [1]
+  .bss             zero     0x2000'001c    0x1  main.o [1]
+                          - 0x2000'001d   0x1d
 
-"P2", part 2 of 2:                        0x200
-  .noinit          uninit   0x2000'0024   0x200  startup_ewarm.o [1]
-                          - 0x2000'0224   0x200
+"P2", part 2 of 2:                       0x200
+  .noinit          uninit   0x2000'0020  0x200  startup_ewarm.o [1]
+                          - 0x2000'0220  0x200
 
 Unused ranges:
 
          From           To      Size
          ----           --      ----
-       0x2ba0     0x3'ffff  0x3'd460
-  0x2000'0224  0x2000'7fff    0x7ddc
+        0xfa4     0x3'ffff  0x3'f05c
+  0x2000'0220  0x2000'7fff    0x7de0
 
 
 *******************************************************************************
@@ -157,8 +133,8 @@ Unused ranges:
           Address      Size
           -------      ----
 Zero (__iar_zero_init3)
-    1 destination range, total size 0x21:
-          0x2000'0000  0x21
+    1 destination range, total size 0x1d:
+          0x2000'0000  0x1d
 
 
 
@@ -166,102 +142,80 @@ Zero (__iar_zero_init3)
 *** MODULE SUMMARY
 ***
 
-    Module                 ro code  ro data  rw data
-    ------                 -------  -------  -------
+    Module            ro code  ro data  rw data
+    ------            -------  -------  -------
 command line/config:
-    ------------------------------------------------
+    -------------------------------------------
     Total:
 
 E:\coding\embedded\embededProject\Debug\Obj: [1]
-    main.o                   1'108       92       25
-    startup_ewarm.o             34      620      512
-    ------------------------------------------------
-    Total:                   1'142      712      537
+    main.o              1'112       76       25
+    startup_ewarm.o        34      620      512
+    -------------------------------------------
+    Total:              1'146      696      537
 
 E:\coding\embedded\embededProject\Debug\Obj\APP: [2]
-    ------------------------------------------------
+    -------------------------------------------
     Total:
 
 E:\coding\embedded\embededProject\Debug\Obj\HAL\Keypad: [3]
-    ------------------------------------------------
+    -------------------------------------------
     Total:
 
 E:\coding\embedded\embededProject\Debug\Obj\HAL\LCD: [4]
-    ------------------------------------------------
+    -------------------------------------------
     Total:
 
 E:\coding\embedded\embededProject\Debug\Obj\HAL\Potentiometer: [5]
-    ------------------------------------------------
+    -------------------------------------------
     Total:
 
 E:\coding\embedded\embededProject\Debug\Obj\UART: [6]
-    ------------------------------------------------
+    -------------------------------------------
     Total:
 
 dl7M_tln.a: [7]
-    abort.o                      6
-    exit.o                       4
-    low_level_init.o             4
-    sprintf.o                   64
-    strcspn.o                   34
-    strspn.o                    34
-    strtok.o                    76                 4
-    xfail_s.o                   64                 4
-    xprintffull_nomb.o       3'862
-    xsprout.o                   10
-    ------------------------------------------------
-    Total:                   4'158                 8
+    exit.o                  4
+    low_level_init.o        4
+    strcspn.o              34
+    strspn.o               34
+    strtok.o               76                 4
+    -------------------------------------------
+    Total:                152                 4
 
 driverlib.a: [8]
-    gpio.o                     696
-    sysctl.o                   740
-    uart.o                     182
-    ------------------------------------------------
-    Total:                   1'618
+    gpio.o                696
+    sysctl.o              740
+    uart.o                182
+    -------------------------------------------
+    Total:              1'618
 
 m7M_tls.a: [9]
-    DblAddSub.o                590
-    DblCmpGe.o                  52
-    DblCmpLe.o                  52
-    DblDiv.o                   582
-    DblMul.o                   426
-    DblToS32.o                  54
-    DblToU32.o                  34
-    S32ToDbl.o                  34
-    U32ToDbl.o                  28
-    fpinit_M.o                  34
-    frexp.o                    112
-    ldexp.o                    314
-    ------------------------------------------------
-    Total:                   2'312
+    fpinit_M.o             34
+    -------------------------------------------
+    Total:                 34
 
 rt7M_tl.a: [10]
-    ABImemcpy_unaligned.o      118
-    ABImemset.o                102
-    I64DivMod.o                560
-    I64DivZer.o                  2
-    cexit.o                     10
-    cmain.o                     30
-    cstartup_M.o                28
-    data_init.o                 40
-    memchr.o                    88
-    strchr.o                    22
-    strcmp.o                    18
-    strcpy.o                    24
-    strlen.o                    54
-    zero_init3.o                56
-    ------------------------------------------------
-    Total:                   1'152
+    ABImemset.o           102
+    cexit.o                10
+    cmain.o                30
+    cstartup_M.o           28
+    data_init.o            40
+    strcmp.o               18
+    strcpy.o               24
+    zero_init3.o           56
+    -------------------------------------------
+    Total:                308
 
 shb_l.a: [11]
-    exit.o                      20
-    ------------------------------------------------
-    Total:                      20
+    exit.o                 20
+    -------------------------------------------
+    Total:                 20
 
-    Gaps                        36        2
-    Linker created                       16
-----------------------------------------------------
-    Grand Total:            10'438      730      545
+    Gaps                   14
+    Linker created                  16
+-----------------------------------------------
+    Grand Total:        3'292      712      541
 
 
 *******************************************************************************
@@ -270,114 +224,68 @@ shb_l.a: [11]
 
 Entry                       Address   Size  Type      Object
 -----                       -------   ----  ----      ------
-.iar.init_table$$Base        0x2b34          --   Gb  - Linker created -
-.iar.init_table$$Limit       0x2b44          --   Gb  - Linker created -
-?main                        0x2b01         Code  Gb  cmain.o [10]
-BUZZ                         0x1f17   0x24  Code  Gb  main.o [1]
-FaultISR                     0x2ab7    0x2  Code  Lc  startup_ewarm.o [1]
-GPIODirModeSet               0x2569   0x28  Code  Gb  gpio.o [8]
-GPIOPadConfigSet             0x2591  0x174  Code  Gb  gpio.o [8]
-GPIOPinConfigure             0x2747   0x38  Code  Gb  gpio.o [8]
-GPIOPinTypeGPIOOutput        0x270f    0xa  Code  Gb  gpio.o [8]
-GPIOPinTypeUART              0x2733   0x14  Code  Gb  gpio.o [8]
-GPIOPinWrite                 0x2705    0x6  Code  Gb  gpio.o [8]
-IntDefaultHandler            0x2ab9    0x2  Code  Lc  startup_ewarm.o [1]
-LED_Init                     0x1e31   0x36  Code  Gb  main.o [1]
-NmiSR                        0x2ab5    0x2  Code  Lc  startup_ewarm.o [1]
-PORTF_Handler                0x2abd    0x2  Code  Gb  startup_ewarm.o [1]
-Region$$Table$$Base          0x2b34          --   Gb  - Linker created -
-Region$$Table$$Limit         0x2b44          --   Gb  - Linker created -
-ResetISR                     0x2a9d   0x14  Code  Gb  startup_ewarm.o [1]
-SysCtlClockGet               0x23a1  0x110  Code  Gb  sysctl.o [8]
-SysCtlClockSet               0x22c9   0xd8  Code  Gb  sysctl.o [8]
-SysCtlDelay                  0x22c1    0x8  Code  Gb  sysctl.o [8]
-SysCtlPeripheralEnable       0x22a5    0x8  Code  Gb  sysctl.o [8]
-SysCtlPeripheralReady        0x2285    0x8  Code  Gb  sysctl.o [8]
-UART1_Init                   0x1e67   0xb0  Code  Gb  main.o [1]
-UART1_SendString             0x1f3b   0x40  Code  Gb  main.o [1]
-UARTBusy                     0x28cd    0xa  Code  Gb  uart.o [8]
-UARTCharGet                  0x28b9    0xa  Code  Gb  uart.o [8]
-UARTCharPut                  0x28c3    0xa  Code  Gb  uart.o [8]
-UARTCharsAvail               0x28a9    0x6  Code  Gb  uart.o [8]
-UARTConfigSetExpClk          0x2821   0x4c  Code  Gb  uart.o [8]
-UARTDisable                  0x2887   0x1e  Code  Gb  uart.o [8]
-UARTEnable                   0x286d   0x1a  Code  Gb  uart.o [8]
-WAIT_FOR_MESSAGE             0x1f7b  0x26c  Code  Gb  main.o [1]
-_LitobFullNoMb                0xf89  0x10c  Code  Lc  xprintffull_nomb.o [7]
-_PrintfFullNoMb               0x26d  0xcec  Code  Gb  xprintffull_nomb.o [7]
-_PutcharFullNoMb             0x10ed   0x20  Code  Lc  xprintffull_nomb.o [7]
-_PutcharsFullNoMb            0x110d   0x2e  Code  Lc  xprintffull_nomb.o [7]
-_SProut                      0x1183    0xa  Code  Gb  xsprout.o [7]
+.iar.init_table$$Base         0xf48          --   Gb  - Linker created -
+.iar.init_table$$Limit        0xf58          --   Gb  - Linker created -
+?main                         0xf01         Code  Gb  cmain.o [10]
+BUZZ                          0x347   0x24  Code  Gb  main.o [1]
+FaultISR                      0xeb7    0x2  Code  Lc  startup_ewarm.o [1]
+GPIODirModeSet                0x9a9   0x28  Code  Gb  gpio.o [8]
+GPIOPadConfigSet              0x9d1  0x174  Code  Gb  gpio.o [8]
+GPIOPinConfigure              0xb87   0x38  Code  Gb  gpio.o [8]
+GPIOPinTypeGPIOOutput         0xb4f    0xa  Code  Gb  gpio.o [8]
+GPIOPinTypeUART               0xb73   0x14  Code  Gb  gpio.o [8]
+GPIOPinWrite                  0xb45    0x6  Code  Gb  gpio.o [8]
+IntDefaultHandler             0xeb9    0x2  Code  Lc  startup_ewarm.o [1]
+LED_Init                      0x26d   0x36  Code  Gb  main.o [1]
+NmiSR                         0xeb5    0x2  Code  Lc  startup_ewarm.o [1]
+PORTF_Handler                 0xebd    0x2  Code  Gb  startup_ewarm.o [1]
+Region$$Table$$Base           0xf48          --   Gb  - Linker created -
+Region$$Table$$Limit          0xf58          --   Gb  - Linker created -
+ResetISR                      0xe9d   0x14  Code  Gb  startup_ewarm.o [1]
+SysCtlClockGet                0x7e1  0x110  Code  Gb  sysctl.o [8]
+SysCtlClockSet                0x709   0xd8  Code  Gb  sysctl.o [8]
+SysCtlDelay                   0x701    0x8  Code  Gb  sysctl.o [8]
+SysCtlPeripheralEnable        0x6e5    0x8  Code  Gb  sysctl.o [8]
+SysCtlPeripheralReady         0x6c5    0x8  Code  Gb  sysctl.o [8]
+UART1_Init                    0x2a3   0xa4  Code  Gb  main.o [1]
+UART1_SendString              0x36b   0x52  Code  Gb  main.o [1]
+UARTBusy                      0xd0d    0xa  Code  Gb  uart.o [8]
+UARTCharGet                   0xcf9    0xa  Code  Gb  uart.o [8]
+UARTCharPut                   0xd03    0xa  Code  Gb  uart.o [8]
+UARTCharsAvail                0xce9    0x6  Code  Gb  uart.o [8]
+UARTConfigSetExpClk           0xc61   0x4c  Code  Gb  uart.o [8]
+UARTDisable                   0xcc7   0x1e  Code  Gb  uart.o [8]
+UARTEnable                    0xcad   0x1a  Code  Gb  uart.o [8]
+WAIT_FOR_MESSAGE              0x3bd  0x25e  Code  Gb  main.o [1]
 _Strtok_ssave           0x2000'0014    0x4  Data  Lc  strtok.o [7]
-__aeabi_cdcmple              0x135d         Code  Gb  DblCmpLe.o [9]
-__aeabi_cdrcmple             0x1391         Code  Gb  DblCmpGe.o [9]
-__aeabi_d2iz                 0x1501         Code  Gb  DblToS32.o [9]
-__aeabi_d2uiz                0x19f5         Code  Gb  DblToU32.o [9]
-__aeabi_ddiv                 0x17ad         Code  Gb  DblDiv.o [9]
-__aeabi_dmul                 0x1a35         Code  Gb  DblMul.o [9]
-__aeabi_dsub                 0x16c9         Code  Gb  DblAddSub.o [9]
-__aeabi_i2d                  0x1539         Code  Gb  S32ToDbl.o [9]
-__aeabi_ldiv0                0x1e19         Code  Gb  I64DivZer.o [10]
-__aeabi_memset               0x297d         Code  Gb  ABImemset.o [10]
-__aeabi_ui2d                 0x1a19         Code  Gb  U32ToDbl.o [9]
-__aeabi_uldivmod             0x1be1         Code  Gb  I64DivMod.o [10]
-__cmain                      0x2b01         Code  Gb  cmain.o [10]
-__exit                       0x1e1d   0x14  Code  Gb  exit.o [11]
-__iar_Fail_s                 0x11a5   0x1c  Code  Gb  xfail_s.o [7]
-__iar_Memchr                 0x121d         Code  Gb  memchr.o [10]
-__iar_Memset                 0x297d         Code  Gb  ABImemset.o [10]
-__iar_Memset_word            0x2985         Code  Gb  ABImemset.o [10]
-__iar_Strchr                 0x118d         Code  Gb  strchr.o [10]
-__iar_data_init3             0x2a75   0x28  Code  Gb  data_init.o [10]
-__iar_frexp                  0x12f9         Code  Gb  frexp.o [9]
-__iar_frexpl                 0x12f9         Code  Gb  frexp.o [9]
-__iar_init_vfp               0x2add         Code  Gb  fpinit_M.o [9]
-__iar_ldexp64                0x13c5         Code  Gb  ldexp.o [9]
-__iar_program_start          0x2ac1         Code  Gb  cstartup_M.o [10]
-__iar_scalbln64              0x13c5         Code  Gb  ldexp.o [9]
-__iar_scalbn64               0x13c5         Code  Gb  ldexp.o [9]
-__iar_softfp___iar_frexp64
-                             0x12ed         Code  Gb  frexp.o [9]
-__iar_softfp_frexp           0x12ed         Code  Gb  frexp.o [9]
-__iar_softfp_frexpl          0x12ed         Code  Gb  frexp.o [9]
-__iar_unaligned_memcpy       0x1275         Code  Gb  ABImemcpy_unaligned.o [10]
-__iar_unaligned_memcpy4
-                             0x1295         Code  Gb  ABImemcpy_unaligned.o [10]
-__iar_unaligned_memcpy8
-                             0x1295         Code  Gb  ABImemcpy_unaligned.o [10]
-__iar_zero_init3             0x2a3b   0x38  Code  Gb  zero_init3.o [10]
-__low_level_init             0x2b1f    0x4  Code  Gb  low_level_init.o [7]
+__aeabi_memset                0xd7d         Code  Gb  ABImemset.o [10]
+__cmain                       0xf01         Code  Gb  cmain.o [10]
+__exit                        0xf35   0x14  Code  Gb  exit.o [11]
+__iar_Memset                  0xd7d         Code  Gb  ABImemset.o [10]
+__iar_Memset_word             0xd85         Code  Gb  ABImemset.o [10]
+__iar_data_init3              0xe75   0x28  Code  Gb  data_init.o [10]
+__iar_init_vfp                0xedd         Code  Gb  fpinit_M.o [9]
+__iar_program_start           0xec1         Code  Gb  cstartup_M.o [10]
+__iar_zero_init3              0xe3b   0x38  Code  Gb  zero_init3.o [10]
+__low_level_init              0xf1f    0x4  Code  Gb  low_level_init.o [7]
 __vector_table                  0x0  0x26c  Data  Gb  startup_ewarm.o [1]
-_call_main                   0x2b0d         Code  Gb  cmain.o [10]
-_exit                        0x2b29         Code  Gb  cexit.o [10]
-abort                        0x1e11    0x6  Code  Gb  abort.o [7]
-c                       0x2000'001c    0x2  Data  Gb  main.o [1]
-exit                         0x2b23    0x4  Code  Gb  exit.o [7]
-failedAttempts          0x2000'001e    0x2  Data  Gb  main.o [1]
-g_pui32GPIOBaseAddrs         0x2790   0x90  Data  Lc  gpio.o [8]
-g_pui32Xtals                 0x24fc   0x6c  Data  Lc  sysctl.o [8]
-ldexp                        0x13c5         Code  Gb  ldexp.o [9]
-ldexpl                       0x13c5         Code  Gb  ldexp.o [9]
-main                         0x21e7   0x34  Code  Gb  main.o [1]
-memchr                       0x121d         Code  Gb  memchr.o [10]
-pui32Stack              0x2000'0024  0x200  Data  Lc  startup_ewarm.o [1]
+_call_main                    0xf0d         Code  Gb  cmain.o [10]
+_exit                         0xf29         Code  Gb  cexit.o [10]
+c                       0x2000'0018    0x2  Data  Gb  main.o [1]
+exit                          0xf23    0x4  Code  Gb  exit.o [7]
+failedAttempts          0x2000'001a    0x2  Data  Gb  main.o [1]
+g_pui32GPIOBaseAddrs          0xbd0   0x90  Data  Lc  gpio.o [8]
+g_pui32Xtals                  0x93c   0x6c  Data  Lc  sysctl.o [8]
+main                          0x61b   0x42  Code  Gb  main.o [1]
+pui32Stack              0x2000'0020  0x200  Data  Lc  startup_ewarm.o [1]
 rxBuffer                0x2000'0000   0x14  Data  Gb  main.o [1]
-rxIndex                 0x2000'0020    0x1  Data  Gb  main.o [1]
-scalbln                      0x13c5         Code  Gb  ldexp.o [9]
-scalblnl                     0x13c5         Code  Gb  ldexp.o [9]
-scalbn                       0x13c5         Code  Gb  ldexp.o [9]
-scalbnl                      0x13c5         Code  Gb  ldexp.o [9]
-scale                        0x1095   0x46  Code  Lc  xprintffull_nomb.o [7]
-sec_hand                0x2000'0018    0x4  Data  Lc  xfail_s.o [7]
-sprintf                      0x28d9   0x40  Code  Gb  sprintf.o [7]
-strchr                       0x118d         Code  Gb  strchr.o [10]
-strcmp                       0x29e5         Code  Gb  strcmp.o [10]
-strcpy                       0x2919         Code  Gb  strcpy.o [10]
-strcspn                      0x2a19   0x22  Code  Gb  strcspn.o [7]
-strlen                       0x11e5         Code  Gb  strlen.o [10]
-strspn                       0x29f7   0x22  Code  Gb  strspn.o [7]
-strtok                       0x2931   0x4c  Code  Gb  strtok.o [7]
-systick_ISR                  0x2abb    0x2  Code  Gb  startup_ewarm.o [1]
+rxIndex                 0x2000'001c    0x1  Data  Gb  main.o [1]
+strcmp                        0xde5         Code  Gb  strcmp.o [10]
+strcpy                        0xd19         Code  Gb  strcpy.o [10]
+strcspn                       0xe19   0x22  Code  Gb  strcspn.o [7]
+strspn                        0xdf7   0x22  Code  Gb  strspn.o [7]
+strtok                        0xd31   0x4c  Code  Gb  strtok.o [7]
+systick_ISR                   0xebb    0x2  Code  Gb  startup_ewarm.o [1]
 
 
 [1] = E:\coding\embedded\embededProject\Debug\Obj
@@ -392,9 +300,9 @@ systick_ISR                  0x2abb    0x2  Code  Gb  startup_ewarm.o [1]
 [10] = rt7M_tl.a
 [11] = shb_l.a
 
-  10'438 bytes of readonly  code memory
-     730 bytes of readonly  data memory
-     545 bytes of readwrite data memory
+  3'292 bytes of readonly  code memory
+    712 bytes of readonly  data memory
+    541 bytes of readwrite data memory
 
 Errors: none
 Warnings: 1
