@@ -29,6 +29,7 @@ int main(void)
 
     DISPLAY_ClearScreen();
     DISPLAY_ShowMainMenu();  // Show menu while testing
+    
     /* ---------- Main Loop ---------- */
     short mode = 0;
     while (1)

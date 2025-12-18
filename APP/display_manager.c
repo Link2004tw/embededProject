@@ -193,6 +193,7 @@ void DISPLAY_CHANGEPASSWORD(void){
 
     LCD_Clear();
     if(ack_buffer[0] != '\0'){
+
         // TEST LED: Red flash on successful receive
         GPIOPinWrite(GPIO_PORTF_BASE, GPIO_PIN_1, GPIO_PIN_1);
         SysCtlDelay(2000000);
@@ -202,12 +203,16 @@ void DISPLAY_CHANGEPASSWORD(void){
         SysCtlDelay(16000000);  
 
     }else {
+        ack_buffer[0]='\0';
+        LCD_Clear();
+        UART5_ReceiveString(ack_buffer, 20);
+
         // TEST LED: Long red on timeout
         GPIOPinWrite(GPIO_PORTF_BASE, GPIO_PIN_1, GPIO_PIN_1);
         SysCtlDelay(8000000);
         GPIOPinWrite(GPIO_PORTF_BASE, GPIO_PIN_1, 0);
         
-        DISPLAY_ShowMessage("No response");
+        DISPLAY_ShowMessage(ack_buffer);
     }
     SysCtlDelay(10000000);
     
@@ -299,6 +304,8 @@ void DISPLAY_OLD_PASSWORD(void)
         SysCtlDelay(16000000);  
 
     }else {
+        // TEST LED: Long red on timeout
+        LCD_Clear();
         // TEST LED: Long red on timeout
         GPIOPinWrite(GPIO_PORTF_BASE, GPIO_PIN_1, GPIO_PIN_1);
         SysCtlDelay(8000000);
