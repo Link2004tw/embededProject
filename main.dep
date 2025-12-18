@@ -5,55 +5,44 @@
     <configuration>
         <name>Debug</name>
         <outputs>
-            <file>$PROJ_DIR$\Debug\Obj\HAL\Keypad\keypad.o</file>
-            <file>$PROJ_DIR$\Debug\Obj\APP\display_manager.o</file>
-            <file>$PROJ_DIR$\Debug\Obj\HAL\Potentiometer\potentiometer.o</file>
-            <file>$PROJ_DIR$\Debug\Obj\HMI_Comm.o</file>
-            <file>$PROJ_DIR$\Debug\Obj\startup_ewarm.o</file>
-            <file>$PROJ_DIR$\Debug\Obj\APP\input_manager.o</file>
-            <file>$PROJ_DIR$\Debug\Obj\APP\potentiometer_manager.o</file>
-            <file>$PROJ_DIR$\Debug\Obj\main.o</file>
-            <file>$PROJ_DIR$\hw_nvic.h</file>
-            <file>$PROJ_DIR$\HAL\Keypad\dio.c</file>
-            <file>$PROJ_DIR$\HAL\Keypad\dio.h</file>
-            <file>$PROJ_DIR$\main.c</file>
-            <file>$PROJ_DIR$\startup_ewarm.c</file>
-            <file>$PROJ_DIR$\APP\potentiometer_manager.c</file>
-            <file>$PROJ_DIR$\APP\input_manager.h</file>
-            <file>$PROJ_DIR$\HAL\Keypad\keypad.c</file>
-            <file>$PROJ_DIR$\HAL\LCD\lcd.h</file>
-            <file>$PROJ_DIR$\consts.h</file>
-            <file>$PROJ_DIR$\Debug\Obj\HAL\LCD\lcd.o</file>
-            <file>$PROJ_DIR$\APP\display_manager.h</file>
-            <file>$PROJ_DIR$\HAL\LCD\lcd.c</file>
-            <file>$PROJ_DIR$\APP\potentiometer_manager.h</file>
-            <file>$PROJ_DIR$\eepromDriver.h</file>
-            <file>$PROJ_DIR$\HMI_Comm.c</file>
-            <file>$PROJ_DIR$\HMI_Comm.h</file>
-            <file>$PROJ_DIR$\APP\input_manager.c</file>
-            <file>$PROJ_DIR$\HAL\Potentiometer\potentiometer.c</file>
-            <file>$PROJ_DIR$\UART.h</file>
-            <file>$PROJ_DIR$\HAL\Keypad\keypad.h</file>
-            <file>$PROJ_DIR$\hw_types.h</file>
             <file>$PROJ_DIR$\APP\display_manager.c</file>
+            <file>$PROJ_DIR$\UART.h</file>
+            <file>$PROJ_DIR$\Debug\Obj\HAL\Keypad\keypad.o</file>
+            <file>$PROJ_DIR$\Debug\Obj\main.o</file>
+            <file>$PROJ_DIR$\Debug\Obj\HAL\Potentiometer\potentiometer.o</file>
+            <file>$PROJ_DIR$\consts.h</file>
+            <file>$PROJ_DIR$\hw_types.h</file>
+            <file>$PROJ_DIR$\main.c</file>
+            <file>$PROJ_DIR$\hw_nvic.h</file>
+            <file>$PROJ_DIR$\Debug\Obj\startup_ewarm.o</file>
+            <file>$PROJ_DIR$\HMI_Comm.h</file>
+            <file>$PROJ_DIR$\HMI_Comm.c</file>
+            <file>$PROJ_DIR$\HAL\Keypad\keypad.c</file>
+            <file>$PROJ_DIR$\APP\display_manager.h</file>
+            <file>$PROJ_DIR$\Debug\Obj\HMI_Comm.o</file>
+            <file>$PROJ_DIR$\Debug\Obj\APP\input_manager.o</file>
+            <file>$PROJ_DIR$\Debug\Obj\APP\display_manager.o</file>
+            <file>$PROJ_DIR$\Debug\Obj\APP\potentiometer_manager.o</file>
+            <file>$PROJ_DIR$\APP\potentiometer_manager.h</file>
+            <file>$PROJ_DIR$\HAL\LCD\lcd.c</file>
+            <file>$PROJ_DIR$\Debug\Obj\HAL\LCD\lcd.o</file>
             <file>$PROJ_DIR$\Debug\Obj\HAL\Keypad\dio.o</file>
+            <file>$PROJ_DIR$\APP\input_manager.h</file>
+            <file>$PROJ_DIR$\HAL\Keypad\dio.c</file>
+            <file>$PROJ_DIR$\APP\input_manager.c</file>
+            <file>$PROJ_DIR$\APP\potentiometer_manager.c</file>
+            <file>$PROJ_DIR$\eepromDriver.h</file>
+            <file>$PROJ_DIR$\startup_ewarm.c</file>
+            <file>$PROJ_DIR$\HAL\Potentiometer\potentiometer.c</file>
             <file>$PROJ_DIR$\Debug\Exe\main.out</file>
+            <file>$PROJ_DIR$\APP\password_manager.c</file>
         </outputs>
         <file>
-            <name>[ROOT_NODE]</name>
-            <outputs>
-                <tool>
-                    <name>ILINK</name>
-                    <file> 32</file>
-                </tool>
-            </outputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\HAL\Keypad\dio.c</name>
+            <name>$PROJ_DIR$\APP\display_manager.c</name>
             <outputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 31</file>
+                    <file> 16</file>
                 </tool>
             </outputs>
         </file>
@@ -62,43 +51,7 @@
             <outputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 7</file>
-                </tool>
-            </outputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\startup_ewarm.c</name>
-            <outputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 4</file>
-                </tool>
-            </outputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\APP\potentiometer_manager.c</name>
-            <outputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 6</file>
-                </tool>
-            </outputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\HAL\Keypad\keypad.c</name>
-            <outputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 0</file>
-                </tool>
-            </outputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\HAL\LCD\lcd.c</name>
-            <outputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 18</file>
+                    <file> 3</file>
                 </tool>
             </outputs>
         </file>
@@ -107,21 +60,12 @@
             <outputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 3</file>
+                    <file> 14</file>
                 </tool>
             </outputs>
         </file>
         <file>
-            <name>$PROJ_DIR$\APP\input_manager.c</name>
-            <outputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 5</file>
-                </tool>
-            </outputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\HAL\Potentiometer\potentiometer.c</name>
+            <name>$PROJ_DIR$\HAL\Keypad\keypad.c</name>
             <outputs>
                 <tool>
                     <name>ICCARM</name>
@@ -130,11 +74,65 @@
             </outputs>
         </file>
         <file>
-            <name>$PROJ_DIR$\APP\display_manager.c</name>
+            <name>$PROJ_DIR$\HAL\LCD\lcd.c</name>
             <outputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 1</file>
+                    <file> 20</file>
+                </tool>
+            </outputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\HAL\Keypad\dio.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 21</file>
+                </tool>
+            </outputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\APP\input_manager.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 15</file>
+                </tool>
+            </outputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\APP\potentiometer_manager.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 17</file>
+                </tool>
+            </outputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\startup_ewarm.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 9</file>
+                </tool>
+            </outputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\HAL\Potentiometer\potentiometer.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 4</file>
+                </tool>
+            </outputs>
+        </file>
+        <file>
+            <name>[ROOT_NODE]</name>
+            <outputs>
+                <tool>
+                    <name>ILINK</name>
+                    <file> 29</file>
                 </tool>
             </outputs>
         </file>
