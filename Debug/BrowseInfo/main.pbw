@@ -112415,2162 +112415,6 @@
     "scope": null
   },
   {
-    "ID": "c:string.h@100@macro@_STRING",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "_STRING",
-    "location": {
-      "column": "9",
-      "line": "4",
-      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\string.h"
-    },
-    "name": "_STRING",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:string.h@344@macro@NULL",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "NULL",
-    "location": {
-      "column": "11",
-      "line": "20",
-      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\string.h"
-    },
-    "name": "NULL",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@memcmp",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "int memcmp(const void *, const void *, size_t)",
-    "location": {
-      "column": "45",
-      "line": "38",
-      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\string.h"
-    },
-    "name": "memcmp",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@memcpy",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void * memcpy(void *restrict, const void *restrict, size_t)",
-    "location": {
-      "column": "45",
-      "line": "40",
-      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\string.h"
-    },
-    "name": "memcpy",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@memmove",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void * memmove(void *, const void *, size_t)",
-    "location": {
-      "column": "45",
-      "line": "43",
-      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\string.h"
-    },
-    "name": "memmove",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@memset",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void * memset(void *, int, size_t)",
-    "location": {
-      "column": "45",
-      "line": "45",
-      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\string.h"
-    },
-    "name": "memset",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@strcat",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "char * strcat(char *restrict, const char *restrict)",
-    "location": {
-      "column": "45",
-      "line": "46",
-      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\string.h"
-    },
-    "name": "strcat",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@strcmp",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "int strcmp(const char *, const char *)",
-    "location": {
-      "column": "45",
-      "line": "48",
-      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\string.h"
-    },
-    "name": "strcmp",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@strcoll",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "int strcoll(const char *, const char *)",
-    "location": {
-      "column": "45",
-      "line": "49",
-      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\string.h"
-    },
-    "name": "strcoll",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@strcpy",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "char * strcpy(char *restrict, const char *restrict)",
-    "location": {
-      "column": "45",
-      "line": "50",
-      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\string.h"
-    },
-    "name": "strcpy",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@strcspn",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "size_t strcspn(const char *, const char *)",
-    "location": {
-      "column": "45",
-      "line": "52",
-      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\string.h"
-    },
-    "name": "strcspn",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@strerror",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "char * strerror(int)",
-    "location": {
-      "column": "45",
-      "line": "53",
-      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\string.h"
-    },
-    "name": "strerror",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@strlen",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "size_t strlen(const char *)",
-    "location": {
-      "column": "45",
-      "line": "54",
-      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\string.h"
-    },
-    "name": "strlen",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@strncat",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "char * strncat(char *restrict, const char *restrict, size_t)",
-    "location": {
-      "column": "45",
-      "line": "55",
-      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\string.h"
-    },
-    "name": "strncat",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@strncmp",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "int strncmp(const char *, const char *, size_t)",
-    "location": {
-      "column": "45",
-      "line": "58",
-      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\string.h"
-    },
-    "name": "strncmp",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@strncpy",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "char * strncpy(char *restrict, const char *restrict, size_t)",
-    "location": {
-      "column": "45",
-      "line": "60",
-      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\string.h"
-    },
-    "name": "strncpy",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@strspn",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "size_t strspn(const char *, const char *)",
-    "location": {
-      "column": "45",
-      "line": "63",
-      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\string.h"
-    },
-    "name": "strspn",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@strtok",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "char * strtok(char *restrict, const char *restrict)",
-    "location": {
-      "column": "45",
-      "line": "64",
-      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\string.h"
-    },
-    "name": "strtok",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@strxfrm",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "size_t strxfrm(char *restrict, const char *restrict, size_t)",
-    "location": {
-      "column": "45",
-      "line": "66",
-      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\string.h"
-    },
-    "name": "strxfrm",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@strdup",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "char * strdup(const char *)",
-    "location": {
-      "column": "45",
-      "line": "70",
-      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\string.h"
-    },
-    "name": "strdup",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@strcasecmp",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "int strcasecmp(const char *, const char *)",
-    "location": {
-      "column": "45",
-      "line": "71",
-      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\string.h"
-    },
-    "name": "strcasecmp",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@strncasecmp",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "int strncasecmp(const char *, const char *, size_t)",
-    "location": {
-      "column": "45",
-      "line": "73",
-      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\string.h"
-    },
-    "name": "strncasecmp",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@strtok_r",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "char * strtok_r(char *, const char *, char **)",
-    "location": {
-      "column": "45",
-      "line": "75",
-      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\string.h"
-    },
-    "name": "strtok_r",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@strnlen",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "size_t strnlen(const char *, size_t)",
-    "location": {
-      "column": "45",
-      "line": "77",
-      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\string.h"
-    },
-    "name": "strnlen",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@memchr",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void * memchr(const void *, int, size_t)",
-    "location": {
-      "column": "37",
-      "line": "171",
-      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\string.h"
-    },
-    "name": "memchr",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@strchr",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "char * strchr(const char *, int)",
-    "location": {
-      "column": "37",
-      "line": "172",
-      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\string.h"
-    },
-    "name": "strchr",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@strpbrk",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "char * strpbrk(const char *, const char *)",
-    "location": {
-      "column": "37",
-      "line": "173",
-      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\string.h"
-    },
-    "name": "strpbrk",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@strrchr",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "char * strrchr(const char *, int)",
-    "location": {
-      "column": "37",
-      "line": "174",
-      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\string.h"
-    },
-    "name": "strrchr",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@strstr",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "char * strstr(const char *, const char *)",
-    "location": {
-      "column": "37",
-      "line": "175",
-      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\string.h"
-    },
-    "name": "strstr",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:uart.h@2023@macro@__DRIVERLIB_UART_H__",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "__DRIVERLIB_UART_H__",
-    "location": {
-      "column": "9",
-      "line": "41",
-      "path": "C:\\ti\\TivaWare_C_Series-2.2.0.295\\driverlib\\uart.h"
-    },
-    "name": "__DRIVERLIB_UART_H__",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:uart.h@2691@macro@UART_INT_DMATX",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "UART_INT_DMATX",
-    "location": {
-      "column": "9",
-      "line": "60",
-      "path": "C:\\ti\\TivaWare_C_Series-2.2.0.295\\driverlib\\uart.h"
-    },
-    "name": "UART_INT_DMATX",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:uart.h@2756@macro@UART_INT_DMARX",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "UART_INT_DMARX",
-    "location": {
-      "column": "9",
-      "line": "61",
-      "path": "C:\\ti\\TivaWare_C_Series-2.2.0.295\\driverlib\\uart.h"
-    },
-    "name": "UART_INT_DMARX",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:uart.h@2821@macro@UART_INT_9BIT",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "UART_INT_9BIT",
-    "location": {
-      "column": "9",
-      "line": "62",
-      "path": "C:\\ti\\TivaWare_C_Series-2.2.0.295\\driverlib\\uart.h"
-    },
-    "name": "UART_INT_9BIT",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:uart.h@2899@macro@UART_INT_OE",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "UART_INT_OE",
-    "location": {
-      "column": "9",
-      "line": "63",
-      "path": "C:\\ti\\TivaWare_C_Series-2.2.0.295\\driverlib\\uart.h"
-    },
-    "name": "UART_INT_OE",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:uart.h@2976@macro@UART_INT_BE",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "UART_INT_BE",
-    "location": {
-      "column": "9",
-      "line": "64",
-      "path": "C:\\ti\\TivaWare_C_Series-2.2.0.295\\driverlib\\uart.h"
-    },
-    "name": "UART_INT_BE",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:uart.h@3051@macro@UART_INT_PE",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "UART_INT_PE",
-    "location": {
-      "column": "9",
-      "line": "65",
-      "path": "C:\\ti\\TivaWare_C_Series-2.2.0.295\\driverlib\\uart.h"
-    },
-    "name": "UART_INT_PE",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:uart.h@3127@macro@UART_INT_FE",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "UART_INT_FE",
-    "location": {
-      "column": "9",
-      "line": "66",
-      "path": "C:\\ti\\TivaWare_C_Series-2.2.0.295\\driverlib\\uart.h"
-    },
-    "name": "UART_INT_FE",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:uart.h@3204@macro@UART_INT_RT",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "UART_INT_RT",
-    "location": {
-      "column": "9",
-      "line": "67",
-      "path": "C:\\ti\\TivaWare_C_Series-2.2.0.295\\driverlib\\uart.h"
-    },
-    "name": "UART_INT_RT",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:uart.h@3283@macro@UART_INT_TX",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "UART_INT_TX",
-    "location": {
-      "column": "9",
-      "line": "68",
-      "path": "C:\\ti\\TivaWare_C_Series-2.2.0.295\\driverlib\\uart.h"
-    },
-    "name": "UART_INT_TX",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:uart.h@3355@macro@UART_INT_RX",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "UART_INT_RX",
-    "location": {
-      "column": "9",
-      "line": "69",
-      "path": "C:\\ti\\TivaWare_C_Series-2.2.0.295\\driverlib\\uart.h"
-    },
-    "name": "UART_INT_RX",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:uart.h@3426@macro@UART_INT_DSR",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "UART_INT_DSR",
-    "location": {
-      "column": "9",
-      "line": "70",
-      "path": "C:\\ti\\TivaWare_C_Series-2.2.0.295\\driverlib\\uart.h"
-    },
-    "name": "UART_INT_DSR",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:uart.h@3499@macro@UART_INT_DCD",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "UART_INT_DCD",
-    "location": {
-      "column": "9",
-      "line": "71",
-      "path": "C:\\ti\\TivaWare_C_Series-2.2.0.295\\driverlib\\uart.h"
-    },
-    "name": "UART_INT_DCD",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:uart.h@3572@macro@UART_INT_CTS",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "UART_INT_CTS",
-    "location": {
-      "column": "9",
-      "line": "72",
-      "path": "C:\\ti\\TivaWare_C_Series-2.2.0.295\\driverlib\\uart.h"
-    },
-    "name": "UART_INT_CTS",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:uart.h@3645@macro@UART_INT_RI",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "UART_INT_RI",
-    "location": {
-      "column": "9",
-      "line": "73",
-      "path": "C:\\ti\\TivaWare_C_Series-2.2.0.295\\driverlib\\uart.h"
-    },
-    "name": "UART_INT_RI",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:uart.h@4198@macro@UART_CONFIG_WLEN_MASK",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "UART_CONFIG_WLEN_MASK",
-    "location": {
-      "column": "9",
-      "line": "84",
-      "path": "C:\\ti\\TivaWare_C_Series-2.2.0.295\\driverlib\\uart.h"
-    },
-    "name": "UART_CONFIG_WLEN_MASK",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:uart.h@4278@macro@UART_CONFIG_WLEN_8",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "UART_CONFIG_WLEN_8",
-    "location": {
-      "column": "9",
-      "line": "85",
-      "path": "C:\\ti\\TivaWare_C_Series-2.2.0.295\\driverlib\\uart.h"
-    },
-    "name": "UART_CONFIG_WLEN_8",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:uart.h@4337@macro@UART_CONFIG_WLEN_7",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "UART_CONFIG_WLEN_7",
-    "location": {
-      "column": "9",
-      "line": "86",
-      "path": "C:\\ti\\TivaWare_C_Series-2.2.0.295\\driverlib\\uart.h"
-    },
-    "name": "UART_CONFIG_WLEN_7",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:uart.h@4396@macro@UART_CONFIG_WLEN_6",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "UART_CONFIG_WLEN_6",
-    "location": {
-      "column": "9",
-      "line": "87",
-      "path": "C:\\ti\\TivaWare_C_Series-2.2.0.295\\driverlib\\uart.h"
-    },
-    "name": "UART_CONFIG_WLEN_6",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:uart.h@4455@macro@UART_CONFIG_WLEN_5",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "UART_CONFIG_WLEN_5",
-    "location": {
-      "column": "9",
-      "line": "88",
-      "path": "C:\\ti\\TivaWare_C_Series-2.2.0.295\\driverlib\\uart.h"
-    },
-    "name": "UART_CONFIG_WLEN_5",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:uart.h@4514@macro@UART_CONFIG_STOP_MASK",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "UART_CONFIG_STOP_MASK",
-    "location": {
-      "column": "9",
-      "line": "89",
-      "path": "C:\\ti\\TivaWare_C_Series-2.2.0.295\\driverlib\\uart.h"
-    },
-    "name": "UART_CONFIG_STOP_MASK",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:uart.h@4592@macro@UART_CONFIG_STOP_ONE",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "UART_CONFIG_STOP_ONE",
-    "location": {
-      "column": "9",
-      "line": "90",
-      "path": "C:\\ti\\TivaWare_C_Series-2.2.0.295\\driverlib\\uart.h"
-    },
-    "name": "UART_CONFIG_STOP_ONE",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:uart.h@4653@macro@UART_CONFIG_STOP_TWO",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "UART_CONFIG_STOP_TWO",
-    "location": {
-      "column": "9",
-      "line": "91",
-      "path": "C:\\ti\\TivaWare_C_Series-2.2.0.295\\driverlib\\uart.h"
-    },
-    "name": "UART_CONFIG_STOP_TWO",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:uart.h@4715@macro@UART_CONFIG_PAR_MASK",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "UART_CONFIG_PAR_MASK",
-    "location": {
-      "column": "9",
-      "line": "92",
-      "path": "C:\\ti\\TivaWare_C_Series-2.2.0.295\\driverlib\\uart.h"
-    },
-    "name": "UART_CONFIG_PAR_MASK",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:uart.h@4790@macro@UART_CONFIG_PAR_NONE",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "UART_CONFIG_PAR_NONE",
-    "location": {
-      "column": "9",
-      "line": "93",
-      "path": "C:\\ti\\TivaWare_C_Series-2.2.0.295\\driverlib\\uart.h"
-    },
-    "name": "UART_CONFIG_PAR_NONE",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:uart.h@4848@macro@UART_CONFIG_PAR_EVEN",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "UART_CONFIG_PAR_EVEN",
-    "location": {
-      "column": "9",
-      "line": "94",
-      "path": "C:\\ti\\TivaWare_C_Series-2.2.0.295\\driverlib\\uart.h"
-    },
-    "name": "UART_CONFIG_PAR_EVEN",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:uart.h@4908@macro@UART_CONFIG_PAR_ODD",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "UART_CONFIG_PAR_ODD",
-    "location": {
-      "column": "9",
-      "line": "95",
-      "path": "C:\\ti\\TivaWare_C_Series-2.2.0.295\\driverlib\\uart.h"
-    },
-    "name": "UART_CONFIG_PAR_ODD",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:uart.h@4967@macro@UART_CONFIG_PAR_ONE",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "UART_CONFIG_PAR_ONE",
-    "location": {
-      "column": "9",
-      "line": "96",
-      "path": "C:\\ti\\TivaWare_C_Series-2.2.0.295\\driverlib\\uart.h"
-    },
-    "name": "UART_CONFIG_PAR_ONE",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:uart.h@5033@macro@UART_CONFIG_PAR_ZERO",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "UART_CONFIG_PAR_ZERO",
-    "location": {
-      "column": "9",
-      "line": "97",
-      "path": "C:\\ti\\TivaWare_C_Series-2.2.0.295\\driverlib\\uart.h"
-    },
-    "name": "UART_CONFIG_PAR_ZERO",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:uart.h@5409@macro@UART_FIFO_TX1_8",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "UART_FIFO_TX1_8",
-    "location": {
-      "column": "9",
-      "line": "105",
-      "path": "C:\\ti\\TivaWare_C_Series-2.2.0.295\\driverlib\\uart.h"
-    },
-    "name": "UART_FIFO_TX1_8",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:uart.h@5488@macro@UART_FIFO_TX2_8",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "UART_FIFO_TX2_8",
-    "location": {
-      "column": "9",
-      "line": "106",
-      "path": "C:\\ti\\TivaWare_C_Series-2.2.0.295\\driverlib\\uart.h"
-    },
-    "name": "UART_FIFO_TX2_8",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:uart.h@5567@macro@UART_FIFO_TX4_8",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "UART_FIFO_TX4_8",
-    "location": {
-      "column": "9",
-      "line": "107",
-      "path": "C:\\ti\\TivaWare_C_Series-2.2.0.295\\driverlib\\uart.h"
-    },
-    "name": "UART_FIFO_TX4_8",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:uart.h@5646@macro@UART_FIFO_TX6_8",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "UART_FIFO_TX6_8",
-    "location": {
-      "column": "9",
-      "line": "108",
-      "path": "C:\\ti\\TivaWare_C_Series-2.2.0.295\\driverlib\\uart.h"
-    },
-    "name": "UART_FIFO_TX6_8",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:uart.h@5725@macro@UART_FIFO_TX7_8",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "UART_FIFO_TX7_8",
-    "location": {
-      "column": "9",
-      "line": "109",
-      "path": "C:\\ti\\TivaWare_C_Series-2.2.0.295\\driverlib\\uart.h"
-    },
-    "name": "UART_FIFO_TX7_8",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:uart.h@6113@macro@UART_FIFO_RX1_8",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "UART_FIFO_RX1_8",
-    "location": {
-      "column": "9",
-      "line": "117",
-      "path": "C:\\ti\\TivaWare_C_Series-2.2.0.295\\driverlib\\uart.h"
-    },
-    "name": "UART_FIFO_RX1_8",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:uart.h@6191@macro@UART_FIFO_RX2_8",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "UART_FIFO_RX2_8",
-    "location": {
-      "column": "9",
-      "line": "118",
-      "path": "C:\\ti\\TivaWare_C_Series-2.2.0.295\\driverlib\\uart.h"
-    },
-    "name": "UART_FIFO_RX2_8",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:uart.h@6269@macro@UART_FIFO_RX4_8",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "UART_FIFO_RX4_8",
-    "location": {
-      "column": "9",
-      "line": "119",
-      "path": "C:\\ti\\TivaWare_C_Series-2.2.0.295\\driverlib\\uart.h"
-    },
-    "name": "UART_FIFO_RX4_8",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:uart.h@6347@macro@UART_FIFO_RX6_8",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "UART_FIFO_RX6_8",
-    "location": {
-      "column": "9",
-      "line": "120",
-      "path": "C:\\ti\\TivaWare_C_Series-2.2.0.295\\driverlib\\uart.h"
-    },
-    "name": "UART_FIFO_RX6_8",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:uart.h@6425@macro@UART_FIFO_RX7_8",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "UART_FIFO_RX7_8",
-    "location": {
-      "column": "9",
-      "line": "121",
-      "path": "C:\\ti\\TivaWare_C_Series-2.2.0.295\\driverlib\\uart.h"
-    },
-    "name": "UART_FIFO_RX7_8",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:uart.h@6746@macro@UART_DMA_ERR_RXSTOP",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "UART_DMA_ERR_RXSTOP",
-    "location": {
-      "column": "9",
-      "line": "128",
-      "path": "C:\\ti\\TivaWare_C_Series-2.2.0.295\\driverlib\\uart.h"
-    },
-    "name": "UART_DMA_ERR_RXSTOP",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:uart.h@6825@macro@UART_DMA_TX",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "UART_DMA_TX",
-    "location": {
-      "column": "9",
-      "line": "129",
-      "path": "C:\\ti\\TivaWare_C_Series-2.2.0.295\\driverlib\\uart.h"
-    },
-    "name": "UART_DMA_TX",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:uart.h@6897@macro@UART_DMA_RX",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "UART_DMA_RX",
-    "location": {
-      "column": "9",
-      "line": "130",
-      "path": "C:\\ti\\TivaWare_C_Series-2.2.0.295\\driverlib\\uart.h"
-    },
-    "name": "UART_DMA_RX",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:uart.h@7183@macro@UART_RXERROR_OVERRUN",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "UART_RXERROR_OVERRUN",
-    "location": {
-      "column": "9",
-      "line": "137",
-      "path": "C:\\ti\\TivaWare_C_Series-2.2.0.295\\driverlib\\uart.h"
-    },
-    "name": "UART_RXERROR_OVERRUN",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:uart.h@7227@macro@UART_RXERROR_BREAK",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "UART_RXERROR_BREAK",
-    "location": {
-      "column": "9",
-      "line": "138",
-      "path": "C:\\ti\\TivaWare_C_Series-2.2.0.295\\driverlib\\uart.h"
-    },
-    "name": "UART_RXERROR_BREAK",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:uart.h@7271@macro@UART_RXERROR_PARITY",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "UART_RXERROR_PARITY",
-    "location": {
-      "column": "9",
-      "line": "139",
-      "path": "C:\\ti\\TivaWare_C_Series-2.2.0.295\\driverlib\\uart.h"
-    },
-    "name": "UART_RXERROR_PARITY",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:uart.h@7315@macro@UART_RXERROR_FRAMING",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "UART_RXERROR_FRAMING",
-    "location": {
-      "column": "9",
-      "line": "140",
-      "path": "C:\\ti\\TivaWare_C_Series-2.2.0.295\\driverlib\\uart.h"
-    },
-    "name": "UART_RXERROR_FRAMING",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:uart.h@7637@macro@UART_OUTPUT_RTS",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "UART_OUTPUT_RTS",
-    "location": {
-      "column": "9",
-      "line": "148",
-      "path": "C:\\ti\\TivaWare_C_Series-2.2.0.295\\driverlib\\uart.h"
-    },
-    "name": "UART_OUTPUT_RTS",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:uart.h@7681@macro@UART_OUTPUT_DTR",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "UART_OUTPUT_DTR",
-    "location": {
-      "column": "9",
-      "line": "149",
-      "path": "C:\\ti\\TivaWare_C_Series-2.2.0.295\\driverlib\\uart.h"
-    },
-    "name": "UART_OUTPUT_DTR",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:uart.h@7960@macro@UART_INPUT_RI",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "UART_INPUT_RI",
-    "location": {
-      "column": "9",
-      "line": "156",
-      "path": "C:\\ti\\TivaWare_C_Series-2.2.0.295\\driverlib\\uart.h"
-    },
-    "name": "UART_INPUT_RI",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:uart.h@8004@macro@UART_INPUT_DCD",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "UART_INPUT_DCD",
-    "location": {
-      "column": "9",
-      "line": "157",
-      "path": "C:\\ti\\TivaWare_C_Series-2.2.0.295\\driverlib\\uart.h"
-    },
-    "name": "UART_INPUT_DCD",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:uart.h@8048@macro@UART_INPUT_DSR",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "UART_INPUT_DSR",
-    "location": {
-      "column": "9",
-      "line": "158",
-      "path": "C:\\ti\\TivaWare_C_Series-2.2.0.295\\driverlib\\uart.h"
-    },
-    "name": "UART_INPUT_DSR",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:uart.h@8092@macro@UART_INPUT_CTS",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "UART_INPUT_CTS",
-    "location": {
-      "column": "9",
-      "line": "159",
-      "path": "C:\\ti\\TivaWare_C_Series-2.2.0.295\\driverlib\\uart.h"
-    },
-    "name": "UART_INPUT_CTS",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:uart.h@8402@macro@UART_FLOWCONTROL_TX",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "UART_FLOWCONTROL_TX",
-    "location": {
-      "column": "9",
-      "line": "167",
-      "path": "C:\\ti\\TivaWare_C_Series-2.2.0.295\\driverlib\\uart.h"
-    },
-    "name": "UART_FLOWCONTROL_TX",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:uart.h@8446@macro@UART_FLOWCONTROL_RX",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "UART_FLOWCONTROL_RX",
-    "location": {
-      "column": "9",
-      "line": "168",
-      "path": "C:\\ti\\TivaWare_C_Series-2.2.0.295\\driverlib\\uart.h"
-    },
-    "name": "UART_FLOWCONTROL_RX",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:uart.h@8490@macro@UART_FLOWCONTROL_NONE",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "UART_FLOWCONTROL_NONE",
-    "location": {
-      "column": "9",
-      "line": "169",
-      "path": "C:\\ti\\TivaWare_C_Series-2.2.0.295\\driverlib\\uart.h"
-    },
-    "name": "UART_FLOWCONTROL_NONE",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:uart.h@8799@macro@UART_TXINT_MODE_FIFO",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "UART_TXINT_MODE_FIFO",
-    "location": {
-      "column": "9",
-      "line": "177",
-      "path": "C:\\ti\\TivaWare_C_Series-2.2.0.295\\driverlib\\uart.h"
-    },
-    "name": "UART_TXINT_MODE_FIFO",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:uart.h@8843@macro@UART_TXINT_MODE_EOT",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "UART_TXINT_MODE_EOT",
-    "location": {
-      "column": "9",
-      "line": "178",
-      "path": "C:\\ti\\TivaWare_C_Series-2.2.0.295\\driverlib\\uart.h"
-    },
-    "name": "UART_TXINT_MODE_EOT",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:uart.h@9156@macro@UART_CLOCK_SYSTEM",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "UART_CLOCK_SYSTEM",
-    "location": {
-      "column": "9",
-      "line": "186",
-      "path": "C:\\ti\\TivaWare_C_Series-2.2.0.295\\driverlib\\uart.h"
-    },
-    "name": "UART_CLOCK_SYSTEM",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:uart.h@9200@macro@UART_CLOCK_PIOSC",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "UART_CLOCK_PIOSC",
-    "location": {
-      "column": "9",
-      "line": "187",
-      "path": "C:\\ti\\TivaWare_C_Series-2.2.0.295\\driverlib\\uart.h"
-    },
-    "name": "UART_CLOCK_PIOSC",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@UARTParityModeSet",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void UARTParityModeSet(uint32_t, uint32_t)",
-    "location": {
-      "column": "13",
-      "line": "194",
-      "path": "C:\\ti\\TivaWare_C_Series-2.2.0.295\\driverlib\\uart.h"
-    },
-    "name": "UARTParityModeSet",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@UARTParityModeGet",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "uint32_t UARTParityModeGet(uint32_t)",
-    "location": {
-      "column": "17",
-      "line": "195",
-      "path": "C:\\ti\\TivaWare_C_Series-2.2.0.295\\driverlib\\uart.h"
-    },
-    "name": "UARTParityModeGet",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@UARTFIFOLevelSet",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void UARTFIFOLevelSet(uint32_t, uint32_t, uint32_t)",
-    "location": {
-      "column": "13",
-      "line": "196",
-      "path": "C:\\ti\\TivaWare_C_Series-2.2.0.295\\driverlib\\uart.h"
-    },
-    "name": "UARTFIFOLevelSet",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@UARTFIFOLevelGet",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void UARTFIFOLevelGet(uint32_t, uint32_t *, uint32_t *)",
-    "location": {
-      "column": "13",
-      "line": "198",
-      "path": "C:\\ti\\TivaWare_C_Series-2.2.0.295\\driverlib\\uart.h"
-    },
-    "name": "UARTFIFOLevelGet",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@UARTConfigSetExpClk",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void UARTConfigSetExpClk(uint32_t, uint32_t, uint32_t, uint32_t)",
-    "location": {
-      "column": "13",
-      "line": "200",
-      "path": "C:\\ti\\TivaWare_C_Series-2.2.0.295\\driverlib\\uart.h"
-    },
-    "name": "UARTConfigSetExpClk",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@UARTConfigGetExpClk",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void UARTConfigGetExpClk(uint32_t, uint32_t, uint32_t *, uint32_t *)",
-    "location": {
-      "column": "13",
-      "line": "202",
-      "path": "C:\\ti\\TivaWare_C_Series-2.2.0.295\\driverlib\\uart.h"
-    },
-    "name": "UARTConfigGetExpClk",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@UARTEnable",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void UARTEnable(uint32_t)",
-    "location": {
-      "column": "13",
-      "line": "204",
-      "path": "C:\\ti\\TivaWare_C_Series-2.2.0.295\\driverlib\\uart.h"
-    },
-    "name": "UARTEnable",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@UARTDisable",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void UARTDisable(uint32_t)",
-    "location": {
-      "column": "13",
-      "line": "205",
-      "path": "C:\\ti\\TivaWare_C_Series-2.2.0.295\\driverlib\\uart.h"
-    },
-    "name": "UARTDisable",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@UARTFIFOEnable",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void UARTFIFOEnable(uint32_t)",
-    "location": {
-      "column": "13",
-      "line": "206",
-      "path": "C:\\ti\\TivaWare_C_Series-2.2.0.295\\driverlib\\uart.h"
-    },
-    "name": "UARTFIFOEnable",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@UARTFIFODisable",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void UARTFIFODisable(uint32_t)",
-    "location": {
-      "column": "13",
-      "line": "207",
-      "path": "C:\\ti\\TivaWare_C_Series-2.2.0.295\\driverlib\\uart.h"
-    },
-    "name": "UARTFIFODisable",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@UARTEnableSIR",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void UARTEnableSIR(uint32_t, bool)",
-    "location": {
-      "column": "13",
-      "line": "208",
-      "path": "C:\\ti\\TivaWare_C_Series-2.2.0.295\\driverlib\\uart.h"
-    },
-    "name": "UARTEnableSIR",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@UARTDisableSIR",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void UARTDisableSIR(uint32_t)",
-    "location": {
-      "column": "13",
-      "line": "209",
-      "path": "C:\\ti\\TivaWare_C_Series-2.2.0.295\\driverlib\\uart.h"
-    },
-    "name": "UARTDisableSIR",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@UARTCharsAvail",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "bool UARTCharsAvail(uint32_t)",
-    "location": {
-      "column": "13",
-      "line": "210",
-      "path": "C:\\ti\\TivaWare_C_Series-2.2.0.295\\driverlib\\uart.h"
-    },
-    "name": "UARTCharsAvail",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@UARTSpaceAvail",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "bool UARTSpaceAvail(uint32_t)",
-    "location": {
-      "column": "13",
-      "line": "211",
-      "path": "C:\\ti\\TivaWare_C_Series-2.2.0.295\\driverlib\\uart.h"
-    },
-    "name": "UARTSpaceAvail",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@UARTCharGetNonBlocking",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "int32_t UARTCharGetNonBlocking(uint32_t)",
-    "location": {
-      "column": "16",
-      "line": "212",
-      "path": "C:\\ti\\TivaWare_C_Series-2.2.0.295\\driverlib\\uart.h"
-    },
-    "name": "UARTCharGetNonBlocking",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@UARTCharGet",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "int32_t UARTCharGet(uint32_t)",
-    "location": {
-      "column": "16",
-      "line": "213",
-      "path": "C:\\ti\\TivaWare_C_Series-2.2.0.295\\driverlib\\uart.h"
-    },
-    "name": "UARTCharGet",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@UARTCharPutNonBlocking",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "bool UARTCharPutNonBlocking(uint32_t, unsigned char)",
-    "location": {
-      "column": "13",
-      "line": "214",
-      "path": "C:\\ti\\TivaWare_C_Series-2.2.0.295\\driverlib\\uart.h"
-    },
-    "name": "UARTCharPutNonBlocking",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@UARTCharPut",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void UARTCharPut(uint32_t, unsigned char)",
-    "location": {
-      "column": "13",
-      "line": "215",
-      "path": "C:\\ti\\TivaWare_C_Series-2.2.0.295\\driverlib\\uart.h"
-    },
-    "name": "UARTCharPut",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@UARTBreakCtl",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void UARTBreakCtl(uint32_t, bool)",
-    "location": {
-      "column": "13",
-      "line": "216",
-      "path": "C:\\ti\\TivaWare_C_Series-2.2.0.295\\driverlib\\uart.h"
-    },
-    "name": "UARTBreakCtl",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@UARTBusy",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "bool UARTBusy(uint32_t)",
-    "location": {
-      "column": "13",
-      "line": "217",
-      "path": "C:\\ti\\TivaWare_C_Series-2.2.0.295\\driverlib\\uart.h"
-    },
-    "name": "UARTBusy",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@UARTIntRegister",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void UARTIntRegister(uint32_t, void (*)(void))",
-    "location": {
-      "column": "13",
-      "line": "218",
-      "path": "C:\\ti\\TivaWare_C_Series-2.2.0.295\\driverlib\\uart.h"
-    },
-    "name": "UARTIntRegister",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@UARTIntUnregister",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void UARTIntUnregister(uint32_t)",
-    "location": {
-      "column": "13",
-      "line": "219",
-      "path": "C:\\ti\\TivaWare_C_Series-2.2.0.295\\driverlib\\uart.h"
-    },
-    "name": "UARTIntUnregister",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@UARTIntEnable",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void UARTIntEnable(uint32_t, uint32_t)",
-    "location": {
-      "column": "13",
-      "line": "220",
-      "path": "C:\\ti\\TivaWare_C_Series-2.2.0.295\\driverlib\\uart.h"
-    },
-    "name": "UARTIntEnable",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@UARTIntDisable",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void UARTIntDisable(uint32_t, uint32_t)",
-    "location": {
-      "column": "13",
-      "line": "221",
-      "path": "C:\\ti\\TivaWare_C_Series-2.2.0.295\\driverlib\\uart.h"
-    },
-    "name": "UARTIntDisable",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@UARTIntStatus",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "uint32_t UARTIntStatus(uint32_t, bool)",
-    "location": {
-      "column": "17",
-      "line": "222",
-      "path": "C:\\ti\\TivaWare_C_Series-2.2.0.295\\driverlib\\uart.h"
-    },
-    "name": "UARTIntStatus",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@UARTIntClear",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void UARTIntClear(uint32_t, uint32_t)",
-    "location": {
-      "column": "13",
-      "line": "223",
-      "path": "C:\\ti\\TivaWare_C_Series-2.2.0.295\\driverlib\\uart.h"
-    },
-    "name": "UARTIntClear",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@UARTDMAEnable",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void UARTDMAEnable(uint32_t, uint32_t)",
-    "location": {
-      "column": "13",
-      "line": "224",
-      "path": "C:\\ti\\TivaWare_C_Series-2.2.0.295\\driverlib\\uart.h"
-    },
-    "name": "UARTDMAEnable",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@UARTDMADisable",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void UARTDMADisable(uint32_t, uint32_t)",
-    "location": {
-      "column": "13",
-      "line": "225",
-      "path": "C:\\ti\\TivaWare_C_Series-2.2.0.295\\driverlib\\uart.h"
-    },
-    "name": "UARTDMADisable",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@UARTRxErrorGet",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "uint32_t UARTRxErrorGet(uint32_t)",
-    "location": {
-      "column": "17",
-      "line": "226",
-      "path": "C:\\ti\\TivaWare_C_Series-2.2.0.295\\driverlib\\uart.h"
-    },
-    "name": "UARTRxErrorGet",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@UARTRxErrorClear",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void UARTRxErrorClear(uint32_t)",
-    "location": {
-      "column": "13",
-      "line": "227",
-      "path": "C:\\ti\\TivaWare_C_Series-2.2.0.295\\driverlib\\uart.h"
-    },
-    "name": "UARTRxErrorClear",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@UARTSmartCardEnable",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void UARTSmartCardEnable(uint32_t)",
-    "location": {
-      "column": "13",
-      "line": "228",
-      "path": "C:\\ti\\TivaWare_C_Series-2.2.0.295\\driverlib\\uart.h"
-    },
-    "name": "UARTSmartCardEnable",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@UARTSmartCardDisable",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void UARTSmartCardDisable(uint32_t)",
-    "location": {
-      "column": "13",
-      "line": "229",
-      "path": "C:\\ti\\TivaWare_C_Series-2.2.0.295\\driverlib\\uart.h"
-    },
-    "name": "UARTSmartCardDisable",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@UARTModemControlSet",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void UARTModemControlSet(uint32_t, uint32_t)",
-    "location": {
-      "column": "13",
-      "line": "230",
-      "path": "C:\\ti\\TivaWare_C_Series-2.2.0.295\\driverlib\\uart.h"
-    },
-    "name": "UARTModemControlSet",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@UARTModemControlClear",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void UARTModemControlClear(uint32_t, uint32_t)",
-    "location": {
-      "column": "13",
-      "line": "231",
-      "path": "C:\\ti\\TivaWare_C_Series-2.2.0.295\\driverlib\\uart.h"
-    },
-    "name": "UARTModemControlClear",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@UARTModemControlGet",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "uint32_t UARTModemControlGet(uint32_t)",
-    "location": {
-      "column": "17",
-      "line": "232",
-      "path": "C:\\ti\\TivaWare_C_Series-2.2.0.295\\driverlib\\uart.h"
-    },
-    "name": "UARTModemControlGet",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@UARTModemStatusGet",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "uint32_t UARTModemStatusGet(uint32_t)",
-    "location": {
-      "column": "17",
-      "line": "233",
-      "path": "C:\\ti\\TivaWare_C_Series-2.2.0.295\\driverlib\\uart.h"
-    },
-    "name": "UARTModemStatusGet",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@UARTFlowControlSet",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void UARTFlowControlSet(uint32_t, uint32_t)",
-    "location": {
-      "column": "13",
-      "line": "234",
-      "path": "C:\\ti\\TivaWare_C_Series-2.2.0.295\\driverlib\\uart.h"
-    },
-    "name": "UARTFlowControlSet",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@UARTFlowControlGet",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "uint32_t UARTFlowControlGet(uint32_t)",
-    "location": {
-      "column": "17",
-      "line": "235",
-      "path": "C:\\ti\\TivaWare_C_Series-2.2.0.295\\driverlib\\uart.h"
-    },
-    "name": "UARTFlowControlGet",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@UARTTxIntModeSet",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void UARTTxIntModeSet(uint32_t, uint32_t)",
-    "location": {
-      "column": "13",
-      "line": "236",
-      "path": "C:\\ti\\TivaWare_C_Series-2.2.0.295\\driverlib\\uart.h"
-    },
-    "name": "UARTTxIntModeSet",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@UARTTxIntModeGet",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "uint32_t UARTTxIntModeGet(uint32_t)",
-    "location": {
-      "column": "17",
-      "line": "237",
-      "path": "C:\\ti\\TivaWare_C_Series-2.2.0.295\\driverlib\\uart.h"
-    },
-    "name": "UARTTxIntModeGet",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@UARTClockSourceSet",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void UARTClockSourceSet(uint32_t, uint32_t)",
-    "location": {
-      "column": "13",
-      "line": "238",
-      "path": "C:\\ti\\TivaWare_C_Series-2.2.0.295\\driverlib\\uart.h"
-    },
-    "name": "UARTClockSourceSet",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@UARTClockSourceGet",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "uint32_t UARTClockSourceGet(uint32_t)",
-    "location": {
-      "column": "17",
-      "line": "239",
-      "path": "C:\\ti\\TivaWare_C_Series-2.2.0.295\\driverlib\\uart.h"
-    },
-    "name": "UARTClockSourceGet",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@UART9BitEnable",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void UART9BitEnable(uint32_t)",
-    "location": {
-      "column": "13",
-      "line": "240",
-      "path": "C:\\ti\\TivaWare_C_Series-2.2.0.295\\driverlib\\uart.h"
-    },
-    "name": "UART9BitEnable",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@UART9BitDisable",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void UART9BitDisable(uint32_t)",
-    "location": {
-      "column": "13",
-      "line": "241",
-      "path": "C:\\ti\\TivaWare_C_Series-2.2.0.295\\driverlib\\uart.h"
-    },
-    "name": "UART9BitDisable",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@UART9BitAddrSet",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void UART9BitAddrSet(uint32_t, uint8_t, uint8_t)",
-    "location": {
-      "column": "13",
-      "line": "242",
-      "path": "C:\\ti\\TivaWare_C_Series-2.2.0.295\\driverlib\\uart.h"
-    },
-    "name": "UART9BitAddrSet",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@UART9BitAddrSend",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void UART9BitAddrSend(uint32_t, uint8_t)",
-    "location": {
-      "column": "13",
-      "line": "244",
-      "path": "C:\\ti\\TivaWare_C_Series-2.2.0.295\\driverlib\\uart.h"
-    },
-    "name": "UART9BitAddrSend",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@UARTLoopbackEnable",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void UARTLoopbackEnable(uint32_t)",
-    "location": {
-      "column": "13",
-      "line": "245",
-      "path": "C:\\ti\\TivaWare_C_Series-2.2.0.295\\driverlib\\uart.h"
-    },
-    "name": "UARTLoopbackEnable",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:HMI_Comm.c@31@macro@PASSWORD",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "PASSWORD",
-    "location": {
-      "column": "9",
-      "line": "2",
-      "path": "E:\\coding\\embedded\\embededProject\\UART\\HMI_Comm.c"
-    },
-    "name": "PASSWORD",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:@rxBuffer",
-    "What": "Variable",
-    "defdec": "Def",
-    "display": "rxBuffer",
-    "location": {
-      "column": "6",
-      "line": "3",
-      "path": "E:\\coding\\embedded\\embededProject\\UART\\HMI_Comm.c"
-    },
-    "name": "rxBuffer",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:@rxIndex",
-    "What": "Variable",
-    "defdec": "Def",
-    "display": "rxIndex",
-    "location": {
-      "column": "9",
-      "line": "4",
-      "path": "E:\\coding\\embedded\\embededProject\\UART\\HMI_Comm.c"
-    },
-    "name": "rxIndex",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:@failedAttempts",
-    "What": "Variable",
-    "defdec": "Def",
-    "display": "failedAttempts",
-    "location": {
-      "column": "7",
-      "line": "6",
-      "path": "E:\\coding\\embedded\\embededProject\\UART\\HMI_Comm.c"
-    },
-    "name": "failedAttempts",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@UART1_Init",
-    "What": "Function",
-    "defdec": "Def",
-    "display": "void UART1_Init(void)",
-    "location": {
-      "column": "6",
-      "line": "7",
-      "path": "E:\\coding\\embedded\\embededProject\\UART\\HMI_Comm.c"
-    },
-    "name": "UART1_Init",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@BUZZ",
-    "What": "Function",
-    "defdec": "Def",
-    "display": "void BUZZ(void)",
-    "location": {
-      "column": "6",
-      "line": "37",
-      "path": "E:\\coding\\embedded\\embededProject\\UART\\HMI_Comm.c"
-    },
-    "name": "BUZZ",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@UART1_SendString",
-    "What": "Function",
-    "defdec": "Def",
-    "display": "void UART1_SendString(char *)",
-    "location": {
-      "column": "6",
-      "line": "45",
-      "path": "E:\\coding\\embedded\\embededProject\\UART\\HMI_Comm.c"
-    },
-    "name": "UART1_SendString",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@WAIT_FOR_MESSAGE",
-    "What": "Function",
-    "defdec": "Def",
-    "display": "void WAIT_FOR_MESSAGE(void)",
-    "location": {
-      "column": "6",
-      "line": "59",
-      "path": "E:\\coding\\embedded\\embededProject\\UART\\HMI_Comm.c"
-    },
-    "name": "WAIT_FOR_MESSAGE",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:HMI_Comm.c@1895@F@WAIT_FOR_MESSAGE@receivedChar",
-    "What": "Variable",
-    "defdec": "Def",
-    "display": "receivedChar",
-    "location": {
-      "column": "14",
-      "line": "63",
-      "path": "E:\\coding\\embedded\\embededProject\\UART\\HMI_Comm.c"
-    },
-    "name": "receivedChar",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:HMI_Comm.c@2709@F@WAIT_FOR_MESSAGE@rxBufferCopy",
-    "What": "Variable",
-    "defdec": "Def",
-    "display": "rxBufferCopy",
-    "location": {
-      "column": "18",
-      "line": "81",
-      "path": "E:\\coding\\embedded\\embededProject\\UART\\HMI_Comm.c"
-    },
-    "name": "rxBufferCopy",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:HMI_Comm.c@3040@F@WAIT_FOR_MESSAGE@modeStr",
-    "What": "Variable",
-    "defdec": "Def",
-    "display": "modeStr",
-    "location": {
-      "column": "19",
-      "line": "89",
-      "path": "E:\\coding\\embedded\\embededProject\\UART\\HMI_Comm.c"
-    },
-    "name": "modeStr",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:HMI_Comm.c@3068@F@WAIT_FOR_MESSAGE@pass1Str",
-    "What": "Variable",
-    "defdec": "Def",
-    "display": "pass1Str",
-    "location": {
-      "column": "19",
-      "line": "90",
-      "path": "E:\\coding\\embedded\\embededProject\\UART\\HMI_Comm.c"
-    },
-    "name": "pass1Str",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:HMI_Comm.c@3097@F@WAIT_FOR_MESSAGE@pass2Str",
-    "What": "Variable",
-    "defdec": "Def",
-    "display": "pass2Str",
-    "location": {
-      "column": "19",
-      "line": "91",
-      "path": "E:\\coding\\embedded\\embededProject\\UART\\HMI_Comm.c"
-    },
-    "name": "pass2Str",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:ysizet.h@111@macro@_YSIZET_H",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "_YSIZET_H",
-    "location": {
-      "column": "9",
-      "line": "5",
-      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\ysizet.h"
-    },
-    "name": "_YSIZET_H",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:ysizet.h@277@macro@_SIZE_T",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "_SIZE_T",
-    "location": {
-      "column": "11",
-      "line": "16",
-      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\ysizet.h"
-    },
-    "name": "_SIZE_T",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:ysizet.h@296@macro@_STD_USING_SIZE_T",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "_STD_USING_SIZE_T",
-    "location": {
-      "column": "11",
-      "line": "17",
-      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\ysizet.h"
-    },
-    "name": "_STD_USING_SIZE_T",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:ysizet.h@T@size_t",
-    "What": "Typedef",
-    "defdec": "Def",
-    "display": "_Sizet",
-    "location": {
-      "column": "18",
-      "line": "18",
-      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\ysizet.h"
-    },
-    "name": "size_t",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:ysizet.h@359@macro@__DATA_PTR_MEM_HELPER1__",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "__DATA_PTR_MEM_HELPER1__",
-    "location": {
-      "column": "9",
-      "line": "21",
-      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\ysizet.h"
-    },
-    "name": "__DATA_PTR_MEM_HELPER1__",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:ysizet.h@T@__data_size_t",
-    "What": "Typedef",
-    "defdec": "Def",
-    "display": "unsigned int",
-    "location": {
-      "column": "1",
-      "line": "23",
-      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\ysizet.h"
-    },
-    "name": "__data_size_t",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
     "ID": "c:pin_map.h@2042@macro@__DRIVERLIB_PIN_MAP_H__",
     "What": "MacroDef",
     "defdec": "Def",
@@ -116528,6 +114372,2162 @@
     },
     "name": "GPIO_PF4_USB0EPEN",
     "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:string.h@100@macro@_STRING",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "_STRING",
+    "location": {
+      "column": "9",
+      "line": "4",
+      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\string.h"
+    },
+    "name": "_STRING",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:string.h@344@macro@NULL",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "NULL",
+    "location": {
+      "column": "11",
+      "line": "20",
+      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\string.h"
+    },
+    "name": "NULL",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@memcmp",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "int memcmp(const void *, const void *, size_t)",
+    "location": {
+      "column": "45",
+      "line": "38",
+      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\string.h"
+    },
+    "name": "memcmp",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@memcpy",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void * memcpy(void *restrict, const void *restrict, size_t)",
+    "location": {
+      "column": "45",
+      "line": "40",
+      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\string.h"
+    },
+    "name": "memcpy",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@memmove",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void * memmove(void *, const void *, size_t)",
+    "location": {
+      "column": "45",
+      "line": "43",
+      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\string.h"
+    },
+    "name": "memmove",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@memset",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void * memset(void *, int, size_t)",
+    "location": {
+      "column": "45",
+      "line": "45",
+      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\string.h"
+    },
+    "name": "memset",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@strcat",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "char * strcat(char *restrict, const char *restrict)",
+    "location": {
+      "column": "45",
+      "line": "46",
+      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\string.h"
+    },
+    "name": "strcat",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@strcmp",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "int strcmp(const char *, const char *)",
+    "location": {
+      "column": "45",
+      "line": "48",
+      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\string.h"
+    },
+    "name": "strcmp",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@strcoll",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "int strcoll(const char *, const char *)",
+    "location": {
+      "column": "45",
+      "line": "49",
+      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\string.h"
+    },
+    "name": "strcoll",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@strcpy",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "char * strcpy(char *restrict, const char *restrict)",
+    "location": {
+      "column": "45",
+      "line": "50",
+      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\string.h"
+    },
+    "name": "strcpy",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@strcspn",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "size_t strcspn(const char *, const char *)",
+    "location": {
+      "column": "45",
+      "line": "52",
+      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\string.h"
+    },
+    "name": "strcspn",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@strerror",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "char * strerror(int)",
+    "location": {
+      "column": "45",
+      "line": "53",
+      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\string.h"
+    },
+    "name": "strerror",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@strlen",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "size_t strlen(const char *)",
+    "location": {
+      "column": "45",
+      "line": "54",
+      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\string.h"
+    },
+    "name": "strlen",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@strncat",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "char * strncat(char *restrict, const char *restrict, size_t)",
+    "location": {
+      "column": "45",
+      "line": "55",
+      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\string.h"
+    },
+    "name": "strncat",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@strncmp",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "int strncmp(const char *, const char *, size_t)",
+    "location": {
+      "column": "45",
+      "line": "58",
+      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\string.h"
+    },
+    "name": "strncmp",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@strncpy",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "char * strncpy(char *restrict, const char *restrict, size_t)",
+    "location": {
+      "column": "45",
+      "line": "60",
+      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\string.h"
+    },
+    "name": "strncpy",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@strspn",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "size_t strspn(const char *, const char *)",
+    "location": {
+      "column": "45",
+      "line": "63",
+      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\string.h"
+    },
+    "name": "strspn",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@strtok",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "char * strtok(char *restrict, const char *restrict)",
+    "location": {
+      "column": "45",
+      "line": "64",
+      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\string.h"
+    },
+    "name": "strtok",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@strxfrm",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "size_t strxfrm(char *restrict, const char *restrict, size_t)",
+    "location": {
+      "column": "45",
+      "line": "66",
+      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\string.h"
+    },
+    "name": "strxfrm",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@strdup",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "char * strdup(const char *)",
+    "location": {
+      "column": "45",
+      "line": "70",
+      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\string.h"
+    },
+    "name": "strdup",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@strcasecmp",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "int strcasecmp(const char *, const char *)",
+    "location": {
+      "column": "45",
+      "line": "71",
+      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\string.h"
+    },
+    "name": "strcasecmp",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@strncasecmp",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "int strncasecmp(const char *, const char *, size_t)",
+    "location": {
+      "column": "45",
+      "line": "73",
+      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\string.h"
+    },
+    "name": "strncasecmp",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@strtok_r",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "char * strtok_r(char *, const char *, char **)",
+    "location": {
+      "column": "45",
+      "line": "75",
+      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\string.h"
+    },
+    "name": "strtok_r",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@strnlen",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "size_t strnlen(const char *, size_t)",
+    "location": {
+      "column": "45",
+      "line": "77",
+      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\string.h"
+    },
+    "name": "strnlen",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@memchr",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void * memchr(const void *, int, size_t)",
+    "location": {
+      "column": "37",
+      "line": "171",
+      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\string.h"
+    },
+    "name": "memchr",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@strchr",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "char * strchr(const char *, int)",
+    "location": {
+      "column": "37",
+      "line": "172",
+      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\string.h"
+    },
+    "name": "strchr",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@strpbrk",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "char * strpbrk(const char *, const char *)",
+    "location": {
+      "column": "37",
+      "line": "173",
+      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\string.h"
+    },
+    "name": "strpbrk",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@strrchr",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "char * strrchr(const char *, int)",
+    "location": {
+      "column": "37",
+      "line": "174",
+      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\string.h"
+    },
+    "name": "strrchr",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@strstr",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "char * strstr(const char *, const char *)",
+    "location": {
+      "column": "37",
+      "line": "175",
+      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\string.h"
+    },
+    "name": "strstr",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:uart.h@2023@macro@__DRIVERLIB_UART_H__",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "__DRIVERLIB_UART_H__",
+    "location": {
+      "column": "9",
+      "line": "41",
+      "path": "C:\\ti\\TivaWare_C_Series-2.2.0.295\\driverlib\\uart.h"
+    },
+    "name": "__DRIVERLIB_UART_H__",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:uart.h@2691@macro@UART_INT_DMATX",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "UART_INT_DMATX",
+    "location": {
+      "column": "9",
+      "line": "60",
+      "path": "C:\\ti\\TivaWare_C_Series-2.2.0.295\\driverlib\\uart.h"
+    },
+    "name": "UART_INT_DMATX",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:uart.h@2756@macro@UART_INT_DMARX",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "UART_INT_DMARX",
+    "location": {
+      "column": "9",
+      "line": "61",
+      "path": "C:\\ti\\TivaWare_C_Series-2.2.0.295\\driverlib\\uart.h"
+    },
+    "name": "UART_INT_DMARX",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:uart.h@2821@macro@UART_INT_9BIT",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "UART_INT_9BIT",
+    "location": {
+      "column": "9",
+      "line": "62",
+      "path": "C:\\ti\\TivaWare_C_Series-2.2.0.295\\driverlib\\uart.h"
+    },
+    "name": "UART_INT_9BIT",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:uart.h@2899@macro@UART_INT_OE",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "UART_INT_OE",
+    "location": {
+      "column": "9",
+      "line": "63",
+      "path": "C:\\ti\\TivaWare_C_Series-2.2.0.295\\driverlib\\uart.h"
+    },
+    "name": "UART_INT_OE",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:uart.h@2976@macro@UART_INT_BE",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "UART_INT_BE",
+    "location": {
+      "column": "9",
+      "line": "64",
+      "path": "C:\\ti\\TivaWare_C_Series-2.2.0.295\\driverlib\\uart.h"
+    },
+    "name": "UART_INT_BE",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:uart.h@3051@macro@UART_INT_PE",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "UART_INT_PE",
+    "location": {
+      "column": "9",
+      "line": "65",
+      "path": "C:\\ti\\TivaWare_C_Series-2.2.0.295\\driverlib\\uart.h"
+    },
+    "name": "UART_INT_PE",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:uart.h@3127@macro@UART_INT_FE",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "UART_INT_FE",
+    "location": {
+      "column": "9",
+      "line": "66",
+      "path": "C:\\ti\\TivaWare_C_Series-2.2.0.295\\driverlib\\uart.h"
+    },
+    "name": "UART_INT_FE",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:uart.h@3204@macro@UART_INT_RT",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "UART_INT_RT",
+    "location": {
+      "column": "9",
+      "line": "67",
+      "path": "C:\\ti\\TivaWare_C_Series-2.2.0.295\\driverlib\\uart.h"
+    },
+    "name": "UART_INT_RT",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:uart.h@3283@macro@UART_INT_TX",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "UART_INT_TX",
+    "location": {
+      "column": "9",
+      "line": "68",
+      "path": "C:\\ti\\TivaWare_C_Series-2.2.0.295\\driverlib\\uart.h"
+    },
+    "name": "UART_INT_TX",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:uart.h@3355@macro@UART_INT_RX",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "UART_INT_RX",
+    "location": {
+      "column": "9",
+      "line": "69",
+      "path": "C:\\ti\\TivaWare_C_Series-2.2.0.295\\driverlib\\uart.h"
+    },
+    "name": "UART_INT_RX",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:uart.h@3426@macro@UART_INT_DSR",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "UART_INT_DSR",
+    "location": {
+      "column": "9",
+      "line": "70",
+      "path": "C:\\ti\\TivaWare_C_Series-2.2.0.295\\driverlib\\uart.h"
+    },
+    "name": "UART_INT_DSR",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:uart.h@3499@macro@UART_INT_DCD",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "UART_INT_DCD",
+    "location": {
+      "column": "9",
+      "line": "71",
+      "path": "C:\\ti\\TivaWare_C_Series-2.2.0.295\\driverlib\\uart.h"
+    },
+    "name": "UART_INT_DCD",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:uart.h@3572@macro@UART_INT_CTS",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "UART_INT_CTS",
+    "location": {
+      "column": "9",
+      "line": "72",
+      "path": "C:\\ti\\TivaWare_C_Series-2.2.0.295\\driverlib\\uart.h"
+    },
+    "name": "UART_INT_CTS",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:uart.h@3645@macro@UART_INT_RI",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "UART_INT_RI",
+    "location": {
+      "column": "9",
+      "line": "73",
+      "path": "C:\\ti\\TivaWare_C_Series-2.2.0.295\\driverlib\\uart.h"
+    },
+    "name": "UART_INT_RI",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:uart.h@4198@macro@UART_CONFIG_WLEN_MASK",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "UART_CONFIG_WLEN_MASK",
+    "location": {
+      "column": "9",
+      "line": "84",
+      "path": "C:\\ti\\TivaWare_C_Series-2.2.0.295\\driverlib\\uart.h"
+    },
+    "name": "UART_CONFIG_WLEN_MASK",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:uart.h@4278@macro@UART_CONFIG_WLEN_8",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "UART_CONFIG_WLEN_8",
+    "location": {
+      "column": "9",
+      "line": "85",
+      "path": "C:\\ti\\TivaWare_C_Series-2.2.0.295\\driverlib\\uart.h"
+    },
+    "name": "UART_CONFIG_WLEN_8",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:uart.h@4337@macro@UART_CONFIG_WLEN_7",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "UART_CONFIG_WLEN_7",
+    "location": {
+      "column": "9",
+      "line": "86",
+      "path": "C:\\ti\\TivaWare_C_Series-2.2.0.295\\driverlib\\uart.h"
+    },
+    "name": "UART_CONFIG_WLEN_7",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:uart.h@4396@macro@UART_CONFIG_WLEN_6",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "UART_CONFIG_WLEN_6",
+    "location": {
+      "column": "9",
+      "line": "87",
+      "path": "C:\\ti\\TivaWare_C_Series-2.2.0.295\\driverlib\\uart.h"
+    },
+    "name": "UART_CONFIG_WLEN_6",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:uart.h@4455@macro@UART_CONFIG_WLEN_5",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "UART_CONFIG_WLEN_5",
+    "location": {
+      "column": "9",
+      "line": "88",
+      "path": "C:\\ti\\TivaWare_C_Series-2.2.0.295\\driverlib\\uart.h"
+    },
+    "name": "UART_CONFIG_WLEN_5",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:uart.h@4514@macro@UART_CONFIG_STOP_MASK",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "UART_CONFIG_STOP_MASK",
+    "location": {
+      "column": "9",
+      "line": "89",
+      "path": "C:\\ti\\TivaWare_C_Series-2.2.0.295\\driverlib\\uart.h"
+    },
+    "name": "UART_CONFIG_STOP_MASK",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:uart.h@4592@macro@UART_CONFIG_STOP_ONE",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "UART_CONFIG_STOP_ONE",
+    "location": {
+      "column": "9",
+      "line": "90",
+      "path": "C:\\ti\\TivaWare_C_Series-2.2.0.295\\driverlib\\uart.h"
+    },
+    "name": "UART_CONFIG_STOP_ONE",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:uart.h@4653@macro@UART_CONFIG_STOP_TWO",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "UART_CONFIG_STOP_TWO",
+    "location": {
+      "column": "9",
+      "line": "91",
+      "path": "C:\\ti\\TivaWare_C_Series-2.2.0.295\\driverlib\\uart.h"
+    },
+    "name": "UART_CONFIG_STOP_TWO",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:uart.h@4715@macro@UART_CONFIG_PAR_MASK",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "UART_CONFIG_PAR_MASK",
+    "location": {
+      "column": "9",
+      "line": "92",
+      "path": "C:\\ti\\TivaWare_C_Series-2.2.0.295\\driverlib\\uart.h"
+    },
+    "name": "UART_CONFIG_PAR_MASK",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:uart.h@4790@macro@UART_CONFIG_PAR_NONE",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "UART_CONFIG_PAR_NONE",
+    "location": {
+      "column": "9",
+      "line": "93",
+      "path": "C:\\ti\\TivaWare_C_Series-2.2.0.295\\driverlib\\uart.h"
+    },
+    "name": "UART_CONFIG_PAR_NONE",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:uart.h@4848@macro@UART_CONFIG_PAR_EVEN",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "UART_CONFIG_PAR_EVEN",
+    "location": {
+      "column": "9",
+      "line": "94",
+      "path": "C:\\ti\\TivaWare_C_Series-2.2.0.295\\driverlib\\uart.h"
+    },
+    "name": "UART_CONFIG_PAR_EVEN",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:uart.h@4908@macro@UART_CONFIG_PAR_ODD",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "UART_CONFIG_PAR_ODD",
+    "location": {
+      "column": "9",
+      "line": "95",
+      "path": "C:\\ti\\TivaWare_C_Series-2.2.0.295\\driverlib\\uart.h"
+    },
+    "name": "UART_CONFIG_PAR_ODD",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:uart.h@4967@macro@UART_CONFIG_PAR_ONE",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "UART_CONFIG_PAR_ONE",
+    "location": {
+      "column": "9",
+      "line": "96",
+      "path": "C:\\ti\\TivaWare_C_Series-2.2.0.295\\driverlib\\uart.h"
+    },
+    "name": "UART_CONFIG_PAR_ONE",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:uart.h@5033@macro@UART_CONFIG_PAR_ZERO",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "UART_CONFIG_PAR_ZERO",
+    "location": {
+      "column": "9",
+      "line": "97",
+      "path": "C:\\ti\\TivaWare_C_Series-2.2.0.295\\driverlib\\uart.h"
+    },
+    "name": "UART_CONFIG_PAR_ZERO",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:uart.h@5409@macro@UART_FIFO_TX1_8",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "UART_FIFO_TX1_8",
+    "location": {
+      "column": "9",
+      "line": "105",
+      "path": "C:\\ti\\TivaWare_C_Series-2.2.0.295\\driverlib\\uart.h"
+    },
+    "name": "UART_FIFO_TX1_8",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:uart.h@5488@macro@UART_FIFO_TX2_8",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "UART_FIFO_TX2_8",
+    "location": {
+      "column": "9",
+      "line": "106",
+      "path": "C:\\ti\\TivaWare_C_Series-2.2.0.295\\driverlib\\uart.h"
+    },
+    "name": "UART_FIFO_TX2_8",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:uart.h@5567@macro@UART_FIFO_TX4_8",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "UART_FIFO_TX4_8",
+    "location": {
+      "column": "9",
+      "line": "107",
+      "path": "C:\\ti\\TivaWare_C_Series-2.2.0.295\\driverlib\\uart.h"
+    },
+    "name": "UART_FIFO_TX4_8",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:uart.h@5646@macro@UART_FIFO_TX6_8",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "UART_FIFO_TX6_8",
+    "location": {
+      "column": "9",
+      "line": "108",
+      "path": "C:\\ti\\TivaWare_C_Series-2.2.0.295\\driverlib\\uart.h"
+    },
+    "name": "UART_FIFO_TX6_8",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:uart.h@5725@macro@UART_FIFO_TX7_8",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "UART_FIFO_TX7_8",
+    "location": {
+      "column": "9",
+      "line": "109",
+      "path": "C:\\ti\\TivaWare_C_Series-2.2.0.295\\driverlib\\uart.h"
+    },
+    "name": "UART_FIFO_TX7_8",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:uart.h@6113@macro@UART_FIFO_RX1_8",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "UART_FIFO_RX1_8",
+    "location": {
+      "column": "9",
+      "line": "117",
+      "path": "C:\\ti\\TivaWare_C_Series-2.2.0.295\\driverlib\\uart.h"
+    },
+    "name": "UART_FIFO_RX1_8",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:uart.h@6191@macro@UART_FIFO_RX2_8",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "UART_FIFO_RX2_8",
+    "location": {
+      "column": "9",
+      "line": "118",
+      "path": "C:\\ti\\TivaWare_C_Series-2.2.0.295\\driverlib\\uart.h"
+    },
+    "name": "UART_FIFO_RX2_8",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:uart.h@6269@macro@UART_FIFO_RX4_8",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "UART_FIFO_RX4_8",
+    "location": {
+      "column": "9",
+      "line": "119",
+      "path": "C:\\ti\\TivaWare_C_Series-2.2.0.295\\driverlib\\uart.h"
+    },
+    "name": "UART_FIFO_RX4_8",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:uart.h@6347@macro@UART_FIFO_RX6_8",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "UART_FIFO_RX6_8",
+    "location": {
+      "column": "9",
+      "line": "120",
+      "path": "C:\\ti\\TivaWare_C_Series-2.2.0.295\\driverlib\\uart.h"
+    },
+    "name": "UART_FIFO_RX6_8",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:uart.h@6425@macro@UART_FIFO_RX7_8",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "UART_FIFO_RX7_8",
+    "location": {
+      "column": "9",
+      "line": "121",
+      "path": "C:\\ti\\TivaWare_C_Series-2.2.0.295\\driverlib\\uart.h"
+    },
+    "name": "UART_FIFO_RX7_8",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:uart.h@6746@macro@UART_DMA_ERR_RXSTOP",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "UART_DMA_ERR_RXSTOP",
+    "location": {
+      "column": "9",
+      "line": "128",
+      "path": "C:\\ti\\TivaWare_C_Series-2.2.0.295\\driverlib\\uart.h"
+    },
+    "name": "UART_DMA_ERR_RXSTOP",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:uart.h@6825@macro@UART_DMA_TX",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "UART_DMA_TX",
+    "location": {
+      "column": "9",
+      "line": "129",
+      "path": "C:\\ti\\TivaWare_C_Series-2.2.0.295\\driverlib\\uart.h"
+    },
+    "name": "UART_DMA_TX",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:uart.h@6897@macro@UART_DMA_RX",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "UART_DMA_RX",
+    "location": {
+      "column": "9",
+      "line": "130",
+      "path": "C:\\ti\\TivaWare_C_Series-2.2.0.295\\driverlib\\uart.h"
+    },
+    "name": "UART_DMA_RX",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:uart.h@7183@macro@UART_RXERROR_OVERRUN",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "UART_RXERROR_OVERRUN",
+    "location": {
+      "column": "9",
+      "line": "137",
+      "path": "C:\\ti\\TivaWare_C_Series-2.2.0.295\\driverlib\\uart.h"
+    },
+    "name": "UART_RXERROR_OVERRUN",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:uart.h@7227@macro@UART_RXERROR_BREAK",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "UART_RXERROR_BREAK",
+    "location": {
+      "column": "9",
+      "line": "138",
+      "path": "C:\\ti\\TivaWare_C_Series-2.2.0.295\\driverlib\\uart.h"
+    },
+    "name": "UART_RXERROR_BREAK",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:uart.h@7271@macro@UART_RXERROR_PARITY",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "UART_RXERROR_PARITY",
+    "location": {
+      "column": "9",
+      "line": "139",
+      "path": "C:\\ti\\TivaWare_C_Series-2.2.0.295\\driverlib\\uart.h"
+    },
+    "name": "UART_RXERROR_PARITY",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:uart.h@7315@macro@UART_RXERROR_FRAMING",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "UART_RXERROR_FRAMING",
+    "location": {
+      "column": "9",
+      "line": "140",
+      "path": "C:\\ti\\TivaWare_C_Series-2.2.0.295\\driverlib\\uart.h"
+    },
+    "name": "UART_RXERROR_FRAMING",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:uart.h@7637@macro@UART_OUTPUT_RTS",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "UART_OUTPUT_RTS",
+    "location": {
+      "column": "9",
+      "line": "148",
+      "path": "C:\\ti\\TivaWare_C_Series-2.2.0.295\\driverlib\\uart.h"
+    },
+    "name": "UART_OUTPUT_RTS",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:uart.h@7681@macro@UART_OUTPUT_DTR",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "UART_OUTPUT_DTR",
+    "location": {
+      "column": "9",
+      "line": "149",
+      "path": "C:\\ti\\TivaWare_C_Series-2.2.0.295\\driverlib\\uart.h"
+    },
+    "name": "UART_OUTPUT_DTR",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:uart.h@7960@macro@UART_INPUT_RI",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "UART_INPUT_RI",
+    "location": {
+      "column": "9",
+      "line": "156",
+      "path": "C:\\ti\\TivaWare_C_Series-2.2.0.295\\driverlib\\uart.h"
+    },
+    "name": "UART_INPUT_RI",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:uart.h@8004@macro@UART_INPUT_DCD",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "UART_INPUT_DCD",
+    "location": {
+      "column": "9",
+      "line": "157",
+      "path": "C:\\ti\\TivaWare_C_Series-2.2.0.295\\driverlib\\uart.h"
+    },
+    "name": "UART_INPUT_DCD",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:uart.h@8048@macro@UART_INPUT_DSR",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "UART_INPUT_DSR",
+    "location": {
+      "column": "9",
+      "line": "158",
+      "path": "C:\\ti\\TivaWare_C_Series-2.2.0.295\\driverlib\\uart.h"
+    },
+    "name": "UART_INPUT_DSR",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:uart.h@8092@macro@UART_INPUT_CTS",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "UART_INPUT_CTS",
+    "location": {
+      "column": "9",
+      "line": "159",
+      "path": "C:\\ti\\TivaWare_C_Series-2.2.0.295\\driverlib\\uart.h"
+    },
+    "name": "UART_INPUT_CTS",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:uart.h@8402@macro@UART_FLOWCONTROL_TX",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "UART_FLOWCONTROL_TX",
+    "location": {
+      "column": "9",
+      "line": "167",
+      "path": "C:\\ti\\TivaWare_C_Series-2.2.0.295\\driverlib\\uart.h"
+    },
+    "name": "UART_FLOWCONTROL_TX",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:uart.h@8446@macro@UART_FLOWCONTROL_RX",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "UART_FLOWCONTROL_RX",
+    "location": {
+      "column": "9",
+      "line": "168",
+      "path": "C:\\ti\\TivaWare_C_Series-2.2.0.295\\driverlib\\uart.h"
+    },
+    "name": "UART_FLOWCONTROL_RX",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:uart.h@8490@macro@UART_FLOWCONTROL_NONE",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "UART_FLOWCONTROL_NONE",
+    "location": {
+      "column": "9",
+      "line": "169",
+      "path": "C:\\ti\\TivaWare_C_Series-2.2.0.295\\driverlib\\uart.h"
+    },
+    "name": "UART_FLOWCONTROL_NONE",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:uart.h@8799@macro@UART_TXINT_MODE_FIFO",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "UART_TXINT_MODE_FIFO",
+    "location": {
+      "column": "9",
+      "line": "177",
+      "path": "C:\\ti\\TivaWare_C_Series-2.2.0.295\\driverlib\\uart.h"
+    },
+    "name": "UART_TXINT_MODE_FIFO",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:uart.h@8843@macro@UART_TXINT_MODE_EOT",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "UART_TXINT_MODE_EOT",
+    "location": {
+      "column": "9",
+      "line": "178",
+      "path": "C:\\ti\\TivaWare_C_Series-2.2.0.295\\driverlib\\uart.h"
+    },
+    "name": "UART_TXINT_MODE_EOT",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:uart.h@9156@macro@UART_CLOCK_SYSTEM",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "UART_CLOCK_SYSTEM",
+    "location": {
+      "column": "9",
+      "line": "186",
+      "path": "C:\\ti\\TivaWare_C_Series-2.2.0.295\\driverlib\\uart.h"
+    },
+    "name": "UART_CLOCK_SYSTEM",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:uart.h@9200@macro@UART_CLOCK_PIOSC",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "UART_CLOCK_PIOSC",
+    "location": {
+      "column": "9",
+      "line": "187",
+      "path": "C:\\ti\\TivaWare_C_Series-2.2.0.295\\driverlib\\uart.h"
+    },
+    "name": "UART_CLOCK_PIOSC",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@UARTParityModeSet",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void UARTParityModeSet(uint32_t, uint32_t)",
+    "location": {
+      "column": "13",
+      "line": "194",
+      "path": "C:\\ti\\TivaWare_C_Series-2.2.0.295\\driverlib\\uart.h"
+    },
+    "name": "UARTParityModeSet",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@UARTParityModeGet",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "uint32_t UARTParityModeGet(uint32_t)",
+    "location": {
+      "column": "17",
+      "line": "195",
+      "path": "C:\\ti\\TivaWare_C_Series-2.2.0.295\\driverlib\\uart.h"
+    },
+    "name": "UARTParityModeGet",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@UARTFIFOLevelSet",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void UARTFIFOLevelSet(uint32_t, uint32_t, uint32_t)",
+    "location": {
+      "column": "13",
+      "line": "196",
+      "path": "C:\\ti\\TivaWare_C_Series-2.2.0.295\\driverlib\\uart.h"
+    },
+    "name": "UARTFIFOLevelSet",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@UARTFIFOLevelGet",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void UARTFIFOLevelGet(uint32_t, uint32_t *, uint32_t *)",
+    "location": {
+      "column": "13",
+      "line": "198",
+      "path": "C:\\ti\\TivaWare_C_Series-2.2.0.295\\driverlib\\uart.h"
+    },
+    "name": "UARTFIFOLevelGet",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@UARTConfigSetExpClk",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void UARTConfigSetExpClk(uint32_t, uint32_t, uint32_t, uint32_t)",
+    "location": {
+      "column": "13",
+      "line": "200",
+      "path": "C:\\ti\\TivaWare_C_Series-2.2.0.295\\driverlib\\uart.h"
+    },
+    "name": "UARTConfigSetExpClk",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@UARTConfigGetExpClk",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void UARTConfigGetExpClk(uint32_t, uint32_t, uint32_t *, uint32_t *)",
+    "location": {
+      "column": "13",
+      "line": "202",
+      "path": "C:\\ti\\TivaWare_C_Series-2.2.0.295\\driverlib\\uart.h"
+    },
+    "name": "UARTConfigGetExpClk",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@UARTEnable",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void UARTEnable(uint32_t)",
+    "location": {
+      "column": "13",
+      "line": "204",
+      "path": "C:\\ti\\TivaWare_C_Series-2.2.0.295\\driverlib\\uart.h"
+    },
+    "name": "UARTEnable",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@UARTDisable",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void UARTDisable(uint32_t)",
+    "location": {
+      "column": "13",
+      "line": "205",
+      "path": "C:\\ti\\TivaWare_C_Series-2.2.0.295\\driverlib\\uart.h"
+    },
+    "name": "UARTDisable",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@UARTFIFOEnable",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void UARTFIFOEnable(uint32_t)",
+    "location": {
+      "column": "13",
+      "line": "206",
+      "path": "C:\\ti\\TivaWare_C_Series-2.2.0.295\\driverlib\\uart.h"
+    },
+    "name": "UARTFIFOEnable",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@UARTFIFODisable",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void UARTFIFODisable(uint32_t)",
+    "location": {
+      "column": "13",
+      "line": "207",
+      "path": "C:\\ti\\TivaWare_C_Series-2.2.0.295\\driverlib\\uart.h"
+    },
+    "name": "UARTFIFODisable",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@UARTEnableSIR",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void UARTEnableSIR(uint32_t, bool)",
+    "location": {
+      "column": "13",
+      "line": "208",
+      "path": "C:\\ti\\TivaWare_C_Series-2.2.0.295\\driverlib\\uart.h"
+    },
+    "name": "UARTEnableSIR",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@UARTDisableSIR",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void UARTDisableSIR(uint32_t)",
+    "location": {
+      "column": "13",
+      "line": "209",
+      "path": "C:\\ti\\TivaWare_C_Series-2.2.0.295\\driverlib\\uart.h"
+    },
+    "name": "UARTDisableSIR",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@UARTCharsAvail",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "bool UARTCharsAvail(uint32_t)",
+    "location": {
+      "column": "13",
+      "line": "210",
+      "path": "C:\\ti\\TivaWare_C_Series-2.2.0.295\\driverlib\\uart.h"
+    },
+    "name": "UARTCharsAvail",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@UARTSpaceAvail",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "bool UARTSpaceAvail(uint32_t)",
+    "location": {
+      "column": "13",
+      "line": "211",
+      "path": "C:\\ti\\TivaWare_C_Series-2.2.0.295\\driverlib\\uart.h"
+    },
+    "name": "UARTSpaceAvail",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@UARTCharGetNonBlocking",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "int32_t UARTCharGetNonBlocking(uint32_t)",
+    "location": {
+      "column": "16",
+      "line": "212",
+      "path": "C:\\ti\\TivaWare_C_Series-2.2.0.295\\driverlib\\uart.h"
+    },
+    "name": "UARTCharGetNonBlocking",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@UARTCharGet",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "int32_t UARTCharGet(uint32_t)",
+    "location": {
+      "column": "16",
+      "line": "213",
+      "path": "C:\\ti\\TivaWare_C_Series-2.2.0.295\\driverlib\\uart.h"
+    },
+    "name": "UARTCharGet",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@UARTCharPutNonBlocking",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "bool UARTCharPutNonBlocking(uint32_t, unsigned char)",
+    "location": {
+      "column": "13",
+      "line": "214",
+      "path": "C:\\ti\\TivaWare_C_Series-2.2.0.295\\driverlib\\uart.h"
+    },
+    "name": "UARTCharPutNonBlocking",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@UARTCharPut",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void UARTCharPut(uint32_t, unsigned char)",
+    "location": {
+      "column": "13",
+      "line": "215",
+      "path": "C:\\ti\\TivaWare_C_Series-2.2.0.295\\driverlib\\uart.h"
+    },
+    "name": "UARTCharPut",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@UARTBreakCtl",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void UARTBreakCtl(uint32_t, bool)",
+    "location": {
+      "column": "13",
+      "line": "216",
+      "path": "C:\\ti\\TivaWare_C_Series-2.2.0.295\\driverlib\\uart.h"
+    },
+    "name": "UARTBreakCtl",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@UARTBusy",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "bool UARTBusy(uint32_t)",
+    "location": {
+      "column": "13",
+      "line": "217",
+      "path": "C:\\ti\\TivaWare_C_Series-2.2.0.295\\driverlib\\uart.h"
+    },
+    "name": "UARTBusy",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@UARTIntRegister",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void UARTIntRegister(uint32_t, void (*)(void))",
+    "location": {
+      "column": "13",
+      "line": "218",
+      "path": "C:\\ti\\TivaWare_C_Series-2.2.0.295\\driverlib\\uart.h"
+    },
+    "name": "UARTIntRegister",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@UARTIntUnregister",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void UARTIntUnregister(uint32_t)",
+    "location": {
+      "column": "13",
+      "line": "219",
+      "path": "C:\\ti\\TivaWare_C_Series-2.2.0.295\\driverlib\\uart.h"
+    },
+    "name": "UARTIntUnregister",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@UARTIntEnable",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void UARTIntEnable(uint32_t, uint32_t)",
+    "location": {
+      "column": "13",
+      "line": "220",
+      "path": "C:\\ti\\TivaWare_C_Series-2.2.0.295\\driverlib\\uart.h"
+    },
+    "name": "UARTIntEnable",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@UARTIntDisable",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void UARTIntDisable(uint32_t, uint32_t)",
+    "location": {
+      "column": "13",
+      "line": "221",
+      "path": "C:\\ti\\TivaWare_C_Series-2.2.0.295\\driverlib\\uart.h"
+    },
+    "name": "UARTIntDisable",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@UARTIntStatus",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "uint32_t UARTIntStatus(uint32_t, bool)",
+    "location": {
+      "column": "17",
+      "line": "222",
+      "path": "C:\\ti\\TivaWare_C_Series-2.2.0.295\\driverlib\\uart.h"
+    },
+    "name": "UARTIntStatus",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@UARTIntClear",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void UARTIntClear(uint32_t, uint32_t)",
+    "location": {
+      "column": "13",
+      "line": "223",
+      "path": "C:\\ti\\TivaWare_C_Series-2.2.0.295\\driverlib\\uart.h"
+    },
+    "name": "UARTIntClear",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@UARTDMAEnable",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void UARTDMAEnable(uint32_t, uint32_t)",
+    "location": {
+      "column": "13",
+      "line": "224",
+      "path": "C:\\ti\\TivaWare_C_Series-2.2.0.295\\driverlib\\uart.h"
+    },
+    "name": "UARTDMAEnable",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@UARTDMADisable",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void UARTDMADisable(uint32_t, uint32_t)",
+    "location": {
+      "column": "13",
+      "line": "225",
+      "path": "C:\\ti\\TivaWare_C_Series-2.2.0.295\\driverlib\\uart.h"
+    },
+    "name": "UARTDMADisable",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@UARTRxErrorGet",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "uint32_t UARTRxErrorGet(uint32_t)",
+    "location": {
+      "column": "17",
+      "line": "226",
+      "path": "C:\\ti\\TivaWare_C_Series-2.2.0.295\\driverlib\\uart.h"
+    },
+    "name": "UARTRxErrorGet",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@UARTRxErrorClear",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void UARTRxErrorClear(uint32_t)",
+    "location": {
+      "column": "13",
+      "line": "227",
+      "path": "C:\\ti\\TivaWare_C_Series-2.2.0.295\\driverlib\\uart.h"
+    },
+    "name": "UARTRxErrorClear",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@UARTSmartCardEnable",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void UARTSmartCardEnable(uint32_t)",
+    "location": {
+      "column": "13",
+      "line": "228",
+      "path": "C:\\ti\\TivaWare_C_Series-2.2.0.295\\driverlib\\uart.h"
+    },
+    "name": "UARTSmartCardEnable",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@UARTSmartCardDisable",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void UARTSmartCardDisable(uint32_t)",
+    "location": {
+      "column": "13",
+      "line": "229",
+      "path": "C:\\ti\\TivaWare_C_Series-2.2.0.295\\driverlib\\uart.h"
+    },
+    "name": "UARTSmartCardDisable",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@UARTModemControlSet",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void UARTModemControlSet(uint32_t, uint32_t)",
+    "location": {
+      "column": "13",
+      "line": "230",
+      "path": "C:\\ti\\TivaWare_C_Series-2.2.0.295\\driverlib\\uart.h"
+    },
+    "name": "UARTModemControlSet",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@UARTModemControlClear",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void UARTModemControlClear(uint32_t, uint32_t)",
+    "location": {
+      "column": "13",
+      "line": "231",
+      "path": "C:\\ti\\TivaWare_C_Series-2.2.0.295\\driverlib\\uart.h"
+    },
+    "name": "UARTModemControlClear",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@UARTModemControlGet",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "uint32_t UARTModemControlGet(uint32_t)",
+    "location": {
+      "column": "17",
+      "line": "232",
+      "path": "C:\\ti\\TivaWare_C_Series-2.2.0.295\\driverlib\\uart.h"
+    },
+    "name": "UARTModemControlGet",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@UARTModemStatusGet",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "uint32_t UARTModemStatusGet(uint32_t)",
+    "location": {
+      "column": "17",
+      "line": "233",
+      "path": "C:\\ti\\TivaWare_C_Series-2.2.0.295\\driverlib\\uart.h"
+    },
+    "name": "UARTModemStatusGet",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@UARTFlowControlSet",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void UARTFlowControlSet(uint32_t, uint32_t)",
+    "location": {
+      "column": "13",
+      "line": "234",
+      "path": "C:\\ti\\TivaWare_C_Series-2.2.0.295\\driverlib\\uart.h"
+    },
+    "name": "UARTFlowControlSet",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@UARTFlowControlGet",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "uint32_t UARTFlowControlGet(uint32_t)",
+    "location": {
+      "column": "17",
+      "line": "235",
+      "path": "C:\\ti\\TivaWare_C_Series-2.2.0.295\\driverlib\\uart.h"
+    },
+    "name": "UARTFlowControlGet",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@UARTTxIntModeSet",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void UARTTxIntModeSet(uint32_t, uint32_t)",
+    "location": {
+      "column": "13",
+      "line": "236",
+      "path": "C:\\ti\\TivaWare_C_Series-2.2.0.295\\driverlib\\uart.h"
+    },
+    "name": "UARTTxIntModeSet",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@UARTTxIntModeGet",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "uint32_t UARTTxIntModeGet(uint32_t)",
+    "location": {
+      "column": "17",
+      "line": "237",
+      "path": "C:\\ti\\TivaWare_C_Series-2.2.0.295\\driverlib\\uart.h"
+    },
+    "name": "UARTTxIntModeGet",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@UARTClockSourceSet",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void UARTClockSourceSet(uint32_t, uint32_t)",
+    "location": {
+      "column": "13",
+      "line": "238",
+      "path": "C:\\ti\\TivaWare_C_Series-2.2.0.295\\driverlib\\uart.h"
+    },
+    "name": "UARTClockSourceSet",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@UARTClockSourceGet",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "uint32_t UARTClockSourceGet(uint32_t)",
+    "location": {
+      "column": "17",
+      "line": "239",
+      "path": "C:\\ti\\TivaWare_C_Series-2.2.0.295\\driverlib\\uart.h"
+    },
+    "name": "UARTClockSourceGet",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@UART9BitEnable",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void UART9BitEnable(uint32_t)",
+    "location": {
+      "column": "13",
+      "line": "240",
+      "path": "C:\\ti\\TivaWare_C_Series-2.2.0.295\\driverlib\\uart.h"
+    },
+    "name": "UART9BitEnable",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@UART9BitDisable",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void UART9BitDisable(uint32_t)",
+    "location": {
+      "column": "13",
+      "line": "241",
+      "path": "C:\\ti\\TivaWare_C_Series-2.2.0.295\\driverlib\\uart.h"
+    },
+    "name": "UART9BitDisable",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@UART9BitAddrSet",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void UART9BitAddrSet(uint32_t, uint8_t, uint8_t)",
+    "location": {
+      "column": "13",
+      "line": "242",
+      "path": "C:\\ti\\TivaWare_C_Series-2.2.0.295\\driverlib\\uart.h"
+    },
+    "name": "UART9BitAddrSet",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@UART9BitAddrSend",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void UART9BitAddrSend(uint32_t, uint8_t)",
+    "location": {
+      "column": "13",
+      "line": "244",
+      "path": "C:\\ti\\TivaWare_C_Series-2.2.0.295\\driverlib\\uart.h"
+    },
+    "name": "UART9BitAddrSend",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@UARTLoopbackEnable",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void UARTLoopbackEnable(uint32_t)",
+    "location": {
+      "column": "13",
+      "line": "245",
+      "path": "C:\\ti\\TivaWare_C_Series-2.2.0.295\\driverlib\\uart.h"
+    },
+    "name": "UARTLoopbackEnable",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:HMI_Comm.c@246@macro@PASSWORD",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "PASSWORD",
+    "location": {
+      "column": "9",
+      "line": "11",
+      "path": "E:\\coding\\embedded\\embededProject\\UART\\HMI_Comm.c"
+    },
+    "name": "PASSWORD",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@rxBuffer",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "rxBuffer",
+    "location": {
+      "column": "6",
+      "line": "12",
+      "path": "E:\\coding\\embedded\\embededProject\\UART\\HMI_Comm.c"
+    },
+    "name": "rxBuffer",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@rxIndex",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "rxIndex",
+    "location": {
+      "column": "9",
+      "line": "13",
+      "path": "E:\\coding\\embedded\\embededProject\\UART\\HMI_Comm.c"
+    },
+    "name": "rxIndex",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@failedAttempts",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "failedAttempts",
+    "location": {
+      "column": "7",
+      "line": "14",
+      "path": "E:\\coding\\embedded\\embededProject\\UART\\HMI_Comm.c"
+    },
+    "name": "failedAttempts",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@UART1_Init",
+    "What": "Function",
+    "defdec": "Def",
+    "display": "void UART1_Init(void)",
+    "location": {
+      "column": "6",
+      "line": "16",
+      "path": "E:\\coding\\embedded\\embededProject\\UART\\HMI_Comm.c"
+    },
+    "name": "UART1_Init",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@BUZZ",
+    "What": "Function",
+    "defdec": "Def",
+    "display": "void BUZZ(void)",
+    "location": {
+      "column": "6",
+      "line": "50",
+      "path": "E:\\coding\\embedded\\embededProject\\UART\\HMI_Comm.c"
+    },
+    "name": "BUZZ",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@UART1_SendString",
+    "What": "Function",
+    "defdec": "Def",
+    "display": "void UART1_SendString(char *)",
+    "location": {
+      "column": "6",
+      "line": "57",
+      "path": "E:\\coding\\embedded\\embededProject\\UART\\HMI_Comm.c"
+    },
+    "name": "UART1_SendString",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@WAIT_FOR_MESSAGE",
+    "What": "Function",
+    "defdec": "Def",
+    "display": "void WAIT_FOR_MESSAGE(void)",
+    "location": {
+      "column": "6",
+      "line": "71",
+      "path": "E:\\coding\\embedded\\embededProject\\UART\\HMI_Comm.c"
+    },
+    "name": "WAIT_FOR_MESSAGE",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:HMI_Comm.c@2475@F@WAIT_FOR_MESSAGE@receivedChar",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "receivedChar",
+    "location": {
+      "column": "14",
+      "line": "73",
+      "path": "E:\\coding\\embedded\\embededProject\\UART\\HMI_Comm.c"
+    },
+    "name": "receivedChar",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:HMI_Comm.c@2976@F@WAIT_FOR_MESSAGE@rxBufferCopy",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "rxBufferCopy",
+    "location": {
+      "column": "18",
+      "line": "85",
+      "path": "E:\\coding\\embedded\\embededProject\\UART\\HMI_Comm.c"
+    },
+    "name": "rxBufferCopy",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:HMI_Comm.c@3071@F@WAIT_FOR_MESSAGE@modeStr",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "modeStr",
+    "location": {
+      "column": "19",
+      "line": "88",
+      "path": "E:\\coding\\embedded\\embededProject\\UART\\HMI_Comm.c"
+    },
+    "name": "modeStr",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:HMI_Comm.c@3127@F@WAIT_FOR_MESSAGE@pass1Str",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "pass1Str",
+    "location": {
+      "column": "19",
+      "line": "89",
+      "path": "E:\\coding\\embedded\\embededProject\\UART\\HMI_Comm.c"
+    },
+    "name": "pass1Str",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:HMI_Comm.c@3176@F@WAIT_FOR_MESSAGE@pass2Str",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "pass2Str",
+    "location": {
+      "column": "19",
+      "line": "90",
+      "path": "E:\\coding\\embedded\\embededProject\\UART\\HMI_Comm.c"
+    },
+    "name": "pass2Str",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:ysizet.h@111@macro@_YSIZET_H",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "_YSIZET_H",
+    "location": {
+      "column": "9",
+      "line": "5",
+      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\ysizet.h"
+    },
+    "name": "_YSIZET_H",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:ysizet.h@277@macro@_SIZE_T",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "_SIZE_T",
+    "location": {
+      "column": "11",
+      "line": "16",
+      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\ysizet.h"
+    },
+    "name": "_SIZE_T",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:ysizet.h@296@macro@_STD_USING_SIZE_T",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "_STD_USING_SIZE_T",
+    "location": {
+      "column": "11",
+      "line": "17",
+      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\ysizet.h"
+    },
+    "name": "_STD_USING_SIZE_T",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:ysizet.h@T@size_t",
+    "What": "Typedef",
+    "defdec": "Def",
+    "display": "_Sizet",
+    "location": {
+      "column": "18",
+      "line": "18",
+      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\ysizet.h"
+    },
+    "name": "size_t",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:ysizet.h@359@macro@__DATA_PTR_MEM_HELPER1__",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "__DATA_PTR_MEM_HELPER1__",
+    "location": {
+      "column": "9",
+      "line": "21",
+      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\ysizet.h"
+    },
+    "name": "__DATA_PTR_MEM_HELPER1__",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:ysizet.h@T@__data_size_t",
+    "What": "Typedef",
+    "defdec": "Def",
+    "display": "unsigned int",
+    "location": {
+      "column": "1",
+      "line": "23",
+      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\ysizet.h"
+    },
+    "name": "__data_size_t",
+    "origin": "system_include",
     "scope": null
   },
   {
