@@ -12,7 +12,7 @@
 void DELAY(void){
   SysCtlDelay(SysCtlClockGet());            
 }
-
+// <>
 int main(void)
 {
     UART5_Init_front();
@@ -25,7 +25,7 @@ int main(void)
     
     /* ---------- Optional: show a startup message ---------- */
     DISPLAY_ShowMessage("Frontend Ready");
-    SysCtlDelay(1000);   // 1 second (if SysTick exists)
+    SysCtlDelay(SysCtlClockGet());   // 1 second (if SysTick exists)
 
     DISPLAY_ClearScreen();
     DISPLAY_ShowMainMenu();  // Show menu while testing

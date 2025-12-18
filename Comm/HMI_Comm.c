@@ -19,7 +19,8 @@ void UART5_Init_front(void) {
     GPIOPinWrite(GPIO_PORTF_BASE, GPIO_PIN_1, 0); // Start with LED OFF
      GPIOPinTypeGPIOOutput(GPIO_PORTF_BASE, GPIO_PIN_1); // PF3 is Green LED
     GPIOPinWrite(GPIO_PORTF_BASE, GPIO_PIN_1, 0); // Start with LED OFF
-    
+     GPIOPinTypeGPIOOutput(GPIO_PORTF_BASE, GPIO_PIN_2); // PF3 is Green LED
+    GPIOPinWrite(GPIO_PORTF_BASE, GPIO_PIN_2, 0); // Start with LED OFF
 
     
     UARTEnable(UART5_BASE);
@@ -47,10 +48,6 @@ void UART5_SendString(char* str) {
     GPIOPinWrite(GPIO_PORTF_BASE, GPIO_PIN_3, 0);
 }
 
-// uint8_t UART_ReceiveByte(void) {
-//     while(UARTBusy(UART5_BASE));
-//     return UARTCharGet(UART5_BASE);
-// }
 
 void UART5_ReceiveString(char* buffer, uint16_t max_length) {
     uint16_t index = 0;
@@ -61,7 +58,7 @@ void UART5_ReceiveString(char* buffer, uint16_t max_length) {
     while(index < max_length - 1) {
         if(UARTCharsAvail(UART5_BASE)) {
             received_char = UARTCharGet(UART5_BASE);
-           // timeout_counter = 0;  // Reset timeout on successful receive
+           timeout_counter = 0;  // Reset timeout on successful receive
             
             if(received_char == '#') {
                 break;
@@ -81,3 +78,5 @@ void UART5_ReceiveString(char* buffer, uint16_t max_length) {
     
     buffer[index] = '\0';  // Null terminate the string
 }
+
+

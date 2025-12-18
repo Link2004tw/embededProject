@@ -291,6 +291,8 @@ void DISPLAY_OLD_PASSWORD(void)
     //SysCtlDelay(1000000);
     
     UART5_ReceiveString(ack_buffer, 20);
+    SysCtlDelay(SysCtlClockGet());  // 100ms
+    
     GPIOPinWrite(GPIO_PORTF_BASE, GPIO_PIN_2, 0);
 
     LCD_Clear();
@@ -315,6 +317,7 @@ void DISPLAY_OLD_PASSWORD(void)
     }
     SysCtlDelay(16000000);  
 }
+
 
 /*****************************************************************************
  * Function: DISPLAY_NEW_PASSWORD

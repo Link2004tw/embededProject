@@ -9,8 +9,8 @@
 #include "input_manager.h"
 //#include "lcd.h"
 #include "../Comm/HMI_Comm.h"
-bool static flag = false;
-char static savedPassword[5]="";
+//bool static flag = false;
+//char static savedPassword[5]="";
 
 void DISPLAY_Init(void);
 
