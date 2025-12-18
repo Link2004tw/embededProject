@@ -146,7 +146,7 @@ void PotentiometerManager_HandleTimeoutConfig(void)
             char ack_buffer[20];
             LCD_Clear();
             DISPLAY_ShowMessage("Waiting for Ack...");
-            UART5_ReceiveString(ack_buffer, 20);
+            UART5_ReceiveStringWithTimeout(ack_buffer, 20);
             if(ack_buffer != NULL){
                 SHOW_BUFFER(ack_buffer);
             }

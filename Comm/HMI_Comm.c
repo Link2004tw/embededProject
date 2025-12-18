@@ -48,35 +48,54 @@ void UART5_SendString(char* str) {
     GPIOPinWrite(GPIO_PORTF_BASE, GPIO_PIN_3, 0);
 }
 
+#define ACK_TIMEOUT_MS 1000  // 1 second timeout
 
-void UART5_ReceiveString(char* buffer, uint16_t max_length) {
+void UART5_ReceiveStringWithTimeout(char* buffer, uint16_t max_length) {
     uint16_t index = 0;
-    char received_char;
+    char c;
     uint32_t timeout_counter = 0;
-    const uint32_t TIMEOUT_LIMIT = 16000000;  // ~1 second timeout
-    
+
     while(index < max_length - 1) {
         if(UARTCharsAvail(UART5_BASE)) {
-            received_char = UARTCharGet(UART5_BASE);
-           timeout_counter = 0;  // Reset timeout on successful receive
-            
-            if(received_char == '#') {
-                break;
-            }
-            
-            buffer[index++] = received_char;
+            c = UARTCharGet(UART5_BASE);
+            if(c == '#') break;
+            buffer[index++] = c;
+            timeout_counter = 0; // reset on receive
+        } else {
+            timeout_counter++;
+            if(timeout_counter > ACK_TIMEOUT_MS) break; // timeout reached
+            SysCtlDelay(1000); // small delay
         }
-         else {
-             timeout_counter++;
-             if(timeout_counter > TIMEOUT_LIMIT) {
-                 buffer[index] = '\0';
-                 return;  // Timeout - exit gracefully
-             }
-             SysCtlDelay(100);  // Small delay
-         }
     }
-    
-    buffer[index] = '\0';  // Null terminate the string
+
+    buffer[index] = '\0';
 }
 
-
+//void UART5_ReceiveString(char* buffer, uint16_t max_length) {
+//    uint16_t index = 0;
+//    char received_char;
+//    uint32_t start_tick = SysTick->VAL; // or any timer tick for timeout
+//    const uint32_t TIMEOUT_MS = 1000;   // 1 second
+//
+//    while(index < max_length - 1) {
+//        if(UARTCharsAvail(UART5_BASE)) {
+//            received_char = UARTCharGet(UART5_BASE);
+//
+//            if(received_char == '#') break;
+//
+//            buffer[index++] = received_char;
+//
+//            // Reset timeout on successful receive
+//            start_tick = SysTick->VAL;
+//        }
+//
+//        // Check timeout (polling)
+//        if((SysTick->VAL - start_tick) > (SysCtlClockGet() / 1000 * TIMEOUT_MS)) {
+//            break;  // Timeout
+//        }
+//    }
+//
+//    buffer[index] = '\0'; // Null terminate string
+//}
+//
+//

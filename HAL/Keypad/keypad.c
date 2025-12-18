@@ -108,6 +108,7 @@ char Keypad_GetKey(void) {
             uint8_t pin_val = DIO_ReadPin(KEYPAD_ROW_PORT, row_pins[row]);
 
             if (pin_val == LOW) {
+              SysCtlDelay(266650);            
                 // Key detected at (row, col) - CONFIRM PRESS
                 pressed_key = keypad_codes[row][col];
                 
