@@ -1,241 +1,262 @@
 #include "HMI_Comm.h"
+#include <string.h>
+#include <stdlib.h>
 
-volatile short failedAttempts = 0;  // ← definition
-char rxBuffer[RX_BUFFER_SIZE];       // define buffer
-volatile uint8_t rxIndex = 0;        // define index
-volatile bool messageReady = false;  // define message flag
+// --- MACROS & DEFINITIONS (From Snippet) ---
+#define EEPROM_MAGIC_NUMBER      0xA5A5A5A5
+#define EEPROM_ADDR_MAGIC        0x0000         // Address 0: Magic Number
+#define EEPROM_ADDR_TIMEOUT      0x0004         // Address 4: Timeout Value
+#define EEPROM_ADDR_PASS         0x0010         // Address 16: Password (start)
+#define PASSWORD_MAX_LEN         8              // Max password length (multiple of 4)
 
-void UART1_Init(void)
-{
-    // 1️Enable peripherals
+// --- GLOBAL VARIABLES ---
+char rxBuffer[RX_BUFFER_SIZE];
+volatile uint8_t rxIndex = 0;
+volatile bool messageReady = false;
+
+char currentPassword[PASSWORD_MAX_LEN];
+uint32_t currentTimeout = 30;
+short failedAttempts = 0;
+
+// --- FUNCTION PROTOTYPES ---
+void Save_Settings(void);
+void BUZZ(void);
+
+// --- HELPER: SAVE SETTINGS TO EEPROM ---
+void Save_Settings(void) {
+    uint32_t magic = EEPROM_MAGIC_NUMBER;
+
+    // Save Magic Number
+    EEPROMProgram(&magic, EEPROM_ADDR_MAGIC, sizeof(magic));
+
+    // Save Timeout
+    EEPROMProgram(&currentTimeout, EEPROM_ADDR_TIMEOUT, sizeof(currentTimeout));
+
+    // Save Password (cast to uint32_t* for Tiva API)
+    EEPROMProgram((uint32_t *)currentPassword, EEPROM_ADDR_PASS, PASSWORD_MAX_LEN);
+}
+
+// --- INITIALIZATION ---
+void UART1_Init(void) {
+    // 1. Enable Peripherals
     SysCtlPeripheralEnable(SYSCTL_PERIPH_UART1);
     SysCtlPeripheralEnable(SYSCTL_PERIPH_GPIOB);
+    SysCtlPeripheralEnable(SYSCTL_PERIPH_GPIOF);
+    SysCtlPeripheralEnable(SYSCTL_PERIPH_EEPROM0);
 
-    while (!SysCtlPeripheralReady(SYSCTL_PERIPH_UART1));
-    while (!SysCtlPeripheralReady(SYSCTL_PERIPH_GPIOB));
+    // Wait for peripherals to be ready
+    while(!SysCtlPeripheralReady(SYSCTL_PERIPH_UART1));
+    while(!SysCtlPeripheralReady(SYSCTL_PERIPH_GPIOB));
+    while(!SysCtlPeripheralReady(SYSCTL_PERIPH_GPIOF));
+    while(!SysCtlPeripheralReady(SYSCTL_PERIPH_EEPROM0));
 
-    // 2️Configure GPIO pins for UART1
+    // 2. Configure GPIO (LEDs & UART Pins)
+    GPIOPinTypeGPIOOutput(GPIO_PORTF_BASE, GPIO_PIN_1 | GPIO_PIN_2 | GPIO_PIN_3);
+    GPIOPinTypeGPIOOutput(GPIO_PORTB_BASE, GPIO_PIN_6);
+
     GPIOPinConfigure(GPIO_PB0_U1RX);
     GPIOPinConfigure(GPIO_PB1_U1TX);
     GPIOPinTypeUART(GPIO_PORTB_BASE, GPIO_PIN_0 | GPIO_PIN_1);
 
-    // 3️Configure UART
-    UARTDisable(UART1_BASE);
+    // 3. EEPROM Initialization & Check
+    uint32_t eepromStatus = EEPROMInit();
+    if(eepromStatus != EEPROM_INIT_OK) {
+        // Error: Turn on Red LED forever
+        GPIOPinWrite(GPIO_PORTF_BASE, GPIO_PIN_1, GPIO_PIN_1);
+    }
 
-    UARTConfigSetExpClk(
-        UART1_BASE,
-        SysCtlClockGet(),
-        9600,
-        UART_CONFIG_WLEN_8 |
-        UART_CONFIG_STOP_ONE |
-        UART_CONFIG_PAR_NONE
-    );
+    // Check for First Time Run (Magic Number)
+    uint32_t checkMagic;
+    EEPROMRead(&checkMagic, EEPROM_ADDR_MAGIC, sizeof(checkMagic));
 
-    // Enable FIFOs (recommended)
+    if (checkMagic != EEPROM_MAGIC_NUMBER) {
+        // FIRST TIME: Write Defaults
+        strcpy(currentPassword, "12345");
+        currentTimeout = 30;
+        Save_Settings();
+    }
+    else {
+        // SUBSEQUENT TIMES: Read from EEPROM
+        EEPROMRead(&currentTimeout, EEPROM_ADDR_TIMEOUT, sizeof(currentTimeout));
+        EEPROMRead((uint32_t *)currentPassword, EEPROM_ADDR_PASS, PASSWORD_MAX_LEN);
+    }
+
+    // 4. Configure UART settings
+    UARTConfigSetExpClk(UART1_BASE, SysCtlClockGet(), 9600,
+                        (UART_CONFIG_WLEN_8 | UART_CONFIG_STOP_ONE | UART_CONFIG_PAR_NONE));
+
     UARTFIFOEnable(UART1_BASE);
 
     // Clear RX FIFO
-    while (UARTCharsAvail(UART1_BASE))
-    {
+    while (UARTCharsAvail(UART1_BASE)) {
         UARTCharGetNonBlocking(UART1_BASE);
     }
 
-    // Clear UART errors
-    UARTRxErrorClear(UART1_BASE);
-
-    // 4️Enable UART interrupts
+    // 5. Enable Interrupts
     UARTIntDisable(UART1_BASE, 0xFFFFFFFF);
-
     UARTIntEnable(UART1_BASE, UART_INT_RX | UART_INT_RT);
-
     IntEnable(INT_UART1);
-    
-    // 5Enable UART
     UARTEnable(UART1_BASE);
+
+    // Startup Flash (Green LED)
+    GPIOPinWrite(GPIO_PORTF_BASE, GPIO_PIN_3, GPIO_PIN_3);
+    SysCtlDelay(8000000);
+    GPIOPinWrite(GPIO_PORTF_BASE, GPIO_PIN_3, 0);
 }
 
-
-void UART1_Handler(void)
-{
+// --- INTERRUPT HANDLER ---
+void UART1_Handler(void) {
     uint32_t status = UARTIntStatus(UART1_BASE, true);
     UARTIntClear(UART1_BASE, status);
 
-    while (UARTCharsAvail(UART1_BASE))
-    {
+    while (UARTCharsAvail(UART1_BASE)) {
         char c = UARTCharGetNonBlocking(UART1_BASE);
 
-        if (c == '#')
-        {
-            rxBuffer[rxIndex] = '\0';
+        if (c == '#') {
+            rxBuffer[rxIndex] = '\0';     // Null terminate
             rxIndex = 0;
-            messageReady = true;
+            messageReady = true;          // Signal main loop
         }
-        else if (rxIndex < RX_BUFFER_SIZE - 1)
-        {
+        else if (rxIndex < RX_BUFFER_SIZE - 1) {
             rxBuffer[rxIndex++] = c;
         }
     }
 }
 
+// --- SEND STRING ---
+void UART1_SendString(char* str) {
+    // Green LED feedback during TX
+    GPIOPinWrite(GPIO_PORTF_BASE, GPIO_PIN_3, GPIO_PIN_3);
 
-void PROCESS_MESSAGE(void)
-{
+    while(*str) {
+        // Wait until there is space in the FIFO
+        UARTCharPut(UART1_BASE, *str++);
+    }
+    while(UARTBusy(UART1_BASE));
+
+    GPIOPinWrite(GPIO_PORTF_BASE, GPIO_PIN_3, 0);
+}
+
+// --- BUZZER / ALARM ---
+void BUZZ(void) {
+    GPIOPinWrite(GPIO_PORTF_BASE, GPIO_PIN_1, GPIO_PIN_1);     // Red LED ON
+    SysCtlDelay(16000000);     // Delay
+    GPIOPinWrite(GPIO_PORTF_BASE, GPIO_PIN_1, 0);
+}
+
+// --- PROCESS MESSAGE (Call this when messageReady == true) ---
+void PROCESS_MESSAGE(void) {
+    // Create a local copy to manipulate with strtok
     char rxCopy[RX_BUFFER_SIZE];
     strcpy(rxCopy, rxBuffer);
 
-    char *modeStr  = strtok(rxCopy, ",");
-    char *passStr  = strtok(NULL, ",");
-    char *valueStr = strtok(NULL, ",");
+    char *modeStr;
+    char *pass1Str;
+    char *pass2Str;
 
-    // ------------------------------
-    // Basic format validation
-    // ------------------------------
-    if (modeStr == NULL || passStr == NULL)
-    {
+    // Expected format: Mode,Param1,Param2#
+    modeStr  = strtok(rxCopy, ",");
+    pass1Str = strtok(NULL, ",");
+    pass2Str = strtok(NULL, ",");         // Can be NULL
+
+    // Basic Validation
+    if (modeStr == NULL || pass1Str == NULL) {
         UART1_SendString("ERR#");
+        messageReady = false;
         return;
     }
 
-    // ------------------------------
-    // MODE 0: Open Door
-    // ------------------------------
-    if (strcmp(modeStr, "0") == 0)
-    {
-        if (strcmp(passStr, PASSWORD) == 0)
-        {
-            failedAttempts = 0;
-
+    // --------------------------------------------------
+    // MODE 0: UNLOCK DOOR (0,password#)
+    // --------------------------------------------------
+    if (strcmp(modeStr, "0") == 0) {
+        if (strcmp(pass1Str, currentPassword) == 0) {
             UART1_SendString("OK#");
-
-            Door_Unlock();          // motor unlock
-            TimerStart(TIMEOUT_VALUE); // uses stored timeout
-        }
-        else
-        {
-            failedAttempts++;
-            UART1_SendString("WRONG#");
-
-            if (failedAttempts >= 3)
-            {
-                failedAttempts = 0;
-                Activate_Lockout(); // buzzer + delay (timer-based)
-            }
-        }
-    }
-
-    // ------------------------------
-    // MODE 1: Change Password
-    // ------------------------------
-    else if (strcmp(modeStr, "1") == 0)
-    {
-        if (strcmp(passStr, PASSWORD) == 0 && valueStr != NULL)
-        {
-            SavePasswordToEEPROM(valueStr);
-            UART1_SendString("CHANGED#");
             failedAttempts = 0;
+
+            // Unlock Hardware Logic
+            GPIOPinWrite(GPIO_PORTF_BASE, GPIO_PIN_3, GPIO_PIN_3);     // Green LED
+
+            // Call your timer/unlock function here:
+            // Door_Unlock();
+
+            // --- RELAY CONTROL (PB6) ---
+            GPIOPinWrite(GPIO_PORTB_BASE, GPIO_PIN_6, GPIO_PIN_6); // Turn ON Relay
+            SysCtlDelay(16000000);                                 // Delay ~1-3 seconds (Adjust based on clock speed)
+            GPIOPinWrite(GPIO_PORTB_BASE, GPIO_PIN_6, 0);          // Turn OFF Relay
         }
-        else
-        {
+        else {
             failedAttempts++;
             UART1_SendString("WRONG#");
-
-            if (failedAttempts >= 3)
-            {
+            if (failedAttempts >= 3) {
+                BUZZ();
                 failedAttempts = 0;
-                Activate_Lockout();
             }
         }
     }
 
-    // ------------------------------
-    // MODE 2: Set Timeout
-    // ------------------------------
-    else if (strcmp(modeStr, "2") == 0)
-    {
-            uint8_t timeout = atoi(passStr);
+    // --------------------------------------------------
+    // MODE 1: CHANGE PASSWORD (1,old_pass,new_pass#)
+    // --------------------------------------------------
+    else if (strcmp(modeStr, "1") == 0) {
+        // Verify Old Password first
+        if (strcmp(pass1Str, currentPassword) == 0) {
+            // Check if New Password exists
+            if (pass2Str != NULL && pass2Str[0] != '\0') {
+                // Update RAM
+                memset(currentPassword, 0, PASSWORD_MAX_LEN);
+                strncpy(currentPassword, pass2Str, PASSWORD_MAX_LEN - 1);
 
-            if (timeout >= 5 && timeout <= 30)
-            {
-                SaveTimeoutToEEPROM(timeout);
-                UART1_SendString("TIMEOUT_OK#");
-             
-            else
-            {
-                UART1_SendString("BAD_VALUE#");
+                // Update EEPROM
+                EEPROMProgram((uint32_t *)currentPassword, EEPROM_ADDR_PASS, PASSWORD_MAX_LEN);
+
+                UART1_SendString("CHANGED#");
+                failedAttempts = 0;
             }
-        
-        
+            else {
+                UART1_SendString("ERR_EMPTY#");
+            }
+        }
+        else {
+            failedAttempts++;
+            UART1_SendString("WRONG_OLD#");
+            if (failedAttempts >= 3) {
+                BUZZ();
+                failedAttempts = 0;
+            }
+        }
     }
 
-    // ------------------------------
-    // Unknown mode
-    // ------------------------------
-    else
-    {
-        UART1_SendString("ERR#");
+    // --------------------------------------------------
+    // MODE 2: SET TIMEOUT (2,new_timeout#)
+    // --------------------------------------------------
+    else if (strcmp(modeStr, "2") == 0) {
+        int newTimeout = atoi(pass1Str);
+
+        if (newTimeout >= 5 && newTimeout <= 60) {
+            currentTimeout = (uint32_t)newTimeout;
+
+            // Save to EEPROM
+            EEPROMProgram(&currentTimeout, EEPROM_ADDR_TIMEOUT, sizeof(currentTimeout));
+
+            // Blue LED Feedback
+            GPIOPinWrite(GPIO_PORTF_BASE, GPIO_PIN_2, GPIO_PIN_2);
+            SysCtlDelay(16000000);
+            GPIOPinWrite(GPIO_PORTF_BASE, GPIO_PIN_2, 0);
+
+            UART1_SendString("TIMEOUT_OK#");
+        }
+        else {
+            UART1_SendString("BAD_VALUE#");
+        }
     }
 
-    // Clear buffer after processing
+    // Unknown Mode
+    else {
+        UART1_SendString("ERR_MODE#");
+    }
+
+    // Reset Flag
+    messageReady = false;
     memset(rxBuffer, 0, sizeof(rxBuffer));
-}
-void UART1_SendString(char* str)
-{
-    while (*str)
-    {
-        // Wait until space is available in TX FIFO
-        UARTCharPut(UART1_BASE, *str++);
-    }
-}
-
-// Simple placeholder function
-void EEPROMWriteByte(uint32_t base, uint32_t addr, uint8_t data)
-{
-    // TODO: implement actual EEPROM or Flash writing
-    // For now, just ignore or store in RAM for testing
-    (void)base;
-    (void)addr;
-    (void)data;
-}
-
-void Door_Unlock(void) {
-    // Activate the unlocking mechanism
-    GPIOPinWrite(GPIO_PORTF_BASE, GPIO_PIN_3, GPIO_PIN_3); // Start with LED OFF
-   // Example for Tiva C, set pin low to unlock
-    // Optionally start a timer to relock
-    TimerStart(TIMEOUT_VALUE);
-    //Start_AutoLock_Timer();
-}
-
-//void Start_AutoLock_Timer(void)
-//{
-    // Reload the timer with the auto-lock timeout value
-      // Use the reusable TimerStart function
-
-    // Optional: if you want, you can clear any pending interrupts inside TimerStart itself
-//}
-
-void Activate_Lockout(void) {
-    // Optionally turn on an LED or buzzer
-    GPIOPinWrite(LED_PORT, LED_PIN, LED_PIN);
-
-    // Start lockout timer
-    TimerLoadSet(TIMER1_BASE, TIMER_A, LOCKOUT_DURATION);
-    TimerEnable(TIMER1_BASE, TIMER_A);
-}
-
-
-void SavePasswordToEEPROM(char *newPass) {
-    for(uint8_t i = 0; i < PASSWORD_LENGTH; i++) {
-        EEPROMWriteByte(EEPROM_BASE, i, newPass[i]);
-    }
-}
-
-void SaveTimeoutToEEPROM(uint8_t timeout) {
-    EEPROMWriteByte(EEPROM_BASE, TIMEOUT_ADDRESS, timeout);
-}
-
-void Door_Lock(void){
-
-  GPIOPinWrite(GPIO_PORTF_BASE, GPIO_PIN_3, 0); // Start with LED OFF
-
 }
