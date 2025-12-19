@@ -123153,13 +123153,13 @@
     "scope": null
   },
   {
-    "ID": "c:HMI_Comm.h@467@macro@RX_BUFFER_SIZE",
+    "ID": "c:HMI_Comm.h@469@macro@RX_BUFFER_SIZE",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "RX_BUFFER_SIZE",
     "location": {
       "column": "9",
-      "line": "19",
+      "line": "20",
       "path": "E:\\coding\\embedded\\embededProject\\UART\\HMI_Comm.h"
     },
     "name": "RX_BUFFER_SIZE",
@@ -123167,13 +123167,13 @@
     "scope": null
   },
   {
-    "ID": "c:HMI_Comm.h@497@macro@PASSWORD_LENGTH",
+    "ID": "c:HMI_Comm.h@499@macro@PASSWORD_LENGTH",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "PASSWORD_LENGTH",
     "location": {
       "column": "9",
-      "line": "20",
+      "line": "21",
       "path": "E:\\coding\\embedded\\embededProject\\UART\\HMI_Comm.h"
     },
     "name": "PASSWORD_LENGTH",
@@ -123181,13 +123181,13 @@
     "scope": null
   },
   {
-    "ID": "c:HMI_Comm.h@526@macro@PASSWORD",
+    "ID": "c:HMI_Comm.h@528@macro@PASSWORD",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "PASSWORD",
     "location": {
       "column": "9",
-      "line": "21",
+      "line": "22",
       "path": "E:\\coding\\embedded\\embededProject\\UART\\HMI_Comm.h"
     },
     "name": "PASSWORD",
@@ -123195,13 +123195,13 @@
     "scope": null
   },
   {
-    "ID": "c:HMI_Comm.h@561@macro@LOCKOUT_DURATION",
+    "ID": "c:HMI_Comm.h@563@macro@LOCKOUT_DURATION",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "LOCKOUT_DURATION",
     "location": {
       "column": "9",
-      "line": "22",
+      "line": "23",
       "path": "E:\\coding\\embedded\\embededProject\\UART\\HMI_Comm.h"
     },
     "name": "LOCKOUT_DURATION",
@@ -123209,13 +123209,13 @@
     "scope": null
   },
   {
-    "ID": "c:HMI_Comm.h@593@macro@TIMEOUT_ADDRESS",
+    "ID": "c:HMI_Comm.h@595@macro@TIMEOUT_ADDRESS",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "TIMEOUT_ADDRESS",
     "location": {
       "column": "9",
-      "line": "23",
+      "line": "24",
       "path": "E:\\coding\\embedded\\embededProject\\UART\\HMI_Comm.h"
     },
     "name": "TIMEOUT_ADDRESS",
@@ -123223,13 +123223,13 @@
     "scope": null
   },
   {
-    "ID": "c:HMI_Comm.h@625@macro@TIMEOUT_VALUE",
+    "ID": "c:HMI_Comm.h@627@macro@TIMEOUT_VALUE",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "TIMEOUT_VALUE",
     "location": {
       "column": "9",
-      "line": "24",
+      "line": "25",
       "path": "E:\\coding\\embedded\\embededProject\\UART\\HMI_Comm.h"
     },
     "name": "TIMEOUT_VALUE",
@@ -123237,13 +123237,13 @@
     "scope": null
   },
   {
-    "ID": "c:HMI_Comm.h@664@macro@LOCK_PORT",
+    "ID": "c:HMI_Comm.h@666@macro@LOCK_PORT",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "LOCK_PORT",
     "location": {
       "column": "9",
-      "line": "26",
+      "line": "27",
       "path": "E:\\coding\\embedded\\embededProject\\UART\\HMI_Comm.h"
     },
     "name": "LOCK_PORT",
@@ -123251,13 +123251,13 @@
     "scope": null
   },
   {
-    "ID": "c:HMI_Comm.h@699@macro@LOCK_PIN",
+    "ID": "c:HMI_Comm.h@701@macro@LOCK_PIN",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "LOCK_PIN",
     "location": {
       "column": "9",
-      "line": "27",
+      "line": "28",
       "path": "E:\\coding\\embedded\\embededProject\\UART\\HMI_Comm.h"
     },
     "name": "LOCK_PIN",
@@ -123265,13 +123265,13 @@
     "scope": null
   },
   {
-    "ID": "c:HMI_Comm.h@729@macro@LED_PORT",
+    "ID": "c:HMI_Comm.h@731@macro@LED_PORT",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "LED_PORT",
     "location": {
       "column": "9",
-      "line": "28",
+      "line": "29",
       "path": "E:\\coding\\embedded\\embededProject\\UART\\HMI_Comm.h"
     },
     "name": "LED_PORT",
@@ -123279,13 +123279,13 @@
     "scope": null
   },
   {
-    "ID": "c:HMI_Comm.h@764@macro@LED_PIN",
+    "ID": "c:HMI_Comm.h@766@macro@LED_PIN",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "LED_PIN",
     "location": {
       "column": "9",
-      "line": "29",
+      "line": "30",
       "path": "E:\\coding\\embedded\\embededProject\\UART\\HMI_Comm.h"
     },
     "name": "LED_PIN",
@@ -123299,7 +123299,7 @@
     "display": "rxBuffer",
     "location": {
       "column": "13",
-      "line": "33",
+      "line": "34",
       "path": "E:\\coding\\embedded\\embededProject\\UART\\HMI_Comm.h"
     },
     "name": "rxBuffer",
@@ -123313,7 +123313,7 @@
     "display": "rxIndex",
     "location": {
       "column": "25",
-      "line": "34",
+      "line": "35",
       "path": "E:\\coding\\embedded\\embededProject\\UART\\HMI_Comm.h"
     },
     "name": "rxIndex",
@@ -123327,7 +123327,7 @@
     "display": "rxIndex",
     "location": {
       "column": "25",
-      "line": "34",
+      "line": "35",
       "path": "E:\\coding\\embedded\\embededProject\\UART\\HMI_Comm.h"
     },
     "name": "rxIndex",
@@ -123341,7 +123341,7 @@
     "display": "messageReady",
     "location": {
       "column": "22",
-      "line": "35",
+      "line": "36",
       "path": "E:\\coding\\embedded\\embededProject\\UART\\HMI_Comm.h"
     },
     "name": "messageReady",
@@ -123355,7 +123355,7 @@
     "display": "messageReady",
     "location": {
       "column": "22",
-      "line": "35",
+      "line": "36",
       "path": "E:\\coding\\embedded\\embededProject\\UART\\HMI_Comm.h"
     },
     "name": "messageReady",
@@ -123369,21 +123369,7 @@
     "display": "failedAttempts",
     "location": {
       "column": "23",
-      "line": "36",
-      "path": "E:\\coding\\embedded\\embededProject\\UART\\HMI_Comm.h"
-    },
-    "name": "failedAttempts",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@failedAttempts",
-    "What": "Variable",
-    "defdec": "Dec",
-    "display": "failedAttempts",
-    "location": {
-      "column": "23",
-      "line": "36",
+      "line": "37",
       "path": "E:\\coding\\embedded\\embededProject\\UART\\HMI_Comm.h"
     },
     "name": "failedAttempts",
@@ -123397,7 +123383,7 @@
     "display": "void UART1_Init(void)",
     "location": {
       "column": "6",
-      "line": "39",
+      "line": "40",
       "path": "E:\\coding\\embedded\\embededProject\\UART\\HMI_Comm.h"
     },
     "name": "UART1_Init",
@@ -123411,7 +123397,7 @@
     "display": "void UART1_Init(void)",
     "location": {
       "column": "6",
-      "line": "39",
+      "line": "40",
       "path": "E:\\coding\\embedded\\embededProject\\UART\\HMI_Comm.h"
     },
     "name": "UART1_Init",
@@ -123425,7 +123411,7 @@
     "display": "void PROCESS_MESSAGE(void)",
     "location": {
       "column": "6",
-      "line": "40",
+      "line": "41",
       "path": "E:\\coding\\embedded\\embededProject\\UART\\HMI_Comm.h"
     },
     "name": "PROCESS_MESSAGE",
@@ -123439,7 +123425,7 @@
     "display": "void PROCESS_MESSAGE(void)",
     "location": {
       "column": "6",
-      "line": "40",
+      "line": "41",
       "path": "E:\\coding\\embedded\\embededProject\\UART\\HMI_Comm.h"
     },
     "name": "PROCESS_MESSAGE",
@@ -123453,7 +123439,21 @@
     "display": "void UART1_SendString(char *)",
     "location": {
       "column": "6",
-      "line": "41",
+      "line": "42",
+      "path": "E:\\coding\\embedded\\embededProject\\UART\\HMI_Comm.h"
+    },
+    "name": "UART1_SendString",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@UART1_SendString",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void UART1_SendString(char *)",
+    "location": {
+      "column": "6",
+      "line": "42",
       "path": "E:\\coding\\embedded\\embededProject\\UART\\HMI_Comm.h"
     },
     "name": "UART1_SendString",
@@ -123467,7 +123467,7 @@
     "display": "void Door_Unlock(void)",
     "location": {
       "column": "6",
-      "line": "42",
+      "line": "43",
       "path": "E:\\coding\\embedded\\embededProject\\UART\\HMI_Comm.h"
     },
     "name": "Door_Unlock",
@@ -123481,7 +123481,7 @@
     "display": "void UART1_Handler(void)",
     "location": {
       "column": "6",
-      "line": "43",
+      "line": "44",
       "path": "E:\\coding\\embedded\\embededProject\\UART\\HMI_Comm.h"
     },
     "name": "UART1_Handler",
@@ -123495,7 +123495,7 @@
     "display": "void UART1_Handler(void)",
     "location": {
       "column": "6",
-      "line": "43",
+      "line": "44",
       "path": "E:\\coding\\embedded\\embededProject\\UART\\HMI_Comm.h"
     },
     "name": "UART1_Handler",
@@ -123509,7 +123509,21 @@
     "display": "void Activate_Lockout(void)",
     "location": {
       "column": "6",
-      "line": "45",
+      "line": "46",
+      "path": "E:\\coding\\embedded\\embededProject\\UART\\HMI_Comm.h"
+    },
+    "name": "Activate_Lockout",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@Activate_Lockout",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void Activate_Lockout(void)",
+    "location": {
+      "column": "6",
+      "line": "46",
       "path": "E:\\coding\\embedded\\embededProject\\UART\\HMI_Comm.h"
     },
     "name": "Activate_Lockout",
@@ -123523,7 +123537,21 @@
     "display": "void SavePasswordToEEPROM(char *)",
     "location": {
       "column": "6",
-      "line": "46",
+      "line": "47",
+      "path": "E:\\coding\\embedded\\embededProject\\UART\\HMI_Comm.h"
+    },
+    "name": "SavePasswordToEEPROM",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@SavePasswordToEEPROM",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void SavePasswordToEEPROM(char *)",
+    "location": {
+      "column": "6",
+      "line": "47",
       "path": "E:\\coding\\embedded\\embededProject\\UART\\HMI_Comm.h"
     },
     "name": "SavePasswordToEEPROM",
@@ -123537,7 +123565,21 @@
     "display": "void SaveTimeoutToEEPROM(uint8_t)",
     "location": {
       "column": "6",
-      "line": "47",
+      "line": "48",
+      "path": "E:\\coding\\embedded\\embededProject\\UART\\HMI_Comm.h"
+    },
+    "name": "SaveTimeoutToEEPROM",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@SaveTimeoutToEEPROM",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void SaveTimeoutToEEPROM(uint8_t)",
+    "location": {
+      "column": "6",
+      "line": "48",
       "path": "E:\\coding\\embedded\\embededProject\\UART\\HMI_Comm.h"
     },
     "name": "SaveTimeoutToEEPROM",
@@ -123551,7 +123593,21 @@
     "display": "void Door_Lock(void)",
     "location": {
       "column": "6",
-      "line": "48",
+      "line": "49",
+      "path": "E:\\coding\\embedded\\embededProject\\UART\\HMI_Comm.h"
+    },
+    "name": "Door_Lock",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@Door_Lock",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void Door_Lock(void)",
+    "location": {
+      "column": "6",
+      "line": "49",
       "path": "E:\\coding\\embedded\\embededProject\\UART\\HMI_Comm.h"
     },
     "name": "Door_Lock",
@@ -123579,7 +123635,7 @@
     "display": "void Timer0A_Handler(void)",
     "location": {
       "column": "6",
-      "line": "16",
+      "line": "15",
       "path": "E:\\coding\\embedded\\embededProject\\TIMER\\timer.c"
     },
     "name": "Timer0A_Handler",
@@ -123593,7 +123649,7 @@
     "display": "void TimerStart(uint32_t)",
     "location": {
       "column": "6",
-      "line": "30",
+      "line": "28",
       "path": "E:\\coding\\embedded\\embededProject\\TIMER\\timer.c"
     },
     "name": "TimerStart",
@@ -124933,16 +124989,72 @@
     "scope": null
   },
   {
-    "ID": "c:@failedAttempts",
-    "What": "Variable",
+    "ID": "c:HMI_Comm.c@123@macro@EEPROM_MAGIC_NUMBER",
+    "What": "MacroDef",
     "defdec": "Def",
-    "display": "failedAttempts",
+    "display": "EEPROM_MAGIC_NUMBER",
     "location": {
-      "column": "16",
-      "line": "3",
+      "column": "9",
+      "line": "6",
       "path": "E:\\coding\\embedded\\embededProject\\UART\\HMI_Comm.c"
     },
-    "name": "failedAttempts",
+    "name": "EEPROM_MAGIC_NUMBER",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:HMI_Comm.c@168@macro@EEPROM_ADDR_MAGIC",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "EEPROM_ADDR_MAGIC",
+    "location": {
+      "column": "9",
+      "line": "7",
+      "path": "E:\\coding\\embedded\\embededProject\\UART\\HMI_Comm.c"
+    },
+    "name": "EEPROM_ADDR_MAGIC",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:HMI_Comm.c@244@macro@EEPROM_ADDR_TIMEOUT",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "EEPROM_ADDR_TIMEOUT",
+    "location": {
+      "column": "9",
+      "line": "8",
+      "path": "E:\\coding\\embedded\\embededProject\\UART\\HMI_Comm.c"
+    },
+    "name": "EEPROM_ADDR_TIMEOUT",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:HMI_Comm.c@321@macro@EEPROM_ADDR_PASS",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "EEPROM_ADDR_PASS",
+    "location": {
+      "column": "9",
+      "line": "9",
+      "path": "E:\\coding\\embedded\\embededProject\\UART\\HMI_Comm.c"
+    },
+    "name": "EEPROM_ADDR_PASS",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:HMI_Comm.c@402@macro@PASSWORD_MAX_LEN",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "PASSWORD_MAX_LEN",
+    "location": {
+      "column": "9",
+      "line": "10",
+      "path": "E:\\coding\\embedded\\embededProject\\UART\\HMI_Comm.c"
+    },
+    "name": "PASSWORD_MAX_LEN",
     "origin": "project_file",
     "scope": null
   },
@@ -124953,7 +125065,7 @@
     "display": "rxBuffer",
     "location": {
       "column": "6",
-      "line": "4",
+      "line": "13",
       "path": "E:\\coding\\embedded\\embededProject\\UART\\HMI_Comm.c"
     },
     "name": "rxBuffer",
@@ -124967,7 +125079,7 @@
     "display": "rxIndex",
     "location": {
       "column": "18",
-      "line": "5",
+      "line": "14",
       "path": "E:\\coding\\embedded\\embededProject\\UART\\HMI_Comm.c"
     },
     "name": "rxIndex",
@@ -124981,10 +125093,108 @@
     "display": "messageReady",
     "location": {
       "column": "15",
-      "line": "6",
+      "line": "15",
       "path": "E:\\coding\\embedded\\embededProject\\UART\\HMI_Comm.c"
     },
     "name": "messageReady",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@currentPassword",
+    "What": "Variable",
+    "defdec": "Dec",
+    "display": "currentPassword",
+    "location": {
+      "column": "6",
+      "line": "17",
+      "path": "E:\\coding\\embedded\\embededProject\\UART\\HMI_Comm.c"
+    },
+    "name": "currentPassword",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@currentTimeout",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "currentTimeout",
+    "location": {
+      "column": "10",
+      "line": "18",
+      "path": "E:\\coding\\embedded\\embededProject\\UART\\HMI_Comm.c"
+    },
+    "name": "currentTimeout",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@failedAttempts",
+    "What": "Variable",
+    "defdec": "Dec",
+    "display": "failedAttempts",
+    "location": {
+      "column": "7",
+      "line": "19",
+      "path": "E:\\coding\\embedded\\embededProject\\UART\\HMI_Comm.c"
+    },
+    "name": "failedAttempts",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@Save_Settings",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void Save_Settings(void)",
+    "location": {
+      "column": "6",
+      "line": "22",
+      "path": "E:\\coding\\embedded\\embededProject\\UART\\HMI_Comm.c"
+    },
+    "name": "Save_Settings",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@BUZZ",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void BUZZ(void)",
+    "location": {
+      "column": "6",
+      "line": "23",
+      "path": "E:\\coding\\embedded\\embededProject\\UART\\HMI_Comm.c"
+    },
+    "name": "BUZZ",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@Save_Settings",
+    "What": "Function",
+    "defdec": "Def",
+    "display": "void Save_Settings(void)",
+    "location": {
+      "column": "6",
+      "line": "26",
+      "path": "E:\\coding\\embedded\\embededProject\\UART\\HMI_Comm.c"
+    },
+    "name": "Save_Settings",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:HMI_Comm.c@871@F@Save_Settings@magic",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "magic",
+    "location": {
+      "column": "14",
+      "line": "27",
+      "path": "E:\\coding\\embedded\\embededProject\\UART\\HMI_Comm.c"
+    },
+    "name": "magic",
     "origin": "project_file",
     "scope": null
   },
@@ -124995,10 +125205,38 @@
     "display": "void UART1_Init(void)",
     "location": {
       "column": "6",
-      "line": "8",
+      "line": "40",
       "path": "E:\\coding\\embedded\\embededProject\\UART\\HMI_Comm.c"
     },
     "name": "UART1_Init",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:HMI_Comm.c@2185@F@UART1_Init@eepromStatus",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "eepromStatus",
+    "location": {
+      "column": "14",
+      "line": "62",
+      "path": "E:\\coding\\embedded\\embededProject\\UART\\HMI_Comm.c"
+    },
+    "name": "eepromStatus",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:HMI_Comm.c@2434@F@UART1_Init@checkMagic",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "checkMagic",
+    "location": {
+      "column": "14",
+      "line": "69",
+      "path": "E:\\coding\\embedded\\embededProject\\UART\\HMI_Comm.c"
+    },
+    "name": "checkMagic",
     "origin": "project_file",
     "scope": null
   },
@@ -125009,7 +125247,7 @@
     "display": "void UART1_Handler(void)",
     "location": {
       "column": "6",
-      "line": "58",
+      "line": "108",
       "path": "E:\\coding\\embedded\\embededProject\\UART\\HMI_Comm.c"
     },
     "name": "UART1_Handler",
@@ -125017,13 +125255,13 @@
     "scope": null
   },
   {
-    "ID": "c:HMI_Comm.c@1485@F@UART1_Handler@status",
+    "ID": "c:HMI_Comm.c@3730@F@UART1_Handler@status",
     "What": "Variable",
     "defdec": "Def",
     "display": "status",
     "location": {
       "column": "14",
-      "line": "60",
+      "line": "109",
       "path": "E:\\coding\\embedded\\embededProject\\UART\\HMI_Comm.c"
     },
     "name": "status",
@@ -125031,16 +125269,44 @@
     "scope": null
   },
   {
-    "ID": "c:HMI_Comm.c@1633@F@UART1_Handler@c",
+    "ID": "c:HMI_Comm.c@3873@F@UART1_Handler@c",
     "What": "Variable",
     "defdec": "Def",
     "display": "c",
     "location": {
       "column": "14",
-      "line": "65",
+      "line": "113",
       "path": "E:\\coding\\embedded\\embededProject\\UART\\HMI_Comm.c"
     },
     "name": "c",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@UART1_SendString",
+    "What": "Function",
+    "defdec": "Def",
+    "display": "void UART1_SendString(char *)",
+    "location": {
+      "column": "6",
+      "line": "127",
+      "path": "E:\\coding\\embedded\\embededProject\\UART\\HMI_Comm.c"
+    },
+    "name": "UART1_SendString",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@BUZZ",
+    "What": "Function",
+    "defdec": "Def",
+    "display": "void BUZZ(void)",
+    "location": {
+      "column": "6",
+      "line": "141",
+      "path": "E:\\coding\\embedded\\embededProject\\UART\\HMI_Comm.c"
+    },
+    "name": "BUZZ",
     "origin": "project_file",
     "scope": null
   },
@@ -125051,7 +125317,7 @@
     "display": "void PROCESS_MESSAGE(void)",
     "location": {
       "column": "6",
-      "line": "81",
+      "line": "148",
       "path": "E:\\coding\\embedded\\embededProject\\UART\\HMI_Comm.c"
     },
     "name": "PROCESS_MESSAGE",
@@ -125059,13 +125325,13 @@
     "scope": null
   },
   {
-    "ID": "c:HMI_Comm.c@1982@F@PROCESS_MESSAGE@rxCopy",
+    "ID": "c:HMI_Comm.c@4962@F@PROCESS_MESSAGE@rxCopy",
     "What": "Variable",
     "defdec": "Def",
     "display": "rxCopy",
     "location": {
       "column": "10",
-      "line": "83",
+      "line": "150",
       "path": "E:\\coding\\embedded\\embededProject\\UART\\HMI_Comm.c"
     },
     "name": "rxCopy",
@@ -125073,13 +125339,13 @@
     "scope": null
   },
   {
-    "ID": "c:HMI_Comm.c@2049@F@PROCESS_MESSAGE@modeStr",
+    "ID": "c:HMI_Comm.c@5029@F@PROCESS_MESSAGE@modeStr",
     "What": "Variable",
     "defdec": "Def",
     "display": "modeStr",
     "location": {
       "column": "11",
-      "line": "86",
+      "line": "153",
       "path": "E:\\coding\\embedded\\embededProject\\UART\\HMI_Comm.c"
     },
     "name": "modeStr",
@@ -125087,45 +125353,1199 @@
     "scope": null
   },
   {
-    "ID": "c:HMI_Comm.c@2092@F@PROCESS_MESSAGE@passStr",
+    "ID": "c:HMI_Comm.c@5049@F@PROCESS_MESSAGE@pass1Str",
     "What": "Variable",
     "defdec": "Def",
-    "display": "passStr",
+    "display": "pass1Str",
     "location": {
       "column": "11",
-      "line": "87",
+      "line": "154",
       "path": "E:\\coding\\embedded\\embededProject\\UART\\HMI_Comm.c"
     },
-    "name": "passStr",
+    "name": "pass1Str",
     "origin": "project_file",
     "scope": null
   },
   {
-    "ID": "c:HMI_Comm.c@2133@F@PROCESS_MESSAGE@valueStr",
+    "ID": "c:HMI_Comm.c@5070@F@PROCESS_MESSAGE@pass2Str",
     "What": "Variable",
     "defdec": "Def",
-    "display": "valueStr",
+    "display": "pass2Str",
     "location": {
       "column": "11",
-      "line": "88",
-      "path": "E:\\coding\\embedded\\embededProject\\UART\\HMI_Comm.c"
-    },
-    "name": "valueStr",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:HMI_Comm.c@3886@F@PROCESS_MESSAGE@timeout",
-    "What": "Variable",
-    "defdec": "Def",
-    "display": "timeout",
-    "location": {
-      "column": "21",
       "line": "155",
       "path": "E:\\coding\\embedded\\embededProject\\UART\\HMI_Comm.c"
     },
-    "name": "timeout",
+    "name": "pass2Str",
     "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:HMI_Comm.c@7895@F@PROCESS_MESSAGE@newTimeout",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "newTimeout",
+    "location": {
+      "column": "13",
+      "line": "234",
+      "path": "E:\\coding\\embedded\\embededProject\\UART\\HMI_Comm.c"
+    },
+    "name": "newTimeout",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@Activate_Lockout",
+    "What": "Function",
+    "defdec": "Def",
+    "display": "void Activate_Lockout(void)",
+    "location": {
+      "column": "6",
+      "line": "265",
+      "path": "E:\\coding\\embedded\\embededProject\\UART\\HMI_Comm.c"
+    },
+    "name": "Activate_Lockout",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@SavePasswordToEEPROM",
+    "What": "Function",
+    "defdec": "Def",
+    "display": "void SavePasswordToEEPROM(char *)",
+    "location": {
+      "column": "6",
+      "line": "275",
+      "path": "E:\\coding\\embedded\\embededProject\\UART\\HMI_Comm.c"
+    },
+    "name": "SavePasswordToEEPROM",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:HMI_Comm.c@8986@F@SavePasswordToEEPROM@i",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "i",
+    "location": {
+      "column": "17",
+      "line": "276",
+      "path": "E:\\coding\\embedded\\embededProject\\UART\\HMI_Comm.c"
+    },
+    "name": "i",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@SaveTimeoutToEEPROM",
+    "What": "Function",
+    "defdec": "Def",
+    "display": "void SaveTimeoutToEEPROM(uint8_t)",
+    "location": {
+      "column": "6",
+      "line": "281",
+      "path": "E:\\coding\\embedded\\embededProject\\UART\\HMI_Comm.c"
+    },
+    "name": "SaveTimeoutToEEPROM",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@Door_Lock",
+    "What": "Function",
+    "defdec": "Def",
+    "display": "void Door_Lock(void)",
+    "location": {
+      "column": "6",
+      "line": "285",
+      "path": "E:\\coding\\embedded\\embededProject\\UART\\HMI_Comm.c"
+    },
+    "name": "Door_Lock",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:stdlib.h@102@macro@_STDLIB",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "_STDLIB",
+    "location": {
+      "column": "9",
+      "line": "5",
+      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\stdlib.h"
+    },
+    "name": "_STDLIB",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@__iar_Mbcurmax",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "size_t __iar_Mbcurmax(void)",
+    "location": {
+      "column": "25",
+      "line": "29",
+      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\stdlib.h"
+    },
+    "name": "__iar_Mbcurmax",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:stdlib.h@691@macro@MB_CUR_MAX",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "MB_CUR_MAX",
+    "location": {
+      "column": "11",
+      "line": "31",
+      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\stdlib.h"
+    },
+    "name": "MB_CUR_MAX",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:stdlib.h@811@macro@EXIT_FAILURE",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "EXIT_FAILURE",
+    "location": {
+      "column": "9",
+      "line": "40",
+      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\stdlib.h"
+    },
+    "name": "EXIT_FAILURE",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:stdlib.h@838@macro@EXIT_SUCCESS",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "EXIT_SUCCESS",
+    "location": {
+      "column": "9",
+      "line": "41",
+      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\stdlib.h"
+    },
+    "name": "EXIT_SUCCESS",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:stdlib.h@892@macro@RAND_MAX",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "RAND_MAX",
+    "location": {
+      "column": "11",
+      "line": "44",
+      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\stdlib.h"
+    },
+    "name": "RAND_MAX",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:stdlib.h@1018@macro@_WCHART",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "_WCHART",
+    "location": {
+      "column": "11",
+      "line": "51",
+      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\stdlib.h"
+    },
+    "name": "_WCHART",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:stdlib.h@T@wchar_t",
+    "What": "Typedef",
+    "defdec": "Def",
+    "display": "_Wchart",
+    "location": {
+      "column": "19",
+      "line": "52",
+      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\stdlib.h"
+    },
+    "name": "wchar_t",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@SA@div_t",
+    "What": "Struct",
+    "defdec": "Def",
+    "display": "",
+    "location": {
+      "column": "9",
+      "line": "55",
+      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\stdlib.h"
+    },
+    "members": [
+      {
+        "ID": "c:@SA@div_t@FI@quot",
+        "What": "FieldDecl",
+        "defdec": "Def",
+        "display": "quot",
+        "location": {
+          "column": "7",
+          "line": "57",
+          "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\stdlib.h"
+        },
+        "name": "quot",
+        "origin": "system_include",
+        "scope": "_anonymous_stdlib_h_55_9"
+      },
+      {
+        "ID": "c:@SA@div_t@FI@rem",
+        "What": "FieldDecl",
+        "defdec": "Def",
+        "display": "rem",
+        "location": {
+          "column": "7",
+          "line": "58",
+          "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\stdlib.h"
+        },
+        "name": "rem",
+        "origin": "system_include",
+        "scope": "_anonymous_stdlib_h_55_9"
+      }
+    ],
+    "name": "",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@T@div_t",
+    "What": "Typedef",
+    "defdec": "Def",
+    "display": "struct div_t",
+    "location": {
+      "column": "3",
+      "line": "59",
+      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\stdlib.h"
+    },
+    "name": "div_t",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@SA@ldiv_t",
+    "What": "Struct",
+    "defdec": "Def",
+    "display": "",
+    "location": {
+      "column": "9",
+      "line": "61",
+      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\stdlib.h"
+    },
+    "members": [
+      {
+        "ID": "c:@SA@ldiv_t@FI@quot",
+        "What": "FieldDecl",
+        "defdec": "Def",
+        "display": "quot",
+        "location": {
+          "column": "8",
+          "line": "63",
+          "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\stdlib.h"
+        },
+        "name": "quot",
+        "origin": "system_include",
+        "scope": "_anonymous_stdlib_h_61_9"
+      },
+      {
+        "ID": "c:@SA@ldiv_t@FI@rem",
+        "What": "FieldDecl",
+        "defdec": "Def",
+        "display": "rem",
+        "location": {
+          "column": "8",
+          "line": "64",
+          "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\stdlib.h"
+        },
+        "name": "rem",
+        "origin": "system_include",
+        "scope": "_anonymous_stdlib_h_61_9"
+      }
+    ],
+    "name": "",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@T@ldiv_t",
+    "What": "Typedef",
+    "defdec": "Def",
+    "display": "struct ldiv_t",
+    "location": {
+      "column": "3",
+      "line": "65",
+      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\stdlib.h"
+    },
+    "name": "ldiv_t",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@SA@lldiv_t",
+    "What": "Struct",
+    "defdec": "Def",
+    "display": "",
+    "location": {
+      "column": "11",
+      "line": "68",
+      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\stdlib.h"
+    },
+    "members": [
+      {
+        "ID": "c:@SA@lldiv_t@FI@quot",
+        "What": "FieldDecl",
+        "defdec": "Def",
+        "display": "quot",
+        "location": {
+          "column": "15",
+          "line": "70",
+          "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\stdlib.h"
+        },
+        "name": "quot",
+        "origin": "system_include",
+        "scope": "_anonymous_stdlib_h_68_11"
+      },
+      {
+        "ID": "c:@SA@lldiv_t@FI@rem",
+        "What": "FieldDecl",
+        "defdec": "Def",
+        "display": "rem",
+        "location": {
+          "column": "15",
+          "line": "71",
+          "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\stdlib.h"
+        },
+        "name": "rem",
+        "origin": "system_include",
+        "scope": "_anonymous_stdlib_h_68_11"
+      }
+    ],
+    "name": "",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@T@lldiv_t",
+    "What": "Typedef",
+    "defdec": "Def",
+    "display": "struct lldiv_t",
+    "location": {
+      "column": "5",
+      "line": "72",
+      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\stdlib.h"
+    },
+    "name": "lldiv_t",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@atexit",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "int atexit(void (*)(void))",
+    "location": {
+      "column": "32",
+      "line": "89",
+      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\stdlib.h"
+    },
+    "name": "atexit",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@at_quick_exit",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "int at_quick_exit(void (*)(void))",
+    "location": {
+      "column": "32",
+      "line": "91",
+      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\stdlib.h"
+    },
+    "name": "at_quick_exit",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@_Exit",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void _Exit(int)",
+    "location": {
+      "column": "32",
+      "line": "92",
+      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\stdlib.h"
+    },
+    "name": "_Exit",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@quick_exit",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void quick_exit(int)",
+    "location": {
+      "column": "32",
+      "line": "93",
+      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\stdlib.h"
+    },
+    "name": "quick_exit",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@exit",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void exit(int)",
+    "location": {
+      "column": "32",
+      "line": "95",
+      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\stdlib.h"
+    },
+    "name": "exit",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@getenv",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "char * getenv(const char *)",
+    "location": {
+      "column": "32",
+      "line": "96",
+      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\stdlib.h"
+    },
+    "name": "getenv",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@system",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "int system(const char *)",
+    "location": {
+      "column": "32",
+      "line": "97",
+      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\stdlib.h"
+    },
+    "name": "system",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@aligned_alloc",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void * aligned_alloc(size_t, size_t)",
+    "location": {
+      "column": "39",
+      "line": "102",
+      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\stdlib.h"
+    },
+    "name": "aligned_alloc",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@abort",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void abort(void)",
+    "location": {
+      "column": "39",
+      "line": "104",
+      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\stdlib.h"
+    },
+    "name": "abort",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@abs",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "int abs(int)",
+    "location": {
+      "column": "39",
+      "line": "105",
+      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\stdlib.h"
+    },
+    "name": "abs",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@calloc",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void * calloc(size_t, size_t)",
+    "location": {
+      "column": "39",
+      "line": "106",
+      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\stdlib.h"
+    },
+    "name": "calloc",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@div",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "div_t div(int, int)",
+    "location": {
+      "column": "39",
+      "line": "107",
+      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\stdlib.h"
+    },
+    "name": "div",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@free",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void free(void *)",
+    "location": {
+      "column": "39",
+      "line": "108",
+      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\stdlib.h"
+    },
+    "name": "free",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@labs",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "long labs(long)",
+    "location": {
+      "column": "39",
+      "line": "109",
+      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\stdlib.h"
+    },
+    "name": "labs",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@ldiv",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "ldiv_t ldiv(long, long)",
+    "location": {
+      "column": "39",
+      "line": "110",
+      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\stdlib.h"
+    },
+    "name": "ldiv",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@llabs",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "long long llabs(long long)",
+    "location": {
+      "column": "39",
+      "line": "112",
+      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\stdlib.h"
+    },
+    "name": "llabs",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@lldiv",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "lldiv_t lldiv(long long, long long)",
+    "location": {
+      "column": "39",
+      "line": "113",
+      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\stdlib.h"
+    },
+    "name": "lldiv",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@malloc",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void * malloc(size_t)",
+    "location": {
+      "column": "39",
+      "line": "115",
+      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\stdlib.h"
+    },
+    "name": "malloc",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@mblen",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "int mblen(const char *, size_t)",
+    "location": {
+      "column": "39",
+      "line": "116",
+      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\stdlib.h"
+    },
+    "name": "mblen",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@mbstowcs",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "size_t mbstowcs(wchar_t *restrict, const char *restrict, size_t)",
+    "location": {
+      "column": "40",
+      "line": "118",
+      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\stdlib.h"
+    },
+    "name": "mbstowcs",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@mbtowc",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "int mbtowc(wchar_t *restrict, const char *restrict, size_t)",
+    "location": {
+      "column": "40",
+      "line": "120",
+      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\stdlib.h"
+    },
+    "name": "mbtowc",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@rand",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "int rand(void)",
+    "location": {
+      "column": "36",
+      "line": "123",
+      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\stdlib.h"
+    },
+    "name": "rand",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@srand",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void srand(unsigned int)",
+    "location": {
+      "column": "36",
+      "line": "124",
+      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\stdlib.h"
+    },
+    "name": "srand",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@realloc",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void * realloc(void *, size_t)",
+    "location": {
+      "column": "36",
+      "line": "125",
+      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\stdlib.h"
+    },
+    "name": "realloc",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@__iar_realloc_in_place",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void * __iar_realloc_in_place(void *, size_t)",
+    "location": {
+      "column": "36",
+      "line": "127",
+      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\stdlib.h"
+    },
+    "name": "__iar_realloc_in_place",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@strtol",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "long strtol(const char *restrict, char **restrict, int)",
+    "location": {
+      "column": "43",
+      "line": "129",
+      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\stdlib.h"
+    },
+    "name": "strtol",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@strtoul",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "unsigned long strtoul(const char *, char **, int)",
+    "location": {
+      "column": "43",
+      "line": "131",
+      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\stdlib.h"
+    },
+    "name": "strtoul",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@wcstombs",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "size_t wcstombs(char *restrict, const wchar_t *restrict, size_t)",
+    "location": {
+      "column": "40",
+      "line": "133",
+      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\stdlib.h"
+    },
+    "name": "wcstombs",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@wctomb",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "int wctomb(char *, wchar_t)",
+    "location": {
+      "column": "40",
+      "line": "136",
+      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\stdlib.h"
+    },
+    "name": "wctomb",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@strtoll",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "long long strtoll(const char *, char **, int)",
+    "location": {
+      "column": "41",
+      "line": "139",
+      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\stdlib.h"
+    },
+    "name": "strtoll",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@strtoull",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "unsigned long long strtoull(const char *, char **, int)",
+    "location": {
+      "column": "50",
+      "line": "140",
+      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\stdlib.h"
+    },
+    "name": "strtoull",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:stdlib.h@T@_Cmpfun",
+    "What": "Typedef",
+    "defdec": "Def",
+    "display": "int (const void *, const void *)",
+    "location": {
+      "column": "15",
+      "line": "164",
+      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\stdlib.h"
+    },
+    "name": "_Cmpfun",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@bsearch",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void * bsearch(const void *, const void *, size_t, size_t, _Cmpfun *)",
+    "location": {
+      "column": "48",
+      "line": "165",
+      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\stdlib.h"
+    },
+    "name": "bsearch",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@qsort",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void qsort(void *, size_t, size_t, _Cmpfun *)",
+    "location": {
+      "column": "48",
+      "line": "168",
+      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\stdlib.h"
+    },
+    "name": "qsort",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@__qsortbbl",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void __qsortbbl(void *, size_t, size_t, _Cmpfun *)",
+    "location": {
+      "column": "48",
+      "line": "170",
+      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\stdlib.h"
+    },
+    "name": "__qsortbbl",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@atof",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "double atof(const char *)",
+    "location": {
+      "column": "48",
+      "line": "172",
+      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\stdlib.h"
+    },
+    "name": "atof",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@atoi",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "int atoi(const char *)",
+    "location": {
+      "column": "48",
+      "line": "173",
+      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\stdlib.h"
+    },
+    "name": "atoi",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@atol",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "long atol(const char *)",
+    "location": {
+      "column": "48",
+      "line": "174",
+      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\stdlib.h"
+    },
+    "name": "atol",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@atoll",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "long long atoll(const char *)",
+    "location": {
+      "column": "46",
+      "line": "176",
+      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\stdlib.h"
+    },
+    "name": "atoll",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@strtof",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "float strtof(const char *restrict, char **restrict)",
+    "location": {
+      "column": "46",
+      "line": "177",
+      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\stdlib.h"
+    },
+    "name": "strtof",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@strtold",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "long double strtold(const char *, char **)",
+    "location": {
+      "column": "46",
+      "line": "179",
+      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\stdlib.h"
+    },
+    "name": "strtold",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@strtod",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "double strtod(const char *restrict, char **restrict)",
+    "location": {
+      "column": "46",
+      "line": "181",
+      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\stdlib.h"
+    },
+    "name": "strtod",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@__iar_DLib_library_version",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "int __iar_DLib_library_version(void)",
+    "location": {
+      "column": "46",
+      "line": "184",
+      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\stdlib.h"
+    },
+    "name": "__iar_DLib_library_version",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@abs",
+    "What": "Function",
+    "defdec": "Def",
+    "display": "int abs(int)",
+    "location": {
+      "column": "7",
+      "line": "191",
+      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\stdlib.h"
+    },
+    "name": "abs",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@labs",
+    "What": "Function",
+    "defdec": "Def",
+    "display": "long labs(long)",
+    "location": {
+      "column": "8",
+      "line": "197",
+      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\stdlib.h"
+    },
+    "name": "labs",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@llabs",
+    "What": "Function",
+    "defdec": "Def",
+    "display": "long long llabs(long long)",
+    "location": {
+      "column": "15",
+      "line": "204",
+      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\stdlib.h"
+    },
+    "name": "llabs",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:DLib_Product_stdlib.h@251@macro@_DLIB_PRODUCTS_STDLIB_H_",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "_DLIB_PRODUCTS_STDLIB_H_",
+    "location": {
+      "column": "9",
+      "line": "10",
+      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\DLib_Product_stdlib.h"
+    },
+    "name": "_DLIB_PRODUCTS_STDLIB_H_",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@div",
+    "What": "Function",
+    "defdec": "Def",
+    "display": "div_t div(int, int)",
+    "location": {
+      "column": "7",
+      "line": "29",
+      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\DLib_Product_stdlib.h"
+    },
+    "name": "div",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:DLib_Product_stdlib.h@647@F@div@q",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "q",
+    "location": {
+      "column": "7",
+      "line": "32",
+      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\DLib_Product_stdlib.h"
+    },
+    "name": "q",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:DLib_Product_stdlib.h@665@F@div@r",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "r",
+    "location": {
+      "column": "7",
+      "line": "33",
+      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\DLib_Product_stdlib.h"
+    },
+    "name": "r",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:DLib_Product_stdlib.h@687@F@div@d",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "d",
+    "location": {
+      "column": "9",
+      "line": "34",
+      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\DLib_Product_stdlib.h"
+    },
+    "name": "d",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@ldiv",
+    "What": "Function",
+    "defdec": "Def",
+    "display": "ldiv_t ldiv(long, long)",
+    "location": {
+      "column": "8",
+      "line": "45",
+      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\DLib_Product_stdlib.h"
+    },
+    "name": "ldiv",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:DLib_Product_stdlib.h@1014@F@ldiv@q",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "q",
+    "location": {
+      "column": "7",
+      "line": "54",
+      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\DLib_Product_stdlib.h"
+    },
+    "name": "q",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:DLib_Product_stdlib.h@1032@F@ldiv@r",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "r",
+    "location": {
+      "column": "7",
+      "line": "55",
+      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\DLib_Product_stdlib.h"
+    },
+    "name": "r",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:DLib_Product_stdlib.h@1054@F@ldiv@ld",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "ld",
+    "location": {
+      "column": "10",
+      "line": "56",
+      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\DLib_Product_stdlib.h"
+    },
+    "name": "ld",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@__aeabi_ldivmod",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "lldiv_t __aeabi_ldivmod(long long, long long)",
+    "location": {
+      "column": "13",
+      "line": "83",
+      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\DLib_Product_stdlib.h"
+    },
+    "name": "__aeabi_ldivmod",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@lldiv",
+    "What": "Function",
+    "defdec": "Def",
+    "display": "lldiv_t lldiv(long long, long long)",
+    "location": {
+      "column": "13",
+      "line": "87",
+      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\DLib_Product_stdlib.h"
+    },
+    "name": "lldiv",
+    "origin": "system_include",
     "scope": null
   },
   {

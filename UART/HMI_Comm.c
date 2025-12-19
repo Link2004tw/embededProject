@@ -260,3 +260,30 @@ void PROCESS_MESSAGE(void) {
     messageReady = false;
     memset(rxBuffer, 0, sizeof(rxBuffer));
 }
+
+
+void Activate_Lockout(void) {
+    // Optionally turn on an LED or buzzer
+    GPIOPinWrite(LED_PORT, LED_PIN, LED_PIN);
+
+    // Start lockout timer
+    TimerLoadSet(TIMER1_BASE, TIMER_A, LOCKOUT_DURATION);
+    TimerEnable(TIMER1_BASE, TIMER_A);
+}
+
+
+void SavePasswordToEEPROM(char *newPass) {
+    for(uint8_t i = 0; i < PASSWORD_LENGTH; i++) {
+        EEPROMWriteByte(EEPROM_BASE, i, newPass[i]);
+    }
+}
+
+void SaveTimeoutToEEPROM(uint8_t timeout) {
+    EEPROMWriteByte(EEPROM_BASE, TIMEOUT_ADDRESS, timeout);
+}
+
+void Door_Lock(void){
+
+  GPIOPinWrite(GPIO_PORTF_BASE, GPIO_PIN_3, 0); // Start with LED OFF
+
+}
