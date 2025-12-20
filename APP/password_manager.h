@@ -2,15 +2,24 @@
 #define PASSWORD_MANAGER_H_
 
 #include <stdint.h>
-#include <stdbool.h>
 
-#define PASSWORD_LENGTH 5
-#define MAX_ATTEMPTS 3
+/******************************************************************************
+ *                                DEFINES                                     *
+ ******************************************************************************/
 
-void PASSWORD_Init(void);                    
-void PASSWORD_SetNew(void);                
-bool PASSWORD_Check(void); 
-uint8_t PASSWORD_GetAttempts(void);
+#define MAX_PASSWORD_ATTEMPTS      3U
 
+/******************************************************************************
+ *                           FUNCTION PROTOTYPES                               *
+ ******************************************************************************/
 
-#endif
+/* Handle password check for opening door */
+uint8_t PasswordMgr_Verify(void);
+
+/* Handle change password process */
+uint8_t PasswordMgr_Change(void);
+
+/* Reset attempts counter */
+void PasswordMgr_ResetAttempts(void);
+
+#endif /* PASSWORD_MANAGER_H_ */

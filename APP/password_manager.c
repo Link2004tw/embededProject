@@ -1,101 +1,84 @@
 #include "password_manager.h"
-#include "display_manager.h"
-#include "input_manager.h"
-#include "../HAL/eeprom/eeprom.h"
-#include <string.h>
+#include "../HAL/password/password.h"
+#include "../display_manager/display_manager.h"
+#include "../input_manager/input_manager.h"
+#include "../buzzer_manager/buzzer_manager.h"
 
-static char stored_password[PASSWORD_LENGTH + 1];
-static uint8_t attempts;
+/******************************************************************************
+ *                          STATIC VARIABLES                                   *
+ ******************************************************************************/
 
-static void GetPasswordFromUser(char *buffer, uint8_t length)
+static uint8_t g_failedAttempts = 0U;
+
+/******************************************************************************
+ *                          FUNCTION DEFINITIONS                                *
+ ******************************************************************************/
+
+uint8_t PasswordMgr_Verify(void)
 {
-    uint8_t index = 0;
-    memset(buffer, 0, length + 1);
-    DISPLAY_EnablePasswordMode();
+    uint8_t enteredPassword[PASSWORD_LENGTH];
 
-    while (index < length)
+    Display_ShowMessage("Enter Password");
+    Input_GetPassword(enteredPassword);
+
+    if (Password_Compare(enteredPassword) == PASSWORD_OK)
     {
-        char key = 0;
-        while ((key = InputManager_GetKey()) == 0); 
-
-        if (key == '#') break; 
-        if (key == 'D')       
-        {
-            if (index > 0) index--;
-            continue;
-        }
-        if (key >= '0' && key <= '9')
-        {
-            buffer[index++] = key;
-            DISPLAY_HandleKey(key);
-        }
+        PasswordMgr_ResetAttempts();
+        return 1U; /* Correct */
     }
 
-    DISPLAY_DisablePasswordMode();
+    g_failedAttempts++;
+
+    if (g_failedAttempts >= MAX_PASSWORD_ATTEMPTS)
+    {
+        Display_ShowMessage("LOCKED!");
+        Buzzer_Activate();
+        PasswordMgr_ResetAttempts();
+        return 0U;
+    }
+
+    Display_ShowMessage("Wrong Password");
+    return 0U;
 }
 
-void PASSWORD_Init(void)
+uint8_t PasswordMgr_Change(void)
 {
-    attempts = 0;
-    EEPROM_Read(0x00, (uint8_t*)stored_password, PASSWORD_LENGTH);
-    stored_password[PASSWORD_LENGTH] = '\0';
-}
+    uint8_t oldPass[PASSWORD_LENGTH];
+    uint8_t newPass[PASSWORD_LENGTH];
 
-void PASSWORD_SetNew(void)
-{
-    char new_pass[PASSWORD_LENGTH + 1];
-    char confirm[PASSWORD_LENGTH + 1];
+    Display_ShowMessage("Old Password");
+    Input_GetPassword(oldPass);
 
-    
-        //DISPLAY_AskEnterPassword();
-        GetPasswordFromUser(new_pass, PASSWORD_LENGTH);
+    if (Password_Compare(oldPass) != PASSWORD_OK)
+    {
+        g_failedAttempts++;
 
-        DISPLAY_AskConfirmPassword();
-        GetPasswordFromUser(confirm, PASSWORD_LENGTH);
-
-        if (strcmp(new_pass, confirm) == 0)
+        if (g_failedAttempts >= MAX_PASSWORD_ATTEMPTS)
         {
-            strncpy(stored_password, new_pass, PASSWORD_LENGTH);
-            stored_password[PASSWORD_LENGTH] = '\0';
-            EEPROM_Write(0x00, (uint8_t*)stored_password, PASSWORD_LENGTH);
-            //DISPLAY_ShowMessage("Password Saved!");
-            break;
+            Display_ShowMessage("LOCKED!");
+            Buzzer_Activate();
+            PasswordMgr_ResetAttempts();
         }
         else
         {
-            DISPLAY_PasswordMismatch();
-        }
-    
-}
-
-bool PASSWORD_Check(void)
-{
-    char entered[PASSWORD_LENGTH + 1];
-    DISPLAY_AskPassword();
-    GetPasswordFromUser(entered, PASSWORD_LENGTH);
-
-    if (strcmp(entered, stored_password) == 0)
-    {
-        attempts = 0;
-        DISPLAY_AccessGranted();
-        return true;
-    }
-    else
-    {
-        attempts++;
-        DISPLAY_WrongPassword(attempts);
-
-        if (attempts >= MAX_ATTEMPTS)
-        {
-            DISPLAY_Lockout();
-            attempts = 0;
+            /* User feedback: notify wrong password entered */
+            Display_ShowMessage("Wrong Password");
         }
 
-        return false;
+        return 0U;
     }
+
+    Display_ShowMessage("New Password");
+    Input_GetPassword(newPass);
+
+    Password_Save(newPass);
+    PasswordMgr_ResetAttempts();
+
+    Display_ShowMessage("Password Saved");
+    return 1U;
 }
 
-uint8_t PASSWORD_GetAttempts(void)
+void PasswordMgr_ResetAttempts(void)
 {
-    return attempts;
+    g_failedAttempts = 0U;
 }
