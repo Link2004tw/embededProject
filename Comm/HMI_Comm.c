@@ -1,3 +1,4 @@
+#include "HMI_Comm.h"
 #include "driverlib/interrupt.h"
 #include "inc/hw_ints.h"
 

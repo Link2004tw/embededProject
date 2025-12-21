@@ -17,12 +17,18 @@
 
 
 
+#include "driverlib/interrupt.h"
+#include "inc/hw_ints.h"
+
+volatile uint16_t g_ADCValue = 0;
+
 /*****************************************************************************
  * Function: Potentiometer_Init
  * 
  * Description:
  *   Initializes the ADC0 module for reading the potentiometer on PE0.
  *   Configures the GPIO pin as analog input and sets up ADC sequencer.
+ *   Enables Interrupts for non-blocking operation.
  *****************************************************************************/
 void Potentiometer_Init(void)
 {
@@ -67,42 +73,55 @@ void Potentiometer_Init(void)
     /* Enable sequencer 3 */
     ADCSequenceEnable(ADC0_BASE, ADC_SEQUENCER);
     
-    /* Clear any pending interrupt flag */
+    /* Configure Interrupts */
     ADCIntClear(ADC0_BASE, ADC_SEQUENCER);
+    IntEnable(INT_ADC0SS3);
+    ADCIntEnable(ADC0_BASE, ADC_SEQUENCER);
+    IntMasterEnable();
+    
+    /* Kick off the first conversion so we have data */
+    ADCProcessorTrigger(ADC0_BASE, ADC_SEQUENCER);
+}
+
+/*****************************************************************************
+ * ISR: ADC0SS3_Handler
+ * 
+ * Description:
+ *   Interrupt Service Routine for ADC0 Sequencer 3.
+ *   Reads the data from the hardware FIFO and updates global cache.
+ *****************************************************************************/
+void ADC0SS3_Handler(void)
+{
+    uint32_t adc_value_array[1];
+    
+    /* Clear the interrupt flag */
+    ADCIntClear(ADC0_BASE, ADC_SEQUENCER);
+    
+    /* Read the data */
+    ADCSequenceDataGet(ADC0_BASE, ADC_SEQUENCER, adc_value_array);
+    
+    /* Update global cache variable */
+    g_ADCValue = (uint16_t)(adc_value_array[0] & 0xFFF);
 }
 
 /*****************************************************************************
  * Function: Potentiometer_ReadRaw
  * 
  * Description:
- *   Reads the raw 12-bit ADC value from the potentiometer.
- *   Performs a single conversion and returns the result.
+ *   Returns the latest cached ADC value.
+ *   Triggers a new conversion for the *next* read.
+ *   This is "non-blocking" because we don't wait for the result now.
  * 
  * Returns:
  *   uint16_t - Raw ADC value (0-4095)
  *****************************************************************************/
 uint16_t Potentiometer_ReadRaw(void)
 {
-    uint32_t adc_value = 0;
-    
-    /* Clear any pending interrupt flag */
-    ADCIntClear(ADC0_BASE, ADC_SEQUENCER);
-    
-    /* Trigger ADC conversion on sequencer 3 */
+    /* Trigger the NEXT conversion */
     ADCProcessorTrigger(ADC0_BASE, ADC_SEQUENCER);
     
-    /* Wait for conversion to complete
-     * Poll the ADC interrupt status register
-     */
-    while (!ADCIntStatus(ADC0_BASE, ADC_SEQUENCER, false));
-    
-    /* Read the conversion result
-     * ADC stores result in the SSFIFO (Sequencer Sample FIFO)
-     */
-    ADCSequenceDataGet(ADC0_BASE, ADC_SEQUENCER, &adc_value);
-    
-    /* Return the 12-bit value */
-    return (uint16_t)(adc_value & 0xFFF);
+    /* Return the LAST KNOWN value instantly */
+    return g_ADCValue;
 }
 
 /*****************************************************************************

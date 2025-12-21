@@ -46,6 +46,7 @@ static void IntDefaultHandler(void);
 extern void systick_ISR (void);
 extern void PORTF_Handler(void) ;
 extern void UART5_Handler(void);
+extern void ADC0SS3_Handler(void);
 
 
 //*****************************************************************************
@@ -118,7 +119,7 @@ __root const uVectorEntry __vector_table [] @ ".intvec" =
     IntDefaultHandler,                      // ADC Sequence 0
     IntDefaultHandler,                      // ADC Sequence 1
     IntDefaultHandler,                      // ADC Sequence 2
-    IntDefaultHandler,                      // ADC Sequence 3
+    ADC0SS3_Handler,                      // ADC Sequence 3
     IntDefaultHandler,                      // Watchdog timer
     IntDefaultHandler ,                      // Timer 0 subtimer A
     IntDefaultHandler,                      // Timer 0 subtimer B

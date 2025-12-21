@@ -32,6 +32,8 @@
  * Function Prototypes
  *****************************************************************************/
 
+extern volatile uint16_t g_ADCValue;
+
 /*
  * Potentiometer_Init
  * 
@@ -48,6 +50,7 @@
  * Must be called before using Potentiometer_ReadTimeout().
  */
 void Potentiometer_Init(void);
+void ADC0SS3_Handler(void);
 
 /*
  * Potentiometer_ReadRaw
