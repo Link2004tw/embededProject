@@ -25,4 +25,8 @@ E:\coding\embedded\embededProject\Debug\BrowseInfo\startup_ewarm.pbi: \
   C:\ti\TivaWare_C_Series-2.2.0.295\driverlib/flash.h \
   E:\coding\embedded\embededProject/UART/../TIMER/TIMER.h \
   E:\coding\embedded\embededProject/UART/../TIMER/../UART/HMI_Comm.h \
+  E:\coding\embedded\embededProject/UART/../TIMER/../BACK/EEPROM/eepromDriver.h \
+  E:\coding\embedded\embededProject/UART/../HAL/BUZZER/buzzer.h \
+  E:\coding\embedded\embededProject/UART/../HAL/password/password.h \
+  E:\coding\embedded\embededProject/UART/../BACK/EEPROM/eepromDriver.h \
   E:\coding\embedded\embededProject/TIMER/TIMER.h

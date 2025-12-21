@@ -1,5 +1,6 @@
 #include "UART/HMI_Comm.h"
 #include "TIMER/TIMER.h"
+#include "EEPROM/eepromDriver.h"
 //#include <stdint.h>
 //#include <stdbool.h>
 //#include <string.h> 
@@ -30,6 +31,7 @@ int main(void) {
   UART1_Init();
   SysCtlDelay(SysCtlClockGet() / 10);  // 100ms delay
   Timer0A_Init();
+  EEPROM_Init();
   IntMasterEnable();
   
   //UART1_SendString("Ready#");

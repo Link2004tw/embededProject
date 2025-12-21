@@ -34,10 +34,25 @@ build E$:\coding\embedded\embededProject\Debug\BrowseInfo\APP\input_manager.xcl 
   flags = E$:\coding\embedded\embededProject\APP\input_manager.c -D PART_TM4C123GH6PM -o E$:\coding\embedded\embededProject\Debug\Obj\APP --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa --no_clustering --no_scheduling --debug --endian=little --cpu=Cortex-M4 -e --fpu=VFPv4_sp --dlib_config "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\arm\inc\c\DLib_Config_Normal.h" -I C$:\ti\TivaWare_C_Series-2.2.0.295\ -I C$:\ti\TivaWare_C_Series-2.2.0.295\inc\ -I C$:\ti\TivaWare_C_Series-2.2.0.295\driverlib\ -On --predef_macros E$:\coding\embedded\embededProject\Debug\BrowseInfo\APP\input_manager.tmp
   rspfile_name = E$:\coding\embedded\embededProject\Debug\BrowseInfo\APP\input_manager.xcl.rsp
 
+build E$:\coding\embedded\embededProject\Debug\BrowseInfo\APP\password_manager.xcl : COMPILER_XCL 
+  xclcommand = -source_file E$:\coding\embedded\embededProject\APP\password_manager.c -xcl_file E$:\coding\embedded\embededProject\Debug\BrowseInfo\APP\password_manager.xcl -macro_file E$:\coding\embedded\embededProject\Debug\BrowseInfo\APP\password_manager.tmp -icc_path "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\arm\bin\iccarm.exe"
+  flags = E$:\coding\embedded\embededProject\APP\password_manager.c -D PART_TM4C123GH6PM -o E$:\coding\embedded\embededProject\Debug\Obj\APP --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa --no_clustering --no_scheduling --debug --endian=little --cpu=Cortex-M4 -e --fpu=VFPv4_sp --dlib_config "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\arm\inc\c\DLib_Config_Normal.h" -I C$:\ti\TivaWare_C_Series-2.2.0.295\ -I C$:\ti\TivaWare_C_Series-2.2.0.295\inc\ -I C$:\ti\TivaWare_C_Series-2.2.0.295\driverlib\ -On --predef_macros E$:\coding\embedded\embededProject\Debug\BrowseInfo\APP\password_manager.tmp
+  rspfile_name = E$:\coding\embedded\embededProject\Debug\BrowseInfo\APP\password_manager.xcl.rsp
+
 build E$:\coding\embedded\embededProject\Debug\BrowseInfo\APP\potentiometer_manager.xcl : COMPILER_XCL 
   xclcommand = -source_file E$:\coding\embedded\embededProject\APP\potentiometer_manager.c -xcl_file E$:\coding\embedded\embededProject\Debug\BrowseInfo\APP\potentiometer_manager.xcl -macro_file E$:\coding\embedded\embededProject\Debug\BrowseInfo\APP\potentiometer_manager.tmp -icc_path "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\arm\bin\iccarm.exe"
   flags = E$:\coding\embedded\embededProject\APP\potentiometer_manager.c -D PART_TM4C123GH6PM -o E$:\coding\embedded\embededProject\Debug\Obj\APP --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa --no_clustering --no_scheduling --debug --endian=little --cpu=Cortex-M4 -e --fpu=VFPv4_sp --dlib_config "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\arm\inc\c\DLib_Config_Normal.h" -I C$:\ti\TivaWare_C_Series-2.2.0.295\ -I C$:\ti\TivaWare_C_Series-2.2.0.295\inc\ -I C$:\ti\TivaWare_C_Series-2.2.0.295\driverlib\ -On --predef_macros E$:\coding\embedded\embededProject\Debug\BrowseInfo\APP\potentiometer_manager.tmp
   rspfile_name = E$:\coding\embedded\embededProject\Debug\BrowseInfo\APP\potentiometer_manager.xcl.rsp
+
+build E$:\coding\embedded\embededProject\Debug\BrowseInfo\BUZZER\buzzer.xcl : COMPILER_XCL 
+  xclcommand = -source_file E$:\coding\embedded\embededProject\HAL\Buzzer\buzzer.c -xcl_file E$:\coding\embedded\embededProject\Debug\BrowseInfo\BUZZER\buzzer.xcl -macro_file E$:\coding\embedded\embededProject\Debug\BrowseInfo\BUZZER\buzzer.tmp -icc_path "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\arm\bin\iccarm.exe"
+  flags = E$:\coding\embedded\embededProject\HAL\Buzzer\buzzer.c -D PART_TM4C123GH6PM -o E$:\coding\embedded\embededProject\Debug\Obj\BUZZER --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa --no_clustering --no_scheduling --debug --endian=little --cpu=Cortex-M4 -e --fpu=VFPv4_sp --dlib_config "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\arm\inc\c\DLib_Config_Normal.h" -I C$:\ti\TivaWare_C_Series-2.2.0.295\ -I C$:\ti\TivaWare_C_Series-2.2.0.295\inc\ -I C$:\ti\TivaWare_C_Series-2.2.0.295\driverlib\ -On --predef_macros E$:\coding\embedded\embededProject\Debug\BrowseInfo\BUZZER\buzzer.tmp
+  rspfile_name = E$:\coding\embedded\embededProject\Debug\BrowseInfo\BUZZER\buzzer.xcl.rsp
+
+build E$:\coding\embedded\embededProject\Debug\BrowseInfo\EEPROM\eepromDriver.xcl : COMPILER_XCL 
+  xclcommand = -source_file E$:\coding\embedded\embededProject\BACK\EEPROM\eepromDriver.c -xcl_file E$:\coding\embedded\embededProject\Debug\BrowseInfo\EEPROM\eepromDriver.xcl -macro_file E$:\coding\embedded\embededProject\Debug\BrowseInfo\EEPROM\eepromDriver.tmp -icc_path "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\arm\bin\iccarm.exe"
+  flags = E$:\coding\embedded\embededProject\BACK\EEPROM\eepromDriver.c -D PART_TM4C123GH6PM -o E$:\coding\embedded\embededProject\Debug\Obj\EEPROM --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa --no_clustering --no_scheduling --debug --endian=little --cpu=Cortex-M4 -e --fpu=VFPv4_sp --dlib_config "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\arm\inc\c\DLib_Config_Normal.h" -I C$:\ti\TivaWare_C_Series-2.2.0.295\ -I C$:\ti\TivaWare_C_Series-2.2.0.295\inc\ -I C$:\ti\TivaWare_C_Series-2.2.0.295\driverlib\ -On --predef_macros E$:\coding\embedded\embededProject\Debug\BrowseInfo\EEPROM\eepromDriver.tmp
+  rspfile_name = E$:\coding\embedded\embededProject\Debug\BrowseInfo\EEPROM\eepromDriver.xcl.rsp
 
 build E$:\coding\embedded\embededProject\Debug\BrowseInfo\HAL\Keypad\dio.xcl : COMPILER_XCL 
   xclcommand = -source_file E$:\coding\embedded\embededProject\HAL\Keypad\dio.c -xcl_file E$:\coding\embedded\embededProject\Debug\BrowseInfo\HAL\Keypad\dio.xcl -macro_file E$:\coding\embedded\embededProject\Debug\BrowseInfo\HAL\Keypad\dio.tmp -icc_path "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\arm\bin\iccarm.exe"
@@ -53,6 +68,11 @@ build E$:\coding\embedded\embededProject\Debug\BrowseInfo\HAL\LCD\lcd.xcl : COMP
   xclcommand = -source_file E$:\coding\embedded\embededProject\HAL\LCD\lcd.c -xcl_file E$:\coding\embedded\embededProject\Debug\BrowseInfo\HAL\LCD\lcd.xcl -macro_file E$:\coding\embedded\embededProject\Debug\BrowseInfo\HAL\LCD\lcd.tmp -icc_path "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\arm\bin\iccarm.exe"
   flags = E$:\coding\embedded\embededProject\HAL\LCD\lcd.c -D PART_TM4C123GH6PM -o E$:\coding\embedded\embededProject\Debug\Obj\HAL\LCD --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa --no_clustering --no_scheduling --debug --endian=little --cpu=Cortex-M4 -e --fpu=VFPv4_sp --dlib_config "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\arm\inc\c\DLib_Config_Normal.h" -I C$:\ti\TivaWare_C_Series-2.2.0.295\ -I C$:\ti\TivaWare_C_Series-2.2.0.295\inc\ -I C$:\ti\TivaWare_C_Series-2.2.0.295\driverlib\ -On --predef_macros E$:\coding\embedded\embededProject\Debug\BrowseInfo\HAL\LCD\lcd.tmp
   rspfile_name = E$:\coding\embedded\embededProject\Debug\BrowseInfo\HAL\LCD\lcd.xcl.rsp
+
+build E$:\coding\embedded\embededProject\Debug\BrowseInfo\HAL\PASSWORD\password.xcl : COMPILER_XCL 
+  xclcommand = -source_file E$:\coding\embedded\embededProject\HAL\password\password.c -xcl_file E$:\coding\embedded\embededProject\Debug\BrowseInfo\HAL\PASSWORD\password.xcl -macro_file E$:\coding\embedded\embededProject\Debug\BrowseInfo\HAL\PASSWORD\password.tmp -icc_path "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\arm\bin\iccarm.exe"
+  flags = E$:\coding\embedded\embededProject\HAL\password\password.c -D PART_TM4C123GH6PM -o E$:\coding\embedded\embededProject\Debug\Obj\HAL\PASSWORD --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa --no_clustering --no_scheduling --debug --endian=little --cpu=Cortex-M4 -e --fpu=VFPv4_sp --dlib_config "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\arm\inc\c\DLib_Config_Normal.h" -I C$:\ti\TivaWare_C_Series-2.2.0.295\ -I C$:\ti\TivaWare_C_Series-2.2.0.295\inc\ -I C$:\ti\TivaWare_C_Series-2.2.0.295\driverlib\ -On --predef_macros E$:\coding\embedded\embededProject\Debug\BrowseInfo\HAL\PASSWORD\password.tmp
+  rspfile_name = E$:\coding\embedded\embededProject\Debug\BrowseInfo\HAL\PASSWORD\password.xcl.rsp
 
 build E$:\coding\embedded\embededProject\Debug\BrowseInfo\HAL\Potentiometer\potentiometer.xcl : COMPILER_XCL 
   xclcommand = -source_file E$:\coding\embedded\embededProject\HAL\Potentiometer\potentiometer.c -xcl_file E$:\coding\embedded\embededProject\Debug\BrowseInfo\HAL\Potentiometer\potentiometer.xcl -macro_file E$:\coding\embedded\embededProject\Debug\BrowseInfo\HAL\Potentiometer\potentiometer.tmp -icc_path "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\arm\bin\iccarm.exe"
@@ -87,9 +107,21 @@ build E$:\coding\embedded\embededProject\Debug\BrowseInfo\APP\input_manager.pbi 
 E$:\coding\embedded\embededProject\APP\input_manager.c
   flags = -out=E$:\coding\embedded\embededProject\Debug\BrowseInfo\APP\input_manager.pbi -f E$:\coding\embedded\embededProject\Debug\BrowseInfo\APP\input_manager.xcl
 
+build E$:\coding\embedded\embededProject\Debug\BrowseInfo\APP\password_manager.pbi : INDEXER E$:\coding\embedded\embededProject\Debug\BrowseInfo\APP\password_manager.xcl |  $
+E$:\coding\embedded\embededProject\APP\password_manager.c
+  flags = -out=E$:\coding\embedded\embededProject\Debug\BrowseInfo\APP\password_manager.pbi -f E$:\coding\embedded\embededProject\Debug\BrowseInfo\APP\password_manager.xcl
+
 build E$:\coding\embedded\embededProject\Debug\BrowseInfo\APP\potentiometer_manager.pbi : INDEXER E$:\coding\embedded\embededProject\Debug\BrowseInfo\APP\potentiometer_manager.xcl |  $
 E$:\coding\embedded\embededProject\APP\potentiometer_manager.c
   flags = -out=E$:\coding\embedded\embededProject\Debug\BrowseInfo\APP\potentiometer_manager.pbi -f E$:\coding\embedded\embededProject\Debug\BrowseInfo\APP\potentiometer_manager.xcl
+
+build E$:\coding\embedded\embededProject\Debug\BrowseInfo\BUZZER\buzzer.pbi : INDEXER E$:\coding\embedded\embededProject\Debug\BrowseInfo\BUZZER\buzzer.xcl |  $
+E$:\coding\embedded\embededProject\HAL\Buzzer\buzzer.c
+  flags = -out=E$:\coding\embedded\embededProject\Debug\BrowseInfo\BUZZER\buzzer.pbi -f E$:\coding\embedded\embededProject\Debug\BrowseInfo\BUZZER\buzzer.xcl
+
+build E$:\coding\embedded\embededProject\Debug\BrowseInfo\EEPROM\eepromDriver.pbi : INDEXER E$:\coding\embedded\embededProject\Debug\BrowseInfo\EEPROM\eepromDriver.xcl |  $
+E$:\coding\embedded\embededProject\BACK\EEPROM\eepromDriver.c
+  flags = -out=E$:\coding\embedded\embededProject\Debug\BrowseInfo\EEPROM\eepromDriver.pbi -f E$:\coding\embedded\embededProject\Debug\BrowseInfo\EEPROM\eepromDriver.xcl
 
 build E$:\coding\embedded\embededProject\Debug\BrowseInfo\HAL\Keypad\dio.pbi : INDEXER E$:\coding\embedded\embededProject\Debug\BrowseInfo\HAL\Keypad\dio.xcl |  $
 E$:\coding\embedded\embededProject\HAL\Keypad\dio.c
@@ -102,6 +134,10 @@ E$:\coding\embedded\embededProject\HAL\Keypad\keypad.c
 build E$:\coding\embedded\embededProject\Debug\BrowseInfo\HAL\LCD\lcd.pbi : INDEXER E$:\coding\embedded\embededProject\Debug\BrowseInfo\HAL\LCD\lcd.xcl |  $
 E$:\coding\embedded\embededProject\HAL\LCD\lcd.c
   flags = -out=E$:\coding\embedded\embededProject\Debug\BrowseInfo\HAL\LCD\lcd.pbi -f E$:\coding\embedded\embededProject\Debug\BrowseInfo\HAL\LCD\lcd.xcl
+
+build E$:\coding\embedded\embededProject\Debug\BrowseInfo\HAL\PASSWORD\password.pbi : INDEXER E$:\coding\embedded\embededProject\Debug\BrowseInfo\HAL\PASSWORD\password.xcl |  $
+E$:\coding\embedded\embededProject\HAL\password\password.c
+  flags = -out=E$:\coding\embedded\embededProject\Debug\BrowseInfo\HAL\PASSWORD\password.pbi -f E$:\coding\embedded\embededProject\Debug\BrowseInfo\HAL\PASSWORD\password.xcl
 
 build E$:\coding\embedded\embededProject\Debug\BrowseInfo\HAL\Potentiometer\potentiometer.pbi : INDEXER E$:\coding\embedded\embededProject\Debug\BrowseInfo\HAL\Potentiometer\potentiometer.xcl |  $
 E$:\coding\embedded\embededProject\HAL\Potentiometer\potentiometer.c
@@ -128,22 +164,26 @@ build E$:\coding\embedded\embededProject\Debug\BrowseInfo\main.pbw : MAKEBROWSE 
 
 build E$:\coding\embedded\embededProject\Debug\BrowseInfo\main_part0.pbi : PDBLINK E$:\coding\embedded\embededProject\Debug\BrowseInfo\APP\display_manager.pbi |  $
 E$:\coding\embedded\embededProject\Debug\BrowseInfo\APP\input_manager.pbi $
+E$:\coding\embedded\embededProject\Debug\BrowseInfo\APP\password_manager.pbi $
 E$:\coding\embedded\embededProject\Debug\BrowseInfo\APP\potentiometer_manager.pbi
-  flags = -M E$:\coding\embedded\embededProject\Debug\BrowseInfo\main_part0.pbi E$:\coding\embedded\embededProject\Debug\BrowseInfo\APP\display_manager.pbi E$:\coding\embedded\embededProject\Debug\BrowseInfo\APP\input_manager.pbi E$:\coding\embedded\embededProject\Debug\BrowseInfo\APP\potentiometer_manager.pbi
+  flags = -M E$:\coding\embedded\embededProject\Debug\BrowseInfo\main_part0.pbi E$:\coding\embedded\embededProject\Debug\BrowseInfo\APP\display_manager.pbi E$:\coding\embedded\embededProject\Debug\BrowseInfo\APP\input_manager.pbi E$:\coding\embedded\embededProject\Debug\BrowseInfo\APP\password_manager.pbi E$:\coding\embedded\embededProject\Debug\BrowseInfo\APP\potentiometer_manager.pbi
 
-build E$:\coding\embedded\embededProject\Debug\BrowseInfo\main_part1.pbi : PDBLINK E$:\coding\embedded\embededProject\Debug\BrowseInfo\HAL\Keypad\dio.pbi |  $
-E$:\coding\embedded\embededProject\Debug\BrowseInfo\HAL\Keypad\keypad.pbi $
-E$:\coding\embedded\embededProject\Debug\BrowseInfo\HAL\LCD\lcd.pbi
-  flags = -M E$:\coding\embedded\embededProject\Debug\BrowseInfo\main_part1.pbi E$:\coding\embedded\embededProject\Debug\BrowseInfo\HAL\Keypad\dio.pbi E$:\coding\embedded\embededProject\Debug\BrowseInfo\HAL\Keypad\keypad.pbi E$:\coding\embedded\embededProject\Debug\BrowseInfo\HAL\LCD\lcd.pbi
+build E$:\coding\embedded\embededProject\Debug\BrowseInfo\main_part1.pbi : PDBLINK E$:\coding\embedded\embededProject\Debug\BrowseInfo\BUZZER\buzzer.pbi |  $
+E$:\coding\embedded\embededProject\Debug\BrowseInfo\EEPROM\eepromDriver.pbi $
+E$:\coding\embedded\embededProject\Debug\BrowseInfo\HAL\Keypad\dio.pbi $
+E$:\coding\embedded\embededProject\Debug\BrowseInfo\HAL\Keypad\keypad.pbi
+  flags = -M E$:\coding\embedded\embededProject\Debug\BrowseInfo\main_part1.pbi E$:\coding\embedded\embededProject\Debug\BrowseInfo\BUZZER\buzzer.pbi E$:\coding\embedded\embededProject\Debug\BrowseInfo\EEPROM\eepromDriver.pbi E$:\coding\embedded\embededProject\Debug\BrowseInfo\HAL\Keypad\dio.pbi E$:\coding\embedded\embededProject\Debug\BrowseInfo\HAL\Keypad\keypad.pbi
 
-build E$:\coding\embedded\embededProject\Debug\BrowseInfo\main_part2.pbi : PDBLINK E$:\coding\embedded\embededProject\Debug\BrowseInfo\HAL\Potentiometer\potentiometer.pbi |  $
-E$:\coding\embedded\embededProject\Debug\BrowseInfo\TIMER\timer.pbi $
-E$:\coding\embedded\embededProject\Debug\BrowseInfo\UART\HMI_Comm.pbi
-  flags = -M E$:\coding\embedded\embededProject\Debug\BrowseInfo\main_part2.pbi E$:\coding\embedded\embededProject\Debug\BrowseInfo\HAL\Potentiometer\potentiometer.pbi E$:\coding\embedded\embededProject\Debug\BrowseInfo\TIMER\timer.pbi E$:\coding\embedded\embededProject\Debug\BrowseInfo\UART\HMI_Comm.pbi
+build E$:\coding\embedded\embededProject\Debug\BrowseInfo\main_part2.pbi : PDBLINK E$:\coding\embedded\embededProject\Debug\BrowseInfo\HAL\LCD\lcd.pbi |  $
+E$:\coding\embedded\embededProject\Debug\BrowseInfo\HAL\PASSWORD\password.pbi $
+E$:\coding\embedded\embededProject\Debug\BrowseInfo\HAL\Potentiometer\potentiometer.pbi $
+E$:\coding\embedded\embededProject\Debug\BrowseInfo\TIMER\timer.pbi
+  flags = -M E$:\coding\embedded\embededProject\Debug\BrowseInfo\main_part2.pbi E$:\coding\embedded\embededProject\Debug\BrowseInfo\HAL\LCD\lcd.pbi E$:\coding\embedded\embededProject\Debug\BrowseInfo\HAL\PASSWORD\password.pbi E$:\coding\embedded\embededProject\Debug\BrowseInfo\HAL\Potentiometer\potentiometer.pbi E$:\coding\embedded\embededProject\Debug\BrowseInfo\TIMER\timer.pbi
 
-build E$:\coding\embedded\embededProject\Debug\BrowseInfo\main_part3.pbi : PDBLINK E$:\coding\embedded\embededProject\Debug\BrowseInfo\main.pbi |  $
+build E$:\coding\embedded\embededProject\Debug\BrowseInfo\main_part3.pbi : PDBLINK E$:\coding\embedded\embededProject\Debug\BrowseInfo\UART\HMI_Comm.pbi |  $
+E$:\coding\embedded\embededProject\Debug\BrowseInfo\main.pbi $
 E$:\coding\embedded\embededProject\Debug\BrowseInfo\startup_ewarm.pbi
-  flags = -M E$:\coding\embedded\embededProject\Debug\BrowseInfo\main_part3.pbi E$:\coding\embedded\embededProject\Debug\BrowseInfo\main.pbi E$:\coding\embedded\embededProject\Debug\BrowseInfo\startup_ewarm.pbi
+  flags = -M E$:\coding\embedded\embededProject\Debug\BrowseInfo\main_part3.pbi E$:\coding\embedded\embededProject\Debug\BrowseInfo\UART\HMI_Comm.pbi E$:\coding\embedded\embededProject\Debug\BrowseInfo\main.pbi E$:\coding\embedded\embededProject\Debug\BrowseInfo\startup_ewarm.pbi
 
 build E$:\coding\embedded\embededProject\Debug\BrowseInfo\main.pbd : PDBLINK E$:\coding\embedded\embededProject\Debug\BrowseInfo\main_part0.pbi |  $
 E$:\coding\embedded\embededProject\Debug\BrowseInfo\main_part1.pbi $

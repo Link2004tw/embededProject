@@ -101,25 +101,28 @@ void PROCESS_MESSAGE(void)
     // ------------------------------
     if (strcmp(modeStr, "0") == 0)
     {
-        if (strcmp(passStr, PASSWORD) == 0)
+        char myPassword[PASSWORD_LENGTH];
+        uint8_t res = Password_Compare((uint8_t *)passStr);
+        if (res == PASSWORD_OK)
         {
             failedAttempts = 0;
-
             UART1_SendString("OK#");
-
             Door_Unlock();          // motor unlock
-            TimerStart(TIMEOUT_VALUE); // uses stored timeout
+            //TimerStart(TIMEOUT_VALUE); // it is already in door unlock
         }
-        else
+        if(res == PASSWORD_MISMATCH)
         {
             failedAttempts++;
             UART1_SendString("WRONG#");
-
             if (failedAttempts >= 3)
             {
                 failedAttempts = 0;
                 Activate_Lockout(); // buzzer + delay (timer-based)
             }
+            
+        }
+        else {
+            UART1_SendString("ERR#");
         }
     }
 
@@ -128,11 +131,11 @@ void PROCESS_MESSAGE(void)
     // ------------------------------
     else if (strcmp(modeStr, "1") == 0)
     {
-        if (strcmp(passStr, PASSWORD) == 0 && valueStr != NULL)
+        uint8_t res = Password_Change((uint8_t *)passStr, (uint8_t *)valueStr);
+        if (res == PASSWORD_OK)
         {
-            SavePasswordToEEPROM(valueStr);
-            UART1_SendString("CHANGED#");
             failedAttempts = 0;
+            UART1_SendString("CHANGED#");
         }
         else
         {
@@ -156,9 +159,9 @@ void PROCESS_MESSAGE(void)
 
             if (timeout >= 5 && timeout <= 30)
             {
-                SaveTimeoutToEEPROM(timeout);
+                EEPROM_SaveTimeout(timeout);
                 UART1_SendString("TIMEOUT_OK#");
-             
+            }
             else
             {
                 UART1_SendString("BAD_VALUE#");
@@ -187,15 +190,7 @@ void UART1_SendString(char* str)
     }
 }
 
-// Simple placeholder function
-void EEPROMWriteByte(uint32_t base, uint32_t addr, uint8_t data)
-{
-    // TODO: implement actual EEPROM or Flash writing
-    // For now, just ignore or store in RAM for testing
-    (void)base;
-    (void)addr;
-    (void)data;
-}
+
 
 void Door_Unlock(void) {
     // Activate the unlocking mechanism
@@ -224,15 +219,7 @@ void Activate_Lockout(void) {
 }
 
 
-void SavePasswordToEEPROM(char *newPass) {
-    for(uint8_t i = 0; i < PASSWORD_LENGTH; i++) {
-        EEPROMWriteByte(EEPROM_BASE, i, newPass[i]);
-    }
-}
 
-void SaveTimeoutToEEPROM(uint8_t timeout) {
-    EEPROMWriteByte(EEPROM_BASE, TIMEOUT_ADDRESS, timeout);
-}
 
 void Door_Lock(void){
 

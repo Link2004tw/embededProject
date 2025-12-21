@@ -10,6 +10,7 @@
 #include "driverlib/pin_map.h"
 #include "driverlib/gpio.h"
 #include "../UART/HMI_Comm.h"
+#include "../BACK/EEPROM/eepromDriver.h"
 
 void Timer0A_Init();
 void Timer0A_Handler(void);

@@ -98,3 +98,4 @@ uint8_t Password_Change(const uint8_t *old_pass,
 
     return Password_Save(new_pass);
 }
+

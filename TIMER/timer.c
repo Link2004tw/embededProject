@@ -27,8 +27,9 @@ void Timer0A_Handler(void)
 }
 
 
-void TimerStart(uint32_t timeoutTicks)
+void TimerStart()
 {
+    uint32_t timeoutTicks = EEPROM_ReadWord(TIMEOUT_ADDRESS);
     TimerLoadSet(TIMER0_BASE, TIMER_A, timeoutTicks);
     TimerIntClear(TIMER0_BASE, TIMER_TIMA_TIMEOUT);
     TimerEnable(TIMER0_BASE, TIMER_A);

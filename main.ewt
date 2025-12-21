@@ -2856,10 +2856,34 @@
             <name>$PROJ_DIR$\APP\input_manager.h</name>
         </file>
         <file>
+            <name>$PROJ_DIR$\APP\password_manager.c</name>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\APP\password_manager.h</name>
+        </file>
+        <file>
             <name>$PROJ_DIR$\APP\potentiometer_manager.c</name>
         </file>
         <file>
             <name>$PROJ_DIR$\APP\potentiometer_manager.h</name>
+        </file>
+    </group>
+    <group>
+        <name>BUZZER</name>
+        <file>
+            <name>$PROJ_DIR$\HAL\Buzzer\buzzer.c</name>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\HAL\Buzzer\buzzer.h</name>
+        </file>
+    </group>
+    <group>
+        <name>EEPROM</name>
+        <file>
+            <name>$PROJ_DIR$\BACK\EEPROM\eepromDriver.c</name>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\BACK\EEPROM\eepromDriver.h</name>
         </file>
     </group>
     <group>
@@ -2889,6 +2913,15 @@
             </file>
         </group>
         <group>
+            <name>PASSWORD</name>
+            <file>
+                <name>$PROJ_DIR$\HAL\password\password.c</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\HAL\password\password.h</name>
+            </file>
+        </group>
+        <group>
             <name>Potentiometer</name>
             <file>
                 <name>$PROJ_DIR$\HAL\Potentiometer\potentiometer.c</name>
@@ -2904,7 +2937,7 @@
             <name>$PROJ_DIR$\TIMER\timer.c</name>
         </file>
         <file>
-            <name>$PROJ_DIR$\TIMER\timer.h</name>
+            <name>$PROJ_DIR$\TIMER\TIMER.h</name>
         </file>
     </group>
     <group>

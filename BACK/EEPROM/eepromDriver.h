@@ -104,6 +104,22 @@ uint8_t EEPROM_ReadBuffer(uint32_t block, uint32_t offset, uint8_t *buffer, uint
  * Erases the entire EEPROM (sets all bits to 1).
  * Returns: EEPROM_SUCCESS on success, EEPROM_ERROR on failure
  */
+/* Timeout Storage Constants */
+#define TIMEOUT_EEPROM_BLOCK    0U
+#define TIMEOUT_EEPROM_OFFSET   2U
+
+/*
+ * EEPROM_SaveTimeout
+ * Saves the timeout value to EEPROM.
+ */
+uint8_t EEPROM_SaveTimeout(uint8_t timeout);
+
+/*
+ * EEPROM_ReadTimeout
+ * Reads the timeout value from EEPROM.
+ */
+uint8_t EEPROM_ReadTimeout(uint8_t *timeout);
+
 uint8_t EEPROM_MassErase(void);
 
 #endif /* EEPROM_H_ */

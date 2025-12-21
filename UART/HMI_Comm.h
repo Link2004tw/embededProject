@@ -16,12 +16,17 @@
 #include "driverlib/timer.h"
 #include "driverlib/flash.h"
 #include "../TIMER/TIMER.h"
+#include "../HAL/BUZZER/buzzer.h"
+#include "../HAL/password/password.h"
+#include "../BACK/EEPROM/eepromDriver.h"
 #define RX_BUFFER_SIZE    64
 #define PASSWORD_LENGTH   5
 #define PASSWORD          "12345"
 #define LOCKOUT_DURATION  5000
 #define TIMEOUT_ADDRESS   0x10
 #define TIMEOUT_VALUE     480000000
+
+
 
 #define LOCK_PORT GPIO_PORTB_BASE
 #define LOCK_PIN  GPIO_PIN_6
@@ -43,8 +48,7 @@ void Door_Unlock(void);
 void UART1_Handler(void);
 //void Start_AutoLock_Timer(void);
 void Activate_Lockout(void);
-void SavePasswordToEEPROM(char *newPass);
-void SaveTimeoutToEEPROM(uint8_t timeout);
+
 void Door_Lock(void);
 
 #endif

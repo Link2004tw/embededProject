@@ -202,3 +202,34 @@ uint8_t EEPROM_MassErase(void)
     
     return EEPROM_SUCCESS;
 }
+
+/*
+ * EEPROM_SaveTimeout
+ */
+uint8_t EEPROM_SaveTimeout(uint8_t timeout)
+{
+    return EEPROM_WriteWord(TIMEOUT_EEPROM_BLOCK, TIMEOUT_EEPROM_OFFSET, (uint32_t)timeout);
+}
+
+/*
+ * EEPROM_ReadTimeout
+ */
+uint8_t EEPROM_ReadTimeout(uint8_t *timeout)
+{
+    uint32_t word;
+    uint8_t status;
+    
+    if (timeout == 0)
+    {
+        return EEPROM_ERROR;
+    }
+    
+    status = EEPROM_ReadWord(TIMEOUT_EEPROM_BLOCK, TIMEOUT_EEPROM_OFFSET, &word);
+    
+    if (status == EEPROM_SUCCESS)
+    {
+        *timeout = (uint8_t)(word & 0xFF);
+    }
+    
+    return status;
+}
