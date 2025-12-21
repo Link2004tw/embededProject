@@ -58,7 +58,7 @@ void UART5_ReceiveStringWithTimeout(char* buffer, uint16_t max_length) {
     while(index < max_length - 1) {
         if(UARTCharsAvail(UART5_BASE)) {
             c = UARTCharGet(UART5_BASE);
-            if(c == '#') break;
+            if(c == '%') break;
             buffer[index++] = c;
             timeout_counter = 0; // reset on receive
         } else {

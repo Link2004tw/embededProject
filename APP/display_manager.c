@@ -43,7 +43,7 @@ void DISPLAY_CHANGEPASSWORD(void){
     //8->12 new password
     //13:#
     //14: terminating 
-    char message[15]="";
+    char message[15]="%";
     message[0]= ADDMODE;
     message[1]=',';
     //char password[5] = "";
@@ -86,7 +86,7 @@ void DISPLAY_CHANGEPASSWORD(void){
         newPassword[pass_index-8] =key;
         LCD_WriteChar('*');
     }
-    message[13] = '#';
+    message[13] = '';
     newPassword[4]='\0';
     
     LCD_Clear();
@@ -222,7 +222,7 @@ void DISPLAY_OLD_PASSWORD(void)
         password[pass_index] = key;
         LCD_WriteChar(key);
     }
-    password[7] ='#';
+    password[7] ='%';
     password[8] = '\0';
     
     

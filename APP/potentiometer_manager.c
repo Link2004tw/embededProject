@@ -153,7 +153,7 @@ void PotentiometerManager_HandleTimeoutConfig(void)
             message[1]=',';
             message[2]= '0' + (stored_timeout / 10);
             message[3]= '0' + (stored_timeout % 10);
-            message[4] ='#';
+            message[4] ='%';
             message[5] = '\0';
             DISPLAY_ClearScreen();
             DISPLAY_ShowMessage("Timeout Saved!");
