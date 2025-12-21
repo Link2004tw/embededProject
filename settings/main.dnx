@@ -62,15 +62,6 @@
     <CallStack>
         <ShowArgs>0</ShowArgs>
     </CallStack>
-    <DisassembleMode>
-        <mode>0</mode>
-    </DisassembleMode>
-    <Breakpoints2>
-        <Bp0>_ 0 "EMUL_CODE" "{$PROJ_DIR$\APP\display_manager.c}.1.1" 0 0 1 "" 0 "" 0</Bp0>
-        <Bp1>_ 0 "EMUL_CODE" "{$PROJ_DIR$\APP\potentiometer_manager.c}.122.9" 0 0 1 "" 0 "" 0</Bp1>
-        <Bp2>_ 0 "EMUL_CODE" "{$PROJ_DIR$\APP\potentiometer_manager.c}.46.1" 0 0 1 "" 0 "" 0</Bp2>
-        <Count>3</Count>
-    </Breakpoints2>
     <TermIOLog>
         <LoggingEnabled>_ 0</LoggingEnabled>
         <LogFile>_ ""</LogFile>
@@ -80,18 +71,32 @@
         <LogFile>_ ""</LogFile>
         <Category>_ 0</Category>
     </LogFile>
-    <Aliases>
-        <A0>_ "C:\Jenkins\workspace\TivaWare-Git-Release\DriverLib\build\DriverLib.test\driverlib\adc.c" "C:\ti\TivaWare_C_Series-2.2.0.295\driverlib\adc.c"</A0>
-        <A1>_ "C:\Jenkins\workspace\TivaWare-Git-Release\DriverLib\build\DriverLib.test\driverlib\gpio.c" "C:\ti\TivaWare_C_Series-2.2.0.295\driverlib\uart.c"</A1>
-        <A2>_ "C:\Jenkins\workspace\TivaWare-Git-Release\DriverLib\build\DriverLib.test\driverlib\sysctl.c" ""</A2>
-        <A3>_ "C:\Jenkins\workspace\TivaWare-Git-Release\DriverLib\build\DriverLib.test\driverlib\uart.c" "C:\ti\TivaWare_C_Series-2.2.0.295\driverlib\uart.c"</A3>
-        <Count>4</Count>
-        <SuppressDialog>1</SuppressDialog>
-    </Aliases>
     <CallStackLog>
         <Enabled>0</Enabled>
     </CallStackLog>
     <CallStackStripe>
         <ShowTiming>1</ShowTiming>
     </CallStackStripe>
+    <DisassembleMode>
+        <mode>0</mode>
+    </DisassembleMode>
+    <Breakpoints2>
+        <Bp0>_ 0 "EMUL_CODE" "{$PROJ_DIR$\APP\display_manager.c}.1.1" 0 0 1 "" 0 "" 0</Bp0>
+        <Bp1>_ 0 "EMUL_CODE" "{$PROJ_DIR$\APP\potentiometer_manager.c}.122.9" 0 0 1 "" 0 "" 0</Bp1>
+        <Bp2>_ 0 "EMUL_CODE" "{$PROJ_DIR$\APP\potentiometer_manager.c}.46.1" 0 0 1 "" 0 "" 0</Bp2>
+        <Bp3>_ 1 "EMUL_CODE" "{$PROJ_DIR$\main.c}.59.7" 0 0 1 "" 0 "" 0</Bp3>
+        <Bp4>_ 1 "EMUL_CODE" "{$PROJ_DIR$\UART\HMI_Comm.c}.123.13" 0 0 1 "" 0 "" 0</Bp4>
+        <Count>5</Count>
+    </Breakpoints2>
+    <Aliases>
+        <A0>_ "C:\Jenkins\workspace\TivaWare-Git-Release\DriverLib\build\DriverLib.test\driverlib\adc.c" "C:\ti\TivaWare_C_Series-2.2.0.295\driverlib\adc.c"</A0>
+        <A1>_ "C:\Jenkins\workspace\TivaWare-Git-Release\DriverLib\build\DriverLib.test\driverlib\eeprom.c" "C:\ti\TivaWare_C_Series-2.2.0.295\driverlib\eeprom.c"</A1>
+        <A2>_ "C:\Jenkins\workspace\TivaWare-Git-Release\DriverLib\build\DriverLib.test\driverlib\gpio.c" "C:\ti\TivaWare_C_Series-2.2.0.295\driverlib\uart.c"</A2>
+        <A3>_ "C:\Jenkins\workspace\TivaWare-Git-Release\DriverLib\build\DriverLib.test\driverlib\interrupt.c" "C:\ti\TivaWare_C_Series-2.2.0.295\driverlib\interrupt.c"</A3>
+        <A4>_ "C:\Jenkins\workspace\TivaWare-Git-Release\DriverLib\build\DriverLib.test\driverlib\sysctl.c" ""</A4>
+        <A5>_ "C:\Jenkins\workspace\TivaWare-Git-Release\DriverLib\build\DriverLib.test\driverlib\timer.c" "C:\ti\TivaWare_C_Series-2.2.0.295\driverlib\timer.c"</A5>
+        <A6>_ "C:\Jenkins\workspace\TivaWare-Git-Release\DriverLib\build\DriverLib.test\driverlib\uart.c" "C:\ti\TivaWare_C_Series-2.2.0.295\driverlib\uart.c"</A6>
+        <Count>7</Count>
+        <SuppressDialog>1</SuppressDialog>
+    </Aliases>
 </settings>

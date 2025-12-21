@@ -11,3 +11,13 @@
 12	135	7877843164673445	E:/coding/embedded/embededProject/Debug/Obj/main.o	cefdffd15d255c4e
 2	66	7877834972754980	E:/coding/embedded/embededProject/Debug/Exe/main.out	4e26ed53336a9033
 0	114	7877843594182860	E:/coding/embedded/embededProject/Debug/Obj/Comm/HMI_Comm.o	944357d11e83df04
+36	1247	7880364120815432	E:/coding/embedded/embededProject/Debug/Obj/Comm/HMI_Comm.o	944357d11e83df04
+42	1294	7880364121248325	E:/coding/embedded/embededProject/Debug/Obj/APP/potentiometer_manager.o	50a5dd9adb2babc0
+31	1326	7880364121583414	E:/coding/embedded/embededProject/Debug/Obj/APP/input_manager.o	4eca0bab00ab14df
+47	1352	7880364121829311	E:/coding/embedded/embededProject/Debug/Obj/startup_ewarm.o	eb04533e1dafc6f9
+23	1432	7880364122622469	E:/coding/embedded/embededProject/Debug/Obj/APP/display_manager.o	764081cc74cfa79c
+58	1467	7880364123016448	E:/coding/embedded/embededProject/Debug/Obj/HAL/LCD/lcd.o	e403f52b369071c3
+1256	1476	7880364123036678	E:/coding/embedded/embededProject/Debug/Obj/main.o	cefdffd15d255c4e
+52	1496	7880364123112547	E:/coding/embedded/embededProject/Debug/Obj/HAL/Keypad/keypad.o	d507f0621f184170
+1304	1505	7880364123122572	E:/coding/embedded/embededProject/Debug/Obj/HAL/Potentiometer/potentiometer.o	6917ce06061ac5fc
+63	1574	7880364124099868	E:/coding/embedded/embededProject/Debug/Obj/Utils/dio.o	858989a99b3a8484
