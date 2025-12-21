@@ -5,6 +5,17 @@ char rxBuffer[RX_BUFFER_SIZE];       // define buffer
 volatile uint8_t rxIndex = 0;        // define index
 volatile bool messageReady = false;  // define message flag
 
+// Filter to allow only A-Z, a-z, 0-9, '$', '#', and ',' (protocol separator)
+static inline bool UART1_IsAllowedChar(char c)
+{
+    return ((c >= 'A' && c <= 'Z') ||
+            (c >= 'a' && c <= 'z') ||
+            (c >= '0' && c <= '9') ||
+            c == '$' ||
+            c == '#') ||
+           c == ',';
+}
+
 void UART1_Init(void)
 {
     // 1️Enable peripherals
@@ -62,6 +73,11 @@ void UART1_Handler(void)
     {
         char c = UARTCharGetNonBlocking(UART1_BASE);
 
+        if (!UART1_IsAllowedChar(c))
+        {
+            continue; // ignore any disallowed characters
+        }
+
         if (c == '#')
         {
             rxBuffer[rxIndex] = '\0';
@@ -70,6 +86,7 @@ void UART1_Handler(void)
         }
         else if (rxIndex < RX_BUFFER_SIZE - 1)
         {
+            
             rxBuffer[rxIndex++] = c;
         }
     }
@@ -99,7 +116,7 @@ void PROCESS_MESSAGE(void)
     // ------------------------------
     if (strcmp(modeStr, "0") == 0)
     {
-        char myPassword[PASSWORD_LENGTH];
+       // char myPassword[PASSWORD_LENGTH];
         uint8_t res = Password_Compare((uint8_t *)passStr);
         if (res == PASSWORD_OK)
         {

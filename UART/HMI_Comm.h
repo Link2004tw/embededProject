@@ -20,7 +20,7 @@
 #include "../HAL/password/password.h"
 #include "../BACK/EEPROM/eepromDriver.h"
 #define RX_BUFFER_SIZE    64
-#define PASSWORD_LENGTH   5
+//#define PASSWORD_LENGTH   5
 #define PASSWORD          "12345"
 #define LOCKOUT_DURATION  80000000
 #define TIMEOUT_ADDRESS   0x10

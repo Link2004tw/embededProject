@@ -1,33 +1,37 @@
 ###############################################################################
 #
-# IAR ELF Linker V9.10.1.308/W64 for ARM                  21/Dec/2025  05:05:39
+# IAR ELF Linker V9.10.1.308/W64 for ARM                  21/Dec/2025  23:10:14
 # Copyright 2007-2021 IAR Systems AB.
 #
-#    Output file  =  E:\coding\embedded\embededProject\Debug\Exe\main.out
-#    Map file     =  E:\coding\embedded\embededProject\Debug\List\main.map
+#    Output file  =
+#        C:\Users\patri\Desktop\embedded\embededProject\Debug\Exe\main.out
+#    Map file     =
+#        C:\Users\patri\Desktop\embedded\embededProject\Debug\List\main.map
 #    Command line =
-#        -f E:\coding\embedded\embededProject\Debug\Exe\main.out.rsp
-#        (E:\coding\embedded\embededProject\Debug\Obj\BUZZER\buzzer.o
-#        E:\coding\embedded\embededProject\Debug\Obj\HAL\Keypad\dio.o
-#        E:\coding\embedded\embededProject\Debug\Obj\APP\display_manager.o
-#        E:\coding\embedded\embededProject\Debug\Obj\EEPROM\eepromDriver.o
-#        E:\coding\embedded\embededProject\Debug\Obj\UART\HMI_Comm.o
-#        E:\coding\embedded\embededProject\Debug\Obj\APP\input_manager.o
-#        E:\coding\embedded\embededProject\Debug\Obj\HAL\Keypad\keypad.o
-#        E:\coding\embedded\embededProject\Debug\Obj\HAL\LCD\lcd.o
-#        E:\coding\embedded\embededProject\Debug\Obj\main.o
-#        E:\coding\embedded\embededProject\Debug\Obj\HAL\PASSWORD\password.o
-#        E:\coding\embedded\embededProject\Debug\Obj\APP\password_manager.o
-#        E:\coding\embedded\embededProject\Debug\Obj\HAL\Potentiometer\potentiometer.o
-#        E:\coding\embedded\embededProject\Debug\Obj\APP\potentiometer_manager.o
-#        E:\coding\embedded\embededProject\Debug\Obj\startup_ewarm.o
-#        E:\coding\embedded\embededProject\Debug\Obj\TIMER\timer.o
+#        -f
+#        C:\Users\patri\Desktop\embedded\embededProject\Debug\Exe\main.out.rsp
+#        (C:\Users\patri\Desktop\embedded\embededProject\Debug\Obj\BUZZER\buzzer.o
+#        C:\Users\patri\Desktop\embedded\embededProject\Debug\Obj\HAL\Keypad\dio.o
+#        C:\Users\patri\Desktop\embedded\embededProject\Debug\Obj\APP\display_manager.o
+#        C:\Users\patri\Desktop\embedded\embededProject\Debug\Obj\EEPROM\eepromDriver.o
+#        C:\Users\patri\Desktop\embedded\embededProject\Debug\Obj\UART\HMI_Comm.o
+#        C:\Users\patri\Desktop\embedded\embededProject\Debug\Obj\APP\input_manager.o
+#        C:\Users\patri\Desktop\embedded\embededProject\Debug\Obj\HAL\Keypad\keypad.o
+#        C:\Users\patri\Desktop\embedded\embededProject\Debug\Obj\HAL\LCD\lcd.o
+#        C:\Users\patri\Desktop\embedded\embededProject\Debug\Obj\main.o
+#        C:\Users\patri\Desktop\embedded\embededProject\Debug\Obj\HAL\PASSWORD\password.o
+#        C:\Users\patri\Desktop\embedded\embededProject\Debug\Obj\APP\password_manager.o
+#        C:\Users\patri\Desktop\embedded\embededProject\Debug\Obj\HAL\Potentiometer\potentiometer.o
+#        C:\Users\patri\Desktop\embedded\embededProject\Debug\Obj\APP\potentiometer_manager.o
+#        C:\Users\patri\Desktop\embedded\embededProject\Debug\Obj\startup_ewarm.o
+#        C:\Users\patri\Desktop\embedded\embededProject\Debug\Obj\TIMER\timer.o
 #        --no_out_extension -o
-#        E:\coding\embedded\embededProject\Debug\Exe\main.out --redirect
-#        _Printf=_PrintfFullNoMb --redirect _Scanf=_ScanfFullNoMb --map
-#        E:\coding\embedded\embededProject\Debug\List\main.map --config
-#        "C:\Program Files\IAR Systems\Embedded Workbench
-#        9.0\arm\config\linker\TexasInstruments\TM4C123GH6.icf" --semihosting
+#        C:\Users\patri\Desktop\embedded\embededProject\Debug\Exe\main.out
+#        --redirect _Printf=_PrintfFullNoMb --redirect _Scanf=_ScanfFullNoMb
+#        --map
+#        C:\Users\patri\Desktop\embedded\embededProject\Debug\List\main.map
+#        --config "C:\Program Files\IAR Systems\Embedded Workbench
+#        9.0_2\arm\config\linker\TexasInstruments\TM4C123GH6.icf" --semihosting
 #        C:\ti\TivaWare_C_Series-2.2.0.295\driverlib\ewarm\Exe\driverlib.a
 #        --entry __iar_program_start --vfe --text_out locale)
 #
@@ -81,48 +85,48 @@ do not initialize { rw section .noinit };
   .intvec          const            0x0   0x26c  startup_ewarm.o [1]
                                 - 0x26c   0x26c
 
-"P1":                                    0x1548
+"P1":                                    0x15a8
   .text            ro code        0x26c   0x328  sysctl.o [12]
-  .text            ro code        0x594   0x2b8  gpio.o [12]
-  .text            ro code        0x84c   0x2b4  HMI_Comm.o [10]
-  .text            ro code        0xb00    0xe8  uart.o [12]
-  .text            ro code        0xbe8    0x84  interrupt.o [12]
-  .text            ro code        0xc6c    0x18  strcpy.o [14]
-  .text            ro code        0xc84    0x4c  strtok.o [11]
-  .text            ro code        0xcd0    0x12  strcmp.o [14]
-  .text            ro code        0xce4   0x196  password.o [7]
-  .text            ro code        0xe7c   0x150  iar_Stoulx.o [11]
-  .text            ro code        0xfcc   0x12a  eepromDriver.o [4]
-  .text            ro code       0x10f8    0x66  ABImemset.o [14]
-  .text            ro code       0x1160   0x100  timer.o [9]
-  .text            ro code       0x1260     0x8  cpu.o [12]
-  .text            ro code       0x1268    0x22  strspn.o [11]
-  .text            ro code       0x128a    0x22  strcspn.o [11]
-  .text            ro code       0x12ac    0x58  memchr.o [14]
-  .text            ro code       0x1304   0x174  eeprom.o [12]
-  .text            ro code       0x1478    0xa2  timer.o [12]
-  .text            ro code       0x151c    0xe0  main.o [1]
-  .rodata          const         0x15fc    0x50  iar_Stoulx.o [11]
-  .text            ro code       0x164c    0x38  zero_init3.o [14]
-  .text            ro code       0x1684    0x28  data_init.o [14]
-  .text            ro code       0x16ac    0x22  startup_ewarm.o [1]
-  .text            ro code       0x16d0    0x1c  cstartup_M.o [14]
-  .text            ro code       0x16ec    0x22  fpinit_M.o [13]
-  .text            ro code       0x1710    0x1e  cmain.o [14]
-  .text            ro code       0x172e     0x4  low_level_init.o [11]
-  .text            ro code       0x1732     0x4  exit.o [11]
-  .text            ro code       0x1738     0xa  cexit.o [14]
-  .text            ro code       0x1744    0x14  exit.o [15]
-  .iar.init_table  const         0x1758    0x10  - Linker created -
-  .rodata          const         0x1768    0x10  HMI_Comm.o [10]
-  .rodata          const         0x1778     0xc  HMI_Comm.o [10]
-  .rodata          const         0x1784     0xc  HMI_Comm.o [10]
-  .rodata          const         0x1790     0xc  HMI_Comm.o [10]
-  .rodata          const         0x179c     0x8  HMI_Comm.o [10]
-  .rodata          const         0x17a4     0x8  HMI_Comm.o [10]
-  .rodata          const         0x17ac     0x8  password.o [7]
-  .rodata          const         0x17b4     0x0  zero_init3.o [14]
-                               - 0x17b4  0x1548
+  .text            ro code        0x594   0x314  HMI_Comm.o [10]
+  .text            ro code        0x8a8   0x2b8  gpio.o [12]
+  .text            ro code        0xb60    0xe8  uart.o [12]
+  .text            ro code        0xc48    0x84  interrupt.o [12]
+  .text            ro code        0xccc    0x18  strcpy.o [14]
+  .text            ro code        0xce4    0x4c  strtok.o [11]
+  .text            ro code        0xd30    0x12  strcmp.o [14]
+  .text            ro code        0xd44   0x196  password.o [7]
+  .text            ro code        0xedc   0x150  iar_Stoulx.o [11]
+  .text            ro code       0x102c   0x12a  eepromDriver.o [4]
+  .text            ro code       0x1158    0x66  ABImemset.o [14]
+  .text            ro code       0x11c0   0x100  timer.o [9]
+  .text            ro code       0x12c0     0x8  cpu.o [12]
+  .text            ro code       0x12c8    0x22  strspn.o [11]
+  .text            ro code       0x12ea    0x22  strcspn.o [11]
+  .text            ro code       0x130c    0x58  memchr.o [14]
+  .text            ro code       0x1364   0x174  eeprom.o [12]
+  .text            ro code       0x14d8    0xa2  timer.o [12]
+  .text            ro code       0x157c    0xe0  main.o [1]
+  .rodata          const         0x165c    0x50  iar_Stoulx.o [11]
+  .text            ro code       0x16ac    0x38  zero_init3.o [14]
+  .text            ro code       0x16e4    0x28  data_init.o [14]
+  .text            ro code       0x170c    0x22  startup_ewarm.o [1]
+  .text            ro code       0x1730    0x1c  cstartup_M.o [14]
+  .text            ro code       0x174c    0x22  fpinit_M.o [13]
+  .text            ro code       0x1770    0x1e  cmain.o [14]
+  .text            ro code       0x178e     0x4  low_level_init.o [11]
+  .text            ro code       0x1792     0x4  exit.o [11]
+  .text            ro code       0x1798     0xa  cexit.o [14]
+  .text            ro code       0x17a4    0x14  exit.o [15]
+  .iar.init_table  const         0x17b8    0x10  - Linker created -
+  .rodata          const         0x17c8    0x10  HMI_Comm.o [10]
+  .rodata          const         0x17d8     0xc  HMI_Comm.o [10]
+  .rodata          const         0x17e4     0xc  HMI_Comm.o [10]
+  .rodata          const         0x17f0     0xc  HMI_Comm.o [10]
+  .rodata          const         0x17fc     0x8  HMI_Comm.o [10]
+  .rodata          const         0x1804     0x8  HMI_Comm.o [10]
+  .rodata          const         0x180c     0x8  password.o [7]
+  .rodata          const         0x1814     0x0  zero_init3.o [14]
+                               - 0x1814  0x15a8
 
 "P2", part 1 of 2:                         0x48
   .bss             zero     0x2000'0000    0x40  HMI_Comm.o [10]
@@ -140,7 +144,7 @@ Unused ranges:
 
          From           To      Size
          ----           --      ----
-       0x17b4     0x3'ffff  0x3'e84c
+       0x1814     0x3'ffff  0x3'e7ec
   0x2000'0248  0x2000'7fff    0x7db8
 
 
@@ -166,51 +170,51 @@ command line/config:
     -------------------------------------------
     Total:
 
-E:\coding\embedded\embededProject\Debug\Obj: [1]
+C:\Users\patri\Desktop\embedded\embededProject\Debug\Obj: [1]
     main.o                224
     startup_ewarm.o        34      620      512
     -------------------------------------------
     Total:                258      620      512
 
-E:\coding\embedded\embededProject\Debug\Obj\APP: [2]
+C:\Users\patri\Desktop\embedded\embededProject\Debug\Obj\APP: [2]
     -------------------------------------------
     Total:
 
-E:\coding\embedded\embededProject\Debug\Obj\BUZZER: [3]
+C:\Users\patri\Desktop\embedded\embededProject\Debug\Obj\BUZZER: [3]
     -------------------------------------------
     Total:
 
-E:\coding\embedded\embededProject\Debug\Obj\EEPROM: [4]
+C:\Users\patri\Desktop\embedded\embededProject\Debug\Obj\EEPROM: [4]
     eepromDriver.o        298
     -------------------------------------------
     Total:                298
 
-E:\coding\embedded\embededProject\Debug\Obj\HAL\Keypad: [5]
+C:\Users\patri\Desktop\embedded\embededProject\Debug\Obj\HAL\Keypad: [5]
     -------------------------------------------
     Total:
 
-E:\coding\embedded\embededProject\Debug\Obj\HAL\LCD: [6]
+C:\Users\patri\Desktop\embedded\embededProject\Debug\Obj\HAL\LCD: [6]
     -------------------------------------------
     Total:
 
-E:\coding\embedded\embededProject\Debug\Obj\HAL\PASSWORD: [7]
+C:\Users\patri\Desktop\embedded\embededProject\Debug\Obj\HAL\PASSWORD: [7]
     password.o            406        8
     -------------------------------------------
     Total:                406        8
 
-E:\coding\embedded\embededProject\Debug\Obj\HAL\Potentiometer: [8]
+C:\Users\patri\Desktop\embedded\embededProject\Debug\Obj\HAL\Potentiometer: [8]
     -------------------------------------------
     Total:
 
-E:\coding\embedded\embededProject\Debug\Obj\TIMER: [9]
+C:\Users\patri\Desktop\embedded\embededProject\Debug\Obj\TIMER: [9]
     timer.o               256
     -------------------------------------------
     Total:                256
 
-E:\coding\embedded\embededProject\Debug\Obj\UART: [10]
-    HMI_Comm.o            692       68       68
+C:\Users\patri\Desktop\embedded\embededProject\Debug\Obj\UART: [10]
+    HMI_Comm.o            788       68       68
     -------------------------------------------
-    Total:                692       68       68
+    Total:                788       68       68
 
 dl7M_tln.a: [11]
     exit.o                  4
@@ -259,7 +263,7 @@ shb_l.a: [15]
     Gaps                   18
     Linker created                  16
 -----------------------------------------------
-    Grand Total:        5'276      792      584
+    Grand Total:        5'372      792      584
 
 
 *******************************************************************************
@@ -268,133 +272,134 @@ shb_l.a: [15]
 
 Entry                       Address   Size  Type      Object
 -----                       -------   ----  ----      ------
-.iar.init_table$$Base        0x1758          --   Gb  - Linker created -
-.iar.init_table$$Limit       0x1768          --   Gb  - Linker created -
-?main                        0x1711         Code  Gb  cmain.o [14]
-Activate_Lockout              0xaa1   0x14  Code  Gb  HMI_Comm.o [10]
-CPUcpsie                     0x1261    0x8  Code  Gb  cpu.o [12]
-CalculateAddress              0xfcd    0xa  Code  Lc  eepromDriver.o [4]
-Door_Unlock                   0xa8f   0x12  Code  Gb  HMI_Comm.o [10]
-EEPROMInit                   0x135d   0x2a  Code  Gb  eeprom.o [12]
-EEPROMProgram                0x13bf   0x98  Code  Gb  eeprom.o [12]
-EEPROMRead                   0x1395   0x2a  Code  Gb  eeprom.o [12]
-EEPROM_Init                   0xfd7   0x4c  Code  Gb  eepromDriver.o [4]
-EEPROM_ReadTimeout           0x10cf   0x28  Code  Gb  eepromDriver.o [4]
-EEPROM_ReadWord              0x105d   0x30  Code  Gb  eepromDriver.o [4]
-EEPROM_SaveTimeout           0x108d   0x42  Code  Gb  eepromDriver.o [4]
-EEPROM_WriteWord             0x1029   0x34  Code  Gb  eepromDriver.o [4]
-FaultISR                     0x16c7    0x2  Code  Lc  startup_ewarm.o [1]
-GPIODirModeSet                0x595   0x28  Code  Gb  gpio.o [12]
-GPIOPadConfigSet              0x5bd  0x174  Code  Gb  gpio.o [12]
-GPIOPinConfigure              0x773   0x38  Code  Gb  gpio.o [12]
-GPIOPinTypeGPIOOutput         0x73b    0xa  Code  Gb  gpio.o [12]
-GPIOPinTypeUART               0x75f   0x14  Code  Gb  gpio.o [12]
-GPIOPinWrite                  0x731    0x6  Code  Gb  gpio.o [12]
-IntDefaultHandler            0x16c9    0x2  Code  Lc  startup_ewarm.o [1]
-IntEnable                     0xbf9   0x56  Code  Gb  interrupt.o [12]
-IntMasterEnable               0xbe9    0x8  Code  Gb  interrupt.o [12]
-LED_Init                     0x151d   0x7e  Code  Gb  main.o [1]
-NmiSR                        0x16c5    0x2  Code  Lc  startup_ewarm.o [1]
-PORTF_Handler                0x16cd    0x2  Code  Gb  startup_ewarm.o [1]
-PROCESS_MESSAGE               0x92b  0x14c  Code  Gb  HMI_Comm.o [10]
-Password_Change               0xe5f   0x1c  Code  Gb  password.o [7]
-Password_Compare              0xe31   0x2e  Code  Gb  password.o [7]
-Password_Init                 0xce5   0x62  Code  Gb  password.o [7]
-Password_Read                 0xdeb   0x46  Code  Gb  password.o [7]
-Password_Save                 0xd4d   0x9e  Code  Gb  password.o [7]
-Region$$Table$$Base          0x1758          --   Gb  - Linker created -
-Region$$Table$$Limit         0x1768          --   Gb  - Linker created -
-ResetISR                     0x16ad   0x14  Code  Gb  startup_ewarm.o [1]
+.iar.init_table$$Base        0x17b8          --   Gb  - Linker created -
+.iar.init_table$$Limit       0x17c8          --   Gb  - Linker created -
+?main                        0x1771         Code  Gb  cmain.o [14]
+Activate_Lockout              0x847   0x14  Code  Gb  HMI_Comm.o [10]
+CPUcpsie                     0x12c1    0x8  Code  Gb  cpu.o [12]
+CalculateAddress             0x102d    0xa  Code  Lc  eepromDriver.o [4]
+Door_Unlock                   0x835   0x12  Code  Gb  HMI_Comm.o [10]
+EEPROMInit                   0x13bd   0x2a  Code  Gb  eeprom.o [12]
+EEPROMProgram                0x141f   0x98  Code  Gb  eeprom.o [12]
+EEPROMRead                   0x13f5   0x2a  Code  Gb  eeprom.o [12]
+EEPROM_Init                  0x1037   0x4c  Code  Gb  eepromDriver.o [4]
+EEPROM_ReadTimeout           0x112f   0x28  Code  Gb  eepromDriver.o [4]
+EEPROM_ReadWord              0x10bd   0x30  Code  Gb  eepromDriver.o [4]
+EEPROM_SaveTimeout           0x10ed   0x42  Code  Gb  eepromDriver.o [4]
+EEPROM_WriteWord             0x1089   0x34  Code  Gb  eepromDriver.o [4]
+FaultISR                     0x1727    0x2  Code  Lc  startup_ewarm.o [1]
+GPIODirModeSet                0x8a9   0x28  Code  Gb  gpio.o [12]
+GPIOPadConfigSet              0x8d1  0x174  Code  Gb  gpio.o [12]
+GPIOPinConfigure              0xa87   0x38  Code  Gb  gpio.o [12]
+GPIOPinTypeGPIOOutput         0xa4f    0xa  Code  Gb  gpio.o [12]
+GPIOPinTypeUART               0xa73   0x14  Code  Gb  gpio.o [12]
+GPIOPinWrite                  0xa45    0x6  Code  Gb  gpio.o [12]
+IntDefaultHandler            0x1729    0x2  Code  Lc  startup_ewarm.o [1]
+IntEnable                     0xc59   0x56  Code  Gb  interrupt.o [12]
+IntMasterEnable               0xc49    0x8  Code  Gb  interrupt.o [12]
+LED_Init                     0x157d   0x7e  Code  Gb  main.o [1]
+NmiSR                        0x1725    0x2  Code  Lc  startup_ewarm.o [1]
+PORTF_Handler                0x172d    0x2  Code  Gb  startup_ewarm.o [1]
+PROCESS_MESSAGE               0x6d1  0x14c  Code  Gb  HMI_Comm.o [10]
+Password_Change               0xebf   0x1c  Code  Gb  password.o [7]
+Password_Compare              0xe91   0x2e  Code  Gb  password.o [7]
+Password_Init                 0xd45   0x62  Code  Gb  password.o [7]
+Password_Read                 0xe4b   0x46  Code  Gb  password.o [7]
+Password_Save                 0xdad   0x9e  Code  Gb  password.o [7]
+Region$$Table$$Base          0x17b8          --   Gb  - Linker created -
+Region$$Table$$Limit         0x17c8          --   Gb  - Linker created -
+ResetISR                     0x170d   0x14  Code  Gb  startup_ewarm.o [1]
 SysCtlClockGet                0x3c9  0x110  Code  Gb  sysctl.o [12]
 SysCtlClockSet                0x2f1   0xd8  Code  Gb  sysctl.o [12]
 SysCtlDelay                   0x2e9    0x8  Code  Gb  sysctl.o [12]
 SysCtlPeripheralEnable        0x2cd    0x8  Code  Gb  sysctl.o [12]
 SysCtlPeripheralReady         0x26d    0x8  Code  Gb  sysctl.o [12]
 SysCtlPeripheralReset         0x28d   0x40  Code  Gb  sysctl.o [12]
-Timer0A_Handler              0x1193   0x16  Code  Gb  timer.o [9]
-Timer0A_Init                 0x1161   0x32  Code  Gb  timer.o [9]
-Timer1AStart                 0x1227   0x20  Code  Gb  timer.o [9]
-Timer1A_Handler              0x1211   0x16  Code  Gb  timer.o [9]
-Timer1A_Init                 0x11df   0x32  Code  Gb  timer.o [9]
-TimerConfigure               0x1491   0x52  Code  Gb  timer.o [12]
-TimerDisable                 0x1485    0xc  Code  Gb  timer.o [12]
-TimerEnable                  0x1479    0xc  Code  Gb  timer.o [12]
-TimerIntClear                0x1517    0x4  Code  Gb  timer.o [12]
-TimerIntEnable               0x1505    0x4  Code  Gb  timer.o [12]
-TimerLoadSet                 0x14f5   0x10  Code  Gb  timer.o [12]
-TimerStart                   0x11a9   0x36  Code  Gb  timer.o [9]
-UART1_Handler                 0x8cb   0x60  Code  Gb  HMI_Comm.o [10]
-UART1_Init                    0x84d   0x7e  Code  Gb  HMI_Comm.o [10]
-UART1_SendString              0xa77   0x18  Code  Gb  HMI_Comm.o [10]
-UARTCharGetNonBlocking        0xbab    0xe  Code  Gb  uart.o [12]
-UARTCharPut                   0xbb9    0xa  Code  Gb  uart.o [12]
-UARTCharsAvail                0xb9b    0x6  Code  Gb  uart.o [12]
-UARTConfigSetExpClk           0xb01   0x4c  Code  Gb  uart.o [12]
-UARTDisable                   0xb67   0x1e  Code  Gb  uart.o [12]
-UARTEnable                    0xb4d   0x1a  Code  Gb  uart.o [12]
-UARTFIFOEnable                0xb89    0xc  Code  Gb  uart.o [12]
-UARTIntClear                  0xbdf    0x4  Code  Gb  uart.o [12]
-UARTIntDisable                0xbc9    0x4  Code  Gb  uart.o [12]
-UARTIntEnable                 0xbc3    0x6  Code  Gb  uart.o [12]
-UARTIntStatus                 0xbd5    0xa  Code  Gb  uart.o [12]
-UARTRxErrorClear              0xbe3    0x6  Code  Gb  uart.o [12]
-_EEPROMSectorMaskClear       0x132f   0x22  Code  Lc  eeprom.o [12]
-_EEPROMSectorMaskSet         0x1305   0x2a  Code  Lc  eeprom.o [12]
+Timer0A_Handler              0x11f3   0x16  Code  Gb  timer.o [9]
+Timer0A_Init                 0x11c1   0x32  Code  Gb  timer.o [9]
+Timer1AStart                 0x1287   0x20  Code  Gb  timer.o [9]
+Timer1A_Handler              0x1271   0x16  Code  Gb  timer.o [9]
+Timer1A_Init                 0x123f   0x32  Code  Gb  timer.o [9]
+TimerConfigure               0x14f1   0x52  Code  Gb  timer.o [12]
+TimerDisable                 0x14e5    0xc  Code  Gb  timer.o [12]
+TimerEnable                  0x14d9    0xc  Code  Gb  timer.o [12]
+TimerIntClear                0x1577    0x4  Code  Gb  timer.o [12]
+TimerIntEnable               0x1565    0x4  Code  Gb  timer.o [12]
+TimerLoadSet                 0x1555   0x10  Code  Gb  timer.o [12]
+TimerStart                   0x1209   0x36  Code  Gb  timer.o [9]
+UART1_Handler                 0x663   0x6e  Code  Gb  HMI_Comm.o [10]
+UART1_Init                    0x5e5   0x7e  Code  Gb  HMI_Comm.o [10]
+UART1_IsAllowedChar           0x595   0x50  Code  Lc  HMI_Comm.o [10]
+UART1_SendString              0x81d   0x18  Code  Gb  HMI_Comm.o [10]
+UARTCharGetNonBlocking        0xc0b    0xe  Code  Gb  uart.o [12]
+UARTCharPut                   0xc19    0xa  Code  Gb  uart.o [12]
+UARTCharsAvail                0xbfb    0x6  Code  Gb  uart.o [12]
+UARTConfigSetExpClk           0xb61   0x4c  Code  Gb  uart.o [12]
+UARTDisable                   0xbc7   0x1e  Code  Gb  uart.o [12]
+UARTEnable                    0xbad   0x1a  Code  Gb  uart.o [12]
+UARTFIFOEnable                0xbe9    0xc  Code  Gb  uart.o [12]
+UARTIntClear                  0xc3f    0x4  Code  Gb  uart.o [12]
+UARTIntDisable                0xc29    0x4  Code  Gb  uart.o [12]
+UARTIntEnable                 0xc23    0x6  Code  Gb  uart.o [12]
+UARTIntStatus                 0xc35    0xa  Code  Gb  uart.o [12]
+UARTRxErrorClear              0xc43    0x6  Code  Gb  uart.o [12]
+_EEPROMSectorMaskClear       0x138f   0x22  Code  Lc  eeprom.o [12]
+_EEPROMSectorMaskSet         0x1365   0x2a  Code  Lc  eeprom.o [12]
 _Strtok_ssave           0x2000'0040    0x4  Data  Lc  strtok.o [11]
-__aeabi_memset               0x10f9         Code  Gb  ABImemset.o [14]
-__cmain                      0x1711         Code  Gb  cmain.o [14]
-__exit                       0x1745   0x14  Code  Gb  exit.o [15]
-__iar_Memchr                 0x12ad         Code  Gb  memchr.o [14]
-__iar_Memset                 0x10f9         Code  Gb  ABImemset.o [14]
-__iar_Memset_word            0x1101         Code  Gb  ABImemset.o [14]
-__iar_Stoulx                  0xe7d  0x13e  Code  Gb  iar_Stoulx.o [11]
-__iar_data_init3             0x1685   0x28  Code  Gb  data_init.o [14]
-__iar_init_vfp               0x16ed         Code  Gb  fpinit_M.o [13]
-__iar_program_start          0x16d1         Code  Gb  cstartup_M.o [14]
-__iar_zero_init3             0x164d   0x38  Code  Gb  zero_init3.o [14]
-__low_level_init             0x172f    0x4  Code  Gb  low_level_init.o [11]
+__aeabi_memset               0x1159         Code  Gb  ABImemset.o [14]
+__cmain                      0x1771         Code  Gb  cmain.o [14]
+__exit                       0x17a5   0x14  Code  Gb  exit.o [15]
+__iar_Memchr                 0x130d         Code  Gb  memchr.o [14]
+__iar_Memset                 0x1159         Code  Gb  ABImemset.o [14]
+__iar_Memset_word            0x1161         Code  Gb  ABImemset.o [14]
+__iar_Stoulx                  0xedd  0x13e  Code  Gb  iar_Stoulx.o [11]
+__iar_data_init3             0x16e5   0x28  Code  Gb  data_init.o [14]
+__iar_init_vfp               0x174d         Code  Gb  fpinit_M.o [13]
+__iar_program_start          0x1731         Code  Gb  cstartup_M.o [14]
+__iar_zero_init3             0x16ad   0x38  Code  Gb  zero_init3.o [14]
+__low_level_init             0x178f    0x4  Code  Gb  low_level_init.o [11]
 __vector_table                  0x0  0x26c  Data  Gb  startup_ewarm.o [1]
-_call_main                   0x171d         Code  Gb  cmain.o [14]
-_exit                        0x1739         Code  Gb  cexit.o [14]
-atoi                          0xfc1    0x2  Code  Gb  iar_Stoulx.o [11]
-digits                       0x1624   0x28  Data  Lc  iar_Stoulx.o [11]
-exit                         0x1733    0x4  Code  Gb  exit.o [11]
+_call_main                   0x177d         Code  Gb  cmain.o [14]
+_exit                        0x1799         Code  Gb  cexit.o [14]
+atoi                         0x1021    0x2  Code  Gb  iar_Stoulx.o [11]
+digits                       0x1684   0x28  Data  Lc  iar_Stoulx.o [11]
+exit                         0x1793    0x4  Code  Gb  exit.o [11]
 failedAttempts          0x2000'0044    0x2  Data  Gb  HMI_Comm.o [10]
-g_pui32EnRegs                 0xc58   0x14  Data  Lc  interrupt.o [12]
-g_pui32GPIOBaseAddrs          0x7bc   0x90  Data  Lc  gpio.o [12]
+g_pui32EnRegs                 0xcb8   0x14  Data  Lc  interrupt.o [12]
+g_pui32GPIOBaseAddrs          0xad0   0x90  Data  Lc  gpio.o [12]
 g_pui32Xtals                  0x528   0x6c  Data  Lc  sysctl.o [12]
-main                         0x159b   0x48  Code  Gb  main.o [1]
-memchr                       0x12ad         Code  Gb  memchr.o [14]
+main                         0x15fb   0x48  Code  Gb  main.o [1]
+memchr                       0x130d         Code  Gb  memchr.o [14]
 messageReady            0x2000'0047    0x1  Data  Gb  HMI_Comm.o [10]
-ndigs                        0x15fc   0x28  Data  Lc  iar_Stoulx.o [11]
+ndigs                        0x165c   0x28  Data  Lc  iar_Stoulx.o [11]
 pui32Stack              0x2000'0048  0x200  Data  Lc  startup_ewarm.o [1]
 rxBuffer                0x2000'0000   0x40  Data  Gb  HMI_Comm.o [10]
 rxIndex                 0x2000'0046    0x1  Data  Gb  HMI_Comm.o [10]
-strcmp                        0xcd1         Code  Gb  strcmp.o [14]
-strcpy                        0xc6d         Code  Gb  strcpy.o [14]
-strcspn                      0x128b   0x22  Code  Gb  strcspn.o [11]
-strspn                       0x1269   0x22  Code  Gb  strspn.o [11]
-strtok                        0xc85   0x4c  Code  Gb  strtok.o [11]
-systick_ISR                  0x16cb    0x2  Code  Gb  startup_ewarm.o [1]
+strcmp                        0xd31         Code  Gb  strcmp.o [14]
+strcpy                        0xccd         Code  Gb  strcpy.o [14]
+strcspn                      0x12eb   0x22  Code  Gb  strcspn.o [11]
+strspn                       0x12c9   0x22  Code  Gb  strspn.o [11]
+strtok                        0xce5   0x4c  Code  Gb  strtok.o [11]
+systick_ISR                  0x172b    0x2  Code  Gb  startup_ewarm.o [1]
 
 
-[1] = E:\coding\embedded\embededProject\Debug\Obj
-[2] = E:\coding\embedded\embededProject\Debug\Obj\APP
-[3] = E:\coding\embedded\embededProject\Debug\Obj\BUZZER
-[4] = E:\coding\embedded\embededProject\Debug\Obj\EEPROM
-[5] = E:\coding\embedded\embededProject\Debug\Obj\HAL\Keypad
-[6] = E:\coding\embedded\embededProject\Debug\Obj\HAL\LCD
-[7] = E:\coding\embedded\embededProject\Debug\Obj\HAL\PASSWORD
-[8] = E:\coding\embedded\embededProject\Debug\Obj\HAL\Potentiometer
-[9] = E:\coding\embedded\embededProject\Debug\Obj\TIMER
-[10] = E:\coding\embedded\embededProject\Debug\Obj\UART
+[1] = C:\Users\patri\Desktop\embedded\embededProject\Debug\Obj
+[2] = C:\Users\patri\Desktop\embedded\embededProject\Debug\Obj\APP
+[3] = C:\Users\patri\Desktop\embedded\embededProject\Debug\Obj\BUZZER
+[4] = C:\Users\patri\Desktop\embedded\embededProject\Debug\Obj\EEPROM
+[5] = C:\Users\patri\Desktop\embedded\embededProject\Debug\Obj\HAL\Keypad
+[6] = C:\Users\patri\Desktop\embedded\embededProject\Debug\Obj\HAL\LCD
+[7] = C:\Users\patri\Desktop\embedded\embededProject\Debug\Obj\HAL\PASSWORD
+[8] = C:\Users\patri\Desktop\embedded\embededProject\Debug\Obj\HAL\Potentiometer
+[9] = C:\Users\patri\Desktop\embedded\embededProject\Debug\Obj\TIMER
+[10] = C:\Users\patri\Desktop\embedded\embededProject\Debug\Obj\UART
 [11] = dl7M_tln.a
 [12] = driverlib.a
 [13] = m7M_tls.a
 [14] = rt7M_tl.a
 [15] = shb_l.a
 
-  5'276 bytes of readonly  code memory
+  5'372 bytes of readonly  code memory
     792 bytes of readonly  data memory
     584 bytes of readwrite data memory
 
