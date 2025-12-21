@@ -95,7 +95,7 @@
             <outputs>
                 <tool>
                     <name>ILINK</name>
-                    <file> 11</file>
+                    <file> 2 11</file>
                 </tool>
             </outputs>
         </file>
