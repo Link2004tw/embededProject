@@ -24,3 +24,6 @@
 1	634	7880367478821217	E:/coding/embedded/embededProject/Debug/Obj/main.o	cefdffd15d255c4e
 6	282	7880367635554068	E:/coding/embedded/embededProject/Debug/Obj/APP/display_manager.o	764081cc74cfa79c
 0	142	7880369192828036	E:/coding/embedded/embededProject/Debug/Obj/APP/display_manager.o	764081cc74cfa79c
+0	108	7880371994907498	E:/coding/embedded/embededProject/Debug/Obj/Comm/HMI_Comm.o	944357d11e83df04
+5	110	7880373086985057	E:/coding/embedded/embededProject/Debug/Obj/Comm/HMI_Comm.o	944357d11e83df04
+1	140	7880373087275123	E:/coding/embedded/embededProject/Debug/Obj/APP/display_manager.o	764081cc74cfa79c

@@ -139,8 +139,8 @@ void DISPLAY_CHANGEPASSWORD(void){
     SysCtlDelay(1000000);
     GPIOPinWrite(GPIO_PORTF_BASE, GPIO_PIN_2, 0);
     
-    UART5_ReceiveString(ack_buffer, 20);
-
+    //UART5_ReceiveString(ack_buffer, 20);
+    UART5_ReceiveStringWithTimeout(ack_buffer, 20);
     LCD_Clear();
     if(ack_buffer[0] != '\0'){
 
@@ -155,7 +155,8 @@ void DISPLAY_CHANGEPASSWORD(void){
     }else {
         ack_buffer[0]='\0';
         LCD_Clear();
-        UART5_ReceiveString(ack_buffer, 20);
+        UART5_ReceiveStringWithTimeout(ack_buffer, 20);
+        //UART5_ReceiveString(ack_buffer, 20);
 
         // TEST LED: Long red on timeout
         GPIOPinWrite(GPIO_PORTF_BASE, GPIO_PIN_1, GPIO_PIN_1);
@@ -239,8 +240,8 @@ void DISPLAY_OLD_PASSWORD(void)
     // TEST LED: Blue flash while waiting
     GPIOPinWrite(GPIO_PORTF_BASE, GPIO_PIN_2, GPIO_PIN_2);
     //SysCtlDelay(1000000);
-    
-    UART5_ReceiveString(ack_buffer, 20);
+    UART5_ReceiveStringWithTimeout(ack_buffer, 20);
+   // UART5_ReceiveString(ack_buffer, 20);
     SysCtlDelay(SysCtlClockGet());  // 100ms
     
     GPIOPinWrite(GPIO_PORTF_BASE, GPIO_PIN_2, 0);
@@ -501,3 +502,27 @@ void DISPLAY_ClearScreen(void)
 //    SysCtlDelay(10000000);
 //    
 //}
+
+void SHOW_BUFFER(char* buffer){
+    LCD_Clear();
+    char* dollar_pos = strchr(buffer, '$');
+    
+    if(dollar_pos != NULL) {
+        // Find length of first part (before $)
+        int first_len = dollar_pos - buffer;
+        
+        // Write first part
+        for(int i = 0; i < first_len; i++) {
+            LCD_WriteChar(buffer[i]);
+        }
+        
+        // Set cursor to second line
+        LCD_SetCursor(1, 0);
+        
+        // Write second part (skip the $)
+        LCD_WriteString(dollar_pos + 1);
+    } else {
+        // No $ found, just write the whole buffer
+        LCD_WriteString(buffer);
+    }
+}

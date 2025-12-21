@@ -102640,7 +102640,7 @@
     "display": "void DISPLAY_CHANGETIMEOUT(void)",
     "location": {
       "column": "6",
-      "line": "173",
+      "line": "174",
       "path": "E:\\coding\\embedded\\embededProject\\APP\\display_manager.c"
     },
     "name": "DISPLAY_CHANGETIMEOUT",
@@ -102654,7 +102654,7 @@
     "display": "void DISPLAY_OLD_PASSWORD(void)",
     "location": {
       "column": "6",
-      "line": "198",
+      "line": "199",
       "path": "E:\\coding\\embedded\\embededProject\\APP\\display_manager.c"
     },
     "name": "DISPLAY_OLD_PASSWORD",
@@ -102662,13 +102662,13 @@
     "scope": null
   },
   {
-    "ID": "c:display_manager.c@5265@F@DISPLAY_OLD_PASSWORD@password",
+    "ID": "c:display_manager.c@5377@F@DISPLAY_OLD_PASSWORD@password",
     "What": "Variable",
     "defdec": "Def",
     "display": "password",
     "location": {
       "column": "10",
-      "line": "200",
+      "line": "201",
       "path": "E:\\coding\\embedded\\embededProject\\APP\\display_manager.c"
     },
     "name": "password",
@@ -102676,13 +102676,13 @@
     "scope": null
   },
   {
-    "ID": "c:display_manager.c@5477@F@DISPLAY_OLD_PASSWORD@pass_index",
+    "ID": "c:display_manager.c@5589@F@DISPLAY_OLD_PASSWORD@pass_index",
     "What": "Variable",
     "defdec": "Def",
     "display": "pass_index",
     "location": {
       "column": "11",
-      "line": "205",
+      "line": "206",
       "path": "E:\\coding\\embedded\\embededProject\\APP\\display_manager.c"
     },
     "name": "pass_index",
@@ -102690,13 +102690,13 @@
     "scope": null
   },
   {
-    "ID": "c:display_manager.c@5504@F@DISPLAY_OLD_PASSWORD@key",
+    "ID": "c:display_manager.c@5616@F@DISPLAY_OLD_PASSWORD@key",
     "What": "Variable",
     "defdec": "Def",
     "display": "key",
     "location": {
       "column": "10",
-      "line": "206",
+      "line": "207",
       "path": "E:\\coding\\embedded\\embededProject\\APP\\display_manager.c"
     },
     "name": "key",
@@ -102704,13 +102704,13 @@
     "scope": null
   },
   {
-    "ID": "c:display_manager.c@6300@F@DISPLAY_OLD_PASSWORD@ack_buffer",
+    "ID": "c:display_manager.c@6412@F@DISPLAY_OLD_PASSWORD@ack_buffer",
     "What": "Variable",
     "defdec": "Def",
     "display": "ack_buffer",
     "location": {
       "column": "10",
-      "line": "235",
+      "line": "236",
       "path": "E:\\coding\\embedded\\embededProject\\APP\\display_manager.c"
     },
     "name": "ack_buffer",
@@ -102724,7 +102724,7 @@
     "display": "void DISPLAY_NEW_PASSWORD(void)",
     "location": {
       "column": "6",
-      "line": "286",
+      "line": "287",
       "path": "E:\\coding\\embedded\\embededProject\\APP\\display_manager.c"
     },
     "name": "DISPLAY_NEW_PASSWORD",
@@ -102732,13 +102732,13 @@
     "scope": null
   },
   {
-    "ID": "c:display_manager.c@7952@F@DISPLAY_NEW_PASSWORD@newPassword",
+    "ID": "c:display_manager.c@8113@F@DISPLAY_NEW_PASSWORD@newPassword",
     "What": "Variable",
     "defdec": "Def",
     "display": "newPassword",
     "location": {
       "column": "10",
-      "line": "288",
+      "line": "289",
       "path": "E:\\coding\\embedded\\embededProject\\APP\\display_manager.c"
     },
     "name": "newPassword",
@@ -102746,13 +102746,13 @@
     "scope": null
   },
   {
-    "ID": "c:display_manager.c@7983@F@DISPLAY_NEW_PASSWORD@confirmPassword",
+    "ID": "c:display_manager.c@8144@F@DISPLAY_NEW_PASSWORD@confirmPassword",
     "What": "Variable",
     "defdec": "Def",
     "display": "confirmPassword",
     "location": {
       "column": "10",
-      "line": "289",
+      "line": "290",
       "path": "E:\\coding\\embedded\\embededProject\\APP\\display_manager.c"
     },
     "name": "confirmPassword",
@@ -102760,13 +102760,13 @@
     "scope": null
   },
   {
-    "ID": "c:display_manager.c@8018@F@DISPLAY_NEW_PASSWORD@pass_index",
+    "ID": "c:display_manager.c@8179@F@DISPLAY_NEW_PASSWORD@pass_index",
     "What": "Variable",
     "defdec": "Def",
     "display": "pass_index",
     "location": {
       "column": "11",
-      "line": "290",
+      "line": "291",
       "path": "E:\\coding\\embedded\\embededProject\\APP\\display_manager.c"
     },
     "name": "pass_index",
@@ -102774,13 +102774,13 @@
     "scope": null
   },
   {
-    "ID": "c:display_manager.c@8045@F@DISPLAY_NEW_PASSWORD@key",
+    "ID": "c:display_manager.c@8206@F@DISPLAY_NEW_PASSWORD@key",
     "What": "Variable",
     "defdec": "Def",
     "display": "key",
     "location": {
       "column": "10",
-      "line": "291",
+      "line": "292",
       "path": "E:\\coding\\embedded\\embededProject\\APP\\display_manager.c"
     },
     "name": "key",
@@ -102794,7 +102794,7 @@
     "display": "void DISPLAY_OPEN(void)",
     "location": {
       "column": "7",
-      "line": "363",
+      "line": "364",
       "path": "E:\\coding\\embedded\\embededProject\\APP\\display_manager.c"
     },
     "name": "DISPLAY_OPEN",
@@ -102808,7 +102808,7 @@
     "display": "void DISPLAY_ERROR(void)",
     "location": {
       "column": "6",
-      "line": "376",
+      "line": "377",
       "path": "E:\\coding\\embedded\\embededProject\\APP\\display_manager.c"
     },
     "name": "DISPLAY_ERROR",
@@ -102822,7 +102822,7 @@
     "display": "void DISPLAY_ShowMessage(const char *)",
     "location": {
       "column": "6",
-      "line": "385",
+      "line": "386",
       "path": "E:\\coding\\embedded\\embededProject\\APP\\display_manager.c"
     },
     "name": "DISPLAY_ShowMessage",
@@ -102836,7 +102836,7 @@
     "display": "void DISPLAY_ShowTimeoutValue(uint8_t)",
     "location": {
       "column": "6",
-      "line": "391",
+      "line": "392",
       "path": "E:\\coding\\embedded\\embededProject\\APP\\display_manager.c"
     },
     "name": "DISPLAY_ShowTimeoutValue",
@@ -102850,7 +102850,7 @@
     "display": "void DISPLAY_ClearScreen(void)",
     "location": {
       "column": "6",
-      "line": "402",
+      "line": "403",
       "path": "E:\\coding\\embedded\\embededProject\\APP\\display_manager.c"
     },
     "name": "DISPLAY_ClearScreen",

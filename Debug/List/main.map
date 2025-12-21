@@ -1,6 +1,6 @@
 ###############################################################################
 #
-# IAR ELF Linker V9.10.1.308/W64 for ARM                  21/Dec/2025  18:15:20
+# IAR ELF Linker V9.10.1.308/W64 for ARM                  21/Dec/2025  18:21:48
 # Copyright 2007-2021 IAR Systems AB.
 #
 #    Output file  =  E:\coding\embedded\embededProject\Debug\Exe\main.out
@@ -39,8 +39,6 @@ Warning[Lt009]: Inconsistent wchar_t size
                       libraries have wchar_t size 32 bits
 Error[Li005]: no definition for "SHOW_BUFFER" [referenced from E:\coding\embedd
           ed\embededProject\Debug\Obj\APP\potentiometer_manager.o]
-Error[Li005]: no definition for "UART5_ReceiveString" [referenced from
-          E:\coding\embedded\embededProject\Debug\Obj\APP\display_manager.o]
 
 
 *******************************************************************************
@@ -382,5 +380,5 @@ systick_ISR                  0x1cc7    0x2  Code  Gb  startup_ewarm.o [1]
     936 bytes of readonly  data memory
     513 bytes of readwrite data memory
 
-Errors: 2
+Errors: 1
 Warnings: 1

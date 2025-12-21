@@ -71,31 +71,31 @@ void UART5_ReceiveStringWithTimeout(char* buffer, uint16_t max_length) {
     buffer[index] = '\0';
 }
 
-//void UART5_ReceiveString(char* buffer, uint16_t max_length) {
+// void UART5_ReceiveString(char* buffer, uint16_t max_length) {
 //    uint16_t index = 0;
 //    char received_char;
-//    uint32_t start_tick = SysTick->VAL; // or any timer tick for timeout
+//    //uint32_t start_tick = SysTick->VAL; // or any timer tick for timeout
 //    const uint32_t TIMEOUT_MS = 1000;   // 1 second
-//
+
 //    while(index < max_length - 1) {
 //        if(UARTCharsAvail(UART5_BASE)) {
 //            received_char = UARTCharGet(UART5_BASE);
-//
+
 //            if(received_char == '#') break;
-//
+
 //            buffer[index++] = received_char;
-//
+
 //            // Reset timeout on successful receive
-//            start_tick = SysTick->VAL;
+//            //start_tick = SysTick->VAL;
 //        }
-//
+
 //        // Check timeout (polling)
-//        if((SysTick->VAL - start_tick) > (SysCtlClockGet() / 1000 * TIMEOUT_MS)) {
-//            break;  // Timeout
-//        }
+//     //    if((SysTick->VAL - start_tick) > (SysCtlClockGet() / 1000 * TIMEOUT_MS)) {
+//     //        break;  // Timeout
+//     //    }
 //    }
-//
+
 //    buffer[index] = '\0'; // Null terminate string
-//}
-//
-//
+// }
+
+
