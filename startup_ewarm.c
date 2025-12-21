@@ -47,6 +47,7 @@ extern void systick_ISR (void);
 extern void PORTF_Handler(void) ;
 extern void UART5_Handler(void);
 extern void ADC0SS3_Handler(void);
+extern void Timer0A_Handler(void);
 
 
 //*****************************************************************************

@@ -35,6 +35,5 @@ char Keypad_GetKey(void);
  * Interrupt handler for keypad row pins.
  * Call this from the GPIO PortA ISR.
  */
-void Keypad_RowISR(void);
-void GPIOPortA_Handler(void);
+void Timer0A_Handler(void);
 #endif // KEYPAD_H
