@@ -32,7 +32,7 @@ void DISPLAY_ShowMainMenu(void)
     LCD_Clear();
     LCD_WriteString("+ Open");
     LCD_SetCursor(1, 0);
-    LCD_WriteString("- Change   * Timeout");
+    LCD_WriteString("- Change  * Time");
 }
 
 void DISPLAY_ShowMessage(const char *msg)
