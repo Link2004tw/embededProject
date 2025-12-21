@@ -9,9 +9,12 @@
 #include "tm4c123gh6pm.h"
 #include "driverlib/pin_map.h"
 #include "driverlib/gpio.h"
-#include "../UART/HMI_Comm.h"
+//#include "../UART/HMI_Comm.h"
 #include "../BACK/EEPROM/eepromDriver.h"
 
 void Timer0A_Init();
 void Timer0A_Handler(void);
-void TimerStart(uint32_t timerBase);
+void Timer1A_Init();
+void Timer1A_Handler(void);
+void Timer1AStart(uint32_t loadVal);
+void TimerStart();

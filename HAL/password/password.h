@@ -24,7 +24,7 @@
 #define PASSWORD_DEFAULT           "12345"
 
 /* EEPROM uninitialized value (erased state) */
-#define EEPROM_UNINITIALIZED       0xFFU
+#define EEPROM_UNINITIALIZED       0xA5
 
 /******************************************************************************
  *                           FUNCTION PROTOTYPES                               *

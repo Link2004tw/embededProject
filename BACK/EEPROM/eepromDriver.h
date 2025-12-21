@@ -28,6 +28,12 @@
 #include <stdint.h>
 #include <stdbool.h>
 
+/* TivaWare includes */
+#include "inc/hw_memmap.h"
+#include "inc/hw_types.h"
+#include "driverlib/sysctl.h"
+#include "driverlib/eeprom.h"
+
 /******************************************************************************
  *                              Definitions                                    *
  ******************************************************************************/
@@ -106,7 +112,7 @@ uint8_t EEPROM_ReadBuffer(uint32_t block, uint32_t offset, uint8_t *buffer, uint
  */
 /* Timeout Storage Constants */
 #define TIMEOUT_EEPROM_BLOCK    0U
-#define TIMEOUT_EEPROM_OFFSET   2U
+#define TIMEOUT_EEPROM_OFFSET   1U /* Shared with Password tail */
 
 /*
  * EEPROM_SaveTimeout

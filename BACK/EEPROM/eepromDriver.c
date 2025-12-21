@@ -14,14 +14,6 @@
  *****************************************************************************/
 
 #include "eepromDriver.h"
-#include <stdint.h>
-#include <stdbool.h>
-
-/* TivaWare includes */
-#include "inc/hw_memmap.h"
-#include "inc/hw_types.h"
-#include "driverlib/sysctl.h"
-#include "driverlib/eeprom.h"
 
 /******************************************************************************
  *                          Private Functions                                  *
@@ -64,6 +56,17 @@ uint8_t EEPROM_Init(void)
     if(result != EEPROM_INIT_OK)
     {
         return EEPROM_ERROR;
+    }
+    
+    /* Check if timeout is initialized */
+    uint8_t currentTimeout;
+    if (EEPROM_ReadTimeout(&currentTimeout) == EEPROM_SUCCESS)
+    {
+        /* If uninitialized (0xFF) or invalid (0), set default */
+        if (currentTimeout == 0xFF || currentTimeout == 0 || currentTimeout==0x0F)
+        {
+            EEPROM_SaveTimeout(15); /* Default 15 seconds */
+        }
     }
     
     return EEPROM_SUCCESS;
@@ -206,9 +209,34 @@ uint8_t EEPROM_MassErase(void)
 /*
  * EEPROM_SaveTimeout
  */
+/*
+ * EEPROM_SaveTimeout
+ */
 uint8_t EEPROM_SaveTimeout(uint8_t timeout)
 {
-    return EEPROM_WriteWord(TIMEOUT_EEPROM_BLOCK, TIMEOUT_EEPROM_OFFSET, (uint32_t)timeout);
+    uint32_t word = 0;
+    
+    /* Read existing word to preserve Password tail */
+    if (EEPROM_ReadWord(TIMEOUT_EEPROM_BLOCK, TIMEOUT_EEPROM_OFFSET, &word) != EEPROM_SUCCESS)
+    {
+        /* If read fails, we might be uninitialized, but we should try to proceed or error out. 
+           Let's assume 0 if read fails (risky for password) or return error. */
+         return EEPROM_ERROR;
+    }
+    
+    /* Modify Byte 1 (Comma) and Byte 2 (Timeout) */
+    /* Word Structure: [Byte 0: Pass4] [Byte 1: ','] [Byte 2: Timeout] [Byte 3: ?] */
+    
+    /* Clear Byte 1 and Byte 2 */
+    word &= ~(0x00FFFF00);
+    
+    /* Set Comma (0x2C) at Byte 1 */
+    word |= ((uint32_t)',' << 8);
+    
+    /* Set Timeout at Byte 2 */
+    word |= ((uint32_t)timeout << 16);
+    
+    return EEPROM_WriteWord(TIMEOUT_EEPROM_BLOCK, TIMEOUT_EEPROM_OFFSET, word);
 }
 
 /*
@@ -228,7 +256,8 @@ uint8_t EEPROM_ReadTimeout(uint8_t *timeout)
     
     if (status == EEPROM_SUCCESS)
     {
-        *timeout = (uint8_t)(word & 0xFF);
+        /* Timeout is at Byte 2 (bits 16-23) */
+        *timeout = (uint8_t)((word >> 16) & 0xFF);
     }
     
     return status;

@@ -122,7 +122,7 @@ __root const uVectorEntry __vector_table [] @ ".intvec" =
     IntDefaultHandler,                      // Watchdog timer
     Timer0A_Handler ,                      // Timer 0 subtimer A
     IntDefaultHandler,                      // Timer 0 subtimer B
-    IntDefaultHandler,                      // Timer 1 subtimer A
+    Timer1A_Handler,                      // Timer 1 subtimer A
     IntDefaultHandler,                      // Timer 1 subtimer B
     IntDefaultHandler,                      // Timer 2 subtimer A
     IntDefaultHandler,                      // Timer 2 subtimer B

@@ -9,11 +9,9 @@ void UART1_Init(void)
 {
     // 1️Enable peripherals
     SysCtlPeripheralEnable(SYSCTL_PERIPH_UART1);
-    SysCtlPeripheralEnable(SYSCTL_PERIPH_GPIOB);
-
+    
     while (!SysCtlPeripheralReady(SYSCTL_PERIPH_UART1));
-    while (!SysCtlPeripheralReady(SYSCTL_PERIPH_GPIOB));
-
+    
     // 2️Configure GPIO pins for UART1
     GPIOPinConfigure(GPIO_PB0_U1RX);
     GPIOPinConfigure(GPIO_PB1_U1TX);
@@ -106,11 +104,11 @@ void PROCESS_MESSAGE(void)
         if (res == PASSWORD_OK)
         {
             failedAttempts = 0;
-            UART1_SendString("OK#");
+            UART1_SendString("Door$Unlocked#");
             Door_Unlock();          // motor unlock
             //TimerStart(TIMEOUT_VALUE); // it is already in door unlock
         }
-        if(res == PASSWORD_MISMATCH)
+        else if(res == PASSWORD_MISMATCH)
         {
             failedAttempts++;
             UART1_SendString("WRONG#");
@@ -160,7 +158,7 @@ void PROCESS_MESSAGE(void)
             if (timeout >= 5 && timeout <= 30)
             {
                 EEPROM_SaveTimeout(timeout);
-                UART1_SendString("TIMEOUT_OK#");
+                UART1_SendString("Time Saved#");
             }
             else
             {
@@ -194,10 +192,10 @@ void UART1_SendString(char* str)
 
 void Door_Unlock(void) {
     // Activate the unlocking mechanism
-    GPIOPinWrite(GPIO_PORTF_BASE, GPIO_PIN_3, GPIO_PIN_3); // Start with LED OFF
+    GPIOPinWrite(GPIO_PORTB_BASE, GPIO_PIN_6, GPIO_PIN_6); // Start with LED OFF
    // Example for Tiva C, set pin low to unlock
     // Optionally start a timer to relock
-    TimerStart(TIMEOUT_VALUE);
+    TimerStart();
     //Start_AutoLock_Timer();
 }
 
@@ -211,11 +209,12 @@ void Door_Unlock(void) {
 
 void Activate_Lockout(void) {
     // Optionally turn on an LED or buzzer
-    GPIOPinWrite(LED_PORT, LED_PIN, LED_PIN);
+    GPIOPinWrite(GPIO_PORTB_BASE, GPIO_PIN_2, GPIO_PIN_2);
 
     // Start lockout timer
-    TimerLoadSet(TIMER1_BASE, TIMER_A, LOCKOUT_DURATION);
-    TimerEnable(TIMER1_BASE, TIMER_A);
+    Timer1AStart(LOCKOUT_DURATION);
+    // TimerLoadSet(TIMER1_BASE, TIMER_A, LOCKOUT_DURATION);
+    // TimerEnable(TIMER1_BASE, TIMER_A);
 }
 
 

@@ -22,7 +22,7 @@
 #define RX_BUFFER_SIZE    64
 #define PASSWORD_LENGTH   5
 #define PASSWORD          "12345"
-#define LOCKOUT_DURATION  5000
+#define LOCKOUT_DURATION  80000000
 #define TIMEOUT_ADDRESS   0x10
 #define TIMEOUT_VALUE     480000000
 
@@ -49,6 +49,5 @@ void UART1_Handler(void);
 //void Start_AutoLock_Timer(void);
 void Activate_Lockout(void);
 
-void Door_Lock(void);
 
 #endif
