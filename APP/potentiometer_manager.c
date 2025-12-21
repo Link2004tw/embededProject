@@ -96,6 +96,12 @@ void PotentiometerManager_HandleTimeoutConfig(void)
         if ((current_timeout != last_displayed_timeout) || 
             (update_counter >= TIMEOUT_DISPLAY_UPDATE_INTERVAL))
         {
+            /* Optional: Read raw ADC value for debugging 
+             * Uncomment the lines below to see the actual ADC reading
+             * This helps diagnose if the potentiometer is reaching full range
+             */
+            // uint16_t raw_adc = Potentiometer_GetRawDebug();
+            
             /* Position cursor on second line */
             DISPLAY_ClearScreen();
             DISPLAY_ShowMessage("Adjust Timeout");
@@ -110,6 +116,23 @@ void PotentiometerManager_HandleTimeoutConfig(void)
             LCD_WriteChar('0' + (current_timeout / 10));
             LCD_WriteChar('0' + (current_timeout % 10));
             LCD_WriteString(" sec");
+            
+            /* Debug display (optional) - shows raw ADC value
+             * Uncomment to diagnose potentiometer range issues:
+             */
+            // LCD_SetCursor(1, 11);
+            // LCD_WriteChar('A');
+            // LCD_WriteChar('D');
+            // LCD_WriteChar('C');
+            // LCD_WriteChar(':');
+            // char digit4 = '0' + ((raw_adc / 1000) % 10);
+            // char digit3 = '0' + ((raw_adc / 100) % 10);
+            // char digit2 = '0' + ((raw_adc / 10) % 10);
+            // char digit1 = '0' + (raw_adc % 10);
+            // if (digit4 != '0') LCD_WriteChar(digit4);
+            // if (digit4 != '0' || digit3 != '0') LCD_WriteChar(digit3);
+            // LCD_WriteChar(digit2);
+            // LCD_WriteChar(digit1);
             
             /* Update state */
             last_displayed_timeout = current_timeout;

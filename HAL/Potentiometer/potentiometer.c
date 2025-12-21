@@ -110,10 +110,15 @@ uint16_t Potentiometer_ReadRaw(void)
  * 
  * Description:
  *   Reads the potentiometer and maps the analog value to timeout seconds.
- *   Uses linear mapping: Timeout = ((ADC_Value / 4095) * 25) + 5
+ *   Uses improved linear mapping with calibration to handle hardware variance.
+ *   
+ *   Calibration Notes:
+ *   - Many potentiometers don't reach the full 0-3.3V range
+ *   - ADC readings typically range from ~100 to ~3900 in practice
+ *   - We use a calibration threshold (95% of max) to ensure 30 seconds is reachable
  * 
- *   This allows users to adjust timeout from 5 to 30 seconds via
- *   the potentiometer, displayed live on the LCD.
+ *   Formula: Timeout = ((ADC_Value / ADC_MAX) * (MAX - MIN)) + MIN
+ *   with proper rounding to avoid truncation errors
  * 
  * Returns:
  *   uint8_t - Timeout value in seconds (5-30)
@@ -126,10 +131,26 @@ uint8_t Potentiometer_ReadTimeout(void)
     /* Read raw ADC value */
     adc_raw = Potentiometer_ReadRaw();
     
-    /* Map ADC value (0-4095) to timeout range (5-30 seconds)
-     * Formula: Timeout = ((ADC / 4095) * (MAX - MIN)) + MIN
+    /* Calibration: Handle hardware variance where potentiometers
+     * may not reach the full ADC range (0-4095)
+     * If ADC reads above 95% of max (3890), treat it as maximum
+     * This ensures users can reliably reach 30 seconds timeout
      */
-    timeout_value = ((adc_raw * TIMEOUT_RANGE) / ADC_MAX_VALUE) + TIMEOUT_MIN_SECONDS;
+    #define ADC_CALIBRATION_THRESHOLD  3890  /* 95% of 4095 */
+    
+    if (adc_raw >= ADC_CALIBRATION_THRESHOLD)
+    {
+        /* Potentiometer at maximum - return max timeout */
+        return TIMEOUT_MAX_SECONDS;
+    }
+    
+    /* Map ADC value (0-3890) to timeout range (5-30 seconds)
+     * Use improved formula with proper rounding:
+     * Timeout = ((ADC * RANGE * 2) / (ADC_MAX * 2)) + MIN
+     * The *2 trick provides better rounding without floating point
+     */
+    timeout_value = ((adc_raw * TIMEOUT_RANGE * 2) + ADC_CALIBRATION_THRESHOLD) / (ADC_CALIBRATION_THRESHOLD * 2);
+    timeout_value += TIMEOUT_MIN_SECONDS;
     
     /* Ensure value is within bounds (safety check) */
     if (timeout_value > TIMEOUT_MAX_SECONDS)
