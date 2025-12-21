@@ -21,3 +21,6 @@
 52	1496	7880364123112547	E:/coding/embedded/embededProject/Debug/Obj/HAL/Keypad/keypad.o	d507f0621f184170
 1304	1505	7880364123122572	E:/coding/embedded/embededProject/Debug/Obj/HAL/Potentiometer/potentiometer.o	6917ce06061ac5fc
 63	1574	7880364124099868	E:/coding/embedded/embededProject/Debug/Obj/Utils/dio.o	858989a99b3a8484
+1	634	7880367478821217	E:/coding/embedded/embededProject/Debug/Obj/main.o	cefdffd15d255c4e
+6	282	7880367635554068	E:/coding/embedded/embededProject/Debug/Obj/APP/display_manager.o	764081cc74cfa79c
+0	142	7880369192828036	E:/coding/embedded/embededProject/Debug/Obj/APP/display_manager.o	764081cc74cfa79c
