@@ -13,6 +13,11 @@
 #define ADDMODE '1'
 #define TIMEMODE '2'
 
+#define RX_BUFFER_SIZE 128 //copilot mosmm en da hysl7 bug liha 3laka b el hardware spam eli ana ba7ebo
+extern volatile char rx_buffer[RX_BUFFER_SIZE];
+extern volatile uint16_t rx_head;
+extern volatile uint16_t rx_tail;
+
 //void HMI_SendPassword(uint8_t* pass, uint8_t length);
 void UART5_Init_front(void);
 void UART5_SendString(char* str);

@@ -1,4 +1,36 @@
-#include "HMI_Comm.h"
+#include "driverlib/interrupt.h"
+#include "inc/hw_ints.h"
+
+
+// Internal function to check if buffer has data
+bool UART5_IsDataAvailable(void) {
+    return (rx_head != rx_tail);
+}
+
+// Internal function to read from buffer
+char UART5_ReadFromBuffer(void) {
+    if (rx_head == rx_tail) return 0; // Empty
+    char c = rx_buffer[rx_tail];
+    rx_tail = (rx_tail + 1) % RX_BUFFER_SIZE;
+    return c;
+}
+
+// UART5 Interrupt Service Routine
+void UART5_Handler(void) {
+    uint32_t status = UARTIntStatus(UART5_BASE, true);
+    UARTIntClear(UART5_BASE, status);
+
+    while (UARTCharsAvail(UART5_BASE)) {
+        char c = UARTCharGetNonBlocking(UART5_BASE);
+        // Store in Ring Buffer
+        uint16_t next_head = (rx_head + 1) % RX_BUFFER_SIZE;
+        if (next_head != rx_tail) { // Check for overflow
+            rx_buffer[rx_head] = c;
+            rx_head = next_head;
+        }
+        // Else: Drop character (Buffer Full)
+    }
+}
 
 // Initialize UART5 on PE4 (Rx) and PE5 (Tx)
 void UART5_Init_front(void) {
@@ -14,6 +46,15 @@ void UART5_Init_front(void) {
 
     UARTConfigSetExpClk(UART5_BASE, SysCtlClockGet(), 9600,
                         (UART_CONFIG_WLEN_8 | UART_CONFIG_STOP_ONE | UART_CONFIG_PAR_NONE));
+    
+    // Enable UART FIFO
+    UARTFIFOEnable(UART5_BASE);
+    
+    // Configure Interrupts (Receive and Receive Timeout)
+    IntEnable(INT_UART5);
+    UARTIntEnable(UART5_BASE, UART_INT_RX | UART_INT_RT);
+    IntMasterEnable(); // Enable global interrupts
+
     SysCtlPeripheralEnable(SYSCTL_PERIPH_GPIOF);
      GPIOPinTypeGPIOOutput(GPIO_PORTF_BASE, GPIO_PIN_3); // PF3 is Green LED
     GPIOPinWrite(GPIO_PORTF_BASE, GPIO_PIN_1, 0); // Start with LED OFF
@@ -26,12 +67,10 @@ void UART5_Init_front(void) {
     UARTEnable(UART5_BASE);
     SysCtlDelay(1000);  // Add delay to let UART settle
     
+    // Clear hardware FIFO
     while (UARTCharsAvail(UART5_BASE)) {
         int x = UARTCharGet(UART5_BASE);
     }
-    //GPIOPinWrite(GPIO_PORTF_BASE, GPIO_PIN_3, GPIO_PIN_3); // Start with LED OFF
-    
-    
 }
 
 
@@ -48,7 +87,7 @@ void UART5_SendString(char* str) {
     GPIOPinWrite(GPIO_PORTF_BASE, GPIO_PIN_3, 0);
 }
 
-#define ACK_TIMEOUT_MS 1000  // 1 second timeout
+#define ACK_TIMEOUT_MS 1000000  // Increased software loop counter for timeout (since we don't have accurate timer yet)
 
 void UART5_ReceiveStringWithTimeout(char* buffer, uint16_t max_length) {
     uint16_t index = 0;
@@ -56,15 +95,17 @@ void UART5_ReceiveStringWithTimeout(char* buffer, uint16_t max_length) {
     uint32_t timeout_counter = 0;
 
     while(index < max_length - 1) {
-        if(UARTCharsAvail(UART5_BASE)) {
-            c = UARTCharGet(UART5_BASE);
+        if(UART5_IsDataAvailable()) { // Check SW Buffer instead of HW Polling
+            c = UART5_ReadFromBuffer();
             if(c == '%') break;
             buffer[index++] = c;
             timeout_counter = 0; // reset on receive
         } else {
             timeout_counter++;
             if(timeout_counter > ACK_TIMEOUT_MS) break; // timeout reached
-            SysCtlDelay(1000); // small delay
+            // Removed SysCtlDelay to make it non-blocking in a real RTOS sense, 
+            // but for now we spin-wait on the buffer which is effectively polling the software buffer.
+            // This is "interrupt-based driver" but "blocking application layer".
         }
     }
 
