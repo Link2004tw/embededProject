@@ -11,7 +11,12 @@
 #ifndef POTENTIOMETER_MANAGER_H
 #define POTENTIOMETER_MANAGER_H
 #include "../Comm/HMI_Comm.h"
-
+#include <stdbool.h>
+#include "display_manager.h"
+#include "input_manager.h"
+#include "../HAL/Potentiometer/potentiometer.h"
+#include "../HAL/LCD/lcd.h"
+#include "driverlib/sysctl.h"
 #include <stdint.h>
 
 /*****************************************************************************
