@@ -20,6 +20,7 @@
 #define PASSWORD_ERROR             1U
 #define PASSWORD_MISMATCH          2U
 #define PASSWORD_NOT_INITIALIZED   3U
+#define EEPROM_UNINITIALIZED       0xA5
 
 /******************************************************************************
  *                           FUNCTION PROTOTYPES                               *
@@ -39,7 +40,7 @@ uint8_t Password_Save(const uint8_t *password);
 
 /* Read stored password from EEPROM */
 uint8_t Password_Read(uint8_t *password);
-
+uint8_t Password_FirstTimeSetup(const uint8_t *password);
 /* Compare entered password with stored one */
 uint8_t Password_Compare(const uint8_t *password);
 
