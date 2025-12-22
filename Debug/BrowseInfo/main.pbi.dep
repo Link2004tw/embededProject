@@ -2,6 +2,10 @@ E:\coding\embedded\embededProject\Debug\BrowseInfo\main.pbi: \
   C:\ti\TivaWare_C_Series-2.2.0.295\driverlib\adc.h \
   E:\coding\embedded\embededProject\HAL\Potentiometer\potentiometer.h \
   E:\coding\embedded\embededProject\APP\display_manager.h \
+  C:\ti\TivaWare_C_Series-2.2.0.295\driverlib\flash.h \
+  C:\ti\TivaWare_C_Series-2.2.0.295\driverlib\timer.h \
+  C:\ti\TivaWare_C_Series-2.2.0.295\inc\hw_ints.h \
+  C:\ti\TivaWare_C_Series-2.2.0.295\driverlib\interrupt.h \
   C:\ti\TivaWare_C_Series-2.2.0.295\driverlib\pin_map.h \
   C:\ti\TivaWare_C_Series-2.2.0.295\driverlib\uart.h \
   C:\ti\TivaWare_C_Series-2.2.0.295\driverlib\gpio.h \

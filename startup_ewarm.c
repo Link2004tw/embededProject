@@ -26,6 +26,7 @@
 #include <stdint.h>
 #include "inc/hw_nvic.h"
 #include "inc/hw_types.h"
+#include "Comm/HMI_Comm.h"
 //#include "HAL/keypad/keypad.h"
 //*****************************************************************************
 //
@@ -161,7 +162,7 @@ __root const uVectorEntry __vector_table [] @ ".intvec" =
     IntDefaultHandler,                      // SSI3 Rx and Tx
     IntDefaultHandler,                      // UART3 Rx and Tx
     IntDefaultHandler,                      // UART4 Rx and Tx
-    IntDefaultHandler,                      // UART5 Rx and Tx
+    UART5_Handler,                      // UART5 Rx and Tx
     IntDefaultHandler,                      // UART6 Rx and Tx
     IntDefaultHandler,                      // UART7 Rx and Tx
     0,                                      // Reserved

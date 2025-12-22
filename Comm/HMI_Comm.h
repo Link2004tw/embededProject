@@ -1,7 +1,22 @@
+
+// //void HMI_SendPassword(uint8_t* pass, uint8_t length);
+// void UART5_Init_front(void);
+// void UART5_SendString(char* str);
+// void UART5_ReceiveString(char* buffer, uint16_t max_length);
+// void UART5_ReceiveStringWithTimeout(char* buffer, uint16_t max_length);
+
+// #endif
+
+
 #ifndef HMI_COMM_H
 #define HMI_COMM_H
+#define PASSMODE '0'
+#define ADDMODE '1'
+#define TIMEMODE '2'
+
 #include <stdint.h>
 #include <stdbool.h>
+#include <string.h> 
 #include "tm4c123gh6pm.h"
 #include "inc/hw_memmap.h"
 #include "inc/hw_types.h"
@@ -9,14 +24,42 @@
 #include "driverlib/gpio.h"
 #include "driverlib/uart.h"
 #include "driverlib/pin_map.h"
-#define PASSMODE '0'
-#define ADDMODE '1'
-#define TIMEMODE '2'
+#include "driverlib/interrupt.h"
+#include "inc/hw_ints.h"
+#include "driverlib/timer.h"
+#include "driverlib/flash.h"
+//#include "../TIMER/TIMER.h"
+//#include "../HAL/BUZZER/buzzer.h"
+//#include "../HAL/password/password.h"
+//#include "../BACK/EEPROM/eepromDriver.h"
+#define RX_BUFFER_SIZE    64
+#define PASSWORD_LENGTH   5
+#define PASSWORD          "12345"
+#define LOCKOUT_DURATION  80000000
+#define TIMEOUT_ADDRESS   0x10
+#define TIMEOUT_VALUE     480000000
 
-//void HMI_SendPassword(uint8_t* pass, uint8_t length);
-void UART5_Init_front(void);
+
+
+//#define LOCK_PORT GPIO_PORTB_BASE
+//#define LOCK_PIN  GPIO_PIN_6
+//#define LED_PORT  GPIO_PORTF_BASE
+//#define LED_PIN   GPIO_PIN_1
+
+// ------------------------------
+// UART globals (shared)
+extern char rxBuffer[RX_BUFFER_SIZE];
+extern volatile uint8_t rxIndex;
+extern volatile bool messageReady;
+
+// Function prototypes
+void UART5_Init(void);
+void PROCESS_MESSAGE(void);
 void UART5_SendString(char* str);
+//void Door_Unlock(void);
+void UART5_Handler(void);
+//void Start_AutoLock_Timer(void);
+//void Activate_Lockout(void);
 void UART5_ReceiveString(char* buffer, uint16_t max_length);
-void UART5_ReceiveStringWithTimeout(char* buffer, uint16_t max_length);
 
 #endif

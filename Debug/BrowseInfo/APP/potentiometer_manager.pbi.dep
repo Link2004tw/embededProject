@@ -9,6 +9,9 @@ E:\coding\embedded\embededProject\Debug\BrowseInfo\APP\potentiometer_manager.pbi
   C:\Program\ Files\IAR\ Systems\Embedded\ Workbench\ 9.0\arm\inc\c\DLib_Config_Normal.h \
   C:\Program\ Files\IAR\ Systems\Embedded\ Workbench\ 9.0\arm\inc\c\DLib_Product.h \
   C:\Program\ Files\IAR\ Systems\Embedded\ Workbench\ 9.0\arm\inc\c\stdbool.h \
+  C:\Program\ Files\IAR\ Systems\Embedded\ Workbench\ 9.0\arm\inc\c\string.h \
+  C:\Program\ Files\IAR\ Systems\Embedded\ Workbench\ 9.0\arm\inc\c\ysizet.h \
+  C:\Program\ Files\IAR\ Systems\Embedded\ Workbench\ 9.0\arm\inc\c\DLib_Product_string.h \
   C:\ti\TivaWare_C_Series-2.2.0.295\inc\tm4c123gh6pm.h \
   C:\ti\TivaWare_C_Series-2.2.0.295\inc/hw_memmap.h \
   C:\ti\TivaWare_C_Series-2.2.0.295\inc/hw_types.h \
@@ -16,10 +19,11 @@ E:\coding\embedded\embededProject\Debug\BrowseInfo\APP\potentiometer_manager.pbi
   C:\ti\TivaWare_C_Series-2.2.0.295\driverlib/gpio.h \
   C:\ti\TivaWare_C_Series-2.2.0.295\driverlib/uart.h \
   C:\ti\TivaWare_C_Series-2.2.0.295\driverlib/pin_map.h \
+  C:\ti\TivaWare_C_Series-2.2.0.295\driverlib/interrupt.h \
+  C:\ti\TivaWare_C_Series-2.2.0.295\inc/hw_ints.h \
+  C:\ti\TivaWare_C_Series-2.2.0.295\driverlib/timer.h \
+  C:\ti\TivaWare_C_Series-2.2.0.295\driverlib/flash.h \
   E:\coding\embedded\embededProject\APP/display_manager.h \
-  C:\Program\ Files\IAR\ Systems\Embedded\ Workbench\ 9.0\arm\inc\c\string.h \
-  C:\Program\ Files\IAR\ Systems\Embedded\ Workbench\ 9.0\arm\inc\c\ysizet.h \
-  C:\Program\ Files\IAR\ Systems\Embedded\ Workbench\ 9.0\arm\inc\c\DLib_Product_string.h \
   E:\coding\embedded\embededProject\APP/../HAL/LCD/lcd.h \
   E:\coding\embedded\embededProject\APP/../HAL/LCD/../../Utils/dio.h \
   E:\coding\embedded\embededProject\APP/input_manager.h \

@@ -16,7 +16,7 @@ void DELAY(void){
 int main(void)
 {
      SysCtlClockSet(SYSCTL_SYSDIV_1 | SYSCTL_USE_OSC | SYSCTL_OSC_MAIN | SYSCTL_XTAL_16MHZ);
-    UART5_Init_front();
+    UART5_Init();
       
     /* ---------- Initialize all frontend modules ---------- */
     Keypad_Init();           // From TA keypad driver
@@ -32,12 +32,15 @@ int main(void)
     DISPLAY_ShowMainMenu();  // Show menu while testing
     char buffer[20];
     char message[3] = "4#";
+    char messageType;
+  
+    
     while(1){
       UART5_SendString(message);
-      UART5_ReceiveStringWithTimeout(buffer, 20);
+      UART5_ReceiveString(buffer, 20);
       if(buffer[0] == '1') break;
       if(buffer[0] == '0'){
-        DISPLAY_NEW_PASSWORD();
+        
       }
     }
     /* ---------- Main Loop ---------- */
