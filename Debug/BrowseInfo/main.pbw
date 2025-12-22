@@ -104685,7 +104685,7 @@
     "ID": "c:@F@ADCComparatorReset",
     "What": "Function",
     "defdec": "Dec",
-    "display": "void ADCComparatorReset(uint32_t, uint32_t, bool, bool)",
+    "display": "void ADCComparatorReset(uint32_t, uint32_t, _Bool, _Bool)",
     "location": {
       "column": "13",
       "line": "295",
@@ -104699,7 +104699,7 @@
     "ID": "c:@F@ADCComparatorReset",
     "What": "Function",
     "defdec": "Dec",
-    "display": "void ADCComparatorReset(uint32_t, uint32_t, _Bool, _Bool)",
+    "display": "void ADCComparatorReset(uint32_t, uint32_t, bool, bool)",
     "location": {
       "column": "13",
       "line": "295",
@@ -112015,7 +112015,7 @@
     "display": "uint8_t EEPROM_ReadTimeout(uint8_t *)",
     "location": {
       "column": "9",
-      "line": "246",
+      "line": "231",
       "path": "E:\\coding\\embedded\\embededProject\\BACK\\EEPROM\\eepromDriver.c"
     },
     "name": "EEPROM_ReadTimeout",
@@ -112023,13 +112023,13 @@
     "scope": null
   },
   {
-    "ID": "c:eepromDriver.c@6578@F@EEPROM_ReadTimeout@word",
+    "ID": "c:eepromDriver.c@6031@F@EEPROM_ReadTimeout@word",
     "What": "Variable",
     "defdec": "Def",
     "display": "word",
     "location": {
       "column": "14",
-      "line": "248",
+      "line": "233",
       "path": "E:\\coding\\embedded\\embededProject\\BACK\\EEPROM\\eepromDriver.c"
     },
     "name": "word",
@@ -112037,13 +112037,13 @@
     "scope": null
   },
   {
-    "ID": "c:eepromDriver.c@6598@F@EEPROM_ReadTimeout@status",
+    "ID": "c:eepromDriver.c@6051@F@EEPROM_ReadTimeout@status",
     "What": "Variable",
     "defdec": "Def",
     "display": "status",
     "location": {
       "column": "13",
-      "line": "249",
+      "line": "234",
       "path": "E:\\coding\\embedded\\embededProject\\BACK\\EEPROM\\eepromDriver.c"
     },
     "name": "status",
@@ -112057,7 +112057,7 @@
     "display": "uint8_t EEPROM_IsPasswordInitialized(void)",
     "location": {
       "column": "9",
-      "line": "271",
+      "line": "256",
       "path": "E:\\coding\\embedded\\embededProject\\BACK\\EEPROM\\eepromDriver.c"
     },
     "name": "EEPROM_IsPasswordInitialized",
@@ -112065,13 +112065,13 @@
     "scope": null
   },
   {
-    "ID": "c:eepromDriver.c@7133@F@EEPROM_IsPasswordInitialized@magicValue",
+    "ID": "c:eepromDriver.c@6580@F@EEPROM_IsPasswordInitialized@magicValue",
     "What": "Variable",
     "defdec": "Def",
     "display": "magicValue",
     "location": {
       "column": "14",
-      "line": "273",
+      "line": "258",
       "path": "E:\\coding\\embedded\\embededProject\\BACK\\EEPROM\\eepromDriver.c"
     },
     "name": "magicValue",
@@ -112085,7 +112085,7 @@
     "display": "uint8_t EEPROM_SetPasswordInitialized(void)",
     "location": {
       "column": "9",
-      "line": "293",
+      "line": "278",
       "path": "E:\\coding\\embedded\\embededProject\\BACK\\EEPROM\\eepromDriver.c"
     },
     "name": "EEPROM_SetPasswordInitialized",
@@ -112835,7 +112835,7 @@
     "scope": null
   },
   {
-    "ID": "c:eepromDriver.h@4094@macro@TIMEOUT_EEPROM_OFFSET",
+    "ID": "c:eepromDriver.h@4093@macro@TIMEOUT_EEPROM_OFFSET",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "TIMEOUT_EEPROM_OFFSET",
@@ -112849,7 +112849,7 @@
     "scope": null
   },
   {
-    "ID": "c:eepromDriver.h@4210@macro@PASSWORD_FLAG_EEPROM_BLOCK",
+    "ID": "c:eepromDriver.h@4231@macro@PASSWORD_FLAG_EEPROM_BLOCK",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "PASSWORD_FLAG_EEPROM_BLOCK",
@@ -112863,7 +112863,7 @@
     "scope": null
   },
   {
-    "ID": "c:eepromDriver.h@4253@macro@PASSWORD_FLAG_EEPROM_OFFSET",
+    "ID": "c:eepromDriver.h@4273@macro@PASSWORD_FLAG_EEPROM_OFFSET",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "PASSWORD_FLAG_EEPROM_OFFSET",
@@ -112877,7 +112877,7 @@
     "scope": null
   },
   {
-    "ID": "c:eepromDriver.h@4339@macro@PASSWORD_INITIALIZED_MAGIC",
+    "ID": "c:eepromDriver.h@4359@macro@PASSWORD_INITIALIZED_MAGIC",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "PASSWORD_INITIALIZED_MAGIC",
@@ -114613,58 +114613,44 @@
     "scope": null
   },
   {
-    "ID": "c:password.c@1112@F@Password_Init@defaultPassword",
-    "What": "Variable",
+    "ID": "c:password.c@1441@macro@PASSWORD_MAGIC",
+    "What": "MacroDef",
     "defdec": "Def",
-    "display": "defaultPassword",
-    "location": {
-      "column": "23",
-      "line": "38",
-      "path": "E:\\coding\\embedded\\embededProject\\HAL\\password\\password.c"
-    },
-    "name": "defaultPassword",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@Password_IsInitialized",
-    "What": "Function",
-    "defdec": "Def",
-    "display": "uint8_t Password_IsInitialized(void)",
+    "display": "PASSWORD_MAGIC",
     "location": {
       "column": "9",
       "line": "50",
       "path": "E:\\coding\\embedded\\embededProject\\HAL\\password\\password.c"
     },
-    "name": "Password_IsInitialized",
+    "name": "PASSWORD_MAGIC",
     "origin": "project_file",
     "scope": null
   },
   {
-    "ID": "c:password.c@1468@F@Password_IsInitialized@stored",
-    "What": "Variable",
+    "ID": "c:password.c@1517@macro@PASSWORD_MAGIC_OFFSET",
+    "What": "MacroDef",
     "defdec": "Def",
-    "display": "stored",
+    "display": "PASSWORD_MAGIC_OFFSET",
     "location": {
-      "column": "13",
+      "column": "9",
       "line": "52",
       "path": "E:\\coding\\embedded\\embededProject\\HAL\\password\\password.c"
     },
-    "name": "stored",
+    "name": "PASSWORD_MAGIC_OFFSET",
     "origin": "project_file",
     "scope": null
   },
   {
-    "ID": "c:password.c@1506@F@Password_IsInitialized@i",
-    "What": "Variable",
+    "ID": "c:password.c@1596@macro@PASSWORD_MAGIC_VALUE",
+    "What": "MacroDef",
     "defdec": "Def",
-    "display": "i",
+    "display": "PASSWORD_MAGIC_VALUE",
     "location": {
-      "column": "13",
+      "column": "9",
       "line": "53",
       "path": "E:\\coding\\embedded\\embededProject\\HAL\\password\\password.c"
     },
-    "name": "i",
+    "name": "PASSWORD_MAGIC_VALUE",
     "origin": "project_file",
     "scope": null
   },
@@ -114675,7 +114661,7 @@
     "display": "uint8_t Password_Save(const uint8_t *)",
     "location": {
       "column": "9",
-      "line": "73",
+      "line": "56",
       "path": "E:\\coding\\embedded\\embededProject\\HAL\\password\\password.c"
     },
     "name": "Password_Save",
@@ -114683,44 +114669,58 @@
     "scope": null
   },
   {
-    "ID": "c:password.c@2099@F@Password_Save@word",
+    "ID": "c:password.c@1771@F@Password_Save@word0",
     "What": "Variable",
     "defdec": "Def",
-    "display": "word",
+    "display": "word0",
     "location": {
       "column": "14",
-      "line": "75",
+      "line": "58",
       "path": "E:\\coding\\embedded\\embededProject\\HAL\\password\\password.c"
     },
-    "name": "word",
+    "name": "word0",
     "origin": "project_file",
     "scope": null
   },
   {
-    "ID": "c:password.c@2124@F@Password_Save@i",
+    "ID": "c:password.c@1796@F@Password_Save@word1",
     "What": "Variable",
     "defdec": "Def",
-    "display": "i",
+    "display": "word1",
     "location": {
-      "column": "13",
-      "line": "76",
+      "column": "14",
+      "line": "59",
       "path": "E:\\coding\\embedded\\embededProject\\HAL\\password\\password.c"
     },
-    "name": "i",
+    "name": "word1",
     "origin": "project_file",
     "scope": null
   },
   {
-    "ID": "c:password.c@2974@F@Password_Save@existingWord",
-    "What": "Variable",
+    "ID": "c:@F@Password_IsInitialized",
+    "What": "Function",
     "defdec": "Def",
-    "display": "existingWord",
+    "display": "uint8_t Password_IsInitialized(void)",
     "location": {
-      "column": "22",
-      "line": "105",
+      "column": "9",
+      "line": "91",
       "path": "E:\\coding\\embedded\\embededProject\\HAL\\password\\password.c"
     },
-    "name": "existingWord",
+    "name": "Password_IsInitialized",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:password.c@2811@F@Password_IsInitialized@magic",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "magic",
+    "location": {
+      "column": "14",
+      "line": "93",
+      "path": "E:\\coding\\embedded\\embededProject\\HAL\\password\\password.c"
+    },
+    "name": "magic",
     "origin": "project_file",
     "scope": null
   },
@@ -114731,7 +114731,7 @@
     "display": "uint8_t Password_Read(uint8_t *)",
     "location": {
       "column": "9",
-      "line": "132",
+      "line": "106",
       "path": "E:\\coding\\embedded\\embededProject\\HAL\\password\\password.c"
     },
     "name": "Password_Read",
@@ -114739,30 +114739,30 @@
     "scope": null
   },
   {
-    "ID": "c:password.c@3935@F@Password_Read@word",
+    "ID": "c:password.c@3256@F@Password_Read@word0",
     "What": "Variable",
     "defdec": "Def",
-    "display": "word",
+    "display": "word0",
     "location": {
       "column": "14",
-      "line": "134",
+      "line": "108",
       "path": "E:\\coding\\embedded\\embededProject\\HAL\\password\\password.c"
     },
-    "name": "word",
+    "name": "word0",
     "origin": "project_file",
     "scope": null
   },
   {
-    "ID": "c:password.c@3955@F@Password_Read@i",
+    "ID": "c:password.c@3256@F@Password_Read@word1",
     "What": "Variable",
-    "defdec": "Def",
-    "display": "i",
+    "defdec": "Dec",
+    "display": "word1",
     "location": {
-      "column": "13",
-      "line": "135",
+      "column": "21",
+      "line": "108",
       "path": "E:\\coding\\embedded\\embededProject\\HAL\\password\\password.c"
     },
-    "name": "i",
+    "name": "word1",
     "origin": "project_file",
     "scope": null
   },
@@ -114773,7 +114773,7 @@
     "display": "uint8_t Password_Compare(const uint8_t *)",
     "location": {
       "column": "9",
-      "line": "158",
+      "line": "135",
       "path": "E:\\coding\\embedded\\embededProject\\HAL\\password\\password.c"
     },
     "name": "Password_Compare",
@@ -114781,13 +114781,13 @@
     "scope": null
   },
   {
-    "ID": "c:password.c@4549@F@Password_Compare@stored",
+    "ID": "c:password.c@4062@F@Password_Compare@stored",
     "What": "Variable",
     "defdec": "Def",
     "display": "stored",
     "location": {
-      "column": "13",
-      "line": "160",
+      "column": "11",
+      "line": "137",
       "path": "E:\\coding\\embedded\\embededProject\\HAL\\password\\password.c"
     },
     "name": "stored",
@@ -114795,13 +114795,13 @@
     "scope": null
   },
   {
-    "ID": "c:password.c@4587@F@Password_Compare@i",
+    "ID": "c:password.c@4224@F@Password_Compare@i",
     "What": "Variable",
     "defdec": "Def",
     "display": "i",
     "location": {
-      "column": "13",
-      "line": "161",
+      "column": "14",
+      "line": "142",
       "path": "E:\\coding\\embedded\\embededProject\\HAL\\password\\password.c"
     },
     "name": "i",
@@ -114815,7 +114815,7 @@
     "display": "uint8_t Password_Change(const uint8_t *, const uint8_t *)",
     "location": {
       "column": "9",
-      "line": "190",
+      "line": "151",
       "path": "E:\\coding\\embedded\\embededProject\\HAL\\password\\password.c"
     },
     "name": "Password_Change",
