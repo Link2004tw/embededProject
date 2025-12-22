@@ -44,10 +44,12 @@ void UART5_Init(void)
 {
     // 1️Enable peripherals
     SysCtlPeripheralEnable(SYSCTL_PERIPH_UART5);
+    SysCtlPeripheralEnable(SYSCTL_PERIPH_GPIOE);  // CRITICAL: Enable GPIO Port E
     
     while (!SysCtlPeripheralReady(SYSCTL_PERIPH_UART5));
+    while (!SysCtlPeripheralReady(SYSCTL_PERIPH_GPIOE));  // Wait for GPIO Port E
     
-    // 2️Configure GPIO pins for UART1
+    // 2️Configure GPIO pins for UART5
     GPIOPinConfigure(GPIO_PE4_U5RX);
     GPIOPinConfigure(GPIO_PE5_U5TX);
     GPIOPinTypeUART(GPIO_PORTE_BASE, GPIO_PIN_4 | GPIO_PIN_5);

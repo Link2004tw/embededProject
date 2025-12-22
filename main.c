@@ -29,20 +29,23 @@ int main(void)
     SysCtlDelay(SysCtlClockGet());   // 1 second (if SysTick exists)
 
     DISPLAY_ClearScreen();
-    DISPLAY_ShowMainMenu();  // Show menu while testing
-    char buffer[20];
-    char message[3] = "4#";
-    char messageType;
-  
     
-    while(1){
-      UART5_SendString(message);
-      UART5_ReceiveString(buffer, 20);
-      if(buffer[0] == '1') break;
-      if(buffer[0] == '0'){
-        
-      }
+    /* ---------- Check if backend is initialized ---------- */
+    char buffer[20];
+    char message[3] = "4#";  // Check initialization status
+    
+    UART5_SendString(message);
+    UART5_ReceiveString(buffer, 20);
+    
+    if(buffer[0] == '0'){
+        // Backend not initialized - need to set up password
+        DISPLAY_NEW_PASSWORD();
     }
+    // If initialized (buffer[0] == '1'), proceed to main menu
+    
+    DISPLAY_ClearScreen();
+    DISPLAY_ShowMainMenu();  // Show menu while testing
+    
     /* ---------- Main Loop ---------- */
     short mode = 0;    
     while (1)

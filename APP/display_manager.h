@@ -27,5 +27,7 @@ void DISPLAY_OPEN(void);
 void DISPLAY_CHANGEPASSWORD(void);
 void DISPLAY_CHANGETIMEOUT(void);
 void DISPLAY_ERROR(void);
+void DISPLAY_NEW_PASSWORD(void);
+void DISPLAY_OLD_PASSWORD(void);
 void SHOW_BUFFER(char* buffer);
 #endif
