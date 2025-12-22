@@ -32,35 +32,8 @@ int main(void)
     //DISPLAY_ShowMainMenu();  // Show menu while testing
     
     /* ---------- System Initialization Check ---------- */
-    // 1. Send "CHECK#" to Control ECU
-    UART5_SendString("CHECK#"); // Blocking send
-    
-    // 2. Wait for Response ("READY" OR "NEW")
-    char init_buffer[20] = "";
-    DISPLAY_ShowMessage("Checking System...");
-    
-    while(1) {
-       // Using Polling Receive
-       UART5_ReceiveStringWithTimeout(init_buffer, 20);
-       
-       if (strcmp(init_buffer, "NEW") == 0) {
-           // Case 1: Uninitialized -> Run Setup
-           DISPLAY_InitialSetup();
-           break;
-       } 
-       else if (strcmp(init_buffer, "READY") == 0) {
-           // Case 2: Initialized -> Go to Main Menu
-           break;
-       }
-       else {
-           // Retry on timeout or garbage
-           SysCtlDelay(16000000*5); // 5 sec
-           UART5_SendString("CHECK#");
-       }
-    }
-
+    mode=4;
     DISPLAY_ClearScreen();
-    DISPLAY_ShowMainMenu();
 
     
     /* ---------- Main Loop ---------- */
@@ -114,6 +87,29 @@ int main(void)
           DELAY();
             
           DISPLAY_ClearScreen();
+            DISPLAY_ShowMainMenu();
+            
+            //DISPLAY_ShowMessage("hiiiii");
+            mode = 0;
+        }
+        else if(mode==4){
+          UART5_SendString("3,check");
+          DELAY();
+          char ack_buffer[20];
+          UART5_ReceiveStringWithTimeout(ack_buffer, 20);
+          if(strncmp(ack_buffer, "INITIALIZED") == 0){
+            DISPLAY_ClearScreen();
+            DISPLAY_ShowMainMenu();
+            mode = 0;
+          }
+          else{
+            mode = 5;
+          }
+        }
+        if(mode == 5){
+          DISPLAY_InitialSetup();
+          DELAY();
+            DISPLAY_ClearScreen();
             DISPLAY_ShowMainMenu();
             
             //DISPLAY_ShowMessage("hiiiii");

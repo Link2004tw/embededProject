@@ -18,6 +18,7 @@ void DISPLAY_HandleKey(char key);
 
 void DISPLAY_EnablePasswordMode(void);
 void DISPLAY_DisablePasswordMode(void);
+void DISPLAY_INITIALIZED(void);
 
 void DISPLAY_ShowMainMenu(void);
 void DISPLAY_ShowMessage(const char *msg);
