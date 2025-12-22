@@ -152,23 +152,8 @@ void PROCESS_MESSAGE(void)
     // MODE 2: Set Timeout
     // ------------------------------
     else if (strcmp(modeStr, "2") == 0)
-    {
-        char READ[];
-        Password_Read((uint8_t *)READ);
-        if(strcmp(pasStr,READ) != 0)
-        {
-            failedAttempts++;
-            UART1_SendString("WRONG#");
-
-            if (failedAttempts >= 3)
-            {
-                failedAttempts = 0;
-                Activate_Lockout();
-            }
-        }
-        else
-        {
-            uint8_t timeout = atoi(valueStr);
+    { 
+            uint8_t timeout = atoi(passStr);
 
             if (timeout >= 5 && timeout <= 30)
             {
@@ -179,7 +164,6 @@ void PROCESS_MESSAGE(void)
             {
                 UART1_SendString("BAD_VALUE#");
             }       
-        }
     }
     //-------------------------------
     // MODE 3: Initialize password check
