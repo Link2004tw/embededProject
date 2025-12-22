@@ -167,7 +167,38 @@ void PROCESS_MESSAGE(void)
         
         
     }
-
+    //-------------------------------
+    // MODE 3: Initialize password check
+    //msg format is "3,check#"
+    // ------------------------------
+    else if (strcmp(modeStr, "3") == 0)
+    {
+        uint8_t res = Password_Check();
+        if (res != PASSWORD_INITIALIZED)
+        {
+            UART1_SendString("UNINITIALIZED#");
+        }
+        else
+        {
+            UART1_SendString("INITIALIZED#");
+        }
+    }
+    //-------------------------------
+    // MODE 4: Initialize password
+    //msg format is "4,set#"
+    // ------------------------------
+    else if (strcmp(modeStr, "4") == 0)
+    {
+        uint8_t res = Password_Init(passStr);
+        if (res == PASSWORD_OK)
+        {
+            UART1_SendString("Set#");
+        }
+        else
+        {
+            UART1_SendString("Failed#");
+        }
+    }
     // ------------------------------
     // Unknown mode
     // ------------------------------

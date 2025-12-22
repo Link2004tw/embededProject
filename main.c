@@ -42,7 +42,6 @@ int main(void) {
   uint8_t e =EEPROM_Init();
   if(e != EEPROM_SUCCESS){
   } //wala3 el denia;
-  Password_Init();
   SysCtlDelay(SysCtlClockGet() / 10);  // 100ms delay
   IntMasterEnable();
   
