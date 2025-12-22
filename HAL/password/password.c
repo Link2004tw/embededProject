@@ -42,6 +42,34 @@ uint8_t Password_Init(void)
     return PASSWORD_OK;
 }
 
+/*
+ * Password_IsInitialized
+ * Checks if password has been initialized in EEPROM.
+ * Returns: 1 if initialized, 0 if not initialized
+ */
+uint8_t Password_IsInitialized(void)
+{
+    uint8_t stored[PASSWORD_LENGTH];
+    uint8_t i;
+    
+    /* Read current password from EEPROM */
+    if (Password_Read(stored) != PASSWORD_OK)
+    {
+        return 0U; /* Error reading, assume not initialized */
+    }
+    
+    /* Check if EEPROM is uninitialized (all bytes are 0xFF or 0x1E) */
+    for (i = 0U; i < PASSWORD_LENGTH; i++)
+    {
+        if (stored[i] != EEPROM_UNINITIALIZED && stored[i] != 0x1E)
+        {
+            return 1U; /* Found initialized data */
+        }
+    }
+    
+    return 0U; /* All bytes are uninitialized pattern */
+}
+
 uint8_t Password_Save(const uint8_t *password)
 {
     uint32_t word = 0U;

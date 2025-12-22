@@ -33,6 +33,9 @@
 /* Initialize password module - sets default password if EEPROM is empty */
 uint8_t Password_Init(void);
 
+/* Check if password has been initialized (returns 1 if initialized, 0 if not) */
+uint8_t Password_IsInitialized(void);
+
 /* Save new password to EEPROM */
 uint8_t Password_Save(const uint8_t *password);
 

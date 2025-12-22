@@ -88,7 +88,7 @@ void PROCESS_MESSAGE(void)
     // ------------------------------
     // Basic format validation
     // ------------------------------
-    if (modeStr == NULL || passStr == NULL)
+    if (modeStr == NULL)
     {
         UART1_SendString("ERR#");
         return;
@@ -153,6 +153,18 @@ void PROCESS_MESSAGE(void)
     // ------------------------------
     else if (strcmp(modeStr, "2") == 0)
     {
+            if (passStr == NULL)
+            {
+                UART1_SendString("ERR#");
+                return;
+            }
+            uint8_t res = Password_Compare((uint8_t *)passStr);
+            if (res = PASSWORD_MISMATCH)
+            {
+                UART1_SendString("WRONG#");
+                        // motor unlock
+                //TimerStart(TIMEOUT_VALUE); // it is already in door unlock
+            }
             uint8_t timeout = atoi(passStr);
 
             if (timeout >= 5 && timeout <= 30)
@@ -166,6 +178,22 @@ void PROCESS_MESSAGE(void)
             }
         
         
+    }
+    else if (strcmp(modeStr, "3") == 0)
+    {
+        //change password 3ala toul
+    }
+    else if (strcmp(modeStr, "4") == 0)
+    {
+        uint8_t res = Password_IsInitialized();
+        if (res == 1)
+        {
+            UART1_SendString("1#");
+        }
+        else
+        {
+            UART1_SendString("0#");
+        }
     }
 
     // ------------------------------
