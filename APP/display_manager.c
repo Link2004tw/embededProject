@@ -220,7 +220,7 @@ void DISPLAY_OLD_PASSWORD(void)
             SysCtlDelay(10000);
         }
         password[pass_index] = key;
-        LCD_WriteChar(key);
+        LCD_WriteChar('*');
     }
     password[7] ='#';
     password[8] = '\0';
