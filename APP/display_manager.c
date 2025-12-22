@@ -288,7 +288,7 @@ void DISPLAY_NEW_PASSWORD(void)
 {
     //3,12345#\n
     //012345678
-    char message[8] = "";
+    char message[9] = "";
     message[0]='3';
     message[1]=',';
     char confirmPassword[7] = "";
@@ -316,7 +316,8 @@ void DISPLAY_NEW_PASSWORD(void)
         
     //}
 
-    message[7] = '\0';
+    message[7] = '#';
+    message[8]='\0';
     newPassword[5] = '\0';
     
     /* Get confirmation password */
@@ -345,7 +346,7 @@ void DISPLAY_NEW_PASSWORD(void)
         LCD_Clear();
         //return false;
     }else{
-        UART5_SendString(newPassword);
+        UART5_SendString(message);
         char buffer[20];
         UART5_ReceiveString(buffer, 20);
         if(buffer[0] == '1'){
@@ -355,6 +356,7 @@ void DISPLAY_NEW_PASSWORD(void)
         }else {
             LCD_Clear();
             LCD_WriteString("Password Not Changed");
+            SysCtlDelay(10000000);
             SHOW_BUFFER(buffer);
         }
         

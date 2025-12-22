@@ -40,7 +40,10 @@ int main(void)
       UART5_ReceiveString(buffer, 20);
       if(buffer[0] == '1') break;
       if(buffer[0] == '0'){
-        
+        DISPLAY_NEW_PASSWORD();
+        DELAY();
+        DISPLAY_ClearScreen();
+        DISPLAY_ShowMainMenu();
       }
       SysCtlDelay(SysCtlClockGet()/50);   // 1 second (if SysTick exists)
     }
