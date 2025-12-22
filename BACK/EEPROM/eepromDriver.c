@@ -217,31 +217,16 @@ uint8_t EEPROM_SaveTimeout(uint8_t timeout)
 {
     uint32_t word = 0;
     
-    /* Read existing word to preserve Password tail */
-    if (EEPROM_ReadWord(TIMEOUT_EEPROM_BLOCK, TIMEOUT_EEPROM_OFFSET, &word) != EEPROM_SUCCESS)
-    {
-        /* If read fails, we might be uninitialized, but we should try to proceed or error out. 
-           Let's assume 0 if read fails (risky for password) or return error. */
-         return EEPROM_ERROR;
-    }
-    
-    /* Modify Byte 1 (Comma) and Byte 2 (Timeout) */
-    /* Word Structure: [Byte 0: Pass4] [Byte 1: ','] [Byte 2: Timeout] [Byte 3: ?] */
-    
-    /* Clear Byte 1 and Byte 2 */
-    word &= ~(0x00FFFF00);
-    
-    /* Set Comma (0x2C) at Byte 1 */
-    word |= ((uint32_t)',' << 8);
-    
-    /* Set Timeout at Byte 2 */
-    word |= ((uint32_t)timeout << 16);
+    /* Timeout now has its own dedicated word - no need to preserve other data */
+    /* Store timeout in byte 0 for simplicity */
+    word = (uint32_t)timeout;
     
     return EEPROM_WriteWord(TIMEOUT_EEPROM_BLOCK, TIMEOUT_EEPROM_OFFSET, word);
 }
 
 /*
  * EEPROM_ReadTimeout
+ * Reads timeout from dedicated Word 2
  */
 uint8_t EEPROM_ReadTimeout(uint8_t *timeout)
 {
@@ -257,8 +242,8 @@ uint8_t EEPROM_ReadTimeout(uint8_t *timeout)
     
     if (status == EEPROM_SUCCESS)
     {
-        /* Timeout is at Byte 2 (bits 16-23) */
-        *timeout = (uint8_t)((word >> 16) & 0xFF);
+        /* Timeout is now at Byte 0 (bits 0-7) */
+        *timeout = (uint8_t)(word & 0xFF);
     }
     
     return status;

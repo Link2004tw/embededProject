@@ -72,120 +72,70 @@ uint8_t Password_IsInitialized(void)
 
 uint8_t Password_Save(const uint8_t *password)
 {
-    uint32_t word = 0U;
-    uint8_t i;
+    uint32_t word0 = 0;
+    uint32_t word1 = 0;
 
     if (password == 0)
-    {
         return PASSWORD_ERROR;
-    }
 
-    for (i = 0U; i < PASSWORD_LENGTH; i++)
-    {
-        /* Case 1: First 4 bytes (Index 0-3), standard accumulation */
-        if (i < 4)
-        {
-            word |= ((uint32_t)password[i] << ((i % 4U) * 8U));
-            
-            /* If we filled the word (i=3), write it */
-            if (i == 3)
-            {
-                if (EEPROM_WriteWord(PASSWORD_EEPROM_BLOCK,
-                                    PASSWORD_EEPROM_OFFSET + 0,
-                                    word) != EEPROM_SUCCESS)
-                {
-                    return PASSWORD_ERROR;
-                }
-                word = 0U;
-            }
-        }
-        /* Case 2: 5th byte (Index 4), Shared Word logic */
-        else if (i == 4)
-        {
-            uint32_t existingWord = 0;
-            
-            /* Read existing Word 1 to preserve Comma and Timeout */
-            if (EEPROM_ReadWord(PASSWORD_EEPROM_BLOCK,
-                                PASSWORD_EEPROM_OFFSET + 1,
-                                &existingWord) != EEPROM_SUCCESS)
-            {
-               return PASSWORD_ERROR;
-            }
-            
-            /* Modify Byte 0 (Pass4) only */
-            existingWord &= ~(0x000000FF); /* Clear Byte 0 */
-            existingWord |= (uint32_t)password[i]; /* Set Byte 0 */
-            
-            /* Write Word 1 back */
-            if (EEPROM_WriteWord(PASSWORD_EEPROM_BLOCK,
-                                PASSWORD_EEPROM_OFFSET + 1,
-                                existingWord) != EEPROM_SUCCESS)
-            {
-                return PASSWORD_ERROR;
-            }
-        }
-    }
+    word0 =  password[0]
+          | (password[1] << 8)
+          | (password[2] << 16)
+          | (password[3] << 24);
+
+    word1 = password[4];
+
+    if (EEPROM_WriteWord(PASSWORD_EEPROM_BLOCK,
+                         PASSWORD_EEPROM_OFFSET,
+                         word0) != EEPROM_SUCCESS)
+        return PASSWORD_ERROR;
+
+    if (EEPROM_WriteWord(PASSWORD_EEPROM_BLOCK,
+                         PASSWORD_EEPROM_OFFSET + 1,
+                         word1) != EEPROM_SUCCESS)
+        return PASSWORD_ERROR;
 
     return PASSWORD_OK;
 }
+
 
 uint8_t Password_Read(uint8_t *password)
 {
-    uint32_t word;
-    uint8_t i;
+    uint32_t word0, word1;
 
     if (password == 0)
-    {
         return PASSWORD_ERROR;
-    }
 
-    for (i = 0U; i < PASSWORD_LENGTH; i++)
-    {
-        /* Error checking: verify EEPROM read succeeded */
-        if (EEPROM_ReadWord(PASSWORD_EEPROM_BLOCK,
-                            PASSWORD_EEPROM_OFFSET + (i / 4U),
-                            &word) != EEPROM_SUCCESS)
-        {
-            return PASSWORD_ERROR;
-        }
+    if (EEPROM_ReadWord(PASSWORD_EEPROM_BLOCK,
+                        PASSWORD_EEPROM_OFFSET,
+                        &word0) != EEPROM_SUCCESS)
+        return PASSWORD_ERROR;
 
-        password[i] = (uint8_t)((word >> ((i % 4U) * 8U)) & 0xFFU);
-    }
+    if (EEPROM_ReadWord(PASSWORD_EEPROM_BLOCK,
+                        PASSWORD_EEPROM_OFFSET + 1,
+                        &word1) != EEPROM_SUCCESS)
+        return PASSWORD_ERROR;
+
+    /* Bytes 0–3 from word0 */
+    password[0] = (word0 >> 0)  & 0xFF;
+    password[1] = (word0 >> 8)  & 0xFF;
+    password[2] = (word0 >> 16) & 0xFF;
+    password[3] = (word0 >> 24) & 0xFF;
+
+    /* Byte 4 from word1 */
+    password[4] = word1 & 0xFF;
 
     return PASSWORD_OK;
 }
 
-uint8_t Password_Compare(const uint8_t *password)
+
+for (uint8_t i = 0; i < PASSWORD_LENGTH; i++)
 {
-    uint8_t stored[PASSWORD_LENGTH];
-    uint8_t i;
-
-    if (password == 0)
-    {
-        return PASSWORD_ERROR;
-    }
-
-    /* Error checking: verify Password_Read succeeded */
-    if (Password_Read(stored) != PASSWORD_OK)
-    {
-        return PASSWORD_ERROR;
-    }
-    if(strcmp((char*)password, (char*)stored) == 0){
-        return PASSWORD_OK;
-    }
-    else{
+    if (password[i] != stored[i])
         return PASSWORD_MISMATCH;
-    }
-    // for (i = 0U; i < PASSWORD_LENGTH; i++)
-    // {
-    //     if (password[i] != stored[i])
-    //     {
-    //         return PASSWORD_MISMATCH;
-    //     }
-    // }
-
-    //return PASSWORD_OK;
 }
+return PASSWORD_OK;
+
 
 uint8_t Password_Change(const uint8_t *old_pass,
                         const uint8_t *new_pass)
