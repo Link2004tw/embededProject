@@ -46,7 +46,7 @@
         <MultiCoreRunAll>1</MultiCoreRunAll>
     </Simulator>
     <DebugChecksum>
-        <Checksum>3876412695</Checksum>
+        <Checksum>1616933155</Checksum>
     </DebugChecksum>
     <LMIFTDIDriver>
         <LMIFTDIserialNo>0E233097</LMIFTDIserialNo>
@@ -68,7 +68,7 @@
     <Breakpoints2>
         <Bp0>_ 0 "EMUL_CODE" "{$PROJ_DIR$\APP\display_manager.c}.1.1" 0 0 1 "" 0 "" 0</Bp0>
         <Bp1>_ 0 "EMUL_CODE" "{$PROJ_DIR$\UART\HMI_Comm.c}.124.14" 0 0 1 "" 0 "" 0</Bp1>
-        <Bp2>_ 0 "EMUL_CODE" "{$PROJ_DIR$\main.c}.55.7" 0 0 1 "" 0 "" 0</Bp2>
+        <Bp2>_ 0 "EMUL_CODE" "{$PROJ_DIR$\main.c}.61.7" 0 0 1 "" 0 "" 0</Bp2>
         <Bp3>_ 0 "EMUL_CODE" "{$PROJ_DIR$\BACK\EEPROM\eepromDriver.c}.274.5" 0 0 1 "" 0 "" 0</Bp3>
         <Count>4</Count>
     </Breakpoints2>
