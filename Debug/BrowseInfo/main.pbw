@@ -107249,20 +107249,6 @@
     "scope": null
   },
   {
-    "ID": "c:@F@Password_FirstTimeSetup",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "uint8_t Password_FirstTimeSetup(const uint8_t *)",
-    "location": {
-      "column": "9",
-      "line": "35",
-      "path": "E:\\coding\\embedded\\embededProject\\HAL\\password\\password.h"
-    },
-    "name": "Password_FirstTimeSetup",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
     "ID": "c:@F@Password_Save",
     "What": "Function",
     "defdec": "Dec",
@@ -107371,20 +107357,6 @@
       "path": "E:\\coding\\embedded\\embededProject\\HAL\\password\\password.h"
     },
     "name": "Password_Change",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@Password_GetRawDebug",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "uint8_t Password_GetRawDebug(uint32_t *)",
-    "location": {
-      "column": "9",
-      "line": "51",
-      "path": "E:\\coding\\embedded\\embededProject\\HAL\\password\\password.h"
-    },
-    "name": "Password_GetRawDebug",
     "origin": "user_include",
     "scope": null
   },
@@ -114557,13 +114529,69 @@
     "scope": null
   },
   {
+    "ID": "c:password.c@503@F@Password_Init@stored",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "stored",
+    "location": {
+      "column": "13",
+      "line": "15",
+      "path": "E:\\coding\\embedded\\embededProject\\HAL\\password\\password.c"
+    },
+    "name": "stored",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:password.c@541@F@Password_Init@i",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "i",
+    "location": {
+      "column": "13",
+      "line": "16",
+      "path": "E:\\coding\\embedded\\embededProject\\HAL\\password\\password.c"
+    },
+    "name": "i",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:password.c@557@F@Password_Init@uninitialized",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "uninitialized",
+    "location": {
+      "column": "13",
+      "line": "17",
+      "path": "E:\\coding\\embedded\\embededProject\\HAL\\password\\password.c"
+    },
+    "name": "uninitialized",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:password.c@1112@F@Password_Init@defaultPassword",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "defaultPassword",
+    "location": {
+      "column": "23",
+      "line": "38",
+      "path": "E:\\coding\\embedded\\embededProject\\HAL\\password\\password.c"
+    },
+    "name": "defaultPassword",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
     "ID": "c:@F@Password_IsInitialized",
     "What": "Function",
     "defdec": "Def",
     "display": "uint8_t Password_IsInitialized(void)",
     "location": {
       "column": "9",
-      "line": "25",
+      "line": "50",
       "path": "E:\\coding\\embedded\\embededProject\\HAL\\password\\password.c"
     },
     "name": "Password_IsInitialized",
@@ -114571,16 +114599,30 @@
     "scope": null
   },
   {
-    "ID": "c:@F@Password_FirstTimeSetup",
-    "What": "Function",
+    "ID": "c:password.c@1468@F@Password_IsInitialized@stored",
+    "What": "Variable",
     "defdec": "Def",
-    "display": "uint8_t Password_FirstTimeSetup(const uint8_t *)",
+    "display": "stored",
     "location": {
-      "column": "9",
-      "line": "35",
+      "column": "13",
+      "line": "52",
       "path": "E:\\coding\\embedded\\embededProject\\HAL\\password\\password.c"
     },
-    "name": "Password_FirstTimeSetup",
+    "name": "stored",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:password.c@1506@F@Password_IsInitialized@i",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "i",
+    "location": {
+      "column": "13",
+      "line": "53",
+      "path": "E:\\coding\\embedded\\embededProject\\HAL\\password\\password.c"
+    },
+    "name": "i",
     "origin": "project_file",
     "scope": null
   },
@@ -114591,7 +114633,7 @@
     "display": "uint8_t Password_Save(const uint8_t *)",
     "location": {
       "column": "9",
-      "line": "64",
+      "line": "73",
       "path": "E:\\coding\\embedded\\embededProject\\HAL\\password\\password.c"
     },
     "name": "Password_Save",
@@ -114599,13 +114641,13 @@
     "scope": null
   },
   {
-    "ID": "c:password.c@1639@F@Password_Save@word",
+    "ID": "c:password.c@2099@F@Password_Save@word",
     "What": "Variable",
     "defdec": "Def",
     "display": "word",
     "location": {
       "column": "14",
-      "line": "66",
+      "line": "75",
       "path": "E:\\coding\\embedded\\embededProject\\HAL\\password\\password.c"
     },
     "name": "word",
@@ -114613,13 +114655,13 @@
     "scope": null
   },
   {
-    "ID": "c:password.c@1664@F@Password_Save@i",
+    "ID": "c:password.c@2124@F@Password_Save@i",
     "What": "Variable",
     "defdec": "Def",
     "display": "i",
     "location": {
       "column": "13",
-      "line": "67",
+      "line": "76",
       "path": "E:\\coding\\embedded\\embededProject\\HAL\\password\\password.c"
     },
     "name": "i",
@@ -114627,13 +114669,13 @@
     "scope": null
   },
   {
-    "ID": "c:password.c@2514@F@Password_Save@existingWord",
+    "ID": "c:password.c@2974@F@Password_Save@existingWord",
     "What": "Variable",
     "defdec": "Def",
     "display": "existingWord",
     "location": {
       "column": "22",
-      "line": "96",
+      "line": "105",
       "path": "E:\\coding\\embedded\\embededProject\\HAL\\password\\password.c"
     },
     "name": "existingWord",
@@ -114647,7 +114689,7 @@
     "display": "uint8_t Password_Read(uint8_t *)",
     "location": {
       "column": "9",
-      "line": "123",
+      "line": "132",
       "path": "E:\\coding\\embedded\\embededProject\\HAL\\password\\password.c"
     },
     "name": "Password_Read",
@@ -114655,13 +114697,13 @@
     "scope": null
   },
   {
-    "ID": "c:password.c@3475@F@Password_Read@word",
+    "ID": "c:password.c@3935@F@Password_Read@word",
     "What": "Variable",
     "defdec": "Def",
     "display": "word",
     "location": {
       "column": "14",
-      "line": "125",
+      "line": "134",
       "path": "E:\\coding\\embedded\\embededProject\\HAL\\password\\password.c"
     },
     "name": "word",
@@ -114669,13 +114711,13 @@
     "scope": null
   },
   {
-    "ID": "c:password.c@3495@F@Password_Read@i",
+    "ID": "c:password.c@3955@F@Password_Read@i",
     "What": "Variable",
     "defdec": "Def",
     "display": "i",
     "location": {
       "column": "13",
-      "line": "126",
+      "line": "135",
       "path": "E:\\coding\\embedded\\embededProject\\HAL\\password\\password.c"
     },
     "name": "i",
@@ -114689,7 +114731,7 @@
     "display": "uint8_t Password_Compare(const uint8_t *)",
     "location": {
       "column": "9",
-      "line": "149",
+      "line": "158",
       "path": "E:\\coding\\embedded\\embededProject\\HAL\\password\\password.c"
     },
     "name": "Password_Compare",
@@ -114697,13 +114739,13 @@
     "scope": null
   },
   {
-    "ID": "c:password.c@4089@F@Password_Compare@stored",
+    "ID": "c:password.c@4549@F@Password_Compare@stored",
     "What": "Variable",
     "defdec": "Def",
     "display": "stored",
     "location": {
       "column": "13",
-      "line": "151",
+      "line": "160",
       "path": "E:\\coding\\embedded\\embededProject\\HAL\\password\\password.c"
     },
     "name": "stored",
@@ -114711,13 +114753,13 @@
     "scope": null
   },
   {
-    "ID": "c:password.c@4127@F@Password_Compare@i",
+    "ID": "c:password.c@4587@F@Password_Compare@i",
     "What": "Variable",
     "defdec": "Def",
     "display": "i",
     "location": {
       "column": "13",
-      "line": "152",
+      "line": "161",
       "path": "E:\\coding\\embedded\\embededProject\\HAL\\password\\password.c"
     },
     "name": "i",
@@ -114731,24 +114773,10 @@
     "display": "uint8_t Password_Change(const uint8_t *, const uint8_t *)",
     "location": {
       "column": "9",
-      "line": "181",
+      "line": "190",
       "path": "E:\\coding\\embedded\\embededProject\\HAL\\password\\password.c"
     },
     "name": "Password_Change",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@Password_GetRawDebug",
-    "What": "Function",
-    "defdec": "Def",
-    "display": "uint8_t Password_GetRawDebug(uint32_t *)",
-    "location": {
-      "column": "9",
-      "line": "192",
-      "path": "E:\\coding\\embedded\\embededProject\\HAL\\password\\password.c"
-    },
-    "name": "Password_GetRawDebug",
     "origin": "project_file",
     "scope": null
   },

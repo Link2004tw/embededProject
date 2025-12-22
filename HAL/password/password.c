@@ -7,58 +7,67 @@
 
 /*
  * Password_Init
- * Initializes the password module.
- * Does NOT set a default password - user must initialize it on first use.
+ * Checks if password is initialized in EEPROM.
+ * If EEPROM is uninitialized (all 0xFF), sets default password "12345".
  */
 uint8_t Password_Init(void)
 {
-    /* Just verify EEPROM access is working */
-    /* No longer sets default password automatically */
+    uint8_t stored[PASSWORD_LENGTH];
+    uint8_t i;
+    uint8_t uninitialized = 1U;
+    
+    /* Read current password from EEPROM */
+    if (Password_Read(stored) != PASSWORD_OK)
+    {
+        return PASSWORD_ERROR;
+    }
+    
+    /* Check if EEPROM is uninitialized (all bytes are 0xFF) */
+    for (i = 0U; i < PASSWORD_LENGTH; i++)
+    {
+        if (stored[i] != EEPROM_UNINITIALIZED && stored[i] != 0x1E)
+        {
+            uninitialized = 0U;
+            break;
+        }
+    }
+    
+    /* If uninitialized, set default password "12345" */
+    if (uninitialized == 1U)
+    {
+        const uint8_t defaultPassword[PASSWORD_LENGTH] = {'1', '2', '3', '4', '5'};
+        return Password_Save(defaultPassword);
+    }
+    
     return PASSWORD_OK;
 }
 
 /*
  * Password_IsInitialized
- * Checks if password has been set by the user.
- * Returns: 1 if initialized, 0 if not
+ * Checks if password has been initialized in EEPROM.
+ * Returns: 1 if initialized, 0 if not initialized
  */
 uint8_t Password_IsInitialized(void)
 {
-    return EEPROM_IsPasswordInitialized();
-}
-
-/*
- * Password_FirstTimeSetup
- * Sets the password for the first time.
- * Can only be called when password is not yet initialized.
- */
-uint8_t Password_FirstTimeSetup(const uint8_t *password)
-{
-    if (password == 0)
+    uint8_t stored[PASSWORD_LENGTH];
+    uint8_t i;
+    
+    /* Read current password from EEPROM */
+    if (Password_Read(stored) != PASSWORD_OK)
     {
-        return PASSWORD_ERROR;
+        return 0U; /* Error reading, assume not initialized */
     }
     
-    /* Check if already initialized */
-    if (Password_IsInitialized() == 1U)
+    /* Check if EEPROM is uninitialized (all bytes are 0xFF or 0x1E) */
+    for (i = 0U; i < PASSWORD_LENGTH; i++)
     {
-        return PASSWORD_ERROR; /* Already initialized */
+        if (stored[i] != EEPROM_UNINITIALIZED && stored[i] != 0x1E)
+        {
+            return 1U; /* Found initialized data */
+        }
     }
     
-    /* Save the password */
-    if (Password_Save(password) != PASSWORD_OK)
-    {
-        return PASSWORD_ERROR;
-    }
-    
-    /* Mark as initialized */
-    if (EEPROM_SetPasswordInitialized() != EEPROM_SUCCESS)
-    {
-        return PASSWORD_ERROR;
-    }
-    
-    
-    return PASSWORD_OK;
+    return 0U; /* All bytes are uninitialized pattern */
 }
 
 uint8_t Password_Save(const uint8_t *password)
@@ -188,24 +197,3 @@ uint8_t Password_Change(const uint8_t *old_pass,
 
     return Password_Save(new_pass);
 }
-
-uint8_t Password_GetRawDebug(uint32_t *buffer)
-{
-    if (buffer == 0)
-    {
-        return PASSWORD_ERROR;
-    }
-
-    if (EEPROM_ReadWord(PASSWORD_EEPROM_BLOCK, PASSWORD_EEPROM_OFFSET, &buffer[0]) != EEPROM_SUCCESS)
-    {
-        return PASSWORD_ERROR;
-    }
-
-    if (EEPROM_ReadWord(PASSWORD_EEPROM_BLOCK, PASSWORD_EEPROM_OFFSET + 1, &buffer[1]) != EEPROM_SUCCESS)
-    {
-        return PASSWORD_ERROR;
-    }
-
-    return PASSWORD_OK;
-}
-
