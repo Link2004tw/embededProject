@@ -107109,7 +107109,7 @@
     "scope": null
   },
   {
-    "ID": "c:password.h@527@macro@PASSWORD_EEPROM_OFFSET",
+    "ID": "c:password.h@528@macro@PASSWORD_EEPROM_OFFSET",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "PASSWORD_EEPROM_OFFSET",
@@ -107123,7 +107123,7 @@
     "scope": null
   },
   {
-    "ID": "c:password.h@588@macro@PASSWORD_OK",
+    "ID": "c:password.h@589@macro@PASSWORD_OK",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "PASSWORD_OK",
@@ -107137,7 +107137,7 @@
     "scope": null
   },
   {
-    "ID": "c:password.h@627@macro@PASSWORD_ERROR",
+    "ID": "c:password.h@628@macro@PASSWORD_ERROR",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "PASSWORD_ERROR",
@@ -107151,7 +107151,7 @@
     "scope": null
   },
   {
-    "ID": "c:password.h@666@macro@PASSWORD_MISMATCH",
+    "ID": "c:password.h@667@macro@PASSWORD_MISMATCH",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "PASSWORD_MISMATCH",
@@ -107165,7 +107165,7 @@
     "scope": null
   },
   {
-    "ID": "c:password.h@705@macro@PASSWORD_NOT_INITIALIZED",
+    "ID": "c:password.h@706@macro@PASSWORD_NOT_INITIALIZED",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "PASSWORD_NOT_INITIALIZED",
@@ -107371,6 +107371,34 @@
       "path": "E:\\coding\\embedded\\embededProject\\HAL\\password\\password.h"
     },
     "name": "Password_Change",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@Password_GetRawDebug",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "uint8_t Password_GetRawDebug(uint32_t *)",
+    "location": {
+      "column": "9",
+      "line": "51",
+      "path": "E:\\coding\\embedded\\embededProject\\HAL\\password\\password.h"
+    },
+    "name": "Password_GetRawDebug",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@Password_GetRawDebug",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "uint8_t Password_GetRawDebug(uint32_t *)",
+    "location": {
+      "column": "9",
+      "line": "51",
+      "path": "E:\\coding\\embedded\\embededProject\\HAL\\password\\password.h"
+    },
+    "name": "Password_GetRawDebug",
     "origin": "user_include",
     "scope": null
   },
@@ -108957,44 +108985,128 @@
     "scope": null
   },
   {
-    "ID": "c:input_manager.h@34@macro@INPUT_MANAGER_H_",
+    "ID": "c:buzzer.h@96@macro@HAL_BUZZER_BUZZER_H_",
     "What": "MacroDef",
     "defdec": "Def",
-    "display": "INPUT_MANAGER_H_",
+    "display": "HAL_BUZZER_BUZZER_H_",
     "location": {
       "column": "9",
-      "line": "2",
-      "path": "E:\\coding\\embedded\\embededProject\\APP\\input_manager.h"
+      "line": "8",
+      "path": "E:\\coding\\embedded\\embededProject\\HAL\\Buzzer\\buzzer.h"
     },
-    "name": "INPUT_MANAGER_H_",
+    "name": "HAL_BUZZER_BUZZER_H_",
     "origin": "user_include",
     "scope": null
   },
   {
-    "ID": "c:@F@InputManager_GetKey",
+    "ID": "c:@F@buzzerInit",
     "What": "Function",
     "defdec": "Dec",
-    "display": "char InputManager_GetKey(void)",
+    "display": "void buzzerInit(void)",
     "location": {
       "column": "6",
-      "line": "11",
-      "path": "E:\\coding\\embedded\\embededProject\\APP\\input_manager.h"
+      "line": "12",
+      "path": "E:\\coding\\embedded\\embededProject\\HAL\\Buzzer\\buzzer.h"
     },
-    "name": "InputManager_GetKey",
+    "name": "buzzerInit",
     "origin": "user_include",
     "scope": null
   },
   {
-    "ID": "c:@F@InputManager_HandleKey",
+    "ID": "c:@F@buzzerInit",
     "What": "Function",
     "defdec": "Dec",
-    "display": "void InputManager_HandleKey(void)",
+    "display": "void buzzerInit(void)",
     "location": {
       "column": "6",
-      "line": "19",
-      "path": "E:\\coding\\embedded\\embededProject\\APP\\input_manager.h"
+      "line": "12",
+      "path": "E:\\coding\\embedded\\embededProject\\HAL\\Buzzer\\buzzer.h"
     },
-    "name": "InputManager_HandleKey",
+    "name": "buzzerInit",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@buzzerON",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void buzzerON(void)",
+    "location": {
+      "column": "6",
+      "line": "13",
+      "path": "E:\\coding\\embedded\\embededProject\\HAL\\Buzzer\\buzzer.h"
+    },
+    "name": "buzzerON",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@buzzerON",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void buzzerON(void)",
+    "location": {
+      "column": "6",
+      "line": "13",
+      "path": "E:\\coding\\embedded\\embededProject\\HAL\\Buzzer\\buzzer.h"
+    },
+    "name": "buzzerON",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@buzzerOFF",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void buzzerOFF(void)",
+    "location": {
+      "column": "6",
+      "line": "14",
+      "path": "E:\\coding\\embedded\\embededProject\\HAL\\Buzzer\\buzzer.h"
+    },
+    "name": "buzzerOFF",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@buzzerOFF",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void buzzerOFF(void)",
+    "location": {
+      "column": "6",
+      "line": "14",
+      "path": "E:\\coding\\embedded\\embededProject\\HAL\\Buzzer\\buzzer.h"
+    },
+    "name": "buzzerOFF",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@GPIOF_InterruptInit",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void GPIOF_InterruptInit(void)",
+    "location": {
+      "column": "6",
+      "line": "15",
+      "path": "E:\\coding\\embedded\\embededProject\\HAL\\Buzzer\\buzzer.h"
+    },
+    "name": "GPIOF_InterruptInit",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@GPIOF_InterruptInit",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void GPIOF_InterruptInit(void)",
+    "location": {
+      "column": "6",
+      "line": "15",
+      "path": "E:\\coding\\embedded\\embededProject\\HAL\\Buzzer\\buzzer.h"
+    },
+    "name": "GPIOF_InterruptInit",
     "origin": "user_include",
     "scope": null
   },
@@ -111281,132 +111393,6 @@
     "scope": null
   },
   {
-    "ID": "c:buzzer.h@96@macro@HAL_BUZZER_BUZZER_H_",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "HAL_BUZZER_BUZZER_H_",
-    "location": {
-      "column": "9",
-      "line": "8",
-      "path": "E:\\coding\\embedded\\embededProject\\HAL\\Buzzer\\buzzer.h"
-    },
-    "name": "HAL_BUZZER_BUZZER_H_",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@buzzerInit",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void buzzerInit(void)",
-    "location": {
-      "column": "6",
-      "line": "12",
-      "path": "E:\\coding\\embedded\\embededProject\\HAL\\Buzzer\\buzzer.h"
-    },
-    "name": "buzzerInit",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@buzzerInit",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void buzzerInit(void)",
-    "location": {
-      "column": "6",
-      "line": "12",
-      "path": "E:\\coding\\embedded\\embededProject\\HAL\\Buzzer\\buzzer.h"
-    },
-    "name": "buzzerInit",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@buzzerON",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void buzzerON(void)",
-    "location": {
-      "column": "6",
-      "line": "13",
-      "path": "E:\\coding\\embedded\\embededProject\\HAL\\Buzzer\\buzzer.h"
-    },
-    "name": "buzzerON",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@buzzerON",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void buzzerON(void)",
-    "location": {
-      "column": "6",
-      "line": "13",
-      "path": "E:\\coding\\embedded\\embededProject\\HAL\\Buzzer\\buzzer.h"
-    },
-    "name": "buzzerON",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@buzzerOFF",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void buzzerOFF(void)",
-    "location": {
-      "column": "6",
-      "line": "14",
-      "path": "E:\\coding\\embedded\\embededProject\\HAL\\Buzzer\\buzzer.h"
-    },
-    "name": "buzzerOFF",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@buzzerOFF",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void buzzerOFF(void)",
-    "location": {
-      "column": "6",
-      "line": "14",
-      "path": "E:\\coding\\embedded\\embededProject\\HAL\\Buzzer\\buzzer.h"
-    },
-    "name": "buzzerOFF",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@GPIOF_InterruptInit",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void GPIOF_InterruptInit(void)",
-    "location": {
-      "column": "6",
-      "line": "15",
-      "path": "E:\\coding\\embedded\\embededProject\\HAL\\Buzzer\\buzzer.h"
-    },
-    "name": "GPIOF_InterruptInit",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@GPIOF_InterruptInit",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void GPIOF_InterruptInit(void)",
-    "location": {
-      "column": "6",
-      "line": "15",
-      "path": "E:\\coding\\embedded\\embededProject\\HAL\\Buzzer\\buzzer.h"
-    },
-    "name": "GPIOF_InterruptInit",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
     "ID": "c:potentiometer_manager.h@546@macro@POTENTIOMETER_MANAGER_H",
     "What": "MacroDef",
     "defdec": "Def",
@@ -111683,6 +111669,48 @@
       "path": "E:\\coding\\embedded\\embededProject\\HAL\\Potentiometer\\potentiometer.h"
     },
     "name": "Potentiometer_ReadTimeout",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:input_manager.h@34@macro@INPUT_MANAGER_H_",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "INPUT_MANAGER_H_",
+    "location": {
+      "column": "9",
+      "line": "2",
+      "path": "E:\\coding\\embedded\\embededProject\\APP\\input_manager.h"
+    },
+    "name": "INPUT_MANAGER_H_",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@InputManager_GetKey",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "char InputManager_GetKey(void)",
+    "location": {
+      "column": "6",
+      "line": "11",
+      "path": "E:\\coding\\embedded\\embededProject\\APP\\input_manager.h"
+    },
+    "name": "InputManager_GetKey",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@InputManager_HandleKey",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void InputManager_HandleKey(void)",
+    "location": {
+      "column": "6",
+      "line": "19",
+      "path": "E:\\coding\\embedded\\embededProject\\APP\\input_manager.h"
+    },
+    "name": "InputManager_HandleKey",
     "origin": "user_include",
     "scope": null
   },
@@ -112793,7 +112821,7 @@
     "scope": null
   },
   {
-    "ID": "c:eepromDriver.h@4093@macro@TIMEOUT_EEPROM_OFFSET",
+    "ID": "c:eepromDriver.h@4094@macro@TIMEOUT_EEPROM_OFFSET",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "TIMEOUT_EEPROM_OFFSET",
@@ -112807,7 +112835,7 @@
     "scope": null
   },
   {
-    "ID": "c:eepromDriver.h@4209@macro@PASSWORD_FLAG_EEPROM_BLOCK",
+    "ID": "c:eepromDriver.h@4210@macro@PASSWORD_FLAG_EEPROM_BLOCK",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "PASSWORD_FLAG_EEPROM_BLOCK",
@@ -112821,7 +112849,7 @@
     "scope": null
   },
   {
-    "ID": "c:eepromDriver.h@4251@macro@PASSWORD_FLAG_EEPROM_OFFSET",
+    "ID": "c:eepromDriver.h@4253@macro@PASSWORD_FLAG_EEPROM_OFFSET",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "PASSWORD_FLAG_EEPROM_OFFSET",
@@ -112835,7 +112863,7 @@
     "scope": null
   },
   {
-    "ID": "c:eepromDriver.h@4337@macro@PASSWORD_INITIALIZED_MAGIC",
+    "ID": "c:eepromDriver.h@4339@macro@PASSWORD_INITIALIZED_MAGIC",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "PASSWORD_INITIALIZED_MAGIC",
@@ -114563,7 +114591,7 @@
     "display": "uint8_t Password_Save(const uint8_t *)",
     "location": {
       "column": "9",
-      "line": "63",
+      "line": "64",
       "path": "E:\\coding\\embedded\\embededProject\\HAL\\password\\password.c"
     },
     "name": "Password_Save",
@@ -114571,13 +114599,13 @@
     "scope": null
   },
   {
-    "ID": "c:password.c@1633@F@Password_Save@word",
+    "ID": "c:password.c@1639@F@Password_Save@word",
     "What": "Variable",
     "defdec": "Def",
     "display": "word",
     "location": {
       "column": "14",
-      "line": "65",
+      "line": "66",
       "path": "E:\\coding\\embedded\\embededProject\\HAL\\password\\password.c"
     },
     "name": "word",
@@ -114585,13 +114613,13 @@
     "scope": null
   },
   {
-    "ID": "c:password.c@1658@F@Password_Save@i",
+    "ID": "c:password.c@1664@F@Password_Save@i",
     "What": "Variable",
     "defdec": "Def",
     "display": "i",
     "location": {
       "column": "13",
-      "line": "66",
+      "line": "67",
       "path": "E:\\coding\\embedded\\embededProject\\HAL\\password\\password.c"
     },
     "name": "i",
@@ -114599,13 +114627,13 @@
     "scope": null
   },
   {
-    "ID": "c:password.c@2508@F@Password_Save@existingWord",
+    "ID": "c:password.c@2514@F@Password_Save@existingWord",
     "What": "Variable",
     "defdec": "Def",
     "display": "existingWord",
     "location": {
       "column": "22",
-      "line": "95",
+      "line": "96",
       "path": "E:\\coding\\embedded\\embededProject\\HAL\\password\\password.c"
     },
     "name": "existingWord",
@@ -114619,7 +114647,7 @@
     "display": "uint8_t Password_Read(uint8_t *)",
     "location": {
       "column": "9",
-      "line": "122",
+      "line": "123",
       "path": "E:\\coding\\embedded\\embededProject\\HAL\\password\\password.c"
     },
     "name": "Password_Read",
@@ -114627,13 +114655,13 @@
     "scope": null
   },
   {
-    "ID": "c:password.c@3469@F@Password_Read@word",
+    "ID": "c:password.c@3475@F@Password_Read@word",
     "What": "Variable",
     "defdec": "Def",
     "display": "word",
     "location": {
       "column": "14",
-      "line": "124",
+      "line": "125",
       "path": "E:\\coding\\embedded\\embededProject\\HAL\\password\\password.c"
     },
     "name": "word",
@@ -114641,13 +114669,13 @@
     "scope": null
   },
   {
-    "ID": "c:password.c@3489@F@Password_Read@i",
+    "ID": "c:password.c@3495@F@Password_Read@i",
     "What": "Variable",
     "defdec": "Def",
     "display": "i",
     "location": {
       "column": "13",
-      "line": "125",
+      "line": "126",
       "path": "E:\\coding\\embedded\\embededProject\\HAL\\password\\password.c"
     },
     "name": "i",
@@ -114661,7 +114689,7 @@
     "display": "uint8_t Password_Compare(const uint8_t *)",
     "location": {
       "column": "9",
-      "line": "148",
+      "line": "149",
       "path": "E:\\coding\\embedded\\embededProject\\HAL\\password\\password.c"
     },
     "name": "Password_Compare",
@@ -114669,13 +114697,13 @@
     "scope": null
   },
   {
-    "ID": "c:password.c@4083@F@Password_Compare@stored",
+    "ID": "c:password.c@4089@F@Password_Compare@stored",
     "What": "Variable",
     "defdec": "Def",
     "display": "stored",
     "location": {
       "column": "13",
-      "line": "150",
+      "line": "151",
       "path": "E:\\coding\\embedded\\embededProject\\HAL\\password\\password.c"
     },
     "name": "stored",
@@ -114683,13 +114711,13 @@
     "scope": null
   },
   {
-    "ID": "c:password.c@4121@F@Password_Compare@i",
+    "ID": "c:password.c@4127@F@Password_Compare@i",
     "What": "Variable",
     "defdec": "Def",
     "display": "i",
     "location": {
       "column": "13",
-      "line": "151",
+      "line": "152",
       "path": "E:\\coding\\embedded\\embededProject\\HAL\\password\\password.c"
     },
     "name": "i",
@@ -114703,10 +114731,24 @@
     "display": "uint8_t Password_Change(const uint8_t *, const uint8_t *)",
     "location": {
       "column": "9",
-      "line": "180",
+      "line": "181",
       "path": "E:\\coding\\embedded\\embededProject\\HAL\\password\\password.c"
     },
     "name": "Password_Change",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@Password_GetRawDebug",
+    "What": "Function",
+    "defdec": "Def",
+    "display": "uint8_t Password_GetRawDebug(uint32_t *)",
+    "location": {
+      "column": "9",
+      "line": "192",
+      "path": "E:\\coding\\embedded\\embededProject\\HAL\\password\\password.c"
+    },
+    "name": "Password_GetRawDebug",
     "origin": "project_file",
     "scope": null
   },

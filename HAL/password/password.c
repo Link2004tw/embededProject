@@ -57,6 +57,7 @@ uint8_t Password_FirstTimeSetup(const uint8_t *password)
         return PASSWORD_ERROR;
     }
     
+    
     return PASSWORD_OK;
 }
 
@@ -186,5 +187,25 @@ uint8_t Password_Change(const uint8_t *old_pass,
     }
 
     return Password_Save(new_pass);
+}
+
+uint8_t Password_GetRawDebug(uint32_t *buffer)
+{
+    if (buffer == 0)
+    {
+        return PASSWORD_ERROR;
+    }
+
+    if (EEPROM_ReadWord(PASSWORD_EEPROM_BLOCK, PASSWORD_EEPROM_OFFSET, &buffer[0]) != EEPROM_SUCCESS)
+    {
+        return PASSWORD_ERROR;
+    }
+
+    if (EEPROM_ReadWord(PASSWORD_EEPROM_BLOCK, PASSWORD_EEPROM_OFFSET + 1, &buffer[1]) != EEPROM_SUCCESS)
+    {
+        return PASSWORD_ERROR;
+    }
+
+    return PASSWORD_OK;
 }
 

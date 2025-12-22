@@ -111,11 +111,11 @@ uint8_t EEPROM_ReadBuffer(uint32_t block, uint32_t offset, uint8_t *buffer, uint
  * Returns: EEPROM_SUCCESS on success, EEPROM_ERROR on failure
  */
 /* Timeout Storage Constants */
-#define TIMEOUT_EEPROM_BLOCK    0U
+#define TIMEOUT_EEPROM_BLOCK    31U
 #define TIMEOUT_EEPROM_OFFSET   1U /* Shared with Password tail */
 
 /* Password Initialization Flag Constants */
-#define PASSWORD_FLAG_EEPROM_BLOCK    0U
+#define PASSWORD_FLAG_EEPROM_BLOCK    31U
 #define PASSWORD_FLAG_EEPROM_OFFSET   2U /* Separate word for initialization flag */
 #define PASSWORD_INITIALIZED_MAGIC    0x5AA5C33C /* Magic value indicating password is set */
 

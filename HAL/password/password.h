@@ -12,7 +12,7 @@
 #define PASSWORD_WORDS             2U   /* 5 bytes fit in 2 EEPROM words */
 
 /* EEPROM mapping */
-#define PASSWORD_EEPROM_BLOCK      0U
+#define PASSWORD_EEPROM_BLOCK      31U
 #define PASSWORD_EEPROM_OFFSET     0U
 
 /* Return codes */
@@ -46,5 +46,8 @@ uint8_t Password_Compare(const uint8_t *password);
 /* Change password after verifying old one */
 uint8_t Password_Change(const uint8_t *old_pass,
                         const uint8_t *new_pass);
+
+/* Debug: Read raw EEPROM words (requires uint32_t buffer[2]) */
+uint8_t Password_GetRawDebug(uint32_t *buffer);
 
 #endif /* PASSWORD_H_ */
