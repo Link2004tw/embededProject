@@ -77,6 +77,7 @@ void PotentiometerManager_HandleTimeoutConfig(void)
     
     /* Main loop for timeout configuration */
     current_timeout = PotentiometerManager_GetTimeout();
+    char message[20];
     while (1)
     {
         /* Increment counter to control update rate */
@@ -143,13 +144,12 @@ void PotentiometerManager_HandleTimeoutConfig(void)
              * Save the timeout and return to caller
              */
             stored_timeout = current_timeout;  /* Store confirmed value */
-            char message[6];
             message[0] ='2'; //mode
             message[1]=',';
             message[2]= '0' + (stored_timeout / 10);
             message[3]= '0' + (stored_timeout % 10);
-            message[4] ='#';
-            message[5] = '\0';
+            message[4] =',';
+            //message[5] = '\0';
             DISPLAY_ClearScreen();
             DISPLAY_ShowMessage("Timeout Saved!");
             LCD_SetCursor(1, 0);
@@ -160,20 +160,43 @@ void PotentiometerManager_HandleTimeoutConfig(void)
             LCD_WriteString(" seconds");
             //LCD_Clear();
             //LCD_WriteString(message);
-            UART5_SendString(message);
-            char ack_buffer[20];
-            LCD_Clear();
-            DISPLAY_ShowMessage("Waiting for Ack...");
-            UART5_ReceiveStringWithTimeout(ack_buffer, 20);
-            if(ack_buffer != NULL){
-                SHOW_BUFFER(ack_buffer);
-            }
-            
-            SysCtlDelay(160000);  /* 200ms delay */
+              /* 200ms delay */
             break;
         }
-        
-        /* Small delay to prevent busy-waiting */
-        SysCtlDelay(266650);  /* ~50ms delay */
+            SysCtlDelay(266650);  /* ~50ms delay */
     }
+
+        short pass_index = 5;
+        key = 0;
+        //1 , 1 2 3 4 5 #
+        //0 1 2 3 4 5 6 7
+        LCD_Clear();
+        LCD_WriteString("Enter password");
+        LCD_SetCursor(1, 0);
+        //2 , 05 , 12345#
+        //0 1 23 456789
+        for(pass_index = 5; pass_index < 10; pass_index++){
+            key = InputManager_GetKey();
+            while(key == 0) {  
+                key = InputManager_GetKey();
+                if(key=='=') return;
+                
+                SysCtlDelay(10000);
+            }
+            message[pass_index] = key;
+            LCD_WriteChar(key);
+        }
+        message[10] ='#';
+        message[11] = '\0';
+        
+        UART5_SendString(message);
+        char ack_buffer[20];
+        LCD_Clear();
+        DISPLAY_ShowMessage("Waiting for Ack...");
+        UART5_ReceiveStringWithTimeout(ack_buffer, 20);
+        if(ack_buffer != NULL){
+            SHOW_BUFFER(ack_buffer);
+        }
+        /* Small delay to prevent busy-waiting */
+    
 }

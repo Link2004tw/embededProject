@@ -1,6 +1,7 @@
 E:\coding\embedded\embededProject\Debug\BrowseInfo\main.pbi: \
   C:\ti\TivaWare_C_Series-2.2.0.295\driverlib\adc.h \
   E:\coding\embedded\embededProject\HAL\Potentiometer\potentiometer.h \
+  E:\coding\embedded\embededProject\APP\display_manager.h \
   C:\ti\TivaWare_C_Series-2.2.0.295\driverlib\pin_map.h \
   C:\ti\TivaWare_C_Series-2.2.0.295\driverlib\uart.h \
   C:\ti\TivaWare_C_Series-2.2.0.295\driverlib\gpio.h \
@@ -14,7 +15,6 @@ E:\coding\embedded\embededProject\Debug\BrowseInfo\main.pbi: \
   C:\Program\ Files\IAR\ Systems\Embedded\ Workbench\ 9.0\arm\inc\c\ycheck.h \
   C:\Program\ Files\IAR\ Systems\Embedded\ Workbench\ 9.0\arm\inc\c\ysizet.h \
   C:\Program\ Files\IAR\ Systems\Embedded\ Workbench\ 9.0\arm\inc\c\string.h \
-  E:\coding\embedded\embededProject\APP\display_manager.h \
   E:\coding\embedded\embededProject\APP\input_manager.h \
   C:\Program\ Files\IAR\ Systems\Embedded\ Workbench\ 9.0\arm\inc\c\stdbool.h \
   E:\coding\embedded\embededProject\APP\..\HAL\LCD\..\..\Utils\dio.h \
