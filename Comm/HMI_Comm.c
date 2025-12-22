@@ -2,6 +2,10 @@
 #include "driverlib/interrupt.h"
 #include "inc/hw_ints.h"
 
+// Ring buffer variables
+volatile char rx_buffer[RX_BUFFER_SIZE];
+volatile uint16_t rx_head = 0;
+volatile uint16_t rx_tail = 0;
 
 // Internal function to check if buffer has data
 bool UART5_IsDataAvailable(void) {
@@ -98,15 +102,13 @@ void UART5_ReceiveStringWithTimeout(char* buffer, uint16_t max_length) {
     while(index < max_length - 1) {
         if(UART5_IsDataAvailable()) { // Check SW Buffer instead of HW Polling
             c = UART5_ReadFromBuffer();
-            if(c == '%') break;
+            if(c == '#') break;  // Changed from % to #
             buffer[index++] = c;
             timeout_counter = 0; // reset on receive
         } else {
             timeout_counter++;
             if(timeout_counter > ACK_TIMEOUT_MS) break; // timeout reached
-            // Removed SysCtlDelay to make it non-blocking in a real RTOS sense, 
-            // but for now we spin-wait on the buffer which is effectively polling the software buffer.
-            // This is "interrupt-based driver" but "blocking application layer".
+            SysCtlDelay(100); // Small delay to prevent CPU spin
         }
     }
 

@@ -29,6 +29,35 @@ int main(void)
     SysCtlDelay(SysCtlClockGet());   // 1 second (if SysTick exists)
 
     DISPLAY_ClearScreen();
+    
+    /* ---------- System Initialization Check ---------- */
+    // Send "3,check#" to Backend
+    UART5_SendString("3,check#");
+    
+    char init_buffer[20] = "";
+    DISPLAY_ShowMessage("Checking System...");
+    
+    while(1) {
+        // Wait for response
+        UART5_ReceiveStringWithTimeout(init_buffer, 20);
+        
+        if (strcmp(init_buffer, "INITIALIZED") == 0) {
+            // System ready, go to main menu
+            break;
+        } 
+        else if (strcmp(init_buffer, "UNINITIALIZED") == 0) {
+            // Need initial setup
+            DISPLAY_InitialSetup();
+            break;
+        }
+        else {
+            // Retry on timeout or garbage
+            SysCtlDelay(16000000 * 5); // 5 sec
+            UART5_SendString("3,check#");
+        }
+    }
+    
+    DISPLAY_ClearScreen();
     DISPLAY_ShowMainMenu();  // Show menu while testing
     
     /* ---------- Main Loop ---------- */

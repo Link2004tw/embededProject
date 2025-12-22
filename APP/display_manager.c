@@ -526,3 +526,85 @@ void SHOW_BUFFER(char* buffer){
         LCD_WriteString(buffer);
     }
 }
+
+/*****************************************************************************
+ * Function: DISPLAY_InitialSetup
+ * 
+ * Description:
+ *   Handles First Time Password Setup.
+ *   Sends "4,password#" to Backend.
+ *****************************************************************************/
+void DISPLAY_InitialSetup(void)
+{
+    char firstPass[7] = "";
+    char confirmPass[7] = "";
+    short pass_index = 0;
+    char key = 0;
+    
+    while(1)
+    {
+        /* 1. Get First Entry */
+        LCD_Clear();
+        LCD_WriteString("Create Pass:");
+        LCD_SetCursor(1, 0);
+        
+        for(pass_index = 0; pass_index < 5; pass_index++){
+            key = InputManager_GetKey();
+            while(key == 0) {  
+                key = InputManager_GetKey();
+                SysCtlDelay(10000);
+            }
+            firstPass[pass_index] = key;
+            LCD_WriteChar('*');
+        }
+        firstPass[5] = '\0';
+        
+        /* 2. Get Confirmation */
+        LCD_Clear();
+        LCD_WriteString("Confirm Pass:");
+        LCD_SetCursor(1, 0);
+        
+        for(pass_index = 0; pass_index < 5; pass_index++){
+            key = InputManager_GetKey();
+            while(key == 0) {
+                key = InputManager_GetKey();
+                SysCtlDelay(10000);
+            }
+            confirmPass[pass_index] = key;
+            LCD_WriteChar('*');
+        }
+        confirmPass[5] = '\0';
+        
+        /* 3. Compare */
+        if(strcmp(firstPass, confirmPass) != 0){
+            LCD_Clear();
+            LCD_WriteString("Mismatch!");
+            SysCtlDelay(20000000);
+            continue;
+        }
+        
+        /* 4. Send to Backend - Mode 4 */
+        LCD_Clear();
+        LCD_WriteString("Saving...");
+        
+        char message[20];
+        strcpy(message, "4,");
+        strcat(message, firstPass);
+        strcat(message, "#");
+        
+        UART5_SendString(message);
+        
+        /* 5. Wait for Ack */
+        char ack_buffer[20];
+        UART5_ReceiveStringWithTimeout(ack_buffer, 20);
+        
+        if(ack_buffer[0] != '\0'){
+             SHOW_BUFFER(ack_buffer);
+             SysCtlDelay(16000000);
+             break;
+        } else {
+             DISPLAY_ShowMessage("Save Failed");
+             SysCtlDelay(16000000);
+        }
+    }
+}
