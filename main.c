@@ -28,8 +28,7 @@ int main(void)
     DISPLAY_ShowMessage("Frontend Ready");
     SysCtlDelay(SysCtlClockGet());   // 1 second (if SysTick exists)
 
-    DISPLAY_ClearScreen();
-    DISPLAY_ShowMainMenu();  // Show menu while testing
+    DISPLAY_ClearScreen();  // Show menu while testing
     char buffer[20];
     char message[3] = "4#";
     char messageType;
@@ -40,12 +39,18 @@ int main(void)
       UART5_ReceiveString(buffer, 20);
       if(buffer[0] == '1') break;
       if(buffer[0] == '0'){
-        
+        DISPLAY_NEW_PASSWORD();
+//        DELAY();
+//        DISPLAY_ClearScreen();
+//        DISPLAY_ShowMainMenu();
+        break;
       }
       SysCtlDelay(SysCtlClockGet()/50);   // 1 second (if SysTick exists)
     }
     /* ---------- Main Loop ---------- */
-    short mode = 0;    
+    short mode = 0;   
+    DISPLAY_ShowMainMenu();
+
     while (1)
     {
         char key = InputManager_GetKey();  // Frontend 1 returns mapped char
