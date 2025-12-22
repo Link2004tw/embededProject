@@ -28,8 +28,7 @@ int main(void)
     DISPLAY_ShowMessage("Frontend Ready");
     SysCtlDelay(SysCtlClockGet());   // 1 second (if SysTick exists)
 
-    DISPLAY_ClearScreen();
-    DISPLAY_ShowMainMenu();  // Show menu while testing
+    DISPLAY_ClearScreen();  // Show menu while testing
     char buffer[20];
     char message[3] = "4#";
     char messageType;

@@ -349,7 +349,7 @@ void DISPLAY_NEW_PASSWORD(void)
         UART5_SendString(message);
         char buffer[20];
         UART5_ReceiveString(buffer, 20);
-        if(buffer[0] == '1'){
+        if(strcmp(buffer, "INIT_OK") == 0){
             LCD_Clear();
             LCD_WriteString("Password Changed");
             return;    
