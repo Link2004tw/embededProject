@@ -62,7 +62,7 @@ void UART1_Handler(void)
     {
         char c = UARTCharGetNonBlocking(UART1_BASE);
 
-        if (c == '%')
+        if (c == '#')
         {
             rxBuffer[rxIndex] = '\0';
             rxIndex = 0;
@@ -90,7 +90,7 @@ void PROCESS_MESSAGE(void)
     // ------------------------------
     if (modeStr == NULL || passStr == NULL)
     {
-        UART1_SendString("ERR%");
+        UART1_SendString("ERR#");
         return;
     }
 
@@ -104,14 +104,14 @@ void PROCESS_MESSAGE(void)
         if (res == PASSWORD_OK)
         {
             failedAttempts = 0;
-            UART1_SendString("Door$Unlocked%");
+            UART1_SendString("Door$Unlocked#");
             Door_Unlock();          // motor unlock
             //TimerStart(TIMEOUT_VALUE); // it is already in door unlock
         }
         else if(res == PASSWORD_MISMATCH)
         {
             failedAttempts++;
-            UART1_SendString("WRONG%");
+            UART1_SendString("WRONG#");
             if (failedAttempts >= 3)
             {
                 failedAttempts = 0;
@@ -120,7 +120,7 @@ void PROCESS_MESSAGE(void)
             
         }
         else {
-            UART1_SendString("ERR%");
+            UART1_SendString("ERR#");
         }
     }
 
@@ -133,12 +133,12 @@ void PROCESS_MESSAGE(void)
         if (res == PASSWORD_OK)
         {
             failedAttempts = 0;
-            UART1_SendString("CHANGED%");
+            UART1_SendString("CHANGED#");
         }
         else
         {
             failedAttempts++;
-            UART1_SendString("WRONG%");
+            UART1_SendString("WRONG#");
 
             if (failedAttempts >= 3)
             {
@@ -158,11 +158,11 @@ void PROCESS_MESSAGE(void)
             if (timeout >= 5 && timeout <= 30)
             {
                 EEPROM_SaveTimeout(timeout);
-                UART1_SendString("Time Saved%");
+                UART1_SendString("Time Saved#");
             }
             else
             {
-                UART1_SendString("BAD_VALUE%");
+                UART1_SendString("BAD_VALUE#");
             }
         
         
@@ -173,7 +173,7 @@ void PROCESS_MESSAGE(void)
     // ------------------------------
     else
     {
-        UART1_SendString("ERR%");
+        UART1_SendString("ERR#");
     }
 
     // Clear buffer after processing
