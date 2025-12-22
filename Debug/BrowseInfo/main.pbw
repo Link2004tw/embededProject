@@ -117693,13 +117693,41 @@
     "scope": null
   },
   {
-    "ID": "c:main.c@1173@F@main@mode",
+    "ID": "c:main.c@1124@F@main@buffer",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "buffer",
+    "location": {
+      "column": "10",
+      "line": "33",
+      "path": "E:\\coding\\embedded\\embededProject\\main.c"
+    },
+    "name": "buffer",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:main.c@1146@F@main@message",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "message",
+    "location": {
+      "column": "10",
+      "line": "34",
+      "path": "E:\\coding\\embedded\\embededProject\\main.c"
+    },
+    "name": "message",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:main.c@1411@F@main@mode",
     "What": "Variable",
     "defdec": "Def",
     "display": "mode",
     "location": {
       "column": "11",
-      "line": "35",
+      "line": "43",
       "path": "E:\\coding\\embedded\\embededProject\\main.c"
     },
     "name": "mode",
@@ -117707,13 +117735,13 @@
     "scope": null
   },
   {
-    "ID": "c:main.c@1224@F@main@key",
+    "ID": "c:main.c@1462@F@main@key",
     "What": "Variable",
     "defdec": "Def",
     "display": "key",
     "location": {
       "column": "14",
-      "line": "38",
+      "line": "46",
       "path": "E:\\coding\\embedded\\embededProject\\main.c"
     },
     "name": "key",

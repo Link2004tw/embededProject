@@ -30,7 +30,15 @@ int main(void)
 
     DISPLAY_ClearScreen();
     DISPLAY_ShowMainMenu();  // Show menu while testing
-    
+    char buffer[20];
+    char message[3] = "4#";
+    while(1){
+      UART5_SendString(message);
+      UART5_ReceiveStringWithTimeout(buffer, 20);
+      if(buffer[0] == '1') break;
+      //for debugging
+      SHOW_BUFFER(buffer);
+    }
     /* ---------- Main Loop ---------- */
     short mode = 0;    
     while (1)

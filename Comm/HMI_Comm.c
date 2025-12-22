@@ -61,10 +61,10 @@ void UART5_ReceiveStringWithTimeout(char* buffer, uint16_t max_length) {
             if(c == '#') break;
             buffer[index++] = c;
             timeout_counter = 0; // reset on receive
-        } else {
-            timeout_counter++;
-            if(timeout_counter > ACK_TIMEOUT_MS) break; // timeout reached
-            SysCtlDelay(1000); // small delay
+        // } else {
+        //     timeout_counter++;
+        //     if(timeout_counter > ACK_TIMEOUT_MS) break; // timeout reached
+        //     SysCtlDelay(1000); // small delay
         }
     }
 
