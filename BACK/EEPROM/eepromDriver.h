@@ -114,6 +114,11 @@ uint8_t EEPROM_ReadBuffer(uint32_t block, uint32_t offset, uint8_t *buffer, uint
 #define TIMEOUT_EEPROM_BLOCK    0U
 #define TIMEOUT_EEPROM_OFFSET   1U /* Shared with Password tail */
 
+/* Password Initialization Flag Constants */
+#define PASSWORD_FLAG_EEPROM_BLOCK    0U
+#define PASSWORD_FLAG_EEPROM_OFFSET   2U /* Separate word for initialization flag */
+#define PASSWORD_INITIALIZED_MAGIC    0x5AA5C33C /* Magic value indicating password is set */
+
 /*
  * EEPROM_SaveTimeout
  * Saves the timeout value to EEPROM.
@@ -125,6 +130,20 @@ uint8_t EEPROM_SaveTimeout(uint8_t timeout);
  * Reads the timeout value from EEPROM.
  */
 uint8_t EEPROM_ReadTimeout(uint8_t *timeout);
+
+/*
+ * EEPROM_IsPasswordInitialized
+ * Checks if the password has been initialized.
+ * Returns: 1 if initialized, 0 if not initialized
+ */
+uint8_t EEPROM_IsPasswordInitialized(void);
+
+/*
+ * EEPROM_SetPasswordInitialized
+ * Marks the password as initialized in EEPROM.
+ * Returns: EEPROM_SUCCESS on success, EEPROM_ERROR on failure
+ */
+uint8_t EEPROM_SetPasswordInitialized(void);
 
 uint8_t EEPROM_MassErase(void);
 

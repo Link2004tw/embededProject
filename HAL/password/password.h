@@ -19,12 +19,7 @@
 #define PASSWORD_OK                0U
 #define PASSWORD_ERROR             1U
 #define PASSWORD_MISMATCH          2U
-
-/* Default password when EEPROM is uninitialized */
-#define PASSWORD_DEFAULT           "12345"
-
-/* EEPROM uninitialized value (erased state) */
-#define EEPROM_UNINITIALIZED       0xA5
+#define PASSWORD_NOT_INITIALIZED   3U
 
 /******************************************************************************
  *                           FUNCTION PROTOTYPES                               *
@@ -32,6 +27,12 @@
 
 /* Initialize password module - sets default password if EEPROM is empty */
 uint8_t Password_Init(void);
+
+/* Check if password has been initialized */
+uint8_t Password_IsInitialized(void);
+
+/* Initialize password for the first time (user sets it) */
+uint8_t Password_FirstTimeSetup(const uint8_t *password);
 
 /* Save new password to EEPROM */
 uint8_t Password_Save(const uint8_t *password);

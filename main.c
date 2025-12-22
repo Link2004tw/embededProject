@@ -46,6 +46,23 @@ int main(void) {
   SysCtlDelay(SysCtlClockGet() / 10);  // 100ms delay
   IntMasterEnable();
   
+  /* Check if password is initialized on startup */
+  if (Password_IsInitialized() == 0)
+  {
+      /* Password not initialized - notify user via UART */
+      UART1_SendString("SETUP_REQUIRED#");
+      /* Visual indicator - blink LED to show setup needed */
+      GPIOPinWrite(GPIO_PORTF_BASE, GPIO_PIN_2, GPIO_PIN_2); // Red LED on
+  }
+  else
+  {
+      /* Password is initialized - system ready */
+      UART1_SendString("READY#");
+      GPIOPinWrite(GPIO_PORTF_BASE, GPIO_PIN_3, GPIO_PIN_3); // Green LED on
+      SysCtlDelay(SysCtlClockGet() / 3);  // Short blink
+      GPIOPinWrite(GPIO_PORTF_BASE, GPIO_PIN_3, 0); // Green LED off
+  }
+  
   //UART1_SendString("Ready#");
     
 //    GPIOPinWrite(GPIO_PORTF_BASE, GPIO_PIN_3, 0); // Start with LED OFF

@@ -7,36 +7,54 @@
 
 /*
  * Password_Init
- * Checks if password is initialized in EEPROM.
- * If EEPROM is uninitialized (all 0xFF), sets default password "12345".
+ * Initializes the password module.
+ * Does NOT set a default password - user must initialize it on first use.
  */
 uint8_t Password_Init(void)
 {
-    uint8_t stored[PASSWORD_LENGTH];
-    uint8_t i;
-    uint8_t uninitialized = 1U;
-    
-    /* Read current password from EEPROM */
-    if (Password_Read(stored) != PASSWORD_OK)
+    /* Just verify EEPROM access is working */
+    /* No longer sets default password automatically */
+    return PASSWORD_OK;
+}
+
+/*
+ * Password_IsInitialized
+ * Checks if password has been set by the user.
+ * Returns: 1 if initialized, 0 if not
+ */
+uint8_t Password_IsInitialized(void)
+{
+    return EEPROM_IsPasswordInitialized();
+}
+
+/*
+ * Password_FirstTimeSetup
+ * Sets the password for the first time.
+ * Can only be called when password is not yet initialized.
+ */
+uint8_t Password_FirstTimeSetup(const uint8_t *password)
+{
+    if (password == 0)
     {
         return PASSWORD_ERROR;
     }
     
-    /* Check if EEPROM is uninitialized (all bytes are 0xFF) */
-    for (i = 0U; i < PASSWORD_LENGTH; i++)
+    /* Check if already initialized */
+    if (Password_IsInitialized() == 1U)
     {
-        if (stored[i] != EEPROM_UNINITIALIZED && stored[i] != 0x1E)
-        {
-            uninitialized = 0U;
-            break;
-        }
+        return PASSWORD_ERROR; /* Already initialized */
     }
     
-    /* If uninitialized, set default password "12345" */
-    if (uninitialized == 1U)
+    /* Save the password */
+    if (Password_Save(password) != PASSWORD_OK)
     {
-        const uint8_t defaultPassword[PASSWORD_LENGTH] = {'1', '2', '3', '4', '5'};
-        return Password_Save(defaultPassword);
+        return PASSWORD_ERROR;
+    }
+    
+    /* Mark as initialized */
+    if (EEPROM_SetPasswordInitialized() != EEPROM_SUCCESS)
+    {
+        return PASSWORD_ERROR;
     }
     
     return PASSWORD_OK;

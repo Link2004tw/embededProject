@@ -88,7 +88,7 @@ void PROCESS_MESSAGE(void)
     // ------------------------------
     // Basic format validation
     // ------------------------------
-    if (modeStr == NULL || passStr == NULL)
+    if (modeStr == NULL)
     {
         UART1_SendString("ERR#");
         return;
@@ -99,6 +99,19 @@ void PROCESS_MESSAGE(void)
     // ------------------------------
     if (strcmp(modeStr, "0") == 0)
     {
+        if (passStr == NULL)
+        {
+            UART1_SendString("ERR#");
+            return;
+        }
+        
+        /* Check if password is initialized */
+        if (Password_IsInitialized() == 0)
+        {
+            UART1_SendString("NOT_INIT#");
+            return;
+        }
+        
         char myPassword[PASSWORD_LENGTH];
         uint8_t res = Password_Compare((uint8_t *)passStr);
         if (res == PASSWORD_OK)
@@ -129,6 +142,19 @@ void PROCESS_MESSAGE(void)
     // ------------------------------
     else if (strcmp(modeStr, "1") == 0)
     {
+        if (passStr == NULL || valueStr == NULL)
+        {
+            UART1_SendString("ERR#");
+            return;
+        }
+        
+        /* Check if password is initialized */
+        if (Password_IsInitialized() == 0)
+        {
+            UART1_SendString("NOT_INIT#");
+            return;
+        }
+        
         uint8_t res = Password_Change((uint8_t *)passStr, (uint8_t *)valueStr);
         if (res == PASSWORD_OK)
         {
@@ -153,6 +179,12 @@ void PROCESS_MESSAGE(void)
     // ------------------------------
     else if (strcmp(modeStr, "2") == 0)
     {
+            if (passStr == NULL)
+            {
+                UART1_SendString("ERR#");
+                return;
+            }
+            
             uint8_t timeout = atoi(passStr);
 
             if (timeout >= 5 && timeout <= 30)
@@ -166,6 +198,59 @@ void PROCESS_MESSAGE(void)
             }
         
         
+    }
+
+    // ------------------------------
+    // MODE 3: First-Time Password Setup
+    // ------------------------------
+    else if (strcmp(modeStr, "3") == 0)
+    {
+        if (passStr == NULL)
+        {
+            UART1_SendString("ERR#");
+            return;
+        }
+        
+        /* Check if password is already initialized */
+        if (Password_IsInitialized() == 1)
+        {
+            UART1_SendString("ALREADY_INIT#");
+            return;
+        }
+        
+        /* Validate password length */
+        if (strlen(passStr) != PASSWORD_LENGTH)
+        {
+            UART1_SendString("BAD_LENGTH#");
+            return;
+        }
+        
+        /* Set password for first time */
+        uint8_t res = Password_FirstTimeSetup((uint8_t *)passStr);
+        if (res == PASSWORD_OK)
+        {
+            UART1_SendString("INIT_OK#");
+        }
+        else
+        {
+            UART1_SendString("INIT_FAIL#");
+        }
+    }
+
+    // ------------------------------
+    // MODE 4: Check Password Status
+    // ------------------------------
+    else if (strcmp(modeStr, "4") == 0)
+    {
+        /* Return password initialization status */
+        if (Password_IsInitialized() == 1)
+        {
+            UART1_SendString("INITIALIZED#");
+        }
+        else
+        {
+            UART1_SendString("NOT_INITIALIZED#");
+        }
     }
 
     // ------------------------------

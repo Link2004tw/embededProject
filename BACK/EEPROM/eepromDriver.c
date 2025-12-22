@@ -262,3 +262,36 @@ uint8_t EEPROM_ReadTimeout(uint8_t *timeout)
     
     return status;
 }
+
+/*
+ * EEPROM_IsPasswordInitialized
+ * Checks if the password has been initialized by reading the magic value.
+ */
+uint8_t EEPROM_IsPasswordInitialized(void)
+{
+    uint32_t magicValue = 0;
+    
+    if (EEPROM_ReadWord(PASSWORD_FLAG_EEPROM_BLOCK, PASSWORD_FLAG_EEPROM_OFFSET, &magicValue) != EEPROM_SUCCESS)
+    {
+        return 0U; /* Error reading, assume not initialized */
+    }
+    
+    /* Check if magic value matches */
+    if (magicValue == PASSWORD_INITIALIZED_MAGIC)
+    {
+        return 1U; /* Password is initialized */
+    }
+    
+    return 0U; /* Password not initialized */
+}
+
+/*
+ * EEPROM_SetPasswordInitialized
+ * Marks the password as initialized by writing the magic value.
+ */
+uint8_t EEPROM_SetPasswordInitialized(void)
+{
+    return EEPROM_WriteWord(PASSWORD_FLAG_EEPROM_BLOCK, 
+                           PASSWORD_FLAG_EEPROM_OFFSET, 
+                           PASSWORD_INITIALIZED_MAGIC);
+}
