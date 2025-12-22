@@ -58,7 +58,7 @@ int main(void) {
     while(1) {
       if(messageReady){
         messageReady = false;
-        PROCESS_MESSAGE();
+         PROCESS_MESSAGE();
       }
     }
 }
