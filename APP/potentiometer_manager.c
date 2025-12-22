@@ -144,38 +144,75 @@ void PotentiometerManager_HandleTimeoutConfig(void)
         
         if (key == TIMEOUT_CONFIRM_KEY)
         {
-            /* User pressed '#' to confirm timeout value
-             * Save the timeout and return to caller
-             */
-            stored_timeout = current_timeout;  /* Store confirmed value */
-            char message[6];
-            message[0] ='2'; //mode
-            message[1]=',';
-            message[2]= '0' + (stored_timeout / 10);
-            message[3]= '0' + (stored_timeout % 10);
-            message[4] ='%';
-            message[5] = '\0';
-            DISPLAY_ClearScreen();
-            DISPLAY_ShowMessage("Timeout Saved!");
-            LCD_SetCursor(1, 0);
-            LCD_WriteChar('0' + (stored_timeout / 10));
-            LCD_WriteChar('0' + (stored_timeout % 10));
-            //LCD_WriteChar(message[2]);
-            //LCD_WriteChar(message[3]);
-            LCD_WriteString(" seconds");
-            //LCD_Clear();
-            //LCD_WriteString(message);
-            UART5_SendString(message);
-            char ack_buffer[20];
+            /* Step 1: Ask for password verification */
             LCD_Clear();
-            DISPLAY_ShowMessage("Waiting for Ack...");
-            UART5_ReceiveStringWithTimeout(ack_buffer, 20);
-            if(ack_buffer != NULL){
-                SHOW_BUFFER(ack_buffer);
-            }
+            LCD_WriteString("Enter Password:");
+            LCD_SetCursor(1, 0);
             
-            SysCtlDelay(160000);  /* 200ms delay */
-            break;
+            char password[6] = "";
+            short pass_index = 0;
+            
+            for(pass_index = 0; pass_index < 5; pass_index++){
+                char pass_key = InputManager_GetKey();
+                while(pass_key == 0) {
+                    pass_key = InputManager_GetKey();
+                    SysCtlDelay(10000);
+                }
+                password[pass_index] = pass_key;
+                LCD_WriteChar('*');
+            }
+            password[5] = '\0';
+            
+            /* Step 2: Send password verification to Backend (Mode 0) */
+            char verify_msg[10];
+            strcpy(verify_msg, "0,");
+            strcat(verify_msg, password);
+            strcat(verify_msg, "#");
+            
+            UART5_SendString(verify_msg);
+            
+            char verify_response[20];
+            UART5_ReceiveStringWithTimeout(verify_response, 20);
+            
+            /* Step 3: Check if password was correct */
+            if(strstr(verify_response, "Unlocked") != NULL || strstr(verify_response, "Door") != NULL){
+                /* Password correct - proceed to save timeout */
+                stored_timeout = current_timeout;
+                
+                char message[6];
+                message[0] ='2'; //mode
+                message[1]=',';
+                message[2]= '0' + (stored_timeout / 10);
+                message[3]= '0' + (stored_timeout % 10);
+                message[4] ='#';  // Fixed terminator
+                message[5] = '\0';
+                
+                DISPLAY_ClearScreen();
+                DISPLAY_ShowMessage("Timeout Saved!");
+                LCD_SetCursor(1, 0);
+                LCD_WriteChar('0' + (stored_timeout / 10));
+                LCD_WriteChar('0' + (stored_timeout % 10));
+                LCD_WriteString(" seconds");
+                
+                UART5_SendString(message);
+                
+                char ack_buffer[20];
+                LCD_Clear();
+                DISPLAY_ShowMessage("Waiting for Ack...");
+                UART5_ReceiveStringWithTimeout(ack_buffer, 20);
+                if(ack_buffer[0] != '\0'){
+                    SHOW_BUFFER(ack_buffer);
+                }
+                
+                SysCtlDelay(16000000);
+                break;
+            } else {
+                /* Password incorrect - show error and continue loop */
+                LCD_Clear();
+                LCD_WriteString("Wrong Password!");
+                SysCtlDelay(20000000);
+                /* Loop continues, user can try again */
+            }
         }
         
         /* Small delay to prevent busy-waiting */

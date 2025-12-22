@@ -43,7 +43,7 @@ void DISPLAY_CHANGEPASSWORD(void){
     //8->12 new password
     //13:#
     //14: terminating 
-    char message[15]="%";
+    char message[15]="#";
     message[0]= ADDMODE;
     message[1]=',';
     //char password[5] = "";
