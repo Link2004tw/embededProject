@@ -104685,7 +104685,7 @@
     "ID": "c:@F@ADCComparatorReset",
     "What": "Function",
     "defdec": "Dec",
-    "display": "void ADCComparatorReset(uint32_t, uint32_t, _Bool, _Bool)",
+    "display": "void ADCComparatorReset(uint32_t, uint32_t, bool, bool)",
     "location": {
       "column": "13",
       "line": "295",
@@ -104699,7 +104699,7 @@
     "ID": "c:@F@ADCComparatorReset",
     "What": "Function",
     "defdec": "Dec",
-    "display": "void ADCComparatorReset(uint32_t, uint32_t, bool, bool)",
+    "display": "void ADCComparatorReset(uint32_t, uint32_t, _Bool, _Bool)",
     "location": {
       "column": "13",
       "line": "295",
@@ -107179,13 +107179,27 @@
     "scope": null
   },
   {
+    "ID": "c:password.h@745@macro@EEPROM_UNINITIALIZED",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "EEPROM_UNINITIALIZED",
+    "location": {
+      "column": "9",
+      "line": "23",
+      "path": "E:\\coding\\embedded\\embededProject\\HAL\\password\\password.h"
+    },
+    "name": "EEPROM_UNINITIALIZED",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
     "ID": "c:@F@Password_Init",
     "What": "Function",
     "defdec": "Dec",
     "display": "uint8_t Password_Init(void)",
     "location": {
       "column": "9",
-      "line": "29",
+      "line": "30",
       "path": "E:\\coding\\embedded\\embededProject\\HAL\\password\\password.h"
     },
     "name": "Password_Init",
@@ -107199,7 +107213,7 @@
     "display": "uint8_t Password_Init(void)",
     "location": {
       "column": "9",
-      "line": "29",
+      "line": "30",
       "path": "E:\\coding\\embedded\\embededProject\\HAL\\password\\password.h"
     },
     "name": "Password_Init",
@@ -107213,7 +107227,7 @@
     "display": "uint8_t Password_IsInitialized(void)",
     "location": {
       "column": "9",
-      "line": "32",
+      "line": "33",
       "path": "E:\\coding\\embedded\\embededProject\\HAL\\password\\password.h"
     },
     "name": "Password_IsInitialized",
@@ -107227,7 +107241,7 @@
     "display": "uint8_t Password_IsInitialized(void)",
     "location": {
       "column": "9",
-      "line": "32",
+      "line": "33",
       "path": "E:\\coding\\embedded\\embededProject\\HAL\\password\\password.h"
     },
     "name": "Password_IsInitialized",
@@ -107241,7 +107255,7 @@
     "display": "uint8_t Password_FirstTimeSetup(const uint8_t *)",
     "location": {
       "column": "9",
-      "line": "35",
+      "line": "36",
       "path": "E:\\coding\\embedded\\embededProject\\HAL\\password\\password.h"
     },
     "name": "Password_FirstTimeSetup",
@@ -107255,7 +107269,7 @@
     "display": "uint8_t Password_Save(const uint8_t *)",
     "location": {
       "column": "9",
-      "line": "38",
+      "line": "39",
       "path": "E:\\coding\\embedded\\embededProject\\HAL\\password\\password.h"
     },
     "name": "Password_Save",
@@ -107269,7 +107283,7 @@
     "display": "uint8_t Password_Save(const uint8_t *)",
     "location": {
       "column": "9",
-      "line": "38",
+      "line": "39",
       "path": "E:\\coding\\embedded\\embededProject\\HAL\\password\\password.h"
     },
     "name": "Password_Save",
@@ -107283,7 +107297,7 @@
     "display": "uint8_t Password_Read(uint8_t *)",
     "location": {
       "column": "9",
-      "line": "41",
+      "line": "42",
       "path": "E:\\coding\\embedded\\embededProject\\HAL\\password\\password.h"
     },
     "name": "Password_Read",
@@ -107297,10 +107311,24 @@
     "display": "uint8_t Password_Read(uint8_t *)",
     "location": {
       "column": "9",
-      "line": "41",
+      "line": "42",
       "path": "E:\\coding\\embedded\\embededProject\\HAL\\password\\password.h"
     },
     "name": "Password_Read",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@Password_FirstTimeSetup",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "uint8_t Password_FirstTimeSetup(const uint8_t *)",
+    "location": {
+      "column": "9",
+      "line": "43",
+      "path": "E:\\coding\\embedded\\embededProject\\HAL\\password\\password.h"
+    },
+    "name": "Password_FirstTimeSetup",
     "origin": "user_include",
     "scope": null
   },
@@ -107311,7 +107339,7 @@
     "display": "uint8_t Password_Compare(const uint8_t *)",
     "location": {
       "column": "9",
-      "line": "44",
+      "line": "45",
       "path": "E:\\coding\\embedded\\embededProject\\HAL\\password\\password.h"
     },
     "name": "Password_Compare",
@@ -107325,7 +107353,7 @@
     "display": "uint8_t Password_Compare(const uint8_t *)",
     "location": {
       "column": "9",
-      "line": "44",
+      "line": "45",
       "path": "E:\\coding\\embedded\\embededProject\\HAL\\password\\password.h"
     },
     "name": "Password_Compare",
@@ -107339,7 +107367,7 @@
     "display": "uint8_t Password_Change(const uint8_t *, const uint8_t *)",
     "location": {
       "column": "9",
-      "line": "47",
+      "line": "48",
       "path": "E:\\coding\\embedded\\embededProject\\HAL\\password\\password.h"
     },
     "name": "Password_Change",
@@ -107353,7 +107381,7 @@
     "display": "uint8_t Password_Change(const uint8_t *, const uint8_t *)",
     "location": {
       "column": "9",
-      "line": "47",
+      "line": "48",
       "path": "E:\\coding\\embedded\\embededProject\\HAL\\password\\password.h"
     },
     "name": "Password_Change",
@@ -107367,7 +107395,7 @@
     "display": "uint8_t Password_GetRawDebug(uint32_t *)",
     "location": {
       "column": "9",
-      "line": "51",
+      "line": "52",
       "path": "E:\\coding\\embedded\\embededProject\\HAL\\password\\password.h"
     },
     "name": "Password_GetRawDebug",
@@ -111365,6 +111393,48 @@
     "scope": null
   },
   {
+    "ID": "c:input_manager.h@34@macro@INPUT_MANAGER_H_",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "INPUT_MANAGER_H_",
+    "location": {
+      "column": "9",
+      "line": "2",
+      "path": "E:\\coding\\embedded\\embededProject\\APP\\input_manager.h"
+    },
+    "name": "INPUT_MANAGER_H_",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@InputManager_GetKey",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "char InputManager_GetKey(void)",
+    "location": {
+      "column": "6",
+      "line": "11",
+      "path": "E:\\coding\\embedded\\embededProject\\APP\\input_manager.h"
+    },
+    "name": "InputManager_GetKey",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@InputManager_HandleKey",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void InputManager_HandleKey(void)",
+    "location": {
+      "column": "6",
+      "line": "19",
+      "path": "E:\\coding\\embedded\\embededProject\\APP\\input_manager.h"
+    },
+    "name": "InputManager_HandleKey",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
     "ID": "c:potentiometer_manager.h@546@macro@POTENTIOMETER_MANAGER_H",
     "What": "MacroDef",
     "defdec": "Def",
@@ -111645,48 +111715,6 @@
     "scope": null
   },
   {
-    "ID": "c:input_manager.h@34@macro@INPUT_MANAGER_H_",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "INPUT_MANAGER_H_",
-    "location": {
-      "column": "9",
-      "line": "2",
-      "path": "E:\\coding\\embedded\\embededProject\\APP\\input_manager.h"
-    },
-    "name": "INPUT_MANAGER_H_",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@InputManager_GetKey",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "char InputManager_GetKey(void)",
-    "location": {
-      "column": "6",
-      "line": "11",
-      "path": "E:\\coding\\embedded\\embededProject\\APP\\input_manager.h"
-    },
-    "name": "InputManager_GetKey",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@InputManager_HandleKey",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void InputManager_HandleKey(void)",
-    "location": {
-      "column": "6",
-      "line": "19",
-      "path": "E:\\coding\\embedded\\embededProject\\APP\\input_manager.h"
-    },
-    "name": "InputManager_HandleKey",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
     "ID": "c:ycheck.h@1402@macro@__AEABI_PORTABILITY_INTERNAL_LEVEL",
     "What": "MacroDef",
     "defdec": "Def",
@@ -111715,13 +111743,27 @@
     "scope": null
   },
   {
+    "ID": "c:eepromDriver.c@513@macro@EEPROM_UNINITIALIZED",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "EEPROM_UNINITIALIZED",
+    "location": {
+      "column": "9",
+      "line": "17",
+      "path": "E:\\coding\\embedded\\embededProject\\BACK\\EEPROM\\eepromDriver.c"
+    },
+    "name": "EEPROM_UNINITIALIZED",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
     "ID": "c:eepromDriver.c@F@CalculateAddress",
     "What": "Function",
     "defdec": "Def",
     "display": "uint32_t CalculateAddress(uint32_t, uint32_t)",
     "location": {
       "column": "17",
-      "line": "26",
+      "line": "27",
       "path": "E:\\coding\\embedded\\embededProject\\BACK\\EEPROM\\eepromDriver.c"
     },
     "name": "CalculateAddress",
@@ -111735,7 +111777,7 @@
     "display": "uint8_t EEPROM_Init(void)",
     "location": {
       "column": "9",
-      "line": "40",
+      "line": "41",
       "path": "E:\\coding\\embedded\\embededProject\\BACK\\EEPROM\\eepromDriver.c"
     },
     "name": "EEPROM_Init",
@@ -111743,13 +111785,13 @@
     "scope": null
   },
   {
-    "ID": "c:eepromDriver.c@1377@F@EEPROM_Init@result",
+    "ID": "c:eepromDriver.c@1418@F@EEPROM_Init@result",
     "What": "Variable",
     "defdec": "Def",
     "display": "result",
     "location": {
       "column": "14",
-      "line": "42",
+      "line": "43",
       "path": "E:\\coding\\embedded\\embededProject\\BACK\\EEPROM\\eepromDriver.c"
     },
     "name": "result",
@@ -111757,13 +111799,13 @@
     "scope": null
   },
   {
-    "ID": "c:eepromDriver.c@1904@F@EEPROM_Init@currentTimeout",
+    "ID": "c:eepromDriver.c@1945@F@EEPROM_Init@currentTimeout",
     "What": "Variable",
     "defdec": "Def",
     "display": "currentTimeout",
     "location": {
       "column": "13",
-      "line": "62",
+      "line": "63",
       "path": "E:\\coding\\embedded\\embededProject\\BACK\\EEPROM\\eepromDriver.c"
     },
     "name": "currentTimeout",
@@ -111777,7 +111819,7 @@
     "display": "uint8_t EEPROM_WriteWord(uint32_t, uint32_t, uint32_t)",
     "location": {
       "column": "9",
-      "line": "79",
+      "line": "80",
       "path": "E:\\coding\\embedded\\embededProject\\BACK\\EEPROM\\eepromDriver.c"
     },
     "name": "EEPROM_WriteWord",
@@ -111785,13 +111827,13 @@
     "scope": null
   },
   {
-    "ID": "c:eepromDriver.c@2452@F@EEPROM_WriteWord@address",
+    "ID": "c:eepromDriver.c@2493@F@EEPROM_WriteWord@address",
     "What": "Variable",
     "defdec": "Def",
     "display": "address",
     "location": {
       "column": "14",
-      "line": "81",
+      "line": "82",
       "path": "E:\\coding\\embedded\\embededProject\\BACK\\EEPROM\\eepromDriver.c"
     },
     "name": "address",
@@ -111799,13 +111841,13 @@
     "scope": null
   },
   {
-    "ID": "c:eepromDriver.c@2475@F@EEPROM_WriteWord@result",
+    "ID": "c:eepromDriver.c@2516@F@EEPROM_WriteWord@result",
     "What": "Variable",
     "defdec": "Def",
     "display": "result",
     "location": {
       "column": "14",
-      "line": "82",
+      "line": "83",
       "path": "E:\\coding\\embedded\\embededProject\\BACK\\EEPROM\\eepromDriver.c"
     },
     "name": "result",
@@ -111819,7 +111861,7 @@
     "display": "uint8_t EEPROM_ReadWord(uint32_t, uint32_t, uint32_t *)",
     "location": {
       "column": "9",
-      "line": "108",
+      "line": "109",
       "path": "E:\\coding\\embedded\\embededProject\\BACK\\EEPROM\\eepromDriver.c"
     },
     "name": "EEPROM_ReadWord",
@@ -111827,13 +111869,13 @@
     "scope": null
   },
   {
-    "ID": "c:eepromDriver.c@3124@F@EEPROM_ReadWord@address",
+    "ID": "c:eepromDriver.c@3165@F@EEPROM_ReadWord@address",
     "What": "Variable",
     "defdec": "Def",
     "display": "address",
     "location": {
       "column": "14",
-      "line": "110",
+      "line": "111",
       "path": "E:\\coding\\embedded\\embededProject\\BACK\\EEPROM\\eepromDriver.c"
     },
     "name": "address",
@@ -111847,7 +111889,7 @@
     "display": "uint8_t EEPROM_WriteBuffer(uint32_t, uint32_t, const uint8_t *, uint32_t)",
     "location": {
       "column": "9",
-      "line": "131",
+      "line": "132",
       "path": "E:\\coding\\embedded\\embededProject\\BACK\\EEPROM\\eepromDriver.c"
     },
     "name": "EEPROM_WriteBuffer",
@@ -111855,13 +111897,13 @@
     "scope": null
   },
   {
-    "ID": "c:eepromDriver.c@3736@F@EEPROM_WriteBuffer@address",
+    "ID": "c:eepromDriver.c@3777@F@EEPROM_WriteBuffer@address",
     "What": "Variable",
     "defdec": "Def",
     "display": "address",
     "location": {
       "column": "14",
-      "line": "133",
+      "line": "134",
       "path": "E:\\coding\\embedded\\embededProject\\BACK\\EEPROM\\eepromDriver.c"
     },
     "name": "address",
@@ -111869,13 +111911,13 @@
     "scope": null
   },
   {
-    "ID": "c:eepromDriver.c@3759@F@EEPROM_WriteBuffer@result",
+    "ID": "c:eepromDriver.c@3800@F@EEPROM_WriteBuffer@result",
     "What": "Variable",
     "defdec": "Def",
     "display": "result",
     "location": {
       "column": "14",
-      "line": "134",
+      "line": "135",
       "path": "E:\\coding\\embedded\\embededProject\\BACK\\EEPROM\\eepromDriver.c"
     },
     "name": "result",
@@ -111889,7 +111931,7 @@
     "display": "uint8_t EEPROM_ReadBuffer(uint32_t, uint32_t, uint8_t *, uint32_t)",
     "location": {
       "column": "9",
-      "line": "166",
+      "line": "167",
       "path": "E:\\coding\\embedded\\embededProject\\BACK\\EEPROM\\eepromDriver.c"
     },
     "name": "EEPROM_ReadBuffer",
@@ -111897,13 +111939,13 @@
     "scope": null
   },
   {
-    "ID": "c:eepromDriver.c@4628@F@EEPROM_ReadBuffer@address",
+    "ID": "c:eepromDriver.c@4669@F@EEPROM_ReadBuffer@address",
     "What": "Variable",
     "defdec": "Def",
     "display": "address",
     "location": {
       "column": "14",
-      "line": "168",
+      "line": "169",
       "path": "E:\\coding\\embedded\\embededProject\\BACK\\EEPROM\\eepromDriver.c"
     },
     "name": "address",
@@ -111917,7 +111959,7 @@
     "display": "uint8_t EEPROM_MassErase(void)",
     "location": {
       "column": "9",
-      "line": "194",
+      "line": "195",
       "path": "E:\\coding\\embedded\\embededProject\\BACK\\EEPROM\\eepromDriver.c"
     },
     "name": "EEPROM_MassErase",
@@ -111925,13 +111967,13 @@
     "scope": null
   },
   {
-    "ID": "c:eepromDriver.c@5259@F@EEPROM_MassErase@result",
+    "ID": "c:eepromDriver.c@5300@F@EEPROM_MassErase@result",
     "What": "Variable",
     "defdec": "Def",
     "display": "result",
     "location": {
       "column": "14",
-      "line": "196",
+      "line": "197",
       "path": "E:\\coding\\embedded\\embededProject\\BACK\\EEPROM\\eepromDriver.c"
     },
     "name": "result",
@@ -111945,7 +111987,7 @@
     "display": "uint8_t EEPROM_SaveTimeout(uint8_t)",
     "location": {
       "column": "9",
-      "line": "215",
+      "line": "216",
       "path": "E:\\coding\\embedded\\embededProject\\BACK\\EEPROM\\eepromDriver.c"
     },
     "name": "EEPROM_SaveTimeout",
@@ -111953,13 +111995,13 @@
     "scope": null
   },
   {
-    "ID": "c:eepromDriver.c@5583@F@EEPROM_SaveTimeout@word",
+    "ID": "c:eepromDriver.c@5624@F@EEPROM_SaveTimeout@word",
     "What": "Variable",
     "defdec": "Def",
     "display": "word",
     "location": {
       "column": "14",
-      "line": "217",
+      "line": "218",
       "path": "E:\\coding\\embedded\\embededProject\\BACK\\EEPROM\\eepromDriver.c"
     },
     "name": "word",
@@ -111973,7 +112015,7 @@
     "display": "uint8_t EEPROM_ReadTimeout(uint8_t *)",
     "location": {
       "column": "9",
-      "line": "245",
+      "line": "246",
       "path": "E:\\coding\\embedded\\embededProject\\BACK\\EEPROM\\eepromDriver.c"
     },
     "name": "EEPROM_ReadTimeout",
@@ -111981,13 +112023,13 @@
     "scope": null
   },
   {
-    "ID": "c:eepromDriver.c@6537@F@EEPROM_ReadTimeout@word",
+    "ID": "c:eepromDriver.c@6578@F@EEPROM_ReadTimeout@word",
     "What": "Variable",
     "defdec": "Def",
     "display": "word",
     "location": {
       "column": "14",
-      "line": "247",
+      "line": "248",
       "path": "E:\\coding\\embedded\\embededProject\\BACK\\EEPROM\\eepromDriver.c"
     },
     "name": "word",
@@ -111995,13 +112037,13 @@
     "scope": null
   },
   {
-    "ID": "c:eepromDriver.c@6557@F@EEPROM_ReadTimeout@status",
+    "ID": "c:eepromDriver.c@6598@F@EEPROM_ReadTimeout@status",
     "What": "Variable",
     "defdec": "Def",
     "display": "status",
     "location": {
       "column": "13",
-      "line": "248",
+      "line": "249",
       "path": "E:\\coding\\embedded\\embededProject\\BACK\\EEPROM\\eepromDriver.c"
     },
     "name": "status",
@@ -112015,7 +112057,7 @@
     "display": "uint8_t EEPROM_IsPasswordInitialized(void)",
     "location": {
       "column": "9",
-      "line": "270",
+      "line": "271",
       "path": "E:\\coding\\embedded\\embededProject\\BACK\\EEPROM\\eepromDriver.c"
     },
     "name": "EEPROM_IsPasswordInitialized",
@@ -112023,13 +112065,13 @@
     "scope": null
   },
   {
-    "ID": "c:eepromDriver.c@7092@F@EEPROM_IsPasswordInitialized@magicValue",
+    "ID": "c:eepromDriver.c@7133@F@EEPROM_IsPasswordInitialized@magicValue",
     "What": "Variable",
     "defdec": "Def",
     "display": "magicValue",
     "location": {
       "column": "14",
-      "line": "272",
+      "line": "273",
       "path": "E:\\coding\\embedded\\embededProject\\BACK\\EEPROM\\eepromDriver.c"
     },
     "name": "magicValue",
@@ -112043,7 +112085,7 @@
     "display": "uint8_t EEPROM_SetPasswordInitialized(void)",
     "location": {
       "column": "9",
-      "line": "292",
+      "line": "293",
       "path": "E:\\coding\\embedded\\embededProject\\BACK\\EEPROM\\eepromDriver.c"
     },
     "name": "EEPROM_SetPasswordInitialized",
@@ -126121,6 +126163,426 @@
     "scope": null
   },
   {
+    "ID": "c:HMI_Comm.h@28@macro@HMI_COMM_H",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "HMI_COMM_H",
+    "location": {
+      "column": "9",
+      "line": "2",
+      "path": "E:\\coding\\embedded\\embededProject\\UART\\HMI_Comm.h"
+    },
+    "name": "HMI_COMM_H",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:HMI_Comm.h@583@macro@RX_BUFFER_SIZE",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "RX_BUFFER_SIZE",
+    "location": {
+      "column": "9",
+      "line": "22",
+      "path": "E:\\coding\\embedded\\embededProject\\UART\\HMI_Comm.h"
+    },
+    "name": "RX_BUFFER_SIZE",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:HMI_Comm.h@613@macro@PASSWORD_LENGTH",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "PASSWORD_LENGTH",
+    "location": {
+      "column": "9",
+      "line": "23",
+      "path": "E:\\coding\\embedded\\embededProject\\UART\\HMI_Comm.h"
+    },
+    "name": "PASSWORD_LENGTH",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:HMI_Comm.h@642@macro@PASSWORD",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "PASSWORD",
+    "location": {
+      "column": "9",
+      "line": "24",
+      "path": "E:\\coding\\embedded\\embededProject\\UART\\HMI_Comm.h"
+    },
+    "name": "PASSWORD",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:HMI_Comm.h@677@macro@LOCKOUT_DURATION",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "LOCKOUT_DURATION",
+    "location": {
+      "column": "9",
+      "line": "25",
+      "path": "E:\\coding\\embedded\\embededProject\\UART\\HMI_Comm.h"
+    },
+    "name": "LOCKOUT_DURATION",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:HMI_Comm.h@713@macro@TIMEOUT_ADDRESS",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "TIMEOUT_ADDRESS",
+    "location": {
+      "column": "9",
+      "line": "26",
+      "path": "E:\\coding\\embedded\\embededProject\\UART\\HMI_Comm.h"
+    },
+    "name": "TIMEOUT_ADDRESS",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:HMI_Comm.h@745@macro@TIMEOUT_VALUE",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "TIMEOUT_VALUE",
+    "location": {
+      "column": "9",
+      "line": "27",
+      "path": "E:\\coding\\embedded\\embededProject\\UART\\HMI_Comm.h"
+    },
+    "name": "TIMEOUT_VALUE",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:HMI_Comm.h@788@macro@LOCK_PORT",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "LOCK_PORT",
+    "location": {
+      "column": "9",
+      "line": "31",
+      "path": "E:\\coding\\embedded\\embededProject\\UART\\HMI_Comm.h"
+    },
+    "name": "LOCK_PORT",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:HMI_Comm.h@823@macro@LOCK_PIN",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "LOCK_PIN",
+    "location": {
+      "column": "9",
+      "line": "32",
+      "path": "E:\\coding\\embedded\\embededProject\\UART\\HMI_Comm.h"
+    },
+    "name": "LOCK_PIN",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:HMI_Comm.h@853@macro@LED_PORT",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "LED_PORT",
+    "location": {
+      "column": "9",
+      "line": "33",
+      "path": "E:\\coding\\embedded\\embededProject\\UART\\HMI_Comm.h"
+    },
+    "name": "LED_PORT",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:HMI_Comm.h@888@macro@LED_PIN",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "LED_PIN",
+    "location": {
+      "column": "9",
+      "line": "34",
+      "path": "E:\\coding\\embedded\\embededProject\\UART\\HMI_Comm.h"
+    },
+    "name": "LED_PIN",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@rxBuffer",
+    "What": "Variable",
+    "defdec": "Dec",
+    "display": "rxBuffer",
+    "location": {
+      "column": "13",
+      "line": "38",
+      "path": "E:\\coding\\embedded\\embededProject\\UART\\HMI_Comm.h"
+    },
+    "name": "rxBuffer",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@rxIndex",
+    "What": "Variable",
+    "defdec": "Dec",
+    "display": "rxIndex",
+    "location": {
+      "column": "25",
+      "line": "39",
+      "path": "E:\\coding\\embedded\\embededProject\\UART\\HMI_Comm.h"
+    },
+    "name": "rxIndex",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@rxIndex",
+    "What": "Variable",
+    "defdec": "Dec",
+    "display": "rxIndex",
+    "location": {
+      "column": "25",
+      "line": "39",
+      "path": "E:\\coding\\embedded\\embededProject\\UART\\HMI_Comm.h"
+    },
+    "name": "rxIndex",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@messageReady",
+    "What": "Variable",
+    "defdec": "Dec",
+    "display": "messageReady",
+    "location": {
+      "column": "22",
+      "line": "40",
+      "path": "E:\\coding\\embedded\\embededProject\\UART\\HMI_Comm.h"
+    },
+    "name": "messageReady",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@messageReady",
+    "What": "Variable",
+    "defdec": "Dec",
+    "display": "messageReady",
+    "location": {
+      "column": "22",
+      "line": "40",
+      "path": "E:\\coding\\embedded\\embededProject\\UART\\HMI_Comm.h"
+    },
+    "name": "messageReady",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@failedAttempts",
+    "What": "Variable",
+    "defdec": "Dec",
+    "display": "failedAttempts",
+    "location": {
+      "column": "23",
+      "line": "41",
+      "path": "E:\\coding\\embedded\\embededProject\\UART\\HMI_Comm.h"
+    },
+    "name": "failedAttempts",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@failedAttempts",
+    "What": "Variable",
+    "defdec": "Dec",
+    "display": "failedAttempts",
+    "location": {
+      "column": "23",
+      "line": "41",
+      "path": "E:\\coding\\embedded\\embededProject\\UART\\HMI_Comm.h"
+    },
+    "name": "failedAttempts",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@UART1_Init",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void UART1_Init(void)",
+    "location": {
+      "column": "6",
+      "line": "44",
+      "path": "E:\\coding\\embedded\\embededProject\\UART\\HMI_Comm.h"
+    },
+    "name": "UART1_Init",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@UART1_Init",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void UART1_Init(void)",
+    "location": {
+      "column": "6",
+      "line": "44",
+      "path": "E:\\coding\\embedded\\embededProject\\UART\\HMI_Comm.h"
+    },
+    "name": "UART1_Init",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@PROCESS_MESSAGE",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void PROCESS_MESSAGE(void)",
+    "location": {
+      "column": "6",
+      "line": "45",
+      "path": "E:\\coding\\embedded\\embededProject\\UART\\HMI_Comm.h"
+    },
+    "name": "PROCESS_MESSAGE",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@PROCESS_MESSAGE",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void PROCESS_MESSAGE(void)",
+    "location": {
+      "column": "6",
+      "line": "45",
+      "path": "E:\\coding\\embedded\\embededProject\\UART\\HMI_Comm.h"
+    },
+    "name": "PROCESS_MESSAGE",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@UART1_SendString",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void UART1_SendString(char *)",
+    "location": {
+      "column": "6",
+      "line": "46",
+      "path": "E:\\coding\\embedded\\embededProject\\UART\\HMI_Comm.h"
+    },
+    "name": "UART1_SendString",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@UART1_SendString",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void UART1_SendString(char *)",
+    "location": {
+      "column": "6",
+      "line": "46",
+      "path": "E:\\coding\\embedded\\embededProject\\UART\\HMI_Comm.h"
+    },
+    "name": "UART1_SendString",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@Door_Unlock",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void Door_Unlock(void)",
+    "location": {
+      "column": "6",
+      "line": "47",
+      "path": "E:\\coding\\embedded\\embededProject\\UART\\HMI_Comm.h"
+    },
+    "name": "Door_Unlock",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@Door_Unlock",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void Door_Unlock(void)",
+    "location": {
+      "column": "6",
+      "line": "47",
+      "path": "E:\\coding\\embedded\\embededProject\\UART\\HMI_Comm.h"
+    },
+    "name": "Door_Unlock",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@UART1_Handler",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void UART1_Handler(void)",
+    "location": {
+      "column": "6",
+      "line": "48",
+      "path": "E:\\coding\\embedded\\embededProject\\UART\\HMI_Comm.h"
+    },
+    "name": "UART1_Handler",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@UART1_Handler",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void UART1_Handler(void)",
+    "location": {
+      "column": "6",
+      "line": "48",
+      "path": "E:\\coding\\embedded\\embededProject\\UART\\HMI_Comm.h"
+    },
+    "name": "UART1_Handler",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@Activate_Lockout",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void Activate_Lockout(void)",
+    "location": {
+      "column": "6",
+      "line": "50",
+      "path": "E:\\coding\\embedded\\embededProject\\UART\\HMI_Comm.h"
+    },
+    "name": "Activate_Lockout",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@Activate_Lockout",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void Activate_Lockout(void)",
+    "location": {
+      "column": "6",
+      "line": "50",
+      "path": "E:\\coding\\embedded\\embededProject\\UART\\HMI_Comm.h"
+    },
+    "name": "Activate_Lockout",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
     "ID": "c:string.h@100@macro@_STRING",
     "What": "MacroDef",
     "defdec": "Def",
@@ -127127,426 +127589,6 @@
       "path": "C:\\ti\\TivaWare_C_Series-2.2.0.295\\driverlib\\flash.h"
     },
     "name": "FlashIntClear",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:HMI_Comm.h@28@macro@HMI_COMM_H",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "HMI_COMM_H",
-    "location": {
-      "column": "9",
-      "line": "2",
-      "path": "E:\\coding\\embedded\\embededProject\\UART\\HMI_Comm.h"
-    },
-    "name": "HMI_COMM_H",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:HMI_Comm.h@583@macro@RX_BUFFER_SIZE",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "RX_BUFFER_SIZE",
-    "location": {
-      "column": "9",
-      "line": "22",
-      "path": "E:\\coding\\embedded\\embededProject\\UART\\HMI_Comm.h"
-    },
-    "name": "RX_BUFFER_SIZE",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:HMI_Comm.h@613@macro@PASSWORD_LENGTH",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "PASSWORD_LENGTH",
-    "location": {
-      "column": "9",
-      "line": "23",
-      "path": "E:\\coding\\embedded\\embededProject\\UART\\HMI_Comm.h"
-    },
-    "name": "PASSWORD_LENGTH",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:HMI_Comm.h@642@macro@PASSWORD",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "PASSWORD",
-    "location": {
-      "column": "9",
-      "line": "24",
-      "path": "E:\\coding\\embedded\\embededProject\\UART\\HMI_Comm.h"
-    },
-    "name": "PASSWORD",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:HMI_Comm.h@677@macro@LOCKOUT_DURATION",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "LOCKOUT_DURATION",
-    "location": {
-      "column": "9",
-      "line": "25",
-      "path": "E:\\coding\\embedded\\embededProject\\UART\\HMI_Comm.h"
-    },
-    "name": "LOCKOUT_DURATION",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:HMI_Comm.h@713@macro@TIMEOUT_ADDRESS",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "TIMEOUT_ADDRESS",
-    "location": {
-      "column": "9",
-      "line": "26",
-      "path": "E:\\coding\\embedded\\embededProject\\UART\\HMI_Comm.h"
-    },
-    "name": "TIMEOUT_ADDRESS",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:HMI_Comm.h@745@macro@TIMEOUT_VALUE",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "TIMEOUT_VALUE",
-    "location": {
-      "column": "9",
-      "line": "27",
-      "path": "E:\\coding\\embedded\\embededProject\\UART\\HMI_Comm.h"
-    },
-    "name": "TIMEOUT_VALUE",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:HMI_Comm.h@788@macro@LOCK_PORT",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "LOCK_PORT",
-    "location": {
-      "column": "9",
-      "line": "31",
-      "path": "E:\\coding\\embedded\\embededProject\\UART\\HMI_Comm.h"
-    },
-    "name": "LOCK_PORT",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:HMI_Comm.h@823@macro@LOCK_PIN",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "LOCK_PIN",
-    "location": {
-      "column": "9",
-      "line": "32",
-      "path": "E:\\coding\\embedded\\embededProject\\UART\\HMI_Comm.h"
-    },
-    "name": "LOCK_PIN",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:HMI_Comm.h@853@macro@LED_PORT",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "LED_PORT",
-    "location": {
-      "column": "9",
-      "line": "33",
-      "path": "E:\\coding\\embedded\\embededProject\\UART\\HMI_Comm.h"
-    },
-    "name": "LED_PORT",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:HMI_Comm.h@888@macro@LED_PIN",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "LED_PIN",
-    "location": {
-      "column": "9",
-      "line": "34",
-      "path": "E:\\coding\\embedded\\embededProject\\UART\\HMI_Comm.h"
-    },
-    "name": "LED_PIN",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@rxBuffer",
-    "What": "Variable",
-    "defdec": "Dec",
-    "display": "rxBuffer",
-    "location": {
-      "column": "13",
-      "line": "38",
-      "path": "E:\\coding\\embedded\\embededProject\\UART\\HMI_Comm.h"
-    },
-    "name": "rxBuffer",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@rxIndex",
-    "What": "Variable",
-    "defdec": "Dec",
-    "display": "rxIndex",
-    "location": {
-      "column": "25",
-      "line": "39",
-      "path": "E:\\coding\\embedded\\embededProject\\UART\\HMI_Comm.h"
-    },
-    "name": "rxIndex",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@rxIndex",
-    "What": "Variable",
-    "defdec": "Dec",
-    "display": "rxIndex",
-    "location": {
-      "column": "25",
-      "line": "39",
-      "path": "E:\\coding\\embedded\\embededProject\\UART\\HMI_Comm.h"
-    },
-    "name": "rxIndex",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@messageReady",
-    "What": "Variable",
-    "defdec": "Dec",
-    "display": "messageReady",
-    "location": {
-      "column": "22",
-      "line": "40",
-      "path": "E:\\coding\\embedded\\embededProject\\UART\\HMI_Comm.h"
-    },
-    "name": "messageReady",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@messageReady",
-    "What": "Variable",
-    "defdec": "Dec",
-    "display": "messageReady",
-    "location": {
-      "column": "22",
-      "line": "40",
-      "path": "E:\\coding\\embedded\\embededProject\\UART\\HMI_Comm.h"
-    },
-    "name": "messageReady",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@failedAttempts",
-    "What": "Variable",
-    "defdec": "Dec",
-    "display": "failedAttempts",
-    "location": {
-      "column": "23",
-      "line": "41",
-      "path": "E:\\coding\\embedded\\embededProject\\UART\\HMI_Comm.h"
-    },
-    "name": "failedAttempts",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@failedAttempts",
-    "What": "Variable",
-    "defdec": "Dec",
-    "display": "failedAttempts",
-    "location": {
-      "column": "23",
-      "line": "41",
-      "path": "E:\\coding\\embedded\\embededProject\\UART\\HMI_Comm.h"
-    },
-    "name": "failedAttempts",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@UART1_Init",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void UART1_Init(void)",
-    "location": {
-      "column": "6",
-      "line": "44",
-      "path": "E:\\coding\\embedded\\embededProject\\UART\\HMI_Comm.h"
-    },
-    "name": "UART1_Init",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@UART1_Init",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void UART1_Init(void)",
-    "location": {
-      "column": "6",
-      "line": "44",
-      "path": "E:\\coding\\embedded\\embededProject\\UART\\HMI_Comm.h"
-    },
-    "name": "UART1_Init",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@PROCESS_MESSAGE",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void PROCESS_MESSAGE(void)",
-    "location": {
-      "column": "6",
-      "line": "45",
-      "path": "E:\\coding\\embedded\\embededProject\\UART\\HMI_Comm.h"
-    },
-    "name": "PROCESS_MESSAGE",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@PROCESS_MESSAGE",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void PROCESS_MESSAGE(void)",
-    "location": {
-      "column": "6",
-      "line": "45",
-      "path": "E:\\coding\\embedded\\embededProject\\UART\\HMI_Comm.h"
-    },
-    "name": "PROCESS_MESSAGE",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@UART1_SendString",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void UART1_SendString(char *)",
-    "location": {
-      "column": "6",
-      "line": "46",
-      "path": "E:\\coding\\embedded\\embededProject\\UART\\HMI_Comm.h"
-    },
-    "name": "UART1_SendString",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@UART1_SendString",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void UART1_SendString(char *)",
-    "location": {
-      "column": "6",
-      "line": "46",
-      "path": "E:\\coding\\embedded\\embededProject\\UART\\HMI_Comm.h"
-    },
-    "name": "UART1_SendString",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@Door_Unlock",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void Door_Unlock(void)",
-    "location": {
-      "column": "6",
-      "line": "47",
-      "path": "E:\\coding\\embedded\\embededProject\\UART\\HMI_Comm.h"
-    },
-    "name": "Door_Unlock",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@Door_Unlock",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void Door_Unlock(void)",
-    "location": {
-      "column": "6",
-      "line": "47",
-      "path": "E:\\coding\\embedded\\embededProject\\UART\\HMI_Comm.h"
-    },
-    "name": "Door_Unlock",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@UART1_Handler",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void UART1_Handler(void)",
-    "location": {
-      "column": "6",
-      "line": "48",
-      "path": "E:\\coding\\embedded\\embededProject\\UART\\HMI_Comm.h"
-    },
-    "name": "UART1_Handler",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@UART1_Handler",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void UART1_Handler(void)",
-    "location": {
-      "column": "6",
-      "line": "48",
-      "path": "E:\\coding\\embedded\\embededProject\\UART\\HMI_Comm.h"
-    },
-    "name": "UART1_Handler",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@Activate_Lockout",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void Activate_Lockout(void)",
-    "location": {
-      "column": "6",
-      "line": "50",
-      "path": "E:\\coding\\embedded\\embededProject\\UART\\HMI_Comm.h"
-    },
-    "name": "Activate_Lockout",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@Activate_Lockout",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void Activate_Lockout(void)",
-    "location": {
-      "column": "6",
-      "line": "50",
-      "path": "E:\\coding\\embedded\\embededProject\\UART\\HMI_Comm.h"
-    },
-    "name": "Activate_Lockout",
     "origin": "user_include",
     "scope": null
   },

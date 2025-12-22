@@ -237,7 +237,7 @@ void PROCESS_MESSAGE(void)
         }
         
         /* Set password for first time */
-        uint8_t res = Password_FirstTimeSetup((uint8_t *)passStr);
+        uint8_t res = Password_Save((uint8_t *)passStr);
         if (res == PASSWORD_OK)
         {
             UART1_SendString("INIT_OK#");
