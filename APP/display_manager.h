@@ -24,6 +24,7 @@ void DISPLAY_ShowMessage(const char *msg);
 void DISPLAY_ShowTimeoutValue(uint8_t value);
 void DISPLAY_ClearScreen(void);
 void DISPLAY_OPEN(void);
+void DISPLAY_InitialSetup(void);
 void DISPLAY_CHANGEPASSWORD(void);
 void DISPLAY_CHANGETIMEOUT(void);
 void DISPLAY_ERROR(void);

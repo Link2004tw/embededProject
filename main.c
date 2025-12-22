@@ -15,7 +15,7 @@ void DELAY(void){
 // <>
 int main(void)
 {
-     SysCtlClockSet(SYSCTL_SYSDIV_1 | SYSCTL_USE_OSC | SYSCTL_OSC_MAIN | SYSCTL_XTAL_16MHZ);
+    SysCtlClockSet(SYSCTL_SYSDIV_1 | SYSCTL_USE_OSC | SYSCTL_OSC_MAIN | SYSCTL_XTAL_16MHZ);
     UART5_Init_front();
       
     /* ---------- Initialize all frontend modules ---------- */
@@ -29,7 +29,39 @@ int main(void)
     SysCtlDelay(SysCtlClockGet());   // 1 second (if SysTick exists)
 
     DISPLAY_ClearScreen();
-    DISPLAY_ShowMainMenu();  // Show menu while testing
+    //DISPLAY_ShowMainMenu();  // Show menu while testing
+    
+    /* ---------- System Initialization Check ---------- */
+    // 1. Send "CHECK#" to Control ECU
+    UART5_SendString("CHECK#"); // Blocking send
+    
+    // 2. Wait for Response ("READY" OR "NEW")
+    char init_buffer[20] = "";
+    DISPLAY_ShowMessage("Checking System...");
+    
+    while(1) {
+       // Using Polling Receive
+       UART5_ReceiveStringWithTimeout(init_buffer, 20);
+       
+       if (strcmp(init_buffer, "NEW") == 0) {
+           // Case 1: Uninitialized -> Run Setup
+           DISPLAY_InitialSetup();
+           break;
+       } 
+       else if (strcmp(init_buffer, "READY") == 0) {
+           // Case 2: Initialized -> Go to Main Menu
+           break;
+       }
+       else {
+           // Retry on timeout or garbage
+           SysCtlDelay(16000000*5); // 5 sec
+           UART5_SendString("CHECK#");
+       }
+    }
+
+    DISPLAY_ClearScreen();
+    DISPLAY_ShowMainMenu();
+
     
     /* ---------- Main Loop ---------- */
     short mode = 0;    
