@@ -10,11 +10,19 @@
  * Checks if password is initialized in EEPROM.
  * If EEPROM is uninitialized (all 0xFF), sets default password "12345".
  */
-uint8_t Password_Init(void)
+uint8_t Password_Init(const char *password)
+{
+    if (password == 0)
+    {
+        return PASSWORD_ERROR;
+    }
+    return Password_Save((uint8_t *)password);
+}
+
+uint8_t Password_Check(void)
 {
     uint8_t stored[PASSWORD_LENGTH];
     uint8_t i;
-    uint8_t uninitialized = 1U;
     
     /* Read current password from EEPROM */
     if (Password_Read(stored) != PASSWORD_OK)
@@ -25,22 +33,16 @@ uint8_t Password_Init(void)
     /* Check if EEPROM is uninitialized (all bytes are 0xFF) */
     for (i = 0U; i < PASSWORD_LENGTH; i++)
     {
-        if (stored[i] != EEPROM_UNINITIALIZED && stored[i] != 0x1E)
+        if (stored[i] == EEPROM_UNINITIALIZED || stored[i] == 0x1E)
         {
-            uninitialized = 0U;
-            break;
+            return PASSWORD_UNINITIALIZED;
         }
     }
-    
-    /* If uninitialized, set default password "12345" */
-    if (uninitialized == 1U)
+    else
     {
-        const uint8_t defaultPassword[PASSWORD_LENGTH] = {'1', '2', '3', '4', '5'};
-        return Password_Save(defaultPassword);
+        return PASSWORD_INITIALIZED;
     }
-    
-    return PASSWORD_OK;
-}
+}   
 
 uint8_t Password_Save(const uint8_t *password)
 {
