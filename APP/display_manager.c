@@ -295,7 +295,7 @@ void DISPLAY_NEW_PASSWORD(void)
     LCD_Clear();
     LCD_WriteString("Enter new pass");
     LCD_SetCursor(1, 0);
-    for(pass_index = 0; pass_index < 4; pass_index++){
+    for(pass_index = 0; pass_index < 5; pass_index++){
         key = InputManager_GetKey();
         while(key == 0) {  
             key = InputManager_GetKey();
@@ -309,14 +309,13 @@ void DISPLAY_NEW_PASSWORD(void)
         
     //}
     newPassword[6] = '\0';
-    UART5_SendString(newPassword);
     
     /* Get confirmation password */
     LCD_Clear();
     LCD_WriteString("Confirm new pass");
     LCD_SetCursor(1, 0);
     
-    for(pass_index = 0; pass_index < 4; pass_index++){
+    for(pass_index = 0; pass_index < 5; pass_index++){
         key = InputManager_GetKey();
         while(key == 0) {
             key = InputManager_GetKey();
@@ -337,15 +336,26 @@ void DISPLAY_NEW_PASSWORD(void)
         LCD_Clear();
         //return false;
     }else{
-        return;
+        UART5_SendString(newPassword);
+        char buffer[20];
+        UART5_ReceiveStringWithTimeout(buffer, 20);
+        if(buffer[0] == '1'){
+            LCD_Clear();
+            LCD_WriteString("Password Changed");
+            return;    
+        }else {
+            LCD_Clear();
+            LCD_WriteString("Password Not Changed");
+            SHOW_BUFFER(buffer);
+        }
+        
+        //return;
     }
 
     
     
     /* Success message */
-    LCD_Clear();
-    LCD_WriteString("Password Changed");
-    return;
+    
     //SysCtlDelay(10000000);
     //return true;
 }

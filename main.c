@@ -36,8 +36,9 @@ int main(void)
       UART5_SendString(message);
       UART5_ReceiveStringWithTimeout(buffer, 20);
       if(buffer[0] == '1') break;
-      //for debugging
-      SHOW_BUFFER(buffer);
+      if(buffer[0] == '0'){
+        DISPLAY_NEW_PASSWORD();
+      }
     }
     /* ---------- Main Loop ---------- */
     short mode = 0;    
