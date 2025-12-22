@@ -189,6 +189,17 @@ void PROCESS_MESSAGE(void)
 
             if (timeout >= 5 && timeout <= 30)
             {
+                uint8_t res = Password_Compare((uint8_t *)valueStr);
+                if (res == PASSWORD_OK)
+                {
+                    failedAttempts = 0;
+                    UART1_SendString("CHANGED#");
+                }
+                else
+                {
+                    UART1_SendString("WRONG#");
+                    return;
+                }
                 EEPROM_SaveTimeout(timeout);
                 UART1_SendString("Time Saved#");
             }
@@ -245,11 +256,13 @@ void PROCESS_MESSAGE(void)
         /* Return password initialization status */
         if (Password_IsInitialized() == 1)
         {
-            UART1_SendString("INITIALIZED#");
+           // UART1_SendString("INITIALIZED#");
+           UART1_SendString("1#");
         }
         else
         {
-            UART1_SendString("NOT_INITIALIZED#");
+            //UART1_SendString("NOT_INITIALIZED#");
+            UART1_SendString("0#");
         }
     }
 
