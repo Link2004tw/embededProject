@@ -590,35 +590,84 @@ void SHOW_BUFFER(char* buffer){
  * Function: DISPLAY_InitialSetup
  * 
  * Description:
- *   Handles the First Time Setup flow (Polling Version).
- *   1. Prompts user to Create New Password.
+ *   Handles First Time Password Setup.
+ *   1. Prompts user to Create New Password (5 digits).
  *   2. Prompts user to Re-enter to confirm.
- *   3. If match, sends to Backend with Mode 'S' (Setup).
+ *   3. If match, sends to Backend with Mode 4: "4,password#"
  *   4. Waits for ACK.
  *****************************************************************************/
 void DISPLAY_InitialSetup(void)
 {
-    char newPassword[7] = "";
+    char firstPass[7] = "";
+    char confirmPass[7] = "";
     short pass_index = 0;
     char key = 0;
-    /* Get new password */
-    //while(1){
-    LCD_Clear();
-    LCD_WriteString("Enter new pass");
-    LCD_SetCursor(1, 0);
-    for(pass_index = 0; pass_index < 4; pass_index++){
-        key = InputManager_GetKey();
-        while(key == 0) {  
-            key = InputManager_GetKey();
-            if(key=='=') return;
-            SysCtlDelay(10000);
-        }
-        newPassword[pass_index] = key;
-        LCD_WriteChar('*');
-    }
     
+    while(1) // Loop until successful
+    {
+        /* Step 1: Get First Entry */
+        LCD_Clear();
+        LCD_WriteString("Create Pass:");
+        LCD_SetCursor(1, 0);
         
-    //}
-    newPassword[6] = '\0';
-    UART5_SendString(newPassword);
+        for(pass_index = 0; pass_index < 5; pass_index++){
+            key = InputManager_GetKey();
+            while(key == 0) {  
+                key = InputManager_GetKey();
+                SysCtlDelay(10000);
+            }
+            firstPass[pass_index] = key;
+            LCD_WriteChar('*');
+        }
+        firstPass[5] = '\0';
+        
+        /* Step 2: Get Confirmation */
+        LCD_Clear();
+        LCD_WriteString("Confirm Pass:");
+        LCD_SetCursor(1, 0);
+        
+        for(pass_index = 0; pass_index < 5; pass_index++){
+            key = InputManager_GetKey();
+            while(key == 0) {
+                key = InputManager_GetKey();
+                SysCtlDelay(10000);
+            }
+            confirmPass[pass_index] = key;
+            LCD_WriteChar('*');
+        }
+        confirmPass[5] = '\0';
+        
+        /* Step 3: Compare */
+        if(strcmp(firstPass, confirmPass) != 0){
+            LCD_Clear();
+            LCD_WriteString("Mismatch!");
+            SysCtlDelay(20000000); // 2 sec
+            continue; // Retry
+        }
+        
+        /* Step 4: Send to Backend - Mode 4 */
+        LCD_Clear();
+        LCD_WriteString("Saving...");
+        
+        char message[20];
+        strcpy(message, "4,");
+        strcat(message, firstPass);
+        strcat(message, "#");
+        
+        UART5_SendString(message);
+        
+        /* Step 5: Wait for Ack */
+        char ack_buffer[20];
+        UART5_ReceiveStringWithTimeout(ack_buffer, 20);
+        
+        if(ack_buffer[0] != '\0'){
+             SHOW_BUFFER(ack_buffer);
+             SysCtlDelay(16000000);
+             break; // Success
+        } else {
+             DISPLAY_ShowMessage("Save Failed");
+             SysCtlDelay(16000000);
+             // Loop continues - retry
+        }
+    }
 }

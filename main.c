@@ -29,11 +29,36 @@ int main(void)
     SysCtlDelay(SysCtlClockGet());   // 1 second (if SysTick exists)
 
     DISPLAY_ClearScreen();
-    //DISPLAY_ShowMainMenu();  // Show menu while testing
     
     /* ---------- System Initialization Check ---------- */
-    mode=4;
+    // Send "3,check#" to Backend
+    UART5_SendString("3,check#");
+    
+    char init_buffer[20] = "";
+    DISPLAY_ShowMessage("Checking System...");
+    
+    while(1) {
+        // Wait for response
+        UART5_ReceiveStringWithTimeout(init_buffer, 20);
+        
+        if (strcmp(init_buffer, "INITIALIZED") == 0) {
+            // System ready, go to main menu
+            break;
+        } 
+        else if (strcmp(init_buffer, "UNINITIALIZED") == 0) {
+            // Need initial setup
+            DISPLAY_InitialSetup();
+            break;
+        }
+        else {
+            // Retry on timeout or garbage
+            SysCtlDelay(16000000 * 5); // 5 sec
+            UART5_SendString("3,check#");
+        }
+    }
+    
     DISPLAY_ClearScreen();
+    DISPLAY_ShowMainMenu();
 
     
     /* ---------- Main Loop ---------- */
@@ -87,29 +112,6 @@ int main(void)
           DELAY();
             
           DISPLAY_ClearScreen();
-            DISPLAY_ShowMainMenu();
-            
-            //DISPLAY_ShowMessage("hiiiii");
-            mode = 0;
-        }
-        else if(mode==4){
-          UART5_SendString("3,check");
-          DELAY();
-          char ack_buffer[20];
-          UART5_ReceiveStringWithTimeout(ack_buffer, 20);
-          if(strncmp(ack_buffer, "INITIALIZED") == 0){
-            DISPLAY_ClearScreen();
-            DISPLAY_ShowMainMenu();
-            mode = 0;
-          }
-          else{
-            mode = 5;
-          }
-        }
-        if(mode == 5){
-          DISPLAY_InitialSetup();
-          DELAY();
-            DISPLAY_ClearScreen();
             DISPLAY_ShowMainMenu();
             
             //DISPLAY_ShowMessage("hiiiii");
