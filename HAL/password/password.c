@@ -89,27 +89,19 @@ uint8_t Password_Save(const uint8_t *password)
                 word = 0U;
             }
         }
-        /* Case 2: 5th byte (Index 4), Shared Word logic */
+        /* Case 2: 5th byte (Index 4), now has dedicated word */
         else if (i == 4)
         {
-            uint32_t existingWord = 0;
+            uint32_t word = 0;
             
-            /* Read existing Word 1 to preserve Comma and Timeout */
-            if (EEPROM_ReadWord(PASSWORD_EEPROM_BLOCK,
-                                PASSWORD_EEPROM_OFFSET + 1,
-                                &existingWord) != EEPROM_SUCCESS)
-            {
-               return PASSWORD_ERROR;
-            }
-            
-            /* Modify Byte 0 (Pass4) only */
-            existingWord &= ~(0x000000FF); /* Clear Byte 0 */
-            existingWord |= (uint32_t)password[i]; /* Set Byte 0 */
+            /* Password byte 4 now has its own dedicated word (Word 1) */
+            /* No need to preserve timeout - it's in Word 2 now */
+            word = (uint32_t)password[i]; /* Byte 0 = password[4], rest = 0 */
             
             /* Write Word 1 back */
             if (EEPROM_WriteWord(PASSWORD_EEPROM_BLOCK,
                                 PASSWORD_EEPROM_OFFSET + 1,
-                                existingWord) != EEPROM_SUCCESS)
+                                word) != EEPROM_SUCCESS)
             {
                 return PASSWORD_ERROR;
             }

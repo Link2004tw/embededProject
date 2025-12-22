@@ -112,11 +112,11 @@ uint8_t EEPROM_ReadBuffer(uint32_t block, uint32_t offset, uint8_t *buffer, uint
  */
 /* Timeout Storage Constants */
 #define TIMEOUT_EEPROM_BLOCK    0U
-#define TIMEOUT_EEPROM_OFFSET   1U /* Shared with Password tail */
+#define TIMEOUT_EEPROM_OFFSET   2U /* Changed from 1 to 2 - now uses dedicated Word 2 */
 
 /* Password Initialization Flag Constants */
 #define PASSWORD_FLAG_EEPROM_BLOCK    0U
-#define PASSWORD_FLAG_EEPROM_OFFSET   2U /* Separate word for initialization flag */
+#define PASSWORD_FLAG_EEPROM_OFFSET   3U /* Changed from 2 to 3 - moved to Word 3 */
 #define PASSWORD_INITIALIZED_MAGIC    0x5AA5C33C /* Magic value indicating password is set */
 
 /*
