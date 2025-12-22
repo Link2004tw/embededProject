@@ -42,6 +42,7 @@ int main(void)
       if(buffer[0] == '0'){
         
       }
+      SysCtlDelay(SysCtlClockGet()/50);   // 1 second (if SysTick exists)
     }
     /* ---------- Main Loop ---------- */
     short mode = 0;    

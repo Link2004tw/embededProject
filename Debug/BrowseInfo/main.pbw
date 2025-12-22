@@ -123253,7 +123253,7 @@
     "scope": null
   },
   {
-    "ID": "c:keypad.h@516@macro@KEYPAD_ROW_PINS",
+    "ID": "c:Keypad.h@516@macro@KEYPAD_ROW_PINS",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "KEYPAD_ROW_PINS",
@@ -123267,7 +123267,7 @@
     "scope": null
   },
   {
-    "ID": "c:Keypad.h@516@macro@KEYPAD_ROW_PINS",
+    "ID": "c:keypad.h@516@macro@KEYPAD_ROW_PINS",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "KEYPAD_ROW_PINS",
@@ -123715,34 +123715,6 @@
     "scope": null
   },
   {
-    "ID": "c:@rxIndex",
-    "What": "Variable",
-    "defdec": "Dec",
-    "display": "rxIndex",
-    "location": {
-      "column": "25",
-      "line": "52",
-      "path": "E:\\coding\\embedded\\embededProject\\Comm\\HMI_Comm.h"
-    },
-    "name": "rxIndex",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@messageReady",
-    "What": "Variable",
-    "defdec": "Dec",
-    "display": "messageReady",
-    "location": {
-      "column": "22",
-      "line": "53",
-      "path": "E:\\coding\\embedded\\embededProject\\Comm\\HMI_Comm.h"
-    },
-    "name": "messageReady",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
     "ID": "c:@messageReady",
     "What": "Variable",
     "defdec": "Dec",
@@ -123799,20 +123771,6 @@
     "scope": null
   },
   {
-    "ID": "c:@F@PROCESS_MESSAGE",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void PROCESS_MESSAGE(void)",
-    "location": {
-      "column": "6",
-      "line": "57",
-      "path": "E:\\coding\\embedded\\embededProject\\Comm\\HMI_Comm.h"
-    },
-    "name": "PROCESS_MESSAGE",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
     "ID": "c:@F@UART5_SendString",
     "What": "Function",
     "defdec": "Dec",
@@ -123837,20 +123795,6 @@
       "path": "E:\\coding\\embedded\\embededProject\\Comm\\HMI_Comm.h"
     },
     "name": "UART5_SendString",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@UART5_Handler",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void UART5_Handler(void)",
-    "location": {
-      "column": "6",
-      "line": "60",
-      "path": "E:\\coding\\embedded\\embededProject\\Comm\\HMI_Comm.h"
-    },
-    "name": "UART5_Handler",
     "origin": "user_include",
     "scope": null
   },
@@ -124709,21 +124653,21 @@
     "scope": null
   },
   {
-    "ID": "c:@F@UART5_Init_front",
+    "ID": "c:@F@UART5_Init",
     "What": "Function",
     "defdec": "Def",
-    "display": "void UART5_Init_front(void)",
+    "display": "void UART5_Init(void)",
     "location": {
       "column": "6",
       "line": "4",
       "path": "E:\\coding\\embedded\\embededProject\\Comm\\HMI_Comm.c"
     },
-    "name": "UART5_Init_front",
+    "name": "UART5_Init",
     "origin": "project_file",
     "scope": null
   },
   {
-    "ID": "c:HMI_Comm.c@1270@F@UART5_Init_front@x",
+    "ID": "c:HMI_Comm.c@1264@F@UART5_Init@x",
     "What": "Variable",
     "defdec": "Def",
     "display": "x",
@@ -124737,156 +124681,30 @@
     "scope": null
   },
   {
-    "ID": "c:@failedAttempts",
-    "What": "Variable",
-    "defdec": "Def",
-    "display": "failedAttempts",
-    "location": {
-      "column": "16",
-      "line": "38",
-      "path": "E:\\coding\\embedded\\embededProject\\Comm\\HMI_Comm.c"
-    },
-    "name": "failedAttempts",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:@rxBuffer",
-    "What": "Variable",
-    "defdec": "Dec",
-    "display": "rxBuffer",
-    "location": {
-      "column": "6",
-      "line": "39",
-      "path": "E:\\coding\\embedded\\embededProject\\Comm\\HMI_Comm.c"
-    },
-    "name": "rxBuffer",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:@rxIndex",
-    "What": "Variable",
-    "defdec": "Def",
-    "display": "rxIndex",
-    "location": {
-      "column": "18",
-      "line": "40",
-      "path": "E:\\coding\\embedded\\embededProject\\Comm\\HMI_Comm.c"
-    },
-    "name": "rxIndex",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:@messageReady",
-    "What": "Variable",
-    "defdec": "Def",
-    "display": "messageReady",
-    "location": {
-      "column": "15",
-      "line": "41",
-      "path": "E:\\coding\\embedded\\embededProject\\Comm\\HMI_Comm.c"
-    },
-    "name": "messageReady",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@UART5_Init",
-    "What": "Function",
-    "defdec": "Def",
-    "display": "void UART5_Init(void)",
-    "location": {
-      "column": "6",
-      "line": "43",
-      "path": "E:\\coding\\embedded\\embededProject\\Comm\\HMI_Comm.c"
-    },
-    "name": "UART5_Init",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@UART5_Handler",
-    "What": "Function",
-    "defdec": "Def",
-    "display": "void UART5_Handler(void)",
-    "location": {
-      "column": "6",
-      "line": "91",
-      "path": "E:\\coding\\embedded\\embededProject\\Comm\\HMI_Comm.c"
-    },
-    "name": "UART5_Handler",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:HMI_Comm.c@2795@F@UART5_Handler@status",
-    "What": "Variable",
-    "defdec": "Def",
-    "display": "status",
-    "location": {
-      "column": "14",
-      "line": "93",
-      "path": "E:\\coding\\embedded\\embededProject\\Comm\\HMI_Comm.c"
-    },
-    "name": "status",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:HMI_Comm.c@2943@F@UART5_Handler@c",
-    "What": "Variable",
-    "defdec": "Def",
-    "display": "c",
-    "location": {
-      "column": "14",
-      "line": "98",
-      "path": "E:\\coding\\embedded\\embededProject\\Comm\\HMI_Comm.c"
-    },
-    "name": "c",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@PROCESS_MESSAGE",
-    "What": "Function",
-    "defdec": "Def",
-    "display": "void PROCESS_MESSAGE(void)",
-    "location": {
-      "column": "6",
-      "line": "114",
-      "path": "E:\\coding\\embedded\\embededProject\\Comm\\HMI_Comm.c"
-    },
-    "name": "PROCESS_MESSAGE",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:HMI_Comm.c@3292@F@PROCESS_MESSAGE@rxCopy",
-    "What": "Variable",
-    "defdec": "Def",
-    "display": "rxCopy",
-    "location": {
-      "column": "10",
-      "line": "116",
-      "path": "E:\\coding\\embedded\\embededProject\\Comm\\HMI_Comm.c"
-    },
-    "name": "rxCopy",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
     "ID": "c:@F@UART5_SendString",
     "What": "Function",
     "defdec": "Def",
     "display": "void UART5_SendString(char *)",
     "location": {
       "column": "6",
-      "line": "131",
+      "line": "38",
       "path": "E:\\coding\\embedded\\embededProject\\Comm\\HMI_Comm.c"
     },
     "name": "UART5_SendString",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:HMI_Comm.c@1791@macro@ACK_TIMEOUT_MS",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "ACK_TIMEOUT_MS",
+    "location": {
+      "column": "9",
+      "line": "51",
+      "path": "E:\\coding\\embedded\\embededProject\\Comm\\HMI_Comm.c"
+    },
+    "name": "ACK_TIMEOUT_MS",
     "origin": "project_file",
     "scope": null
   },
@@ -124897,7 +124715,7 @@
     "display": "void UART5_ReceiveString(char *, uint16_t)",
     "location": {
       "column": "6",
-      "line": "159",
+      "line": "53",
       "path": "E:\\coding\\embedded\\embededProject\\Comm\\HMI_Comm.c"
     },
     "name": "UART5_ReceiveString",
@@ -124905,13 +124723,13 @@
     "scope": null
   },
   {
-    "ID": "c:HMI_Comm.c@4280@F@UART5_ReceiveString@index",
+    "ID": "c:HMI_Comm.c@1902@F@UART5_ReceiveString@index",
     "What": "Variable",
     "defdec": "Def",
     "display": "index",
     "location": {
       "column": "14",
-      "line": "160",
+      "line": "54",
       "path": "E:\\coding\\embedded\\embededProject\\Comm\\HMI_Comm.c"
     },
     "name": "index",
@@ -124919,13 +124737,13 @@
     "scope": null
   },
   {
-    "ID": "c:HMI_Comm.c@4305@F@UART5_ReceiveString@c",
+    "ID": "c:HMI_Comm.c@1927@F@UART5_ReceiveString@c",
     "What": "Variable",
     "defdec": "Def",
     "display": "c",
     "location": {
       "column": "10",
-      "line": "161",
+      "line": "55",
       "path": "E:\\coding\\embedded\\embededProject\\Comm\\HMI_Comm.c"
     },
     "name": "c",
@@ -124933,13 +124751,13 @@
     "scope": null
   },
   {
-    "ID": "c:HMI_Comm.c@4318@F@UART5_ReceiveString@timeout_counter",
+    "ID": "c:HMI_Comm.c@1940@F@UART5_ReceiveString@timeout_counter",
     "What": "Variable",
     "defdec": "Def",
     "display": "timeout_counter",
     "location": {
       "column": "14",
-      "line": "162",
+      "line": "56",
       "path": "E:\\coding\\embedded\\embededProject\\Comm\\HMI_Comm.c"
     },
     "name": "timeout_counter",
@@ -125717,13 +125535,13 @@
     "scope": null
   },
   {
-    "ID": "c:main.c@1424@F@main@mode",
+    "ID": "c:main.c@1499@F@main@mode",
     "What": "Variable",
     "defdec": "Def",
     "display": "mode",
     "location": {
       "column": "11",
-      "line": "47",
+      "line": "48",
       "path": "E:\\coding\\embedded\\embededProject\\main.c"
     },
     "name": "mode",
@@ -125731,13 +125549,13 @@
     "scope": null
   },
   {
-    "ID": "c:main.c@1475@F@main@key",
+    "ID": "c:main.c@1550@F@main@key",
     "What": "Variable",
     "defdec": "Def",
     "display": "key",
     "location": {
       "column": "14",
-      "line": "50",
+      "line": "51",
       "path": "E:\\coding\\embedded\\embededProject\\main.c"
     },
     "name": "key",
